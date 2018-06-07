@@ -1,0 +1,36 @@
+﻿Map:
+   Player can explore a sector with 10-20 locations.
+   Each sector has 3-5 hubs, each one owned by a faction.
+   A faction can only own 1 hub.
+   Each sector has 1 powered jump point controlled by the dominant faction.
+   Each sector has 1 unpowered jump point.
+
+Species:
+	Human-Baseline
+	Human-Spacer
+	Mushii (beetle-like alien)
+	Human Rogue AI
+
+Yang Conglomerate
+	- corporation
+	- creates clones for slaves and organ farming
+	- imports: food, luxuries, metals
+	- exports: organs, cybernetics, slaves, ships, weapons, medicine
+	- services offered:
+		- crew cybernetic enhancement
+		- crew advanced medical
+
+	- special: 
+		SR (specimen retrieval) - ships that specialize in disablers and boarding
+		AP (asset protection) - standard corp bodyguard
+
+Axolotl Refugees
+	- enemies of the Yang Conglomerate
+	- refugees
+	- imports: food, medicine
+	- exports: art
+	- special:
+		
+
+
+
