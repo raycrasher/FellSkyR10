@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Actions\AtlasSpriteConverter.cs" />
     <Compile Include="Actions\ImportAtlas.cs" />
+    <Compile Include="Actions\SpriteOperations.cs" />
     <Compile Include="AtlasSprite.cs" />
     <Compile Include="AtlasViewer.cs">
       <SubType>Form</SubType>
