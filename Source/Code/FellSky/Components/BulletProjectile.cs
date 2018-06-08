@@ -33,7 +33,6 @@ namespace FellSky.Components
             {
 
             }
-        }
-    {
+        }    
     }
 }

@@ -16,7 +16,7 @@ namespace FellSky.Editor.Actions
     {
         static Regex AnimRegex = new Regex(@"(.*)\[(\d+)\]$");
 
-        public override bool CanPerformOn(IEnumerable<Pixmap> objEnum) => false;
+        public override bool CanPerformOn(IEnumerable<Pixmap> objEnum) => true;
         public override bool CanPerformOn(Pixmap obj) => true;
         public override string Name => "Import Atlas";
         public override int Priority => 0;
@@ -39,18 +39,22 @@ namespace FellSky.Editor.Actions
 
             List<Rect> atlas = new List<Rect>();
 
-            if (opd.ShowDialog() == DialogResult.OK)
+            if (opd.ShowDialog() != DialogResult.Cancel)
             {
                 var doc = XDocument.Load(opd.FileName);
-                var spriteElems = doc.Descendants().Where(e => e.Name.LocalName == "sprite");
-
+                var spriteElems = doc.Descendants().Where(e => e.Name.LocalName == "sprite").ToArray();
+                if (spriteElems.Length == 0)
+                {
+                    MessageBox.Show("Atlas is invalid or empty!");
+                    return;
+                }
                 Dictionary<string, Dictionary<int, int>> anims = new Dictionary<string, Dictionary<int, int>>();
                 Match match;
                 foreach (var elem in spriteElems)
                 {
                     string sprName;
-                    int index = pixmap.Atlas.Count;
-                    pixmap.Atlas.Add(new Rect(
+                    int index = atlas.Count;
+                    atlas.Add(new Rect(
                         float.Parse(elem.Attribute("x").Value),
                         float.Parse(elem.Attribute("y").Value),
                         float.Parse(elem.Attribute("w").Value),
@@ -79,7 +83,8 @@ namespace FellSky.Editor.Actions
                     }
                 }
                 pixmap.Atlas = atlas;
-                pixmap.Save();               
+                pixmap.Save();
+                MessageBox.Show("Success!");
             }
         }
     }
