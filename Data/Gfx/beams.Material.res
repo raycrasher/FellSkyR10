@@ -4,7 +4,7 @@
     <parameters dataType="Struct" type="Duality.Drawing.ShaderParameterCollection" id="1100841590" custom="true">
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Textures\beams.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Gfx\beams.Texture.res</contentPath>
         </mainTex>
       </body>
     </parameters>

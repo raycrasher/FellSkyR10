@@ -1,4 +1,5 @@
 ﻿using Duality;
+using Duality.Editor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Defs
 {
-
+    [EditorHintCategory("Defs")]
     public class ThingDef: Resource
     {
         public string DisplayName { get; set; }

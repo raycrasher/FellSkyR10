@@ -62,6 +62,8 @@
     <Compile Include="Components\Weapon.cs" />
     <Compile Include="Components\WeaponSlot.cs" />
     <Compile Include="Components\Hull.cs" />
+    <Compile Include="Defs\EngineDef.cs" />
+    <Compile Include="Defs\ShipDef.cs" />
     <Compile Include="Defs\ThingDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
     <Compile Include="Event.cs" />
