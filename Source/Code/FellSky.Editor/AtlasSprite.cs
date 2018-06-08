@@ -16,7 +16,9 @@ namespace FellSky.Editor
             Index = index;
         }
         public AtlasSprite() { }
+
         public int Index { get; set; }
         public ContentRef<Pixmap> Pixmap { get; set; }
+        public bool IsSelected { get; set; }
     }
 }
