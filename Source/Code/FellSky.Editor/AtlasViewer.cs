@@ -1,4 +1,5 @@
 ﻿using Duality;
+using Duality.Editor;
 using Duality.Resources;
 using System;
 using System.Collections.Generic;
@@ -14,25 +15,74 @@ namespace FellSky.Editor
 {
     public partial class AtlasViewer : WeifenLuo.WinFormsUI.Docking.DockContent
     {
+        private Bitmap _bitmap;
+        private Button[] _buttons;
+
         public AtlasViewer()
         {
             InitializeComponent();
             this.AllowDrop = true;
-            DragEnter += DragEnterHandler;
-            DragOver += DragOverHandler;
         }
 
-        private void DragEnterHandler(object sender, DragEventArgs e)
+        protected override void OnDragEnter(DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(typeof(ContentRef<Pixmap>)) || e.Data.GetDataPresent(typeof(ContentRef<Material>)))
-                e.Effect = DragDropEffects.Link;
+            base.OnDragEnter(e);
+            DataObject data = e.Data as DataObject;
+            var op = new ConvertOperation(data, ConvertOperation.Operation.All);
+            if (op.CanPerform<Pixmap>())
+                e.Effect = e.AllowedEffect;
             else
                 e.Effect = DragDropEffects.None;
         }
 
-        private void DragOverHandler(object sender, DragEventArgs e)
+        protected override void OnDragDrop(DragEventArgs e)
         {
-            
+            base.OnDragDrop(e);
+            DataObject data = e.Data as DataObject;
+            var dragObjQuery = new ConvertOperation(data, ConvertOperation.Operation.All).Perform<Pixmap>();
+            if (dragObjQuery != null)
+            {
+                Pixmap pixmap = dragObjQuery.FirstOrDefault();
+                if (pixmap.Atlas != null && pixmap.Atlas.Count > 0 && pixmap.MainLayer != null && pixmap.Width > 0 && pixmap.Height > 0)
+                    RefreshDisplay(pixmap);
+                e.Effect = e.AllowedEffect;
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            _bitmap?.Dispose();
+        }
+
+        private void RefreshDisplay(Pixmap pixmap)
+        {
+            this.Text = "Atlas Viewer: " + pixmap.FullName;
+            if (_bitmap != null)
+                _bitmap.Dispose();
+
+            _bitmap = pixmap.MainLayer.ToBitmap();
+            if (_buttons != null)
+            {
+                foreach(var btn in _buttons)
+                {
+                    flowPanel.Controls.Remove(btn);
+                }
+            }
+            _buttons = pixmap.Atlas.Select((rect, index)=> {
+                var btn = new Button { Width = 64, Height=64, Tag=new AtlasSprite(pixmap, index) };
+                int x = btn.Width / 2 - (int)rect.W / 2;
+                int y = btn.Height / 2 - (int)rect.H / 2;
+                btn.Paint += (o, e) =>
+                {
+                    e.Graphics.DrawImage(_bitmap, x, y, new RectangleF(rect.X, rect.Y, rect.W, rect.H), GraphicsUnit.Pixel);
+                };
+
+                btn.MouseDown += (o, e) => this.DoDragDrop(btn.Tag, DragDropEffects.Link);
+
+                flowPanel.Controls.Add(btn);
+                return btn;
+            }).ToArray();
         }
     }
 }

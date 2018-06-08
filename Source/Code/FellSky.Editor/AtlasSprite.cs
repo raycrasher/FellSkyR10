@@ -10,7 +10,13 @@ namespace FellSky.Editor
 {
     public class AtlasSprite
     {
-        public Rect Rect { get; set; }
-        public Material Material { get; set; }
+        public AtlasSprite(Pixmap map, int index)
+        {
+            Pixmap = map;
+            Index = index;
+        }
+        public AtlasSprite() { }
+        public int Index { get; set; }
+        public ContentRef<Pixmap> Pixmap { get; set; }
     }
 }

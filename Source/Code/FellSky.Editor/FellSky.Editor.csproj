@@ -33,7 +33,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdamsLair.WinForms, Version=1.1.15.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="AdamsLair.WinForms">
+      <HintPath>..\..\..\AdamsLair.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Duality">
       <HintPath>..\..\..\Duality.dll</HintPath>
     </Reference>
@@ -61,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\AtlasSpriteConverter.cs" />
     <Compile Include="Actions\ImportAtlas.cs" />
     <Compile Include="AtlasSprite.cs" />
     <Compile Include="AtlasViewer.cs">
@@ -74,6 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AtlasViewer.resx">
+      <DependentUpon>AtlasViewer.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
