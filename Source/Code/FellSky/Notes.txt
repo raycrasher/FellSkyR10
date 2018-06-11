@@ -1,9 +1,9 @@
 ﻿Map:
-   Player can explore a sector with 10-20 locations.
-   Each sector has 3-5 hubs, each one owned by a faction.
+   Player can explore a system with 10-20 locations.
+   Each system has 3-5 hubs, each one owned by a faction.
    A faction can only own 1 hub.
-   Each sector has 1 powered jump point controlled by the dominant faction.
-   Each sector has 1 unpowered jump point.
+   Each system has 1 powered jump point controlled by the dominant faction.
+   Each system has 1 unpowered jump point.
 
 Species:
 	Human-Baseline

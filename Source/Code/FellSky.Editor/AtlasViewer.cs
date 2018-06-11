@@ -62,13 +62,7 @@ namespace FellSky.Editor
                 _bitmap.Dispose();
 
             _bitmap = pixmap.MainLayer.ToBitmap();
-            if (_buttons != null)
-            {
-                foreach(var btn in _buttons)
-                {
-                    flowPanel.Controls.Remove(btn);
-                }
-            }
+            flowPanel.Controls.Clear();
             _buttons = pixmap.Atlas.Select((rect, index)=> {
                 var sprite = new AtlasSprite(pixmap, index);
                 var btn = new Button {

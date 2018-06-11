@@ -58,7 +58,9 @@
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\EngineNozzle.cs" />
+    <Compile Include="Components\IProjectile.cs" />
     <Compile Include="Components\Ship.cs" />
+    <Compile Include="Components\TrailEffect.cs" />
     <Compile Include="Components\Weapon.cs" />
     <Compile Include="Components\WeaponSlot.cs" />
     <Compile Include="Components\Hull.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="Defs\SovereignDef.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Events\DeathEvent.cs" />
+    <Compile Include="Events\WeaponFireEvent.cs" />
+    <Compile Include="Events\WeaponReloadEvent.cs" />
     <Compile Include="FellSkyCorePlugin.cs" />
     <Compile Include="Gui\GuiEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
