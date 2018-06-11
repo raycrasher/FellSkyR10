@@ -92,6 +92,7 @@ namespace FellSky.Editor
 
                 //    if (sprite.IsSelected)
                 //    {
+
                 //        sprite.IsSelected = false;
                 //    }
                 //    else
