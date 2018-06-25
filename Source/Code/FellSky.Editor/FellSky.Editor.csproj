@@ -73,6 +73,9 @@
     <Compile Include="AtlasViewer.Designer.cs">
       <DependentUpon>AtlasViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="DFPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FellSkyEditorPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

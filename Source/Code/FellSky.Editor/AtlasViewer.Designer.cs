@@ -28,24 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.virtScroll = new System.Windows.Forms.VScrollBar();
+            this.flowPanel = new FellSky.Editor.DFPanel();
             this.SuspendLayout();
+            // 
+            // virtScroll
+            // 
+            this.virtScroll.Dock = System.Windows.Forms.DockStyle.Right;
+            this.virtScroll.Location = new System.Drawing.Point(330, 0);
+            this.virtScroll.Name = "virtScroll";
+            this.virtScroll.Size = new System.Drawing.Size(17, 272);
+            this.virtScroll.TabIndex = 1;
             // 
             // flowPanel
             // 
-            this.flowPanel.AutoScroll = true;
             this.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPanel.Location = new System.Drawing.Point(0, 0);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(284, 262);
-            this.flowPanel.TabIndex = 0;
+            this.flowPanel.Size = new System.Drawing.Size(330, 272);
+            this.flowPanel.TabIndex = 2;
             // 
             // AtlasViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(347, 272);
             this.Controls.Add(this.flowPanel);
+            this.Controls.Add(this.virtScroll);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "AtlasViewer";
             this.Text = "AtlasViewer";
@@ -54,7 +63,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowPanel;
+        private System.Windows.Forms.VScrollBar virtScroll;
+        private DFPanel flowPanel;
     }
 }
