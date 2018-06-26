@@ -54,7 +54,7 @@ namespace FellSky.Editor
         private void RefreshScrollBar()
         {
             virtScroll.Minimum = 0;
-            virtScroll.Maximum = (int)(1f * NumSprites / NumCols + NumRows);
+            virtScroll.Maximum = NumSprites / NumCols + NumRows + 1;
         }
 
         private void OnScrollBarScroll(object sender, ScrollEventArgs e)
@@ -97,7 +97,7 @@ namespace FellSky.Editor
                     _buttonCache.Add(btn);
                     added.Add(btn);
                     //flowPanel.Controls.Add(btn);
-                    btn.MouseDown += (o, e) => DoSpriteDragDrop((int)((Control)o).Tag);
+                    btn.MouseDown += (o, e) => DoSpriteDragDrop(((int)((Control)o).Tag) + (virtScroll.Value * NumCols));
                 }
                 flowPanel.Controls.AddRange(added.ToArray());
             }
@@ -113,7 +113,8 @@ namespace FellSky.Editor
 
         private void DoSpriteDragDrop(int i)
         {
-            this.DoDragDrop(new AtlasSprite(_pixmap.Res, i), DragDropEffects.Link);
+            if(_pixmap.IsAvailable && _pixmap.Res.Atlas!=null && _pixmap.Res.Atlas.Count > i)
+                this.DoDragDrop(new AtlasSprite(_pixmap.Res, i), DragDropEffects.Link);
         }
 
         private void OnButtonPaint(object sender, PaintEventArgs e)
