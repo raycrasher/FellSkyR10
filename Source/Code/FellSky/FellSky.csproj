@@ -63,7 +63,9 @@
     <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
     <Compile Include="Components\Mothership.cs" />
+    <Compile Include="Components\PlayerController.cs" />
     <Compile Include="Components\Ship.cs" />
+    <Compile Include="Components\Thruster.cs" />
     <Compile Include="Components\TrailEffect.cs" />
     <Compile Include="Components\Weapon.cs" />
     <Compile Include="Components\WeaponSlot.cs" />

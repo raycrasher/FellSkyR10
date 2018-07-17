@@ -12,8 +12,29 @@ namespace FellSky.Components
 {
     [EditorHintCategory("Ship")]
     [RequiredComponent(typeof(Transform))]
-    public class Ship : Component, ICmpUpdatable
+    public class Ship : Component, ICmpUpdatable, ICmpInitializable
     {
+        [DontSerialize]
+        private List<Thruster> _thrusters;
+        private List<Weapon> _weapons;
+
+        public void UpdateEquipment()
+        {
+            _thrusters = GameObj.GetComponentsDeep<Thruster>();
+            _weapons = GameObj.GetComponentsDeep<Weapon>();
+
+        }
+
+        void ICmpInitializable.OnActivate()
+        {
+            UpdateEquipment();
+        }
+
+        void ICmpInitializable.OnDeactivate()
+        {
+            
+        }
+
         void ICmpUpdatable.OnUpdate()
         {
             
