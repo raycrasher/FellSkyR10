@@ -58,7 +58,10 @@
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\EngineNozzle.cs" />
+    <Compile Include="Components\GameController.cs" />
+    <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
+    <Compile Include="Components\Mothership.cs" />
     <Compile Include="Components\Ship.cs" />
     <Compile Include="Components\TrailEffect.cs" />
     <Compile Include="Components\Weapon.cs" />
