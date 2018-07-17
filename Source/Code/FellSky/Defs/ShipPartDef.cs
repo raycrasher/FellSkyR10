@@ -1,5 +1,4 @@
 ﻿using Duality;
-using Duality.Editor;
 using Duality.Resources;
 using System;
 using System.Collections.Generic;
@@ -9,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Defs
 {
-    [EditorHintCategory("Defs")]
-    public class ShipDef: Resource
+    public class ShipPartDef: Resource
     {
         public string DisplayName { get; set; }
         public ContentRef<Prefab> Prefab { get; set; }

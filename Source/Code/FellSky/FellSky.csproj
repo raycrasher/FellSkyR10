@@ -59,6 +59,7 @@
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\EngineNozzle.cs" />
     <Compile Include="Components\GameController.cs" />
+    <Compile Include="Components\Hardpoint.cs" />
     <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
     <Compile Include="Components\Mothership.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Components\Hull.cs" />
     <Compile Include="Defs\EngineDef.cs" />
     <Compile Include="Defs\ShipDef.cs" />
+    <Compile Include="Defs\ShipPartDef.cs" />
     <Compile Include="Defs\ThingDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
     <Compile Include="Event.cs" />

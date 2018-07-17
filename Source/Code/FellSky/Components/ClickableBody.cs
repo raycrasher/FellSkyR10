@@ -17,11 +17,11 @@ namespace FellSky.Components
 
         void ICmpUpdatable.OnUpdate()
         {
-            var camera = this.GameObj.ParentScene.FindComponent<Camera>();
+            var camera = Scene.FindComponent<Camera>();
             if (camera != null)
             {
                 var worldCoord = camera.GetWorldPos(DualityApp.Mouse.Pos);
-                if (RigidBody.PickShapesGlobal(worldCoord.Xy, _picks))
+                if (Scene.Physics.PickShapes(worldCoord.Xy, _picks))
                 {
                     var rb = GameObj.GetComponent<RigidBody>();
                     if (_picks.Any(p => p.Parent == rb))

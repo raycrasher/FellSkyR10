@@ -11,10 +11,12 @@ using System.Threading.Tasks;
 namespace FellSky.Components
 {
     [EditorHintCategory("Ship")]
+    [RequiredComponent(typeof(Transform))]
     public class Ship : Component, ICmpUpdatable
     {
         void ICmpUpdatable.OnUpdate()
-        {            
+        {
+            
         }
     }
 }
