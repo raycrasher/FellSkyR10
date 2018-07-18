@@ -18,6 +18,13 @@ namespace FellSky.Components
         private List<Thruster> _thrusters;
         private List<Weapon> _weapons;
 
+        public float ManeuverForce { get; set; }
+        public float ForwardForce { get; set; }
+        public Vector2 ThrustVector { get; set; }
+        public bool IsBoosting { get; set; }
+        public float TurnForce { get; internal set; }
+        public float DesiredTorque { get; set; }
+
         public void UpdateEquipment()
         {
             _thrusters = GameObj.GetComponentsDeep<Thruster>();
@@ -38,6 +45,11 @@ namespace FellSky.Components
         void ICmpUpdatable.OnUpdate()
         {
             
+        }
+
+        public IEnumerable<Turret> GetTurretGroup(int groupNumber)
+        {
+            return GameObj.GetComponentsDeep<Turret>().Where(t => t.GroupNumber == groupNumber);
         }
     }
 }

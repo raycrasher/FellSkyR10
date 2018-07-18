@@ -15,5 +15,6 @@ namespace FellSky.Components
     {
         public HardpointType Type { get; set; }
         public string TagFilter { get; set; }
+        public float Traverse { get; set; } = 180;
     }
 }
