@@ -57,7 +57,6 @@
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\ClickableBody.cs" />
-    <Compile Include="Components\EngineNozzle.cs" />
     <Compile Include="Components\GameController.cs" />
     <Compile Include="Components\Hardpoint.cs" />
     <Compile Include="Components\Inventory.cs" />
@@ -76,6 +75,7 @@
     <Compile Include="Defs\ShipPartDef.cs" />
     <Compile Include="Defs\ThingDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Events\DeathEvent.cs" />
     <Compile Include="Events\SelectedTurretGroupChangedEvent.cs" />

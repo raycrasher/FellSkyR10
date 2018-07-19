@@ -66,7 +66,7 @@ namespace FellSky.Components
 
             if (_turretGroupChangedFlag)
             {
-                Scene.FireEvent(this, new SelectedTurretGroupChangedEvent { OldGroup = _oldSelectedTurretGroup, NewGroup = SelectedTurretGroup })
+                Scene.FireEvent(this, new SelectedTurretGroupChangedEvent { OldGroup = _oldSelectedTurretGroup, NewGroup = SelectedTurretGroup });
                 _turretGroupChangedFlag = false;
             }
         }
@@ -77,22 +77,22 @@ namespace FellSky.Components
             Vector2 speed = Vector2.Zero;
             var keyboard = DualityApp.Keyboard;
             if (keyboard.KeyPressed(ThrustDown))
-                speed.X = -ship.ManeuverForce;
+                speed.X = -ship.ManeuverSpeed;
             else if (keyboard.KeyPressed(ThrustUp))
-                speed.X = ship.ForwardForce;
+                speed.X = ship.ForwardSpeed;
 
             if (keyboard.KeyPressed(StrafeLeft))
-                speed.Y = -ship.ManeuverForce;
+                speed.Y = -ship.ManeuverSpeed;
             else if (keyboard.KeyPressed(StrafeRight))
-                speed.Y = ship.ManeuverForce;
+                speed.Y = ship.ManeuverSpeed;
 
             ship.ThrustVector = ship.GameObj.Transform.GetWorldVector(speed);
 
             ship.IsBoosting = keyboard.KeyPressed(Boost);
             if (keyboard.KeyPressed(TurnCCW))
-                ship.DesiredTorque = -ship.TurnForce;
+                ship.DesiredTorque = -ship.TurnSpeed;
             else if (keyboard.KeyPressed(TurnCW))
-                ship.DesiredTorque = ship.TurnForce;
+                ship.DesiredTorque = ship.TurnSpeed;
             else
                 ship.DesiredTorque = 0;
         }
