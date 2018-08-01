@@ -63,8 +63,10 @@
     <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
     <Compile Include="Components\Mothership.cs" />
+    <Compile Include="Components\Pawn.cs" />
     <Compile Include="Components\PlayerController.cs" />
     <Compile Include="Components\Ship.cs" />
+    <Compile Include="Components\SpriteGlowEffect.cs" />
     <Compile Include="Components\Thruster.cs" />
     <Compile Include="Components\TrailEffect.cs" />
     <Compile Include="Components\Turret.cs" />
@@ -76,8 +78,10 @@
     <Compile Include="Defs\ShipPartDef.cs" />
     <Compile Include="Defs\ThingDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
+    <Compile Include="Defs\Verb.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="Events\DamageEvent.cs" />
     <Compile Include="Events\DeathEvent.cs" />
     <Compile Include="Events\SelectedTurretGroupChangedEvent.cs" />
     <Compile Include="Events\WeaponFireEvent.cs" />
@@ -86,6 +90,9 @@
     <Compile Include="Gui\GuiEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Health.cs" />
+    <Compile Include="SpaceLayer\Components\SpaceObject.cs" />
+    <Compile Include="SpaceLayer\Components\StarSystem.cs" />
+    <Compile Include="SpaceLayer\MapGenerator.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +100,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CombatLayer\" />
+    <Folder Include="GroundLayer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

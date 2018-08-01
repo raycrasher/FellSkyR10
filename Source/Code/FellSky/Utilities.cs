@@ -9,6 +9,21 @@ namespace FellSky
 {
     public static class Utilities
     {
+        public static int CountBits(uint val, bool isSet)
+        {
+            uint c; // store the total here
+
+            c = val - ((val >> 1) & 0x55555555);
+            c = ((c >> 2) & 0x33333333) + (c & 0x33333333);
+            c = ((c >> 4) + c) & 0x0F0F0F0F;
+            c = ((c >> 8) + c) & 0x00FF00FF;
+            c = ((c >> 16) + c) & 0x0000FFFF;
+
+            if (!isSet)
+                c = 32 - c;
+
+            return (int)c;
+        }
         public static float NormalizeAngleNegPiToPi(float angle)
         {
             angle = (angle + MathF.Pi) % MathF.TwoPi;

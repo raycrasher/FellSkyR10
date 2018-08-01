@@ -13,17 +13,17 @@ namespace FellSky.Components
 
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            throw new NotImplementedException();
+            
         }
 
         void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
         {
-            throw new NotImplementedException();
+            
         }
 
         void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args)
         {
-
+            
         }
 
         void ICmpUpdatable.OnUpdate()
