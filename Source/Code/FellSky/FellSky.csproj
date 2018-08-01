@@ -56,6 +56,7 @@
     <Compile Include="Components\BeamProjectile.cs" />
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
+    <Compile Include="Components\CameraController.cs" />
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\GameController.cs" />
     <Compile Include="Components\Hardpoint.cs" />
