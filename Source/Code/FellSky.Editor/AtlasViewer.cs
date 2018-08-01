@@ -54,7 +54,7 @@ namespace FellSky.Editor
         private void RefreshScrollBar()
         {
             virtScroll.Minimum = 0;
-            virtScroll.Maximum = NumSprites / NumCols + NumRows + 1;
+            virtScroll.Maximum = NumSprites / (NumCols <= 0 ? 10 : NumCols) + NumRows + 1;
         }
 
         private void OnScrollBarScroll(object sender, ScrollEventArgs e)
@@ -84,6 +84,7 @@ namespace FellSky.Editor
 
             if (_buttonCache.Count < numControlsPerPage)
             {
+                
                 
                 for(int i = 0; i < _buttonCache.Count; i++)
                 {

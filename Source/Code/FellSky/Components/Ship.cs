@@ -18,13 +18,14 @@ namespace FellSky.Components
         private List<Thruster> _thrusters;
         private List<Weapon> _weapons;
 
-        public float ManeuverSpeed { get; set; }
-        public float ForwardSpeed { get; set; }
-        public Vector2 ThrustVector { get; set; }
-        public bool IsBoosting { get; set; }
-        public float TurnSpeed { get; internal set; }
-        public float DesiredTorque { get; set; }
+        public float ManeuverSpeed { get; set; } = 10;
+        public float ForwardSpeed { get; set; } = 30;
+        public float TurnSpeed { get; internal set; } = 70;
         public float BoostMultiplier { get; set; } = 2;
+
+        public Vector2 ThrustVector { get; set; }
+        public bool IsBoosting { get; set; }        
+        public float DesiredTorque { get; set; }
         public Vector2 Acceleration { get; private set; }
         public Rotation TurnDirection => DesiredTorque < 0 ? Rotation.CCW : DesiredTorque > 0 ? Rotation.CW : Rotation.None;
         
