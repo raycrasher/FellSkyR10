@@ -30,13 +30,9 @@ namespace FellSky.ThirdParty.LibRocket
         }
 
         Dictionary<IntPtr, Geometry> _geometries = new Dictionary<IntPtr, Geometry>();
-        private ContentRef<DrawTechnique> _technique;
+        
 
-        public ContentRef<DrawTechnique> Technique
-        {
-            get => _technique;
-            set => _technique = value;
-        }
+        public DrawTechnique Technique { get; set; }
 
         public IDrawDevice Device
         {
@@ -72,12 +68,12 @@ namespace FellSky.ThirdParty.LibRocket
 
         protected override void RenderCompiledGeometry(IntPtr geometry, Vector2f translation)
         {
-            if (_device == null || _technique == null)
+            if (_device == null || Technique == null)
                 return;
             var geom = _geometries[geometry];
-            var batchInfo = new BatchInfo(_technique, ColorRgba.TransparentWhite, geom.Texture);
+            var batchInfo = new BatchInfo(Technique, ColorRgba.TransparentWhite, geom.Texture);
             SetClipRect(batchInfo);
-            batchInfo.SetValue("translation", translation);
+            batchInfo.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
             _device.AddVertices(batchInfo, VertexMode.Triangles, geom.Vertices);
         }
 
@@ -161,21 +157,21 @@ namespace FellSky.ThirdParty.LibRocket
                 var bl = new Vector3(_scissorRegion.LeftX, size.Y - _scissorRegion.BottomY, 0);
                 var ur = new Vector3(_scissorRegion.RightX, size.Y - _scissorRegion.TopY, 0);
 
-                batch.SetValue("clipRect", new Vector4(bl.X, bl.Y, ur.X, ur.Y));
+                batch.SetValue("clipRect", new Duality.Vector4(bl.X, bl.Y, ur.X, ur.Y));
             }
             else
             {
                 var size = _device.TargetSize;
-                batch.SetValue("clipRect", new Vector4(0, 0, size.X, size.Y));
+                batch.SetValue("clipRect", new Duality.Vector4(0, 0, size.X, size.Y));
             }
         }
 
         protected override unsafe void RenderGeometry(Vertex* vertices, int num_vertices, int* indices, int num_indices, IntPtr texture, Vector2f translation)
         {
-            if (_device == null || _technique == null)
+            if (_device == null || Technique == null)
                 return;
-            var batchInfo = new BatchInfo(_technique, ColorRgba.White, _textures[texture]);
-            batchInfo.SetValue("translation", translation);
+            var batchInfo = new BatchInfo(Technique, ColorRgba.White, _textures[texture]);
+            batchInfo.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
             SetClipRect(batchInfo);
             _device.AddVertices(batchInfo, VertexMode.Triangles, GetVertices(vertices, num_vertices, indices, num_indices), num_indices);
         }

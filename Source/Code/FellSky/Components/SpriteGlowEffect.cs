@@ -21,6 +21,7 @@ namespace FellSky.Components
         public ContentRef<Material> GlowMaterial { get; set; }
         public ColorRgba Color { get; set; } = new ColorRgba(0, 255, 255, 128);
         public float ScaleAmount { get; set; } = 0.2f;
+        public float OffsetAmount { get; set; } = 5;
         public GlowType GlowType { get; set; } = GlowType.Scale | GlowType.Position;
 
         void ICmpRenderer.Draw(IDrawDevice device)
@@ -44,11 +45,12 @@ namespace FellSky.Components
             }
             if ((GlowType & GlowType.Position) != 0)
             {
-                rect.X += rng.NextFloat(-1, 1) * ScaleAmount;
-                rect.Y += rng.NextFloat(-1, 1) * ScaleAmount;
+                rect.X += rng.NextFloat(-1, 1) * OffsetAmount;
+                rect.Y += rng.NextFloat(-1, 1) * OffsetAmount;
             }
 
             renderer.CustomMaterial = new BatchInfo(GlowMaterial.Res);
+            renderer.CustomMaterial.MainTexture = renderer.SharedMaterial.Res.MainTexture;
             renderer.Rect = rect;
             renderer.ColorTint = Color;
             renderer.Draw(device);

@@ -75,6 +75,7 @@
     <Compile Include="Components\CameraController.cs" />
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\GameController.cs" />
+    <Compile Include="Components\GuiController.cs" />
     <Compile Include="Components\Gui\GuiDocument.cs" />
     <Compile Include="Components\Hardpoint.cs" />
     <Compile Include="Components\Inventory.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Events\SelectedTurretGroupChangedEvent.cs" />
     <Compile Include="Events\WeaponFireEvent.cs" />
     <Compile Include="Events\WeaponReloadEvent.cs" />
+    <Compile Include="FellSkyAppData.cs" />
     <Compile Include="FellSkyCorePlugin.cs" />
     <Compile Include="Gui\GuiEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="SpaceLayer\Components\SpaceObject.cs" />
     <Compile Include="SpaceLayer\Components\StarSystem.cs" />
     <Compile Include="SpaceLayer\MapGenerator.cs" />
+    <Compile Include="ThirdParty\LibRocket\GuiCore.cs" />
     <Compile Include="ThirdParty\LibRocket\LibRocketRendererInterface.cs" />
     <Compile Include="ThirdParty\LibRocket\LibRocketSystemInterface.cs" />
     <Compile Include="Utilities.cs" />

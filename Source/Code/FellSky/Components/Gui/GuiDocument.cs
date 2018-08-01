@@ -9,8 +9,5 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
-    public class GuiRenderer : ICmpRenderer
-    {
-        
-    }
+
 }

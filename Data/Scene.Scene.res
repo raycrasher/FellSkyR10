@@ -29,6 +29,10 @@
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
+          <item dataType="Struct" type="Duality.Components.VelocityTracker" id="82939610">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2306772439</gameobj>
+          </item>
           <item dataType="Struct" type="Duality.Components.Camera" id="3853158916">
             <active dataType="Bool">true</active>
             <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba">
@@ -55,10 +59,6 @@
               <Y dataType="Float">0</Y>
             </targetRect>
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
-          </item>
-          <item dataType="Struct" type="Duality.Components.VelocityTracker" id="82939610">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">2306772439</gameobj>
           </item>
           <item dataType="Struct" type="Duality.Components.SoundListener" id="44457670">
             <active dataType="Bool">true</active>
@@ -3562,8 +3562,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">3715413702</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="3308349649">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">3715413702</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3420598074" surrogate="true">
               <header />
@@ -3571,10 +3575,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1683293376">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="Type" id="3833131292" value="FellSky.Components.SpriteGlowEffect" />
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="703465038">
                   <item dataType="ObjectRef">3772690920</item>
                   <item dataType="ObjectRef">889065686</item>
+                  <item dataType="ObjectRef">3308349649</item>
                 </values>
               </body>
             </compMap>
@@ -5735,8 +5741,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2299555856</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1892491803">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2299555856</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2026097814" surrogate="true">
               <header />
@@ -5744,10 +5754,12 @@
                 <keys dataType="Array" type="System.Object[]" id="2651150550">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="4246965210">
                   <item dataType="ObjectRef">2356833074</item>
                   <item dataType="ObjectRef">3768175136</item>
+                  <item dataType="ObjectRef">1892491803</item>
                 </values>
               </body>
             </compMap>
@@ -5776,8 +5788,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">3755384978</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="3348320925">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">3755384978</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1669481626" surrogate="true">
               <header />
@@ -5785,10 +5801,12 @@
                 <keys dataType="Array" type="System.Object[]" id="3064738564">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="2601099670">
                   <item dataType="ObjectRef">3812662196</item>
                   <item dataType="ObjectRef">929036962</item>
+                  <item dataType="ObjectRef">3348320925</item>
                 </values>
               </body>
             </compMap>
@@ -5817,8 +5835,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2105164410</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1698100357">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2105164410</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3585444490" surrogate="true">
               <header />
@@ -5826,10 +5848,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1749176636">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="158229398">
                   <item dataType="ObjectRef">2162441628</item>
                   <item dataType="ObjectRef">3573783690</item>
+                  <item dataType="ObjectRef">1698100357</item>
                 </values>
               </body>
             </compMap>
@@ -5858,8 +5882,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">1011892667</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="604828614">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">1011892667</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2727406184" surrogate="true">
               <header />
@@ -5867,10 +5895,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1602120945">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3378340832">
                   <item dataType="ObjectRef">1069169885</item>
                   <item dataType="ObjectRef">2480511947</item>
+                  <item dataType="ObjectRef">604828614</item>
                 </values>
               </body>
             </compMap>
@@ -6473,8 +6503,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">480266156</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="73202103">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">480266156</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1857584094" surrogate="true">
               <header />
@@ -6482,10 +6516,12 @@
                 <keys dataType="Array" type="System.Object[]" id="538528186">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="999814586">
                   <item dataType="ObjectRef">537543374</item>
                   <item dataType="ObjectRef">1948885436</item>
+                  <item dataType="ObjectRef">73202103</item>
                 </values>
               </body>
             </compMap>
@@ -6577,7 +6613,7 @@
       <parent />
       <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="4190976710">
         <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="873551109">
-          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="1978541654" length="4">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="1978541654" length="16">
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
               <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3521686780">
                 <_items dataType="Array" type="System.Int32[]" id="2002889028">72, 0, 0, 0</_items>
@@ -6609,8 +6645,86 @@
                 <Z dataType="Float">50</Z>
               </val>
             </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2394433038">
+                <_items dataType="Array" type="System.Int32[]" id="834020654">4, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3039774592</componentType>
+              <prop dataType="ObjectRef">2937395102</prop>
+              <val dataType="Struct" type="Duality.Vector3">
+                <X dataType="Float">-99</X>
+                <Y dataType="Float">0</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2928400224">
+                <_items dataType="Array" type="System.Int32[]" id="3741815632">68, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType />
+              <prop dataType="MemberInfo" id="1724652746" value="P:Duality.GameObject:ActiveSingle" />
+              <val dataType="Bool">true</val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="4074327532">
+                <_items dataType="Array" type="System.Int32[]" id="135840340">68, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="MemberInfo" id="1316001126" value="P:Duality.Components.Renderers.SpriteRenderer:ColorTint" />
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">243</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="117222744">
+                <_items dataType="Array" type="System.Int32[]" id="3160354024">69, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">243</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3176578498">
+                <_items dataType="Array" type="System.Int32[]" id="149774234">70, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">243</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2672732036">
+                <_items dataType="Array" type="System.Int32[]" id="442632364">71, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">243</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
           </_items>
-          <_size dataType="Int">3</_size>
+          <_size dataType="Int">9</_size>
         </changes>
         <obj dataType="ObjectRef">3081597339</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -8275,8 +8389,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2111684754</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1704620701">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2111684754</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3252423642" surrogate="true">
               <header />
@@ -8284,10 +8402,12 @@
                 <keys dataType="Array" type="System.Object[]" id="4151025168">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="450636014">
                   <item dataType="ObjectRef">2168961972</item>
                   <item dataType="ObjectRef">3580304034</item>
+                  <item dataType="ObjectRef">1704620701</item>
                 </values>
               </body>
             </compMap>
@@ -8316,8 +8436,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2090089590</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1683025537">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2090089590</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1430501594" surrogate="true">
               <header />
@@ -8325,10 +8449,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1198930724">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3008305430">
                   <item dataType="ObjectRef">2147366808</item>
                   <item dataType="ObjectRef">3558708870</item>
+                  <item dataType="ObjectRef">1683025537</item>
                 </values>
               </body>
             </compMap>
@@ -8357,8 +8483,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">949863679</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="542799626">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">949863679</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="713352040" surrogate="true">
               <header />
@@ -8366,10 +8496,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1411438385">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3635695200">
                   <item dataType="ObjectRef">1007140897</item>
                   <item dataType="ObjectRef">2418482959</item>
+                  <item dataType="ObjectRef">542799626</item>
                 </values>
               </body>
             </compMap>
@@ -8398,8 +8530,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">183366286</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="4071269529">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">183366286</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="610089802" surrogate="true">
               <header />
@@ -8407,10 +8543,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1583571404">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3214039798">
                   <item dataType="ObjectRef">240643504</item>
                   <item dataType="ObjectRef">1651985566</item>
+                  <item dataType="ObjectRef">4071269529</item>
                 </values>
               </body>
             </compMap>
@@ -8439,8 +8577,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2869358771</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="2462294718">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2869358771</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1011392256" surrogate="true">
               <header />
@@ -8448,10 +8590,12 @@
                 <keys dataType="Array" type="System.Object[]" id="2383832429">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="4275534584">
                   <item dataType="ObjectRef">2926635989</item>
                   <item dataType="ObjectRef">43010755</item>
+                  <item dataType="ObjectRef">2462294718</item>
                 </values>
               </body>
             </compMap>
@@ -8480,8 +8624,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">832899203</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="425835150">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">832899203</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1587073600" surrogate="true">
               <header />
@@ -8489,10 +8637,12 @@
                 <keys dataType="Array" type="System.Object[]" id="898922557">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="1602990776">
                   <item dataType="ObjectRef">890176421</item>
                   <item dataType="ObjectRef">2301518483</item>
+                  <item dataType="ObjectRef">425835150</item>
                 </values>
               </body>
             </compMap>
@@ -8767,8 +8917,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2774848203</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="2367784150">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2774848203</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="862757216" surrogate="true">
               <header />
@@ -8776,10 +8930,12 @@
                 <keys dataType="Array" type="System.Object[]" id="2267241013">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3405073992">
                   <item dataType="ObjectRef">2832125421</item>
                   <item dataType="ObjectRef">4243467483</item>
+                  <item dataType="ObjectRef">2367784150</item>
                 </values>
               </body>
             </compMap>
@@ -9505,8 +9661,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">3503291789</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="3096227736">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">3503291789</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="4273723008" surrogate="true">
               <header />
@@ -9514,10 +9674,12 @@
                 <keys dataType="Array" type="System.Object[]" id="1684342099">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3901349752">
                   <item dataType="ObjectRef">3560569007</item>
                   <item dataType="ObjectRef">676943773</item>
+                  <item dataType="ObjectRef">3096227736</item>
                 </values>
               </body>
             </compMap>
@@ -9546,8 +9708,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2044631131</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1637567078">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2044631131</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="4088908448" surrogate="true">
               <header />
@@ -9555,10 +9721,12 @@
                 <keys dataType="Array" type="System.Object[]" id="3707572421">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="2960575016">
                   <item dataType="ObjectRef">2101908349</item>
                   <item dataType="ObjectRef">3513250411</item>
+                  <item dataType="ObjectRef">1637567078</item>
                 </values>
               </body>
             </compMap>
@@ -9792,8 +9960,12 @@
                   <active dataType="Bool">true</active>
                   <gameobj dataType="ObjectRef">2354447559</gameobj>
                 </item>
+                <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1947383506">
+                  <active dataType="Bool">true</active>
+                  <gameobj dataType="ObjectRef">2354447559</gameobj>
+                </item>
               </_items>
-              <_size dataType="Int">2</_size>
+              <_size dataType="Int">3</_size>
             </compList>
             <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="538455736" surrogate="true">
               <header />
@@ -9801,10 +9973,12 @@
                 <keys dataType="Array" type="System.Object[]" id="3332010793">
                   <item dataType="ObjectRef">3039774592</item>
                   <item dataType="ObjectRef">3696641230</item>
+                  <item dataType="ObjectRef">3833131292</item>
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="3127090624">
                   <item dataType="ObjectRef">2411724777</item>
                   <item dataType="ObjectRef">3823066839</item>
+                  <item dataType="ObjectRef">1947383506</item>
                 </values>
               </body>
             </compMap>
@@ -9855,7 +10029,7 @@
       <parent />
       <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1988315066">
         <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="2245053984">
-          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3621211100" length="4">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3621211100">
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
               <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2642290120">
                 <_items dataType="ObjectRef">2307909704</_items>
@@ -9882,8 +10056,91 @@
                 <Z dataType="Float">0</Z>
               </val>
             </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1792355380">
+                <_items dataType="Array" type="System.Int32[]" id="4076471624">9, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3039774592</componentType>
+              <prop dataType="ObjectRef">2937395102</prop>
+              <val dataType="Struct" type="Duality.Vector3">
+                <X dataType="Float">53.09175</X>
+                <Y dataType="Float">96.346344</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2702393122">
+                <_items dataType="Array" type="System.Int32[]" id="2077004110">42, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">255</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="4215791488">
+                <_items dataType="Array" type="System.Int32[]" id="4076654708">43, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">255</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1452960646">
+                <_items dataType="Array" type="System.Int32[]" id="3456919458">44, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">255</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3128601260">
+                <_items dataType="Array" type="System.Int32[]" id="2012813072">45, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">255</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="738876170">
+                <_items dataType="Array" type="System.Int32[]" id="1070028390">41, 0, 0, 0</_items>
+                <_size dataType="Int">1</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">3696641230</componentType>
+              <prop dataType="ObjectRef">1316001126</prop>
+              <val dataType="Struct" type="Duality.Drawing.ColorRgba">
+                <A dataType="Byte">255</A>
+                <B dataType="Byte">255</B>
+                <G dataType="Byte">255</G>
+                <R dataType="Byte">0</R>
+              </val>
+            </item>
           </_items>
-          <_size dataType="Int">2</_size>
+          <_size dataType="Int">8</_size>
         </changes>
         <obj dataType="ObjectRef">2517943780</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
@@ -10024,13 +10281,13 @@
             <gameobj dataType="ObjectRef">1783504531</gameobj>
             <ignoreParent dataType="Bool">false</ignoreParent>
             <pos dataType="Struct" type="Duality.Vector3">
-              <X dataType="Float">515</X>
-              <Y dataType="Float">-135</Y>
+              <X dataType="Float">-489</X>
+              <Y dataType="Float">76</Y>
               <Z dataType="Float">-20</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
-              <X dataType="Float">515</X>
-              <Y dataType="Float">-135</Y>
+              <X dataType="Float">-489</X>
+              <Y dataType="Float">76</Y>
               <Z dataType="Float">-20</Z>
             </posAbs>
             <scale dataType="Float">1.70761073</scale>
@@ -10146,12 +10403,12 @@
             <ignoreParent dataType="Bool">false</ignoreParent>
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
+              <Y dataType="Float">11</Y>
               <Z dataType="Float">5000</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">0</Y>
+              <Y dataType="Float">11</Y>
               <Z dataType="Float">5000</Z>
             </posAbs>
             <scale dataType="Float">10</scale>
@@ -10208,6 +10465,58 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">background</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="240943903">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1163444189">
+        <_items dataType="Array" type="Duality.Component[]" id="129975398" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="298221121">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <gameobj dataType="ObjectRef">240943903</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <pos dataType="Struct" type="Duality.Vector3" />
+            <posAbs dataType="Struct" type="Duality.Vector3" />
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+          </item>
+          <item dataType="Struct" type="FellSky.Components.GuiController" id="950315654">
+            <_x003C_Technique_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
+              <contentPath dataType="String">Data\Gfx\GuiDrawTechnique.DrawTechnique.res</contentPath>
+            </_x003C_Technique_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">240943903</gameobj>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0, AllFlags" value="2147483649" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1285221496" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="2919065271">
+            <item dataType="ObjectRef">3039774592</item>
+            <item dataType="Type" id="1103414158" value="FellSky.Components.GuiController" />
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="2703717184">
+            <item dataType="ObjectRef">298221121</item>
+            <item dataType="ObjectRef">950315654</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">298221121</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="134868117">AaUf21J81k6tGa7q6HFTow==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">Gui</name>
       <parent />
       <prefabLink />
     </item>

@@ -25,9 +25,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">398.900116</X>
-                  <Y dataType="Float">26.4724579</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">542.900146</X>
+                  <Y dataType="Float">-227.527542</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -103,9 +103,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">321.601563</X>
-                  <Y dataType="Float">85.94493</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">465.601563</X>
+                  <Y dataType="Float">-168.055069</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -181,9 +181,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">242.985748</X>
-                  <Y dataType="Float">149.69104</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">386.985748</X>
+                  <Y dataType="Float">-104.30896</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -259,9 +259,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">338.078766</X>
-                  <Y dataType="Float">14.2756195</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">482.078766</X>
+                  <Y dataType="Float">-239.72438</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -337,9 +337,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">250.915466</X>
-                  <Y dataType="Float">75.386734</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">394.915466</X>
+                  <Y dataType="Float">-178.613266</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -415,9 +415,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">263.440369</X>
-                  <Y dataType="Float">16.5383377</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">407.440369</X>
+                  <Y dataType="Float">-237.46167</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -493,9 +493,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">185.190109</X>
-                  <Y dataType="Float">9.264267</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">329.190125</X>
+                  <Y dataType="Float">-244.735733</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -571,9 +571,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">152.273834</X>
-                  <Y dataType="Float">79.61004</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">296.273834</X>
+                  <Y dataType="Float">-174.389954</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -649,9 +649,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">177.544113</X>
-                  <Y dataType="Float">170.700165</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">321.544128</X>
+                  <Y dataType="Float">-83.2998352</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -722,14 +722,14 @@
                 <gameobj dataType="ObjectRef">1492952608</gameobj>
                 <ignoreParent dataType="Bool">false</ignoreParent>
                 <pos dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">53.0917473</X>
+                  <X dataType="Float">53.09175</X>
                   <Y dataType="Float">96.346344</Y>
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">106.183495</X>
-                  <Y dataType="Float">192.692688</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">250.1835</X>
+                  <Y dataType="Float">-61.307312</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -805,9 +805,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">140.410843</X>
-                  <Y dataType="Float">130.2388</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">284.410828</X>
+                  <Y dataType="Float">-123.7612</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -883,9 +883,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">69.06286</X>
-                  <Y dataType="Float">127.900208</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">213.062866</X>
+                  <Y dataType="Float">-126.099792</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -961,9 +961,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">77.32035</X>
-                  <Y dataType="Float">55.56894</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">221.320343</X>
+                  <Y dataType="Float">-198.431061</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1039,9 +1039,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">126.663269</X>
-                  <Y dataType="Float">10.877861</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">270.663269</X>
+                  <Y dataType="Float">-243.122131</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1117,9 +1117,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">77.32035</X>
-                  <Y dataType="Float">-55.56894</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">221.320343</X>
+                  <Y dataType="Float">-309.568939</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1195,9 +1195,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">126.663269</X>
-                  <Y dataType="Float">-10.877861</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">270.663269</X>
+                  <Y dataType="Float">-264.877869</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1273,9 +1273,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">185.190109</X>
-                  <Y dataType="Float">-9.264267</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">329.190125</X>
+                  <Y dataType="Float">-263.264282</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1351,9 +1351,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">152.273834</X>
-                  <Y dataType="Float">-79.61004</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">296.273834</X>
+                  <Y dataType="Float">-333.610046</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1429,9 +1429,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">250.915466</X>
-                  <Y dataType="Float">-75.386734</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">394.915466</X>
+                  <Y dataType="Float">-329.386719</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1507,9 +1507,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">263.440369</X>
-                  <Y dataType="Float">-16.5383377</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">407.440369</X>
+                  <Y dataType="Float">-270.53833</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1585,9 +1585,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">338.078766</X>
-                  <Y dataType="Float">-14.2756195</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">482.078766</X>
+                  <Y dataType="Float">-268.275635</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1663,9 +1663,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">398.900116</X>
-                  <Y dataType="Float">-26.4724579</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">542.900146</X>
+                  <Y dataType="Float">-280.472473</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1741,9 +1741,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">321.601563</X>
-                  <Y dataType="Float">-85.94493</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">465.601563</X>
+                  <Y dataType="Float">-339.944946</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1819,9 +1819,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">69.06286</X>
-                  <Y dataType="Float">-127.900208</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">213.062866</X>
+                  <Y dataType="Float">-381.9002</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1897,9 +1897,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">140.410843</X>
-                  <Y dataType="Float">-130.2388</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">284.410828</X>
+                  <Y dataType="Float">-384.2388</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -1975,9 +1975,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">242.985748</X>
-                  <Y dataType="Float">-149.69104</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">386.985748</X>
+                  <Y dataType="Float">-403.69104</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2053,9 +2053,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">177.544113</X>
-                  <Y dataType="Float">-170.700165</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">321.544128</X>
+                  <Y dataType="Float">-424.700165</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2131,9 +2131,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">106.183495</X>
-                  <Y dataType="Float">-192.692688</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">250.1835</X>
+                  <Y dataType="Float">-446.6927</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2209,9 +2209,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">446.8938</X>
-                  <Y dataType="Float">46.8829956</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">590.8938</X>
+                  <Y dataType="Float">-207.117</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2287,9 +2287,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">362.686829</X>
-                  <Y dataType="Float">113.585236</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">506.686829</X>
+                  <Y dataType="Float">-140.414764</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2365,9 +2365,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">281.108643</X>
-                  <Y dataType="Float">183.905792</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">425.108643</X>
+                  <Y dataType="Float">-70.09421</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2443,9 +2443,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">219.927933</X>
-                  <Y dataType="Float">230.5632</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">363.927917</X>
+                  <Y dataType="Float">-23.4367981</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2521,9 +2521,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">122.269714</X>
-                  <Y dataType="Float">240.7056</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">266.2697</X>
+                  <Y dataType="Float">-13.2944031</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2599,9 +2599,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">47.32247</X>
-                  <Y dataType="Float">204.498932</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">191.322479</X>
+                  <Y dataType="Float">-49.50107</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2677,9 +2677,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">446.8938</X>
-                  <Y dataType="Float">-46.8829956</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">590.8938</X>
+                  <Y dataType="Float">-300.883</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2755,9 +2755,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">362.686829</X>
-                  <Y dataType="Float">-113.585236</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">506.686829</X>
+                  <Y dataType="Float">-367.585236</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2833,9 +2833,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">281.108643</X>
-                  <Y dataType="Float">-183.905792</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">425.108643</X>
+                  <Y dataType="Float">-437.9058</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2911,9 +2911,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">47.32247</X>
-                  <Y dataType="Float">-204.498932</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">191.322479</X>
+                  <Y dataType="Float">-458.498932</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -2989,9 +2989,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">219.927933</X>
-                  <Y dataType="Float">-230.5632</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">363.927917</X>
+                  <Y dataType="Float">-484.5632</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3067,9 +3067,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">122.269714</X>
-                  <Y dataType="Float">-240.7056</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">266.2697</X>
+                  <Y dataType="Float">-494.7056</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3145,9 +3145,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">223.275116</X>
-                  <Y dataType="Float">116.472191</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">367.275116</X>
+                  <Y dataType="Float">-137.5278</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3178,8 +3178,24 @@
                 <spriteIndex dataType="Int">176</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="284594057">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">691658110</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3123421642" surrogate="true">
             <header />
@@ -3187,10 +3203,12 @@
               <keys dataType="Array" type="System.Object[]" id="2996145864">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="Type" id="583638636" value="FellSky.Components.SpriteGlowEffect" />
               </keys>
               <values dataType="Array" type="System.Object[]" id="2219636446">
                 <item dataType="ObjectRef">748935328</item>
                 <item dataType="ObjectRef">2160277390</item>
+                <item dataType="ObjectRef">284594057</item>
               </values>
             </body>
           </compMap>
@@ -3223,9 +3241,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">223.275116</X>
-                  <Y dataType="Float">-116.472191</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">367.275116</X>
+                  <Y dataType="Float">-370.4722</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3256,8 +3274,24 @@
                 <spriteIndex dataType="Int">176</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1742659531">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">2149723584</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2573107958" surrogate="true">
             <header />
@@ -3265,10 +3299,12 @@
               <keys dataType="Array" type="System.Object[]" id="733792326">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="2955470266">
                 <item dataType="ObjectRef">2207000802</item>
                 <item dataType="ObjectRef">3618342864</item>
+                <item dataType="ObjectRef">1742659531</item>
               </values>
             </body>
           </compMap>
@@ -3301,9 +3337,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">106.517578</X>
-                  <Y dataType="Float">182.500122</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">250.517578</X>
+                  <Y dataType="Float">-71.49988</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3334,8 +3370,24 @@
                 <spriteIndex dataType="Int">200</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="3783131973">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">4190196026</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1652914954" surrogate="true">
             <header />
@@ -3343,10 +3395,12 @@
               <keys dataType="Array" type="System.Object[]" id="3777628284">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="839519382">
                 <item dataType="ObjectRef">4247473244</item>
                 <item dataType="ObjectRef">1363848010</item>
+                <item dataType="ObjectRef">3783131973</item>
               </values>
             </body>
           </compMap>
@@ -3379,9 +3433,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">294.011536</X>
-                  <Y dataType="Float">29.706131</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">438.011536</X>
+                  <Y dataType="Float">-224.293869</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3412,8 +3466,24 @@
                 <spriteIndex dataType="Int">200</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="2875214738">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">3282278791</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1411086144" surrogate="true">
             <header />
@@ -3421,10 +3491,12 @@
               <keys dataType="Array" type="System.Object[]" id="1016090813">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="1929401528">
                 <item dataType="ObjectRef">3339556009</item>
                 <item dataType="ObjectRef">455930775</item>
+                <item dataType="ObjectRef">2875214738</item>
               </values>
             </body>
           </compMap>
@@ -3457,9 +3529,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">294.011536</X>
-                  <Y dataType="Float">-29.706131</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">438.011536</X>
+                  <Y dataType="Float">-283.706116</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3490,8 +3562,24 @@
                 <spriteIndex dataType="Int">200</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="4225477484">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">337574241</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2041690272" surrogate="true">
             <header />
@@ -3499,10 +3587,12 @@
               <keys dataType="Array" type="System.Object[]" id="1660909691">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="3018715816">
                 <item dataType="ObjectRef">394851459</item>
                 <item dataType="ObjectRef">1806193521</item>
+                <item dataType="ObjectRef">4225477484</item>
               </values>
             </body>
           </compMap>
@@ -3535,9 +3625,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">106.517578</X>
-                  <Y dataType="Float">-182.500122</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">250.517578</X>
+                  <Y dataType="Float">-436.500122</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3568,8 +3658,24 @@
                 <spriteIndex dataType="Int">200</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="946324422">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">1353388475</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="32533096" surrogate="true">
             <header />
@@ -3577,10 +3683,12 @@
               <keys dataType="Array" type="System.Object[]" id="1852198129">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="3260392416">
                 <item dataType="ObjectRef">1410665693</item>
                 <item dataType="ObjectRef">2822007755</item>
+                <item dataType="ObjectRef">946324422</item>
               </values>
             </body>
           </compMap>
@@ -3613,9 +3721,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">320</X>
-                  <Y dataType="Float">-90</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">464</X>
+                  <Y dataType="Float">-344</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1.21561921</scale>
                 <scaleAbs dataType="Float">2.43123841</scaleAbs>
@@ -3691,9 +3799,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">320</X>
-                  <Y dataType="Float">90</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">464</X>
+                  <Y dataType="Float">-164</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1.21561921</scale>
                 <scaleAbs dataType="Float">2.43123841</scaleAbs>
@@ -3769,9 +3877,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-18.0877533</X>
-                  <Y dataType="Float">164.68045</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">125.912247</X>
+                  <Y dataType="Float">-89.31955</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3847,9 +3955,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-6.218292</X>
-                  <Y dataType="Float">101.886063</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">137.781708</X>
+                  <Y dataType="Float">-152.113937</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3925,9 +4033,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-6.218292</X>
-                  <Y dataType="Float">-101.886063</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">137.781708</X>
+                  <Y dataType="Float">-355.886047</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -3998,14 +4106,14 @@
                 <gameobj dataType="ObjectRef">271662287</gameobj>
                 <ignoreParent dataType="Bool">false</ignoreParent>
                 <pos dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-9.043877</X>
-                  <Y dataType="Float">-82.3402252</Y>
+                  <X dataType="Float">-9</X>
+                  <Y dataType="Float">-82.5</Y>
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-18.0877533</X>
-                  <Y dataType="Float">-164.68045</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">126</X>
+                  <Y dataType="Float">-419</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4081,9 +4189,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">388</X>
-                  <Y dataType="Float">0</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">532</X>
+                  <Y dataType="Float">-254</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4114,8 +4222,24 @@
                 <spriteIndex dataType="Int">220</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="3093650089">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">3500714142</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3462579274" surrogate="true">
             <header />
@@ -4123,10 +4247,12 @@
               <keys dataType="Array" type="System.Object[]" id="3813188712">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="3078724382">
                 <item dataType="ObjectRef">3557991360</item>
                 <item dataType="ObjectRef">674366126</item>
+                <item dataType="ObjectRef">3093650089</item>
               </values>
             </body>
           </compMap>
@@ -4149,7 +4275,7 @@
             <_items dataType="Array" type="Duality.Component[]" id="3737430742" length="4">
               <item dataType="Struct" type="Duality.Components.Transform" id="396635837">
                 <active dataType="Bool">true</active>
-                <angle dataType="Float">-0</angle>
+                <angle dataType="Float">0</angle>
                 <angleAbs dataType="Float">0</angleAbs>
                 <gameobj dataType="ObjectRef">339358619</gameobj>
                 <ignoreParent dataType="Bool">false</ignoreParent>
@@ -4159,9 +4285,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">76</X>
-                  <Y dataType="Float">34</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">220</X>
+                  <Y dataType="Float">-220</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4237,9 +4363,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">76</X>
-                  <Y dataType="Float">-34</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">220</X>
+                  <Y dataType="Float">-288</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4315,9 +4441,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-4.91978455</X>
-                  <Y dataType="Float">134.108978</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">139.080215</X>
+                  <Y dataType="Float">-119.891022</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4393,9 +4519,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">4.976303</X>
-                  <Y dataType="Float">71.64252</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">148.9763</X>
+                  <Y dataType="Float">-182.357483</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4471,9 +4597,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">4.976303</X>
-                  <Y dataType="Float">-71.64252</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">148.9763</X>
+                  <Y dataType="Float">-325.642517</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4549,9 +4675,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-4.91978455</X>
-                  <Y dataType="Float">-134.108978</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">139.080215</X>
+                  <Y dataType="Float">-388.108978</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4627,9 +4753,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-44</X>
-                  <Y dataType="Float">34</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">100</X>
+                  <Y dataType="Float">-220</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4695,7 +4821,7 @@
             <_items dataType="Array" type="Duality.Component[]" id="878734956" length="4">
               <item dataType="Struct" type="Duality.Components.Transform" id="3597321342">
                 <active dataType="Bool">true</active>
-                <angle dataType="Float">-0</angle>
+                <angle dataType="Float">0</angle>
                 <angleAbs dataType="Float">0</angleAbs>
                 <gameobj dataType="ObjectRef">3540044124</gameobj>
                 <ignoreParent dataType="Bool">false</ignoreParent>
@@ -4705,9 +4831,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-44</X>
-                  <Y dataType="Float">-34</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">100</X>
+                  <Y dataType="Float">-288</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4783,9 +4909,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">13.8704681</X>
-                  <Y dataType="Float">39.7536469</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">157.870468</X>
+                  <Y dataType="Float">-214.246353</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4861,9 +4987,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">13.8704681</X>
-                  <Y dataType="Float">-39.7536469</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">157.870468</X>
+                  <Y dataType="Float">-293.753662</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -4939,9 +5065,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-72</X>
-                  <Y dataType="Float">0</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">72</X>
+                  <Y dataType="Float">-254</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5017,9 +5143,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">58</X>
-                  <Y dataType="Float">0</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">202</X>
+                  <Y dataType="Float">-254</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5095,9 +5221,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">37.7918549</X>
-                  <Y dataType="Float">195.94516</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">181.791855</X>
+                  <Y dataType="Float">-58.05484</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5173,9 +5299,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">37.7918549</X>
-                  <Y dataType="Float">-195.94516</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">181.791855</X>
+                  <Y dataType="Float">-449.94516</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5241,7 +5367,7 @@
             <_items dataType="Array" type="Duality.Component[]" id="500203728" length="4">
               <item dataType="Struct" type="Duality.Components.Transform" id="358779052">
                 <active dataType="Bool">true</active>
-                <angle dataType="Float">-0</angle>
+                <angle dataType="Float">0</angle>
                 <angleAbs dataType="Float">0</angleAbs>
                 <gameobj dataType="ObjectRef">301501834</gameobj>
                 <ignoreParent dataType="Bool">false</ignoreParent>
@@ -5251,9 +5377,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">18</X>
-                  <Y dataType="Float">72</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">162</X>
+                  <Y dataType="Float">-182</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5329,9 +5455,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">18</X>
-                  <Y dataType="Float">-72</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">162</X>
+                  <Y dataType="Float">-326</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5407,9 +5533,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">-14</X>
-                  <Y dataType="Float">0</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">130</X>
+                  <Y dataType="Float">-254</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5485,9 +5611,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">34</X>
-                  <Y dataType="Float">-142</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">178</X>
+                  <Y dataType="Float">-396</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5518,8 +5644,24 @@
                 <spriteIndex dataType="Int">251</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1234247003">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">1641311056</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1850315670" surrogate="true">
             <header />
@@ -5527,10 +5669,12 @@
               <keys dataType="Array" type="System.Object[]" id="247907094">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="504371162">
                 <item dataType="ObjectRef">1698588274</item>
                 <item dataType="ObjectRef">3109930336</item>
+                <item dataType="ObjectRef">1234247003</item>
               </values>
             </body>
           </compMap>
@@ -5563,9 +5707,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">34</X>
-                  <Y dataType="Float">142</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">178</X>
+                  <Y dataType="Float">-112</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5596,8 +5740,24 @@
                 <spriteIndex dataType="Int">251</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="1358555002">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">1765619055</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2789090080" surrogate="true">
             <header />
@@ -5605,10 +5765,12 @@
               <keys dataType="Array" type="System.Object[]" id="53682517">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="29981000">
                 <item dataType="ObjectRef">1822896273</item>
                 <item dataType="ObjectRef">3234238335</item>
+                <item dataType="ObjectRef">1358555002</item>
               </values>
             </body>
           </compMap>
@@ -5641,9 +5803,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">108</X>
-                  <Y dataType="Float">-102</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">252</X>
+                  <Y dataType="Float">-356</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5709,7 +5871,7 @@
             <_items dataType="Array" type="Duality.Component[]" id="166649168" length="4">
               <item dataType="Struct" type="Duality.Components.Transform" id="1844897804">
                 <active dataType="Bool">true</active>
-                <angle dataType="Float">-0</angle>
+                <angle dataType="Float">0</angle>
                 <angleAbs dataType="Float">0</angleAbs>
                 <gameobj dataType="ObjectRef">1787620586</gameobj>
                 <ignoreParent dataType="Bool">false</ignoreParent>
@@ -5719,9 +5881,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">108</X>
-                  <Y dataType="Float">102</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">252</X>
+                  <Y dataType="Float">-152</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5797,9 +5959,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">216</X>
-                  <Y dataType="Float">0</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">360</X>
+                  <Y dataType="Float">-254</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1.35905182</scale>
                 <scaleAbs dataType="Float">2.71810365</scaleAbs>
@@ -5875,9 +6037,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">134</X>
-                  <Y dataType="Float">-244</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">278</X>
+                  <Y dataType="Float">-498</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -5953,9 +6115,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">134</X>
-                  <Y dataType="Float">244</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">278</X>
+                  <Y dataType="Float">-10</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -6031,9 +6193,9 @@
                   <Z dataType="Float">0</Z>
                 </pos>
                 <posAbs dataType="Struct" type="Duality.Vector3">
-                  <X dataType="Float">208</X>
-                  <Y dataType="Float">0</Y>
-                  <Z dataType="Float">0</Z>
+                  <X dataType="Float">352</X>
+                  <Y dataType="Float">-254</Y>
+                  <Z dataType="Float">100</Z>
                 </posAbs>
                 <scale dataType="Float">1</scale>
                 <scaleAbs dataType="Float">2</scaleAbs>
@@ -6064,8 +6226,24 @@
                 <spriteIndex dataType="Int">503</spriteIndex>
                 <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
               </item>
+              <item dataType="Struct" type="FellSky.Components.SpriteGlowEffect" id="3102939196">
+                <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">128</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">0</R>
+                </_x003C_Color_x003E_k__BackingField>
+                <_x003C_GlowMaterial_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\GlowMaterial.Material.res</contentPath>
+                </_x003C_GlowMaterial_x003E_k__BackingField>
+                <_x003C_GlowType_x003E_k__BackingField dataType="Enum" type="FellSky.Components.GlowType" name="Scale, Position" value="3" />
+                <_x003C_OffsetAmount_x003E_k__BackingField dataType="Float">1</_x003C_OffsetAmount_x003E_k__BackingField>
+                <_x003C_ScaleAmount_x003E_k__BackingField dataType="Float">0.2</_x003C_ScaleAmount_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">3510003249</gameobj>
+              </item>
             </_items>
-            <_size dataType="Int">2</_size>
+            <_size dataType="Int">3</_size>
           </compList>
           <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3035568480" surrogate="true">
             <header />
@@ -6073,10 +6251,12 @@
               <keys dataType="Array" type="System.Object[]" id="1874704459">
                 <item dataType="ObjectRef">4048584422</item>
                 <item dataType="ObjectRef">2919631162</item>
+                <item dataType="ObjectRef">583638636</item>
               </keys>
               <values dataType="Array" type="System.Object[]" id="218442568">
                 <item dataType="ObjectRef">3567280467</item>
                 <item dataType="ObjectRef">683655233</item>
+                <item dataType="ObjectRef">3102939196</item>
               </values>
             </body>
           </compMap>
@@ -6103,8 +6283,16 @@
           <angleAbs dataType="Float">0</angleAbs>
           <gameobj dataType="ObjectRef">1014267968</gameobj>
           <ignoreParent dataType="Bool">false</ignoreParent>
-          <pos dataType="Struct" type="Duality.Vector3" />
-          <posAbs dataType="Struct" type="Duality.Vector3" />
+          <pos dataType="Struct" type="Duality.Vector3">
+            <X dataType="Float">144</X>
+            <Y dataType="Float">-254</Y>
+            <Z dataType="Float">100</Z>
+          </pos>
+          <posAbs dataType="Struct" type="Duality.Vector3">
+            <X dataType="Float">144</X>
+            <Y dataType="Float">-254</Y>
+            <Z dataType="Float">100</Z>
+          </posAbs>
           <scale dataType="Float">2</scale>
           <scaleAbs dataType="Float">2</scaleAbs>
         </item>
