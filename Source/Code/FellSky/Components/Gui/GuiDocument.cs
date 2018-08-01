@@ -9,5 +9,19 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    public class GuiDocument : Component, ICmpInitializable
+    {
+        
+        public string Code { get; set; }
 
+        void ICmpInitializable.OnActivate()
+        {
+            
+        }
+
+        void ICmpInitializable.OnDeactivate()
+        {
+            
+        }
+    }
 }

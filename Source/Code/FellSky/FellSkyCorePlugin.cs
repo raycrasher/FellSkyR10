@@ -16,22 +16,22 @@ namespace FellSky
 
         protected override void InitPlugin()
         {
-            if (DualityApp.ExecContext == DualityApp.ExecutionContext.Game)
-            {
+            //if (DualityApp.ExecContext == DualityApp.ExecutionContext.Game)
+            //{
                 _guiCore = GuiCore ?? new ThirdParty.LibRocket.GuiCore();
-                _guiCore.Initialize();
-            }
+                _guiCore.Initialize(); 
+            //}
             base.InitPlugin();
         }
 
         protected override void OnDisposePlugin()
         {
             base.OnDisposePlugin();
-            if (DualityApp.ExecContext == DualityApp.ExecutionContext.Game)
-            {
+            //if (DualityApp.ExecContext == DualityApp.ExecutionContext.Game)
+            //{
                 _guiCore.Shutdown();
                 _guiCore = null;
-            }
+            //}
             
         }
     }
