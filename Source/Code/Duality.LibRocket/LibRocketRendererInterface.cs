@@ -8,7 +8,7 @@ using Duality.Drawing;
 using Duality.Resources;
 using LibRocketNet;
 
-namespace FellSky.ThirdParty.LibRocket
+namespace Duality.LibRocket
 {
     public class LibRocketRendererInterface : LibRocketNet.RenderInterface
     {
@@ -53,12 +53,12 @@ namespace FellSky.ThirdParty.LibRocket
             _scissorEnabled = enable;
         }
 
-        protected override unsafe IntPtr CompileGeometry(Vertex* vertices, int num_vertices, int* indices, int num_indices, IntPtr texture)
+        protected override IntPtr CompileGeometry(Vertex[] vertices, int[] indices, IntPtr texture)
         {
 
             var geom = new Geometry
             {
-                Vertices = GetVertices(vertices, num_vertices, indices, num_indices).Take(num_indices).ToArray(),
+                Vertices = GetVertices(vertices, indices).Take(indices.Length).ToArray(),
                 Texture = _textures[texture]
             };
             var idx = (IntPtr)geom.GetHashCode();
@@ -87,13 +87,12 @@ namespace FellSky.ThirdParty.LibRocket
             _textures.Remove(texture);
         }
 
-        protected unsafe override bool GenerateTexture(ref IntPtr texture_handle, byte* source, Vector2i size)
-        {
-            var sizeBytes = size.X * size.Y * 4;
+        protected override bool GenerateTexture(ref IntPtr texture_handle, byte[] source, Vector2i size)
+        {            
             var pixels = new ColorRgba[size.X * size.Y];
 
             int i = 0, j = 0;
-            while (i < sizeBytes)
+            while (i < source.Length)
             {
                 pixels[j].R = source[i++];
                 pixels[j].G = source[i++];
@@ -111,12 +110,12 @@ namespace FellSky.ThirdParty.LibRocket
             return true;
         }
 
-        private unsafe VertexC1P3T2[] GetVertices(Vertex* vertices, int numVertices, int* indices, int numIndices)
+        private VertexC1P3T2[] GetVertices(Vertex[] vertices, int[] indices)
         {
-            if (numVertices > _vtxBuffer.Length)
-                _vtxBuffer = new VertexC1P3T2[numIndices];
+            if (vertices.Length > _vtxBuffer.Length)
+                _vtxBuffer = new VertexC1P3T2[indices.Length];
             float pixelOffset = MathF.RoundToInt(_device.TargetSize.X) != (MathF.RoundToInt(_device.TargetSize.X) / 2) * 2 ? 0.5f : 0f;
-            for (int i = 0; i < numIndices; i++)
+            for (int i = 0; i < indices.Length; i++)
             {
                 var vtx = vertices[indices[i]];
                 var vtx2 = new VertexC1P3T2
@@ -166,14 +165,14 @@ namespace FellSky.ThirdParty.LibRocket
             }
         }
 
-        protected override unsafe void RenderGeometry(Vertex* vertices, int num_vertices, int* indices, int num_indices, IntPtr texture, Vector2f translation)
+        protected override void RenderGeometry(Vertex[] vertices, int[] indices, IntPtr texture, Vector2f translation)
         {
             if (_device == null || Technique == null)
                 return;
             var batchInfo = new BatchInfo(Technique, ColorRgba.White, _textures[texture]);
             batchInfo.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
             SetClipRect(batchInfo);
-            _device.AddVertices(batchInfo, VertexMode.Triangles, GetVertices(vertices, num_vertices, indices, num_indices), num_indices);
+            _device.AddVertices(batchInfo, VertexMode.Triangles, GetVertices(vertices, indices), indices.Length);
         }
 
     }

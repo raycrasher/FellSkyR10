@@ -112,9 +112,6 @@
     <Compile Include="SpaceLayer\Components\SpaceObject.cs" />
     <Compile Include="SpaceLayer\Components\StarSystem.cs" />
     <Compile Include="SpaceLayer\MapGenerator.cs" />
-    <Compile Include="ThirdParty\LibRocket\GuiCore.cs" />
-    <Compile Include="ThirdParty\LibRocket\LibRocketRendererInterface.cs" />
-    <Compile Include="ThirdParty\LibRocket\LibRocketSystemInterface.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +123,12 @@
   <ItemGroup>
     <Folder Include="CombatLayer\" />
     <Folder Include="GroundLayer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Duality.LibRocket\Duality.LibRocket.csproj">
+      <Project>{464a8624-a8a1-47d8-be2b-8157751098d3}</Project>
+      <Name>Duality.LibRocket</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

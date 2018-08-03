@@ -7,6 +7,8 @@ Plugins/Gwen.dll
 Plugins/Gwen.pdb
 Plugins/FellSky.Common.core.dll
 Plugins/FellSky.Common.core.pdb
+Plugins/Duality.Librocket.core.dll
+Plugins/Duality.Librocket.core.pdb
 Source/Code/Duality.Gwen/bin
 Source/Code/Duality.Gwen/obj
 Source/Code/FellSky/bin
@@ -18,6 +20,8 @@ Source/Code/FellSky.GfxTool/obj
 Source/Code/FellSky.Common/bin
 Source/Code/FellSky.Common/obj
 Source/Code/FellSky.Utility
+Source/Code/Duality.Librocket/bin
+Source/Code/Duality.Librocket/obj
 Source/Packages/IconCache
 Source/Code/Packages
 Temp

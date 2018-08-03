@@ -9,13 +9,15 @@ using Duality.Input;
 using Duality.Drawing;
 using Duality.Resources;
 
-namespace FellSky.ThirdParty.LibRocket
+namespace Duality.LibRocket
 {
     public class GuiCore
     {
         public LibRocketSystemInterface SystemInterface { get; private set; }
         public LibRocketRendererInterface RendererInterface { get; private set; }
         public Context CoreContext { get; private set; }
+
+        public static GuiCore Instance => LibRocketCorePlugin.GuiCore;
 
         private int _lastRenderFrame = -1;
 

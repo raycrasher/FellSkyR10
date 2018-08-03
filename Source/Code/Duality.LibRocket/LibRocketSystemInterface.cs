@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FellSky.ThirdParty.LibRocket
+namespace Duality.LibRocket
 {
     public class LibRocketSystemInterface: LibRocketNet.SystemInterface
     {

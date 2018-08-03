@@ -10,6 +10,6 @@ namespace FellSky
 {
     public class FellSkyAppData
     {
-        public ContentRef<DrawTechnique> GuiDrawTechnique { get; set; }
+        public Dictionary<string, string> GuiFontPaths { get; set; } = new Dictionary<string, string>();
     }
 }

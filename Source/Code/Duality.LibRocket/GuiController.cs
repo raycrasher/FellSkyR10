@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 using Duality.Drawing;
 using Duality.Resources;
 
-namespace FellSky.Components
+namespace Duality.LibRocket
 {
+    [Editor.EditorHintCategory("LibRocket")]
     public class GuiController : Renderer, ICmpUpdatable
     {
         public override float BoundRadius => 300;
@@ -17,12 +18,12 @@ namespace FellSky.Components
 
         public override void Draw(IDrawDevice device)
         {
-            FellSkyCorePlugin.GuiCore?.Draw(device, (DrawTechnique)Technique);
+            LibRocketCorePlugin.GuiCore?.Draw(device, (DrawTechnique)Technique);
         }
 
         void ICmpUpdatable.OnUpdate()
         {
-            FellSkyCorePlugin.GuiCore?.Update();
+            LibRocketCorePlugin.GuiCore?.Update();
         }
     }
 }

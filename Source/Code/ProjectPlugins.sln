@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FellSky.Editor", "FellSky.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FellSky.GfxTool", "FellSky.GfxTool\FellSky.GfxTool.csproj", "{3B384CC5-7ED5-4159-ACD8-A3464F3CAF46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duality.LibRocket", "Duality.LibRocket\Duality.LibRocket.csproj", "{464A8624-A8A1-47D8-BE2B-8157751098D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +29,15 @@ Global
 		{3B384CC5-7ED5-4159-ACD8-A3464F3CAF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B384CC5-7ED5-4159-ACD8-A3464F3CAF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B384CC5-7ED5-4159-ACD8-A3464F3CAF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{464A8624-A8A1-47D8-BE2B-8157751098D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464A8624-A8A1-47D8-BE2B-8157751098D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464A8624-A8A1-47D8-BE2B-8157751098D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464A8624-A8A1-47D8-BE2B-8157751098D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEBC99C6-FCC3-4316-9706-BEE91AE04AD2}
 	EndGlobalSection
 EndGlobal
