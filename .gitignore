@@ -33,3 +33,4 @@ UserData.dat
 *.suo
 EditorUserData.xml
 .vs
+*.user
