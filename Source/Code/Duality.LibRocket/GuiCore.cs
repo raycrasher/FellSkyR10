@@ -8,6 +8,8 @@ using LibRocketNet;
 using Duality.Input;
 using Duality.Drawing;
 using Duality.Resources;
+using System.Xml.Linq;
+using System.IO;
 
 namespace Duality.LibRocket
 {
@@ -25,13 +27,14 @@ namespace Duality.LibRocket
         {
             SystemInterface = new LibRocketSystemInterface();
             RendererInterface = new LibRocketRendererInterface();
-            RendererInterface.Technique = (DrawTechnique) ContentProvider.GetLoadedContent<DrawTechnique>().FirstOrDefault(s => s.Name == "GuiDrawTechnique");
             LibRocketNet.Core.SystemInterface = SystemInterface;
             LibRocketNet.Core.RenderInterface = RendererInterface;
 
             LibRocketNet.Core.Initialize();
             CoreContext = LibRocketNet.Core.CreateContext("DualityMainContext", new Vector2i(1000, 1000), RendererInterface);
             Core.InitDebugger(CoreContext);
+
+            LoadFontFaces();
 
             DualityApp.Keyboard.KeyDown += OnKeyDown;
             DualityApp.Keyboard.KeyUp += OnKeyUp;
@@ -40,6 +43,32 @@ namespace Duality.LibRocket
             DualityApp.Mouse.Move += OnMouseMove;
 
             //Core.ScriptEvent += OnScriptEvent;
+        }
+
+        private void LoadFontFaces()
+        {
+            try
+            {
+                if (File.Exists("librocket.xml"))
+                {
+                    var doc = XDocument.Load("librocket.xml");
+                    doc?.Element("librocket")?.Element("fonts")?.Elements("font")?.Select(e =>
+                            (path: e.Attribute("path")?.Value,
+                             family: e.Attribute("family")?.Value,
+                             style: e.Attribute("style")?.Value == "italic" ? LibRocketNet.FontStyle.Italic : LibRocketNet.FontStyle.Normal,
+                             weight: e.Attribute("weight")?.Value == "bold" ? LibRocketNet.FontWeight.Bold : LibRocketNet.FontWeight.Normal))
+                        ?.Where(e =>
+                            !string.IsNullOrWhiteSpace(e.path) && File.Exists(e.path) &&
+                            !string.IsNullOrWhiteSpace(e.family))
+                        ?.ToList()
+                        ?.ForEach(font => LibRocketNet.Core.LoadFontFace(font.path, font.family, font.style, font.weight));
+                }                
+            }
+            catch (Exception ex)
+            {
+                Logs.Game.WriteError("Error loading fonts from librocket.xml");
+                Logs.Game.WriteError(ex.ToString());
+            }
         }
 
         public void Update()

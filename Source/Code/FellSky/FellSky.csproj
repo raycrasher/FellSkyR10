@@ -75,8 +75,6 @@
     <Compile Include="Components\CameraController.cs" />
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\GameController.cs" />
-    <Compile Include="Components\GuiController.cs" />
-    <Compile Include="Components\Gui\GuiDocument.cs" />
     <Compile Include="Components\Hardpoint.cs" />
     <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
