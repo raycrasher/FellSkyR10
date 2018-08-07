@@ -44,6 +44,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GuiController.cs" />
+    <Compile Include="GuiDocument.cs" />
     <Compile Include="LibRocketCorePlugin.cs" />
     <Compile Include="GuiCore.cs" />
     <Compile Include="LibRocketRendererInterface.cs" />

@@ -17,8 +17,19 @@ namespace Duality.LibRocket
     {
         [DontSerialize]
         private ElementDocument _document;
+        private string _filename;
 
-        public string Filename { get; set; }
+        public string Filename {
+            get => _filename;
+            set
+            {                
+                if (_filename != value)
+                {
+                    _filename = value;
+                    Reload();
+                }
+            }
+        }
         
         [EditorHintFlags(MemberFlags.Invisible)]
         public ElementDocument Document { get => _document; }
@@ -31,7 +42,6 @@ namespace Duality.LibRocket
                 if(_document != null)
                 {
                     _document.Close();
-                    _document.Dispose();
                 }
                 _document = LibRocketCorePlugin.GuiCore?.CoreContext?.LoadDocument(Filename);
             }
