@@ -1,0 +1,8 @@
+<librocket>
+	<fonts>
+		<font path="Data/Fonts/TitilliumWeb-Bold.ttf" family="Titillium" weight="bold"/>
+		<font path="Data/Fonts/TitilliumWeb-BoldItalic.ttf" family="Titillium" weight="bold" style="italic"/>
+		<font path="Data/Fonts/TitilliumWeb-Italic.ttf" family="Titillium" style="italic"/>
+		<font path="Data/Fonts/TitilliumWeb-Regular.ttf" family="Titillium" />
+	</fonts>
+</librocket>

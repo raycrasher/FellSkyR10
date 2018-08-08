@@ -10484,7 +10484,7 @@
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
-          <item dataType="Struct" type="FellSky.Components.GuiController" id="950315654">
+          <item dataType="Struct" type="Duality.LibRocket.GuiController" id="132414963">
             <_x003C_Technique_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
               <contentPath dataType="String">Data\Gfx\GuiDrawTechnique.DrawTechnique.res</contentPath>
             </_x003C_Technique_x003E_k__BackingField>
@@ -10500,11 +10500,11 @@
         <body>
           <keys dataType="Array" type="System.Object[]" id="2919065271">
             <item dataType="ObjectRef">3039774592</item>
-            <item dataType="Type" id="1103414158" value="FellSky.Components.GuiController" />
+            <item dataType="Type" id="1103414158" value="Duality.LibRocket.GuiController" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="2703717184">
             <item dataType="ObjectRef">298221121</item>
-            <item dataType="ObjectRef">950315654</item>
+            <item dataType="ObjectRef">132414963</item>
           </values>
         </body>
       </compMap>
@@ -10517,6 +10517,42 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Gui</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1610333515">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="473665081">
+        <_items dataType="Array" type="Duality.Component[]" id="1956135118" length="4">
+          <item dataType="Struct" type="Duality.LibRocket.GuiDocument" id="2681482092">
+            <_x003C_Filename_x003E_k__BackingField dataType="String">Data\Gui\mainMenu.rml</_x003C_Filename_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1610333515</gameobj>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="727095552" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="3055356307">
+            <item dataType="Type" id="1056568550" value="Duality.LibRocket.GuiDocument" />
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="1731670776">
+            <item dataType="ObjectRef">2681482092</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="2701258361">8eVjjwQnSk+ThiUPVxjPzA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">document1</name>
       <parent />
       <prefabLink />
     </item>
