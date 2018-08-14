@@ -8,28 +8,22 @@ namespace Duality.LibRocket
 {
     public class LibRocketCorePlugin: CorePlugin
     {
-        private static GuiCore _guiCore;
+        
 
-        public static GuiCore GuiCore { get => _guiCore; }
+        public static GuiCore GuiCore { get; private set; }
 
         protected override void InitPlugin()
         {
-            _guiCore = GuiCore ?? new GuiCore();
-            _guiCore.Initialize();
-            
+            GuiCore = GuiCore ?? new GuiCore();
+            GuiCore.Initialize();
             base.InitPlugin();
-        }
-
-        protected override void OnExecContextChanged(DualityApp.ExecutionContext previousContext)
-        {
-            base.OnExecContextChanged(previousContext);
         }
 
         protected override void OnDisposePlugin()
         {
             base.OnDisposePlugin();
-            _guiCore.Shutdown();
-            _guiCore = null;
+            GuiCore.Shutdown();
+            GuiCore = null;
 
         }
     }
