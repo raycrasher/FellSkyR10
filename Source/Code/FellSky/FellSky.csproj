@@ -26,7 +26,7 @@
     </DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>latest</LangVersion>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -74,7 +74,9 @@
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\CameraController.cs" />
     <Compile Include="Components\ClickableBody.cs" />
+    <Compile Include="Components\Device.cs" />
     <Compile Include="Components\GameController.cs" />
+    <Compile Include="Components\GuiEventForwarder.cs" />
     <Compile Include="Components\Hardpoint.cs" />
     <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Components\Pawn.cs" />
     <Compile Include="Components\PlayerController.cs" />
     <Compile Include="Components\Ship.cs" />
+    <Compile Include="Components\ShipViewController.cs" />
     <Compile Include="Components\SpriteGlowEffect.cs" />
     <Compile Include="Components\Thruster.cs" />
     <Compile Include="Components\TrailEffect.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="FellSkyAppData.cs" />
     <Compile Include="FellSkyCorePlugin.cs" />
     <Compile Include="Gui\GuiEventArgs.cs" />
+    <Compile Include="MainMenu\MainMenuController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Health.cs" />
     <Compile Include="SpaceLayer\Components\SpaceObject.cs" />

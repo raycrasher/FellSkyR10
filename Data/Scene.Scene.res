@@ -29,10 +29,6 @@
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
-          <item dataType="Struct" type="Duality.Components.VelocityTracker" id="82939610">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">2306772439</gameobj>
-          </item>
           <item dataType="Struct" type="Duality.Components.Camera" id="3853158916">
             <active dataType="Bool">true</active>
             <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba">
@@ -59,6 +55,10 @@
               <Y dataType="Float">0</Y>
             </targetRect>
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.VelocityTracker" id="82939610">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2306772439</gameobj>
           </item>
           <item dataType="Struct" type="Duality.Components.SoundListener" id="44457670">
             <active dataType="Bool">true</active>
@@ -1069,7 +1069,7 @@
                 </changes>
                 <obj dataType="ObjectRef">2209336920</obj>
                 <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-                  <contentPath dataType="String">Data\Prefabs\FastFrigate.Prefab.res</contentPath>
+                  <contentPath dataType="String">Data\Prefabs\ships\FastFrigate.Prefab.res</contentPath>
                 </prefab>
               </prefabLink>
             </targetObj>
@@ -1882,7 +1882,7 @@
         </changes>
         <obj dataType="ObjectRef">787706869</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\Prefabs\patrolfrigate.Prefab.res</contentPath>
+          <contentPath dataType="String">Data\Prefabs\ships\patrolfrigate.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
     </item>
@@ -2925,7 +2925,7 @@
         </changes>
         <obj dataType="ObjectRef">3311095958</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\Prefabs\SmallTanker.Prefab.res</contentPath>
+          <contentPath dataType="String">Data\Prefabs\ships\SmallTanker.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
     </item>
@@ -6728,7 +6728,7 @@
         </changes>
         <obj dataType="ObjectRef">3081597339</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\Prefabs\alienCruiser.Prefab.res</contentPath>
+          <contentPath dataType="String">Data\Prefabs\ships\alienCruiser.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
     </item>
@@ -10144,7 +10144,7 @@
         </changes>
         <obj dataType="ObjectRef">2517943780</obj>
         <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\Prefabs\alien_capship.Prefab.res</contentPath>
+          <contentPath dataType="String">Data\Prefabs\ships\alien_capship.Prefab.res</contentPath>
         </prefab>
       </prefabLink>
     </item>
@@ -10411,8 +10411,8 @@
               <Y dataType="Float">11</Y>
               <Z dataType="Float">5000</Z>
             </posAbs>
-            <scale dataType="Float">10</scale>
-            <scaleAbs dataType="Float">10</scaleAbs>
+            <scale dataType="Float">20</scale>
+            <scaleAbs dataType="Float">20</scaleAbs>
           </item>
           <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="654096542">
             <active dataType="Bool">true</active>
@@ -10426,16 +10426,16 @@
             <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
             <gameobj dataType="ObjectRef">3480444558</gameobj>
             <offset dataType="Float">0</offset>
-            <pixelGrid dataType="Bool">false</pixelGrid>
+            <pixelGrid dataType="Bool">true</pixelGrid>
             <rect dataType="Struct" type="Duality.Rect">
-              <H dataType="Float">6496</H>
-              <W dataType="Float">7920</W>
-              <X dataType="Float">-3960</X>
-              <Y dataType="Float">-3248</Y>
+              <H dataType="Float">8192</H>
+              <W dataType="Float">8192</W>
+              <X dataType="Float">-4096</X>
+              <Y dataType="Float">-4096</Y>
             </rect>
-            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="WrapBoth" value="3" />
             <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath dataType="String">Data\Gfx\water.Material.res</contentPath>
+              <contentPath dataType="String">Data\Gfx\bg2.Material.res</contentPath>
             </sharedMat>
             <spriteIndex dataType="Int">-1</spriteIndex>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
@@ -10526,7 +10526,7 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="473665081">
         <_items dataType="Array" type="Duality.Component[]" id="1956135118" length="4">
           <item dataType="Struct" type="Duality.LibRocket.GuiDocument" id="2681482092">
-            <_x003C_Filename_x003E_k__BackingField dataType="String">Data\Gui\mainMenu.rml</_x003C_Filename_x003E_k__BackingField>
+            <_filename dataType="String">Data/Gui/mainMenu.rml</_filename>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">1610333515</gameobj>
           </item>
@@ -10553,6 +10553,59 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">document1</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="145180118">
+      <active dataType="Bool">false</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2223557248">
+        <_items dataType="Array" type="Duality.Component[]" id="4104611228" length="4">
+          <item dataType="Struct" type="Duality.Components.Diagnostics.ProfileRenderer" id="1955531094">
+            <active dataType="Bool">false</active>
+            <counterGraphs dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="3233771022">
+              <_items dataType="Array" type="System.String[]" id="3522375632">
+                <item dataType="String">Duality\Frame</item>
+                <item dataType="String">Duality\Frame\Render</item>
+                <item dataType="String">Duality\Frame\Update</item>
+                <item dataType="String">Duality\Stats\Memory\TotalUsage</item>
+              </_items>
+              <_size dataType="Int">4</_size>
+            </counterGraphs>
+            <drawGraphs dataType="Bool">true</drawGraphs>
+            <gameobj dataType="ObjectRef">145180118</gameobj>
+            <keyResetCounters dataType="Enum" type="Duality.Input.Key" name="F5" value="14" />
+            <keyToggleGraph dataType="Enum" type="Duality.Input.Key" name="F4" value="13" />
+            <keyToggleTextPerf dataType="Enum" type="Duality.Input.Key" name="F2" value="11" />
+            <keyToggleTextStat dataType="Enum" type="Duality.Input.Key" name="F3" value="12" />
+            <textReportOptions dataType="Enum" type="Duality.ProfileReportOptions" name="LastValue, MaxValue, Header, OmitMinorValues" value="40977" />
+            <textReportPerf dataType="Bool">true</textReportPerf>
+            <textReportStat dataType="Bool">true</textReportStat>
+            <updateInterval dataType="Int">250</updateInterval>
+          </item>
+        </_items>
+        <_size dataType="Int">1</_size>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3369900238" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="2832616018">
+            <item dataType="Type" id="2025915728" value="Duality.Components.Diagnostics.ProfileRenderer" />
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="683416266">
+            <item dataType="ObjectRef">1955531094</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform />
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3189727458">0YhyTTuY/kaaktFsAONnZA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">debug</name>
       <parent />
       <prefabLink />
     </item>

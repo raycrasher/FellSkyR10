@@ -16,7 +16,13 @@ namespace Duality.LibRocket
         {
             _guiCore = GuiCore ?? new GuiCore();
             _guiCore.Initialize();
+            
             base.InitPlugin();
+        }
+
+        protected override void OnExecContextChanged(DualityApp.ExecutionContext previousContext)
+        {
+            base.OnExecContextChanged(previousContext);
         }
 
         protected override void OnDisposePlugin()

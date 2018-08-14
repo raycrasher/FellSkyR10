@@ -30,7 +30,8 @@ namespace FellSky
                 ((EventHandler<T>)handler)(source, data);
             }
         }
-        public void AddHandler<T>(EventHandler<T> handler)
+
+/*        public void AddHandler<T>(EventHandler<T> handler)
         {
             var type = typeof(T);
             if (!_eventHandlers.TryGetValue(type, out var existingHandler))
@@ -55,10 +56,12 @@ namespace FellSky
                 _eventHandlers[type] = typedExistingHandler;
             }
         }
+*/
     }
 
     public static class EventExtensions
     {
+        /*
         public static void AddEventHandler<T>(this Scene scene, EventHandler<T> handler)
         {
             var gObj = scene.FindGameObject<SceneEventHandler>();
@@ -82,10 +85,16 @@ namespace FellSky
             }
             gObj.GetComponent<SceneEventHandler>().RemoveHandler(handler);
         }
+        */
 
         public static void FireEvent<T>(this Scene scene, object source, T data)
             where T : EventArgs
         {
+            foreach(var cmp in scene.FindComponents<IEventHandler<T>>())
+            {
+                cmp.HandleEvent(source, data);
+            }
+            /*
             var gObj = scene.FindGameObject<SceneEventHandler>();
             if (gObj == null)
             {
@@ -94,6 +103,7 @@ namespace FellSky
                 scene.AddObject(gObj);
             }
             gObj.GetComponent<SceneEventHandler>().HandleEvent(source, data);
+            */
         }
 
         public static void FireEvent<T>(this GameObject obj, object source, T data, EventScope scope = EventScope.Object)
