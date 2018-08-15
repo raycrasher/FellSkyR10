@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
-    public class CameraController : Component, ICmpUpdatable
+    public class ShipCameraController : Component, ICmpUpdatable
     {
         private float smoothness = 1.0f;
         private GameObject targetObj = null;

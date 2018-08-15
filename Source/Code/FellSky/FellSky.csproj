@@ -72,7 +72,10 @@
     <Compile Include="Components\BeamProjectile.cs" />
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
-    <Compile Include="Components\CameraController.cs" />
+    <Compile Include="Components\MapController.cs" />
+    <Compile Include="Components\MapObject.cs" />
+    <Compile Include="Components\MapRenderer.cs" />
+    <Compile Include="Components\ShipCameraController.cs" />
     <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\Device.cs" />
     <Compile Include="Components\GameController.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Components\Hardpoint.cs" />
     <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\IProjectile.cs" />
+    <Compile Include="Components\MapCameraController.cs" />
     <Compile Include="Components\Mothership.cs" />
     <Compile Include="Components\Pawn.cs" />
     <Compile Include="Components\PlayerController.cs" />
