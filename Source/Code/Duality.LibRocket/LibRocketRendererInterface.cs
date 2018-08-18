@@ -29,8 +29,8 @@ namespace Duality.LibRocket
             public ContentRef<Texture> Texture;
         }
 
-        Dictionary<IntPtr, Geometry> _geometries = new Dictionary<IntPtr, Geometry>();
-        
+        //Dictionary<IntPtr, Geometry> _geometries = new Dictionary<IntPtr, Geometry>();
+        Dictionary<IntPtr, DrawBatch> _geometries = new Dictionary<IntPtr, DrawBatch>();
 
         public DrawTechnique Technique { get; set; }
 
@@ -54,15 +54,13 @@ namespace Duality.LibRocket
         }
 
         protected override IntPtr CompileGeometry(Vertex[] vertices, int[] indices, IntPtr texture)
-        {
-
-            var geom = new Geometry
-            {
-                Vertices = GetVertices(vertices, indices).Take(indices.Length).ToArray(),
-                Texture = _textures[texture]
-            };
-            var idx = (IntPtr)geom.GetHashCode();
-            _geometries[idx] = geom;
+        {   
+            var buffer = new VertexBuffer();
+            buffer.LoadVertexData(GetVertices(vertices), 0, vertices.Length);
+            buffer.LoadIndexData(indices.Select(s=>(ushort)s).ToArray(), 0, indices.Length);
+            var batch = new DrawBatch(buffer, null, VertexMode.Triangles, new BatchInfo(Technique, ColorRgba.TransparentWhite, _textures[texture]));
+            var idx = (IntPtr)batch.GetHashCode();
+            _geometries[idx] = batch;
             return idx;
         }
 
@@ -70,11 +68,13 @@ namespace Duality.LibRocket
         {
             if (_device == null || Technique == null)
                 return;
-            var geom = _geometries[geometry];
-            var batchInfo = new BatchInfo(Technique, ColorRgba.TransparentWhite, geom.Texture);
-            SetClipRect(batchInfo);
-            batchInfo.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
-            _device.AddVertices(batchInfo, VertexMode.Triangles, geom.Vertices);
+            var batch = _geometries[geometry];
+            SetClipRect(batch.Material);
+            if (batch.Material.Technique != Technique)
+                batch.Material.Technique = Technique;
+            batch.Material.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
+            _device.AddBatch(batch);
+            //_device.AddVertices(batchInfo, VertexMode.Triangles, batch.Vertices);
         }
 
         protected override void ReleaseCompiledGeometry(IntPtr geometry)
@@ -108,6 +108,24 @@ namespace Duality.LibRocket
             texture_handle = new IntPtr(texture.GetHashCode());
             _textures[texture_handle] = texture;
             return true;
+        }
+
+        private VertexC1P3T2[] GetVertices(Vertex[] vertices)
+        {
+            var newVerts = new VertexC1P3T2[vertices.Length];
+            float pixelOffset = MathF.RoundToInt(_device.TargetSize.X) != (MathF.RoundToInt(_device.TargetSize.X) / 2) * 2 ? 0.5f : 0f;
+            for(int i = 0; i < vertices.Length; i++)
+            {
+                var vtx = vertices[i];
+                newVerts[i] = new VertexC1P3T2
+                {
+                    Color = new ColorRgba(vtx.Color.R, vtx.Color.G, vtx.Color.B, vtx.Color.A),
+                    Pos = new Vector3(MathF.Round(vtx.Position.X) + pixelOffset, MathF.Round(vtx.Position.Y) + pixelOffset, ZIndex),
+                    TexCoord = new Vector2(vtx.TexCoords.X, vtx.TexCoords.Y)
+                };
+            }
+
+            return newVerts;
         }
 
         private VertexC1P3T2[] GetVertices(Vertex[] vertices, int[] indices)
@@ -169,7 +187,11 @@ namespace Duality.LibRocket
         {
             if (_device == null || Technique == null)
                 return;
-            var batchInfo = new BatchInfo(Technique, ColorRgba.White, _textures[texture]);
+            
+            var batchInfo = _device.RentMaterial();
+            batchInfo.Technique = Technique;
+            batchInfo.MainColor = ColorRgba.White;
+            batchInfo.MainTexture = _textures[texture];
             batchInfo.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
             SetClipRect(batchInfo);
             _device.AddVertices(batchInfo, VertexMode.Triangles, GetVertices(vertices, indices), indices.Length);

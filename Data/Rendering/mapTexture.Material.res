@@ -4,12 +4,12 @@
     <parameters dataType="Struct" type="Duality.Drawing.ShaderParameterCollection" id="1100841590" custom="true">
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Gfx\kaesprites.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Rendering\mapTexture.Texture.res</contentPath>
         </mainTex>
       </body>
     </parameters>
     <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
-      <contentPath dataType="String">Default:DrawTechnique:Alpha</contentPath>
+      <contentPath dataType="String">Default:DrawTechnique:Mask</contentPath>
     </technique>
   </info>
 </root>
