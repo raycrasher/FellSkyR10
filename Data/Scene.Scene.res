@@ -980,82 +980,8 @@
                       <parent dataType="ObjectRef">2209336920</parent>
                       <prefabLink />
                     </item>
-                    <item dataType="Struct" type="Duality.GameObject" id="2203720792">
-                      <active dataType="Bool">true</active>
-                      <children />
-                      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1341116712">
-                        <_items dataType="Array" type="Duality.Component[]" id="1683900332" length="4">
-                          <item dataType="Struct" type="Duality.Components.Transform" id="2260998010">
-                            <active dataType="Bool">true</active>
-                            <angle dataType="Float">0</angle>
-                            <angleAbs dataType="Float">0</angleAbs>
-                            <gameobj dataType="ObjectRef">2203720792</gameobj>
-                            <ignoreParent dataType="Bool">false</ignoreParent>
-                            <pos dataType="Struct" type="Duality.Vector3" />
-                            <posAbs dataType="Struct" type="Duality.Vector3">
-                              <X dataType="Float">-292</X>
-                              <Y dataType="Float">-108.000008</Y>
-                              <Z dataType="Float">0</Z>
-                            </posAbs>
-                            <scale dataType="Float">1</scale>
-                            <scaleAbs dataType="Float">1</scaleAbs>
-                          </item>
-                          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3672340072">
-                            <active dataType="Bool">true</active>
-                            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
-                              <A dataType="Byte">255</A>
-                              <B dataType="Byte">255</B>
-                              <G dataType="Byte">255</G>
-                              <R dataType="Byte">255</R>
-                            </colorTint>
-                            <customMat />
-                            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
-                            <gameobj dataType="ObjectRef">2203720792</gameobj>
-                            <offset dataType="Float">0</offset>
-                            <pixelGrid dataType="Bool">false</pixelGrid>
-                            <rect dataType="Struct" type="Duality.Rect">
-                              <H dataType="Float">256</H>
-                              <W dataType="Float">256</W>
-                              <X dataType="Float">-128</X>
-                              <Y dataType="Float">-128</Y>
-                            </rect>
-                            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
-                            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-                              <contentPath dataType="String">Default:Material:DualityIcon</contentPath>
-                            </sharedMat>
-                            <spriteIndex dataType="Int">-1</spriteIndex>
-                            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group1" value="2" />
-                          </item>
-                        </_items>
-                        <_size dataType="Int">2</_size>
-                      </compList>
-                      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="525629598" surrogate="true">
-                        <header />
-                        <body>
-                          <keys dataType="Array" type="System.Object[]" id="1791322858">
-                            <item dataType="ObjectRef">1186510720</item>
-                            <item dataType="ObjectRef">3595658446</item>
-                          </keys>
-                          <values dataType="Array" type="System.Object[]" id="2206825434">
-                            <item dataType="ObjectRef">2260998010</item>
-                            <item dataType="ObjectRef">3672340072</item>
-                          </values>
-                        </body>
-                      </compMap>
-                      <compTransform dataType="ObjectRef">2260998010</compTransform>
-                      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-                        <header>
-                          <data dataType="Array" type="System.Byte[]" id="228062026">5d3Uqv/rAkC5wDnY4Nah7w==</data>
-                        </header>
-                        <body />
-                      </identifier>
-                      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-                      <name dataType="String">shipTracker</name>
-                      <parent dataType="ObjectRef">2209336920</parent>
-                      <prefabLink />
-                    </item>
                   </_items>
-                  <_size dataType="Int">23</_size>
+                  <_size dataType="Int">22</_size>
                 </children>
                 <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3777683466">
                   <_items dataType="Array" type="Duality.Component[]" id="2788914588">
@@ -10736,15 +10662,33 @@
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
           <item dataType="Struct" type="FellSky.Components.MapController" id="1303023225">
-            <_isMapVisible dataType="Bool">false</_isMapVisible>
+            <_hudMapMode dataType="Enum" type="FellSky.Components.HudMapMode" name="Minimap" value="0" />
+            <_x003C_MiniMapSize_x003E_k__BackingField dataType="Float">0.3</_x003C_MiniMapSize_x003E_k__BackingField>
             <_x003C_RenderSetup_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderSetup]]">
               <contentPath dataType="String">Data\Rendering\RenderSetup.RenderSetup.res</contentPath>
             </_x003C_RenderSetup_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">512890155</gameobj>
           </item>
+          <item dataType="Struct" type="FellSky.Components.MapRenderer" id="3542425734">
+            <_x003C_BackgroundColor_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">206</A>
+              <B dataType="Byte">0</B>
+              <G dataType="Byte">0</G>
+              <R dataType="Byte">40</R>
+            </_x003C_BackgroundColor_x003E_k__BackingField>
+            <_x003C_GridColor_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">47</B>
+              <G dataType="Byte">102</G>
+              <R dataType="Byte">252</R>
+            </_x003C_GridColor_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">512890155</gameobj>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group1" value="2" />
+          </item>
         </_items>
-        <_size dataType="Int">2</_size>
+        <_size dataType="Int">3</_size>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="4260236315" surrogate="true">
         <header />
@@ -10752,10 +10696,12 @@
           <keys dataType="Array" type="System.Object[]" id="3883466452">
             <item dataType="Type" id="1605209828" value="FellSky.Components.MapController" />
             <item dataType="ObjectRef">1186510720</item>
+            <item dataType="Type" id="1762219542" value="FellSky.Components.MapRenderer" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="1229027766">
             <item dataType="ObjectRef">1303023225</item>
             <item dataType="ObjectRef">570167373</item>
+            <item dataType="ObjectRef">3542425734</item>
           </values>
         </body>
       </compMap>
@@ -10913,7 +10859,6 @@
     <item dataType="ObjectRef">3120420661</item>
     <item dataType="ObjectRef">920817963</item>
     <item dataType="ObjectRef">1274533605</item>
-    <item dataType="ObjectRef">2203720792</item>
     <item dataType="ObjectRef">484552409</item>
     <item dataType="ObjectRef">3038381908</item>
     <item dataType="ObjectRef">3319073449</item>

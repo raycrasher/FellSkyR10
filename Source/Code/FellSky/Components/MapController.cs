@@ -9,14 +9,26 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    public enum HudMapMode { Minimap, Full }
     public class MapController : Component, ICmpUpdatable, ICmpInitializable
-    {
-        [DontSerialize]
-        HashSet<MapObject> _objects;
-        private bool _isMapVisible;
+    {        
+        private HudMapMode _hudMapMode;
 
-        public HashSet<MapObject> Objects => _objects;
+        
         public ContentRef<RenderSetup> RenderSetup  { get; set; }
+        public GameObject MapCamera { get; set; }
+        public HudMapMode HudMapMode {
+            get => _hudMapMode;
+            set
+            {
+                if(_hudMapMode != value)
+                {
+                    _hudMapMode = value;
+                    RefreshMapSize();
+                }
+            }
+        }
+        public float MiniMapSize { get; set; } = 0.3f;
 
         void ICmpUpdatable.OnUpdate()
         {
@@ -27,43 +39,36 @@ namespace FellSky.Components
         {
             if (DualityApp.Keyboard.KeyHit(Duality.Input.Key.Tab))
             {
-                _isMapVisible = !_isMapVisible;
-                if (RenderSetup.IsAvailable && RenderSetup.Res.Steps.Count >= 2)
+                HudMapMode = HudMapMode == HudMapMode.Minimap ? HudMapMode.Full : HudMapMode.Minimap;
+            }
+
+        }
+
+        private void RefreshMapSize()
+        {
+            if (RenderSetup.IsAvailable && RenderSetup.Res.Steps.Count >= 2)
+            {
+                switch (HudMapMode)
                 {
-                    if (_isMapVisible)
-                    {
-                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 0, 1, 1);
-                    }
-                    else
-                    {
+                    case HudMapMode.Minimap:                        
                         var size = DualityApp.TargetViewSize;
                         var ratio = size.Y / size.X;
-                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 1 - 0.35f, 0.35f * ratio, 1f);
-                    }
+                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 1 - MiniMapSize, MiniMapSize * ratio, 1f);                        
+                        break;
+                    case HudMapMode.Full:
+                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 0, 1, 1);
+                        break;
                 }
             }
         }
 
-        public void AddObject(MapObject mapObject)
-        {
-            _objects = _objects ?? new HashSet<MapObject>();
-            _objects.Add(mapObject);
-        }
-
-        public void RemoveObject(MapObject mapObject)
-        {
-            _objects = _objects ?? new HashSet<MapObject>();
-            _objects.Remove(mapObject);
-        }
-
         void ICmpInitializable.OnActivate()
         {
-            _objects = new HashSet<MapObject>();
+            RefreshMapSize();
         }
 
         void ICmpInitializable.OnDeactivate()
         {
-            _objects = null;
         }
     }
 }

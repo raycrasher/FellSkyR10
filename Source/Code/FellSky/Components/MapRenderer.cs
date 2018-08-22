@@ -12,7 +12,7 @@ namespace FellSky.Components
     [RequiredComponent(typeof(MapController))]
     public class MapRenderer : Renderer
     {
-        public static readonly VisibilityFlag DefaultVisibilityFlags = VisibilityFlag.Group20;
+        public static readonly VisibilityFlag DefaultVisibilityFlags = VisibilityFlag.Group2;
 
         [DontSerialize]
         private Canvas _canvas;
@@ -22,6 +22,7 @@ namespace FellSky.Components
         public ColorRgba BackgroundColor { get; set; } = new ColorRgba(0x28, 0, 0, 0xCE);
         public ColorRgba GridColor { get; set; } = new ColorRgba(252,102,47);
 
+        static Vector2[] triBuffer = new Vector2[3];
 
         public MapRenderer()
         {
@@ -31,20 +32,37 @@ namespace FellSky.Components
         public override void Draw(IDrawDevice device)
         {
             _canvas = _canvas ?? new Canvas();
-
+            
             _canvas.Begin(device);
             DrawGrid(_canvas);
             DrawShips(_canvas);
-            _canvas.End();            
+            _canvas.End();
         }
 
         private void DrawShips(Canvas canvas)
         {
-            var objects = Scene.FindGameObjects<MapObject>();
+            
+            var objects = Scene.FindGameObjects<Ship>();
+            _canvas.State.ColorTint = GridColor;
+            foreach (var obj in objects)
+            {
+                canvas.FillPolygonOutline(GetTrianglePoly(obj.Transform), 30, 0, 0);
+            }
+        }
+
+        private Vector2[] GetTrianglePoly(Transform transform)
+        {
+            float scale = 50;
+            triBuffer[0] = transform.GetWorldPoint(new Vector3(5, 0,0) * scale).Xy;
+            triBuffer[1] = transform.GetWorldPoint(new Vector3(-5, 3, 0) * scale).Xy;
+            triBuffer[2] = transform.GetWorldPoint(new Vector3(-5, -3, 0) * scale).Xy;
+            return triBuffer;
+
         }
 
         private void DrawGrid(Canvas canvas)
         {
+            /*
             var camera = GameObj.GetComponent<Camera>();
             var rect = camera.TargetRect;
             var topLeft = camera.GetWorldPos(rect.TopLeft);
@@ -53,6 +71,7 @@ namespace FellSky.Components
             canvas.State.ColorTint = BackgroundColor;
             canvas.FillRect(topLeft.X, topLeft.Y, 0, size.X, size.Y);
             canvas.State.ColorTint = GridColor;
+            */
         }
     }
 }
