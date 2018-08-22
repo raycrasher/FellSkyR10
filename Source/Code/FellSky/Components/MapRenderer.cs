@@ -21,6 +21,7 @@ namespace FellSky.Components
 
         public ColorRgba BackgroundColor { get; set; } = new ColorRgba(0x28, 0, 0, 0xCE);
         public ColorRgba GridColor { get; set; } = new ColorRgba(252,102,47);
+        public float CurrentScale { get; set; } = 50;
 
         static Vector2[] triBuffer = new Vector2[3];
 
@@ -34,6 +35,8 @@ namespace FellSky.Components
             _canvas = _canvas ?? new Canvas();
             
             _canvas.Begin(device);
+            var controller = GameObj.GetComponent<MapController>();
+            CurrentScale = controller.HudMapMode == HudMapMode.Full ? 50 : 80;
             DrawGrid(_canvas);
             DrawShips(_canvas);
             _canvas.End();
@@ -46,13 +49,13 @@ namespace FellSky.Components
             _canvas.State.ColorTint = GridColor;
             foreach (var obj in objects)
             {
-                canvas.FillPolygonOutline(GetTrianglePoly(obj.Transform), 30, 0, 0);
+                canvas.FillPolygonOutline(GetTrianglePoly(obj.Transform), CurrentScale * 0.6f, 0, 0);
             }
         }
 
         private Vector2[] GetTrianglePoly(Transform transform)
         {
-            float scale = 50;
+            float scale = CurrentScale;
             triBuffer[0] = transform.GetWorldPoint(new Vector3(5, 0,0) * scale).Xy;
             triBuffer[1] = transform.GetWorldPoint(new Vector3(-5, 3, 0) * scale).Xy;
             triBuffer[2] = transform.GetWorldPoint(new Vector3(-5, -3, 0) * scale).Xy;

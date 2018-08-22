@@ -28,11 +28,19 @@ namespace FellSky.Components
                 }
             }
         }
+        
+        
         public float MiniMapSize { get; set; } = 0.3f;
 
         void ICmpUpdatable.OnUpdate()
         {
             CheckForToggleVisibilityKeyPress();
+            if (MapCamera != null)
+            {
+                var playerCam = Scene.FindGameObject<PlayerController>();
+                var mapPos = MapCamera.Transform.Pos;
+                MapCamera.Transform.Pos = new Vector3(playerCam.Transform.Pos.Xy, mapPos.Z);
+            }
         }
 
         private void CheckForToggleVisibilityKeyPress()

@@ -73,7 +73,6 @@
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\MapController.cs" />
-    <Compile Include="Components\MapObject.cs" />
     <Compile Include="Components\MapRenderer.cs" />
     <Compile Include="Components\ShipCameraController.cs" />
     <Compile Include="Components\ClickableBody.cs" />
