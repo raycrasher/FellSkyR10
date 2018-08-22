@@ -1,4 +1,6 @@
 ﻿using Duality;
+using Duality.Components;
+using Duality.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +13,35 @@ namespace FellSky.Components
     {
         [DontSerialize]
         HashSet<MapObject> _objects;
+        private bool _isMapVisible;
 
         public HashSet<MapObject> Objects => _objects;
+        public ContentRef<RenderSetup> RenderSetup  { get; set; }
 
         void ICmpUpdatable.OnUpdate()
         {
-            
+            CheckForToggleVisibilityKeyPress();
+        }
+
+        private void CheckForToggleVisibilityKeyPress()
+        {
+            if (DualityApp.Keyboard.KeyHit(Duality.Input.Key.Tab))
+            {
+                _isMapVisible = !_isMapVisible;
+                if (RenderSetup.IsAvailable && RenderSetup.Res.Steps.Count >= 2)
+                {
+                    if (_isMapVisible)
+                    {
+                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 0, 1, 1);
+                    }
+                    else
+                    {
+                        var size = DualityApp.TargetViewSize;
+                        var ratio = size.Y / size.X;
+                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 1 - 0.35f, 0.35f * ratio, 1f);
+                    }
+                }
+            }
         }
 
         public void AddObject(MapObject mapObject)

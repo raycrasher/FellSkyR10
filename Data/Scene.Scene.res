@@ -17,14 +17,14 @@
             <gameobj dataType="ObjectRef">2306772439</gameobj>
             <ignoreParent dataType="Bool">false</ignoreParent>
             <pos dataType="Struct" type="Duality.Vector3">
-              <X dataType="Float">-291.999878</X>
-              <Y dataType="Float">-107.999969</Y>
-              <Z dataType="Float">-500.000122</Z>
+              <X dataType="Float">-291.999756</X>
+              <Y dataType="Float">-107.999947</Y>
+              <Z dataType="Float">-500.000366</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
-              <X dataType="Float">-291.999878</X>
-              <Y dataType="Float">-107.999969</Y>
-              <Z dataType="Float">-500.000122</Z>
+              <X dataType="Float">-291.999756</X>
+              <Y dataType="Float">-107.999947</Y>
+              <Z dataType="Float">-500.000366</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -10709,7 +10709,7 @@
       <prefabLink />
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="512890155">
-      <active dataType="Bool">false</active>
+      <active dataType="Bool">true</active>
       <children dataType="Struct" type="System.Collections.Generic.List`1[[Duality.GameObject]]" id="1933437017">
         <_items dataType="Array" type="Duality.GameObject[]" id="3118671822" length="4" />
         <_size dataType="Int">0</_size>
@@ -10717,7 +10717,7 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3440950272">
         <_items dataType="Array" type="Duality.Component[]" id="3043537011" length="8">
           <item dataType="Struct" type="Duality.Components.Transform" id="570167373">
-            <active dataType="Bool">false</active>
+            <active dataType="Bool">true</active>
             <angle dataType="Float">0</angle>
             <angleAbs dataType="Float">0</angleAbs>
             <gameobj dataType="ObjectRef">512890155</gameobj>
@@ -10736,7 +10736,11 @@
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
           <item dataType="Struct" type="FellSky.Components.MapController" id="1303023225">
-            <active dataType="Bool">false</active>
+            <_isMapVisible dataType="Bool">false</_isMapVisible>
+            <_x003C_RenderSetup_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderSetup]]">
+              <contentPath dataType="String">Data\Rendering\RenderSetup.RenderSetup.res</contentPath>
+            </_x003C_RenderSetup_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">512890155</gameobj>
           </item>
         </_items>

@@ -49,12 +49,7 @@
         <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
       </item>
       <item dataType="Struct" type="Duality.Resources.RenderStep" id="1014616010">
-        <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba">
-          <A dataType="Byte">138</A>
-          <B dataType="Byte">140</B>
-          <G dataType="Byte">78</G>
-          <R dataType="Byte">3</R>
-        </clearColor>
+        <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
         <clearDepth dataType="Float">1</clearDepth>
         <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="Depth" value="2" />
         <defaultClearColor dataType="Bool">false</defaultClearColor>
@@ -72,7 +67,7 @@
             <contentPath dataType="String">Default:DrawTechnique:Alpha</contentPath>
           </technique>
         </input>
-        <inputResize dataType="Enum" type="Duality.TargetResize" name="Stretch" value="1" />
+        <inputResize dataType="Enum" type="Duality.TargetResize" name="Fill" value="3" />
         <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]">
           <contentPath dataType="String">Data\Rendering\mainTarget.RenderTarget.res</contentPath>
         </output>

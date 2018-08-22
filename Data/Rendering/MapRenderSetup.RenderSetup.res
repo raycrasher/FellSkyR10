@@ -19,10 +19,10 @@
     <_items dataType="Array" type="Duality.Resources.RenderStep[]" id="2696347487" length="8">
       <item dataType="Struct" type="Duality.Resources.RenderStep" id="1485019246">
         <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba">
-          <A dataType="Byte">0</A>
-          <B dataType="Byte">0</B>
-          <G dataType="Byte">0</G>
-          <R dataType="Byte">255</R>
+          <A dataType="Byte">245</A>
+          <B dataType="Byte">26</B>
+          <G dataType="Byte">36</G>
+          <R dataType="Byte">52</R>
         </clearColor>
         <clearDepth dataType="Float">1</clearDepth>
         <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="All" value="3" />
