@@ -20,14 +20,7 @@ namespace Duality.LibRocket
 
         VertexC1P3T2[] _vtxBuffer = new VertexC1P3T2[2048];
 
-
         public float ZIndex { get; set; }
-
-        class Geometry
-        {
-            public VertexC1P3T2[] Vertices;
-            public ContentRef<Texture> Texture;
-        }
 
         //Dictionary<IntPtr, Geometry> _geometries = new Dictionary<IntPtr, Geometry>();
         Dictionary<IntPtr, DrawBatch> _geometries = new Dictionary<IntPtr, DrawBatch>();
