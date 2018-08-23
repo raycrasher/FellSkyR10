@@ -1,6 +1,7 @@
 ﻿using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
+using Duality.Components.Renderers;
 using Duality.Editor;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,12 @@ namespace FellSky.Components
     {
         [DontSerialize]
         private List<Thruster> _thrusters;
+        [DontSerialize]
         private List<Weapon> _weapons;
+        [DontSerialize]
+        private float _radius;
+        [DontSerialize]
+        private Vector2 _centroid;
 
         public float ManeuverSpeed { get; set; } = 10;
         public float ForwardSpeed { get; set; } = 30;
@@ -28,7 +34,18 @@ namespace FellSky.Components
         public float DesiredTorque { get; set; }
         public Vector2 Acceleration { get; private set; }
         public Rotation TurnDirection => DesiredTorque < 0 ? Rotation.CCW : DesiredTorque > 0 ? Rotation.CW : Rotation.None;
-        
+        public float Radius
+        {
+            get => _radius;
+            private set => _radius = value;
+        }
+        public Vector2 LocalCentroid
+        {
+            get => _centroid;
+            private set => _centroid = value;
+        }
+
+        public Vector2 Centroid => GameObj.Transform.GetWorldPoint(_centroid);
 
         public void UpdateEquipment()
         {
@@ -40,6 +57,14 @@ namespace FellSky.Components
         void ICmpInitializable.OnActivate()
         {
             UpdateEquipment();
+            CalculateRadius();
+        }
+
+        private void CalculateRadius()
+        {
+            var sprites = GameObj.GetComponentsDeep<SpriteRenderer>().Where(s => s.VisibilityGroup == Duality.Drawing.VisibilityFlag.Group0).ToArray();
+            Radius = sprites.Max(s => s.GameObj.Transform.LocalPos.Length + s.BoundRadius);
+            LocalCentroid = new Vector2(sprites.Average(s => s.GameObj.Transform.LocalPos.X), sprites.Average(s => s.GameObj.Transform.LocalPos.Y));
         }
 
         void ICmpInitializable.OnDeactivate()

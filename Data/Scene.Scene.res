@@ -1095,9 +1095,9 @@
             <gameobj dataType="ObjectRef">2306772439</gameobj>
             <maxZ dataType="Float">1000</maxZ>
             <minZ dataType="Float">300</minZ>
-            <smoothness dataType="Float">1</smoothness>
+            <smoothness dataType="Float">0.5</smoothness>
             <targetObj dataType="ObjectRef">2209336920</targetObj>
-            <velocityOffset dataType="Float">100</velocityOffset>
+            <velocityOffset dataType="Float">30</velocityOffset>
             <zoom dataType="Float">500</zoom>
             <zoomSpeed dataType="Float">15</zoomSpeed>
           </item>
@@ -10696,7 +10696,7 @@
                       <R dataType="Byte">0</R>
                     </clearColor>
                     <farZ dataType="Float">100000</farZ>
-                    <focusDist dataType="Float">500</focusDist>
+                    <focusDist dataType="Float">438.8101</focusDist>
                     <gameobj dataType="ObjectRef">1448010707</gameobj>
                     <nearZ dataType="Float">50</nearZ>
                     <priority dataType="Int">0</priority>
@@ -10748,6 +10748,12 @@
             <_x003C_RenderSetup_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderSetup]]">
               <contentPath dataType="String">Data\Rendering\RenderSetup.RenderSetup.res</contentPath>
             </_x003C_RenderSetup_x003E_k__BackingField>
+            <_x003C_TargetRect_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">1</H>
+              <W dataType="Float">0.165962636</W>
+              <X dataType="Float">0</X>
+              <Y dataType="Float">0.7</Y>
+            </_x003C_TargetRect_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">512890155</gameobj>
           </item>
@@ -10758,15 +10764,21 @@
               <G dataType="Byte">0</G>
               <R dataType="Byte">40</R>
             </_x003C_BackgroundColor_x003E_k__BackingField>
+            <_x003C_CurrentScale_x003E_k__BackingField dataType="Float">10</_x003C_CurrentScale_x003E_k__BackingField>
+            <_x003C_FullMapScale_x003E_k__BackingField dataType="Float">5</_x003C_FullMapScale_x003E_k__BackingField>
             <_x003C_GridColor_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
               <A dataType="Byte">255</A>
               <B dataType="Byte">47</B>
               <G dataType="Byte">102</G>
               <R dataType="Byte">252</R>
             </_x003C_GridColor_x003E_k__BackingField>
+            <_x003C_GridSize_x003E_k__BackingField dataType="Int">1000</_x003C_GridSize_x003E_k__BackingField>
+            <_x003C_Material_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Rendering\MapMaterial.Material.res</contentPath>
+            </_x003C_Material_x003E_k__BackingField>
+            <_x003C_MiniMapScale_x003E_k__BackingField dataType="Float">10</_x003C_MiniMapScale_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">512890155</gameobj>
-            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group1" value="2" />
           </item>
         </_items>
         <_size dataType="Int">3</_size>

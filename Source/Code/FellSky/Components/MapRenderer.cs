@@ -1,6 +1,7 @@
 ﻿using Duality;
 using Duality.Components;
 using Duality.Drawing;
+using Duality.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,34 +11,49 @@ using System.Threading.Tasks;
 namespace FellSky.Components
 {
     [RequiredComponent(typeof(MapController))]
-    public class MapRenderer : Renderer
+    public class MapRenderer : Component, ICmpRenderer
     {
         public static readonly VisibilityFlag DefaultVisibilityFlags = VisibilityFlag.Group2;
 
         [DontSerialize]
         private Canvas _canvas;
 
-        public override float BoundRadius => 500;
-
+        
+        public ContentRef<Material> Material { get; set; }
         public ColorRgba BackgroundColor { get; set; } = new ColorRgba(0x28, 0, 0, 0xCE);
         public ColorRgba GridColor { get; set; } = new ColorRgba(252,102,47);
-        public float CurrentScale { get; set; } = 50;
 
+        [Duality.Editor.EditorHintFlags(Duality.Editor.MemberFlags.Invisible)]
+        public float CurrentScale { get; private set; }
+        public int GridSize { get; set; } = 10000;
+        public float FullMapScale { get; set; } = 5;
+        public float MiniMapScale { get; set; } = 20;
+
+        [DontSerialize]
         Vector2[] triBuffer = new Vector2[3];
+
 
         public MapRenderer()
         {
-            this.VisibilityGroup = DefaultVisibilityFlags;
+            //this.VisibilityGroup = DefaultVisibilityFlags;
         }
 
-        public override void Draw(IDrawDevice device)
+        public void Draw(IDrawDevice device)
         {
-            _canvas = _canvas ?? new Canvas();
+            Canvas CreateCanvas()
+            {
+                var canvas = new Canvas();
+                canvas.State.SetMaterial(Material);
+                return canvas;
+            }
+
+            _canvas = _canvas ?? CreateCanvas();
             
             _canvas.Begin(device);
             var controller = GameObj.GetComponent<MapController>();
-            CurrentScale = controller.HudMapMode == HudMapMode.Full ? 50 : 80;
-            DrawGrid(_canvas);
+            CurrentScale = controller.HudMapMode == HudMapMode.Full ? FullMapScale : MiniMapScale;
+            if(controller.HudMapMode == HudMapMode.Full)
+                DrawGrid(_canvas, controller.TargetRect, controller.MapCamera.GetComponent<Camera>());
             DrawShips(_canvas);
             _canvas.End();
         }
@@ -49,32 +65,50 @@ namespace FellSky.Components
             _canvas.State.ColorTint = GridColor;
             foreach (var obj in objects)
             {
-                canvas.FillPolygonOutline(GetTrianglePoly(obj.Transform), CurrentScale * 0.6f, 0, 0);
+                canvas.FillPolygonOutline(GetShipTrianglePoly(obj.Transform, obj.GetComponent<Ship>().Radius), CurrentScale * 4, 0, 0);
             }
         }
 
-        private Vector2[] GetTrianglePoly(Transform transform)
+        private Vector2[] GetShipTrianglePoly(Transform transform, float shipIconSize)
         {
+            shipIconSize /= 2;
             float scale = CurrentScale;
-            triBuffer[0] = transform.GetWorldPoint(new Vector3(5, 0,0) * scale).Xy;
-            triBuffer[1] = transform.GetWorldPoint(new Vector3(-5, 3, 0) * scale).Xy;
-            triBuffer[2] = transform.GetWorldPoint(new Vector3(-5, -3, 0) * scale).Xy;
+            triBuffer[0] = transform.GetWorldPoint(new Vector3(shipIconSize, 0,0) * scale).Xy;
+            triBuffer[1] = transform.GetWorldPoint(new Vector3(-shipIconSize, shipIconSize * 0.6f, 0) * scale).Xy;
+            triBuffer[2] = transform.GetWorldPoint(new Vector3(-shipIconSize, -shipIconSize * 0.6f, 0) * scale).Xy;
             return triBuffer;
 
         }
 
-        private void DrawGrid(Canvas canvas)
+        private void DrawGrid(Canvas canvas, Rect rect, Camera camera)
         {
-            /*
-            var camera = GameObj.GetComponent<Camera>();
-            var rect = camera.TargetRect;
-            var topLeft = camera.GetWorldPos(rect.TopLeft);
-            var bottomRight = camera.GetWorldPos(rect.BottomRight);
-            var size = bottomRight - topLeft;
-            canvas.State.ColorTint = BackgroundColor;
-            canvas.FillRect(topLeft.X, topLeft.Y, 0, size.X, size.Y);
-            canvas.State.ColorTint = GridColor;
-            */
+            _canvas.State.ColorTint = GridColor.WithAlpha(0.2f);
+            float crossSize = CurrentScale * 10;
+            var topLeft = camera.GetWorldPos(rect.TopLeft * DualityApp.TargetViewSize);
+            var bottomRight = camera.GetWorldPos(rect.BottomRight * DualityApp.TargetViewSize);
+
+            var pixel = camera.GetWorldPos(Vector2.One) - camera.GetWorldPos(Vector2.Zero);
+            topLeft.X = ((int)topLeft.X / pixel.X) * pixel.X;
+            topLeft.Y = ((int)topLeft.Y / pixel.Y) * pixel.Y;
+
+            for (int y = ((int)topLeft.Y / GridSize) * GridSize; y<=bottomRight.Y + crossSize; y+= GridSize)
+            {
+                for (int x = ((int)topLeft.X / GridSize) * GridSize; x <= bottomRight.X + crossSize; x += GridSize)
+                {
+                    //canvas.DrawThickLine(x - crossSize, y, x + crossSize, y, CurrentScale * 0.3f);
+                    //canvas.DrawThickLine(x, y - crossSize, x, y + crossSize, CurrentScale * 0.3f);
+                    canvas.DrawLine(x - crossSize - 1.5f, y + 0.5f, x + crossSize + 0.5f, y + 0.5f);
+                    canvas.DrawLine(x + 0.5f, y - crossSize - 1.5f, x + 0.5f, y + crossSize + 0.5f);
+                }
+            }
         }
+
+        void ICmpRenderer.GetCullingInfo(out CullingInfo info)
+        {
+            info.Position = Vector3.Zero;
+            info.Radius = float.PositiveInfinity;
+            info.Visibility = VisibilityFlag.Group1;
+        }
+
     }
 }

@@ -31,6 +31,7 @@ namespace FellSky.Components
         
         
         public float MiniMapSize { get; set; } = 0.3f;
+        public Rect TargetRect { get; private set; }
 
         void ICmpUpdatable.OnUpdate()
         {
@@ -61,10 +62,10 @@ namespace FellSky.Components
                     case HudMapMode.Minimap:                        
                         var size = DualityApp.TargetViewSize;
                         var ratio = size.Y / size.X;
-                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 1 - MiniMapSize, MiniMapSize * ratio, 1f);                        
+                        RenderSetup.Res.Steps[1].TargetRect = TargetRect = new Rect(0, 1 - MiniMapSize, MiniMapSize * ratio, 1f);                        
                         break;
                     case HudMapMode.Full:
-                        RenderSetup.Res.Steps[1].TargetRect = new Rect(0, 0, 1, 1);
+                        RenderSetup.Res.Steps[1].TargetRect = TargetRect = new Rect(0, 0, 1, 1);
                         break;
                 }
             }
