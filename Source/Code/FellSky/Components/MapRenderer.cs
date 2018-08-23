@@ -23,7 +23,7 @@ namespace FellSky.Components
         public ColorRgba GridColor { get; set; } = new ColorRgba(252,102,47);
         public float CurrentScale { get; set; } = 50;
 
-        static Vector2[] triBuffer = new Vector2[3];
+        Vector2[] triBuffer = new Vector2[3];
 
         public MapRenderer()
         {
