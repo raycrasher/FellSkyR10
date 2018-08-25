@@ -3,10 +3,8 @@
 <link type="text/css" href="Global.rcss"/>
 <style>
 body{
-	width:1366px;
-	height:768px;
-	background-color: #ddeeff;
-	border: solid black 1px;
+	width:100%;
+	height:100%;
 }
 
 #lowerPanel {
@@ -25,41 +23,19 @@ button.powerButton, #powerPanel .powerButtonDesc  {
 	display:inline-block;
 }
 
-
+#upperStatusBar {
+	background: #221100DD;
+	margin:0;
+	padding: 2px 10px;
+	height: 24px;
+}
 
 </style>
 </head>
 <body>
-<div id="lowerPanel">
-	<button id="fireWeapons">Fire</button>
-</div id="powerPanel">
-	<div>
-		<span class="powerButtonDesc">ENG</span>
-		<button class="powerButton">OFF</button>
-		<button class="powerButton">Half</button>
-		<button class="powerButton">Full</button>
-		<button class="powerButton">Over</button>
-	</div>
-	<div>
-		<span class="powerButtonDesc">WPN</span>
-		<button class="powerButton">OFF</button>
-		<button class="powerButton">Half</button>
-		<button class="powerButton">Full</button>
-		<button class="powerButton">Over</button>
-	</div>
-	<div>
-		<span class="powerButtonDesc">LFS</span>
-		<button class="powerButton">OFF</button>
-		<button class="powerButton">Half</button>
-		<button class="powerButton">Full</button>
-	</div>
-	<div>
-		<span class="powerButtonDesc">ENG</span>
-		<button class="powerButton">OFF</button>
-		<button class="powerButton">Half</button>
-		<button class="powerButton">Full</button>
-		<button class="powerButton">Over</button>
-	</div>
-<div>
+<div id="upperStatusBar">
+	Money: 
+</div>
+
 </body>
 </rml>

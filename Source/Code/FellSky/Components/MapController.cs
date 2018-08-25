@@ -16,7 +16,6 @@ namespace FellSky.Components
 
         
         public ContentRef<RenderSetup> RenderSetup  { get; set; }
-        public GameObject MapCamera { get; set; }
         public HudMapMode HudMapMode {
             get => _hudMapMode;
             set
@@ -36,12 +35,6 @@ namespace FellSky.Components
         void ICmpUpdatable.OnUpdate()
         {
             CheckForToggleVisibilityKeyPress();
-            if (MapCamera != null)
-            {
-                var playerCam = Scene.FindGameObject<PlayerController>();
-                var mapPos = MapCamera.Transform.Pos;
-                MapCamera.Transform.Pos = new Vector3(playerCam.Transform.Pos.Xy, mapPos.Z);
-            }
         }
 
         private void CheckForToggleVisibilityKeyPress()

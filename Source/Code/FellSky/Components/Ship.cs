@@ -3,6 +3,7 @@ using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Components.Renderers;
 using Duality.Editor;
+using Duality.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,9 @@ namespace FellSky.Components
         }
 
         public Vector2 Centroid => GameObj.Transform.GetWorldPoint(_centroid);
+
+        [Duality.Editor.EditorHintFlags(MemberFlags.Invisible)]
+        public bool IsWarping { get; internal set; } = false;
 
         public void UpdateEquipment()
         {
@@ -99,6 +103,19 @@ namespace FellSky.Components
             Acceleration = force;
 
             rigidBody.ApplyLocalForce(MathF.Clamp(DesiredTorque, -TurnSpeed, TurnSpeed));
+        }
+
+        public void Warp()
+        {
+            if (IsWarping)
+                return;
+            IsWarping = true;
+            var warpObj = new GameObject();
+            warpObj.AddComponent<Transform>();
+            var warper = warpObj.AddComponent<WarpAnimator>();
+            warper.DrawTechnique = DrawTechnique.Add;
+            warper.Ship = GameObj;
+            warpObj.Parent = GameObj;
         }
 
         public IEnumerable<Turret> GetTurretGroup(int groupNumber)

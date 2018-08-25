@@ -99,6 +99,12 @@
       <DependentUpon>AtlasViewer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Duality.LibRocket\Duality.LibRocket.csproj">
+      <Project>{464a8624-a8a1-47d8-be2b-8157751098d3}</Project>
+      <Name>Duality.LibRocket</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)../../Plugins"

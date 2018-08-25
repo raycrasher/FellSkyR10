@@ -1,5 +1,6 @@
 ﻿using Duality;
 using Duality.Components;
+using Duality.Components.Renderers;
 using Duality.Drawing;
 using Duality.Resources;
 using System;
@@ -25,9 +26,10 @@ namespace FellSky.Components
 
         [Duality.Editor.EditorHintFlags(Duality.Editor.MemberFlags.Invisible)]
         public float CurrentScale { get; private set; }
-        public int GridSize { get; set; } = 10000;
+        public int GridSize { get; set; } = 20000;
         public float FullMapScale { get; set; } = 5;
         public float MiniMapScale { get; set; } = 20;
+        public GameObject MapCamera { get; set; }
 
         [DontSerialize]
         Vector2[] triBuffer = new Vector2[3];
@@ -51,11 +53,31 @@ namespace FellSky.Components
             
             _canvas.Begin(device);
             var controller = GameObj.GetComponent<MapController>();
-            CurrentScale = controller.HudMapMode == HudMapMode.Full ? FullMapScale : MiniMapScale;
+            var tempScale = controller.HudMapMode == HudMapMode.Full ? FullMapScale : MiniMapScale;
+            var mapCameraCtlr = MapCamera.GetComponent<MapCameraController>();
+            var zoomFactor = mapCameraCtlr.FarZoom / mapCameraCtlr.NearZoom;
+            CurrentScale = mapCameraCtlr.Zoom == MapCameraZoom.Far ? tempScale : tempScale / zoomFactor;
+
             if(controller.HudMapMode == HudMapMode.Full)
-                DrawGrid(_canvas, controller.TargetRect, controller.MapCamera.GetComponent<Camera>());
+                DrawGrid(_canvas, controller.TargetRect, MapCamera.GetComponent<Camera>());
             DrawShips(_canvas);
+            DrawCloudObjects(_canvas);
             _canvas.End();
+        }
+
+        private void DrawCloudObjects(Canvas canvas)
+        {
+            var color = GridColor.WithAlpha(0.2f);
+            //_canvas.State.ColorTint = GridColor.WithAlpha(0.2f);
+            var objects = Scene.FindGameObjects<Cloud>();
+            foreach(var obj in objects)
+            {
+                var sr = obj.GetComponent<SpriteRenderer>();
+                var lastColor = sr.ColorTint;
+                sr.ColorTint = color;
+                sr.Draw(canvas.DrawDevice);
+                sr.ColorTint = lastColor;
+            }
         }
 
         private void DrawShips(Canvas canvas)
@@ -82,7 +104,7 @@ namespace FellSky.Components
 
         private void DrawGrid(Canvas canvas, Rect rect, Camera camera)
         {
-            _canvas.State.ColorTint = GridColor.WithAlpha(0.2f);
+            _canvas.State.ColorTint = GridColor.WithAlpha(0.3f);
             float crossSize = CurrentScale * 10;
             var topLeft = camera.GetWorldPos(rect.TopLeft * DualityApp.TargetViewSize);
             var bottomRight = camera.GetWorldPos(rect.BottomRight * DualityApp.TargetViewSize);
@@ -95,10 +117,10 @@ namespace FellSky.Components
             {
                 for (int x = ((int)topLeft.X / GridSize) * GridSize; x <= bottomRight.X + crossSize; x += GridSize)
                 {
-                    //canvas.DrawThickLine(x - crossSize, y, x + crossSize, y, CurrentScale * 0.3f);
-                    //canvas.DrawThickLine(x, y - crossSize, x, y + crossSize, CurrentScale * 0.3f);
-                    canvas.DrawLine(x - crossSize - 1.5f, y + 0.5f, x + crossSize + 0.5f, y + 0.5f);
-                    canvas.DrawLine(x + 0.5f, y - crossSize - 1.5f, x + 0.5f, y + crossSize + 0.5f);
+                    canvas.DrawThickLine(x - crossSize, y, x + crossSize, y, CurrentScale * 0.3f);
+                    canvas.DrawThickLine(x, y - crossSize, x, y + crossSize, CurrentScale * 0.3f);
+                    //canvas.DrawLine(x - crossSize - 1.5f, y + 0.5f, x + crossSize + 0.5f, y + 0.5f);
+                    //canvas.DrawLine(x + 0.5f, y - crossSize - 1.5f, x + 0.5f, y + crossSize + 0.5f);
                 }
             }
         }

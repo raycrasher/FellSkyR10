@@ -73,6 +73,7 @@
     <Compile Include="Components\BeamProjectile.cs" />
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
+    <Compile Include="Components\Cloud.cs" />
     <Compile Include="Components\MapController.cs" />
     <Compile Include="Components\MapRenderer.cs" />
     <Compile Include="Components\ShipCameraController.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Components\Thruster.cs" />
     <Compile Include="Components\TrailEffect.cs" />
     <Compile Include="Components\Turret.cs" />
+    <Compile Include="Components\WarpAnimator.cs" />
     <Compile Include="Components\Weapon.cs" />
     <Compile Include="Components\WeaponSlot.cs" />
     <Compile Include="Components\Hull.cs" />
@@ -107,6 +109,7 @@
     <Compile Include="Events\DamageEvent.cs" />
     <Compile Include="Events\DeathEvent.cs" />
     <Compile Include="Events\SelectedTurretGroupChangedEvent.cs" />
+    <Compile Include="Events\WarpEvent.cs" />
     <Compile Include="Events\WeaponFireEvent.cs" />
     <Compile Include="Events\WeaponReloadEvent.cs" />
     <Compile Include="FellSkyAppData.cs" />
@@ -115,6 +118,7 @@
     <Compile Include="MainMenu\MainMenuController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Health.cs" />
+    <Compile Include="SceneGenerator.cs" />
     <Compile Include="SpaceLayer\Components\SpaceObject.cs" />
     <Compile Include="SpaceLayer\Components\StarSystem.cs" />
     <Compile Include="SpaceLayer\MapGenerator.cs" />

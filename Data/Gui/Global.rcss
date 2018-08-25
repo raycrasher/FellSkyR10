@@ -26,7 +26,7 @@ h5 { font-size: 24px; }
 h6 { font-size: 18px; }
 
 pre {
-	font-family: "Lucida Console";
+	font-family: "Titillium";
 	white-space: pre;
 }
 

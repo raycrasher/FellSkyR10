@@ -46,7 +46,7 @@
           <X dataType="Float">0</X>
           <Y dataType="Float">0</Y>
         </targetRect>
-        <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+        <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0, Group4" value="17" />
       </item>
       <item dataType="Struct" type="Duality.Resources.RenderStep" id="1014616010">
         <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
@@ -73,10 +73,10 @@
         </output>
         <projection dataType="Enum" type="Duality.Drawing.ProjectionMode" name="Screen" value="2" />
         <targetRect dataType="Struct" type="Duality.Rect">
-          <H dataType="Float">1</H>
-          <W dataType="Float">1</W>
+          <H dataType="Float">0.3</H>
+          <W dataType="Float">0.165962636</W>
           <X dataType="Float">0</X>
-          <Y dataType="Float">0</Y>
+          <Y dataType="Float">0.7</Y>
         </targetRect>
         <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group1" value="2" />
       </item>

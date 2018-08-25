@@ -71,8 +71,7 @@ namespace FellSky.Components
 
             Zoom -= DualityApp.Mouse.WheelSpeed * zoomSpeed;
             if (DualityApp.Mouse.ButtonHit(Duality.Input.MouseButton.Middle))
-                Zoom = camera.FocusDist;
-
+            Zoom = camera.FocusDist;
             // The position to focus on.
             Vector3 focusPos;
             Vector3 focusVel;
@@ -112,10 +111,6 @@ namespace FellSky.Components
 
             // Move the camera
             transform.MoveBy(targetVelocity * Time.TimeMult);
-
-            // zoom
-
-
         }
     }
 }

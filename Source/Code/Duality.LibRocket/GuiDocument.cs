@@ -13,11 +13,13 @@ using System.Threading.Tasks;
 namespace Duality.LibRocket
 {
     [EditorHintCategory("LibRocket")]
-    public class GuiDocument : Component, ICmpInitializable
+    public class GuiDocument : Component, ICmpInitializable, ICmpUpdatable
     {
         [DontSerialize]
         private ElementDocument _document;
         private string _filename;
+        [DontSerialize]
+        private bool _needsReload=false;
 
         public string Filename {
             get => _filename;
@@ -26,7 +28,19 @@ namespace Duality.LibRocket
                 if (_filename != value)
                 {
                     _filename = value;
-                    Reload();
+                    _needsReload = true;
+                }
+            }
+        }
+
+        public bool EditorReload
+        {
+            get => false;
+            set
+            {
+                if(value == true)
+                {
+                    _needsReload = true;
                 }
             }
         }
@@ -39,11 +53,14 @@ namespace Duality.LibRocket
             if (string.IsNullOrWhiteSpace(Filename))
                 return;
             if (File.Exists(Filename)) {
+                var isShown = _document?.IsVisible ?? true;
                 if(_document != null)
                 {
                     _document.Close();
+                    _document.Dispose();
                 }
                 _document = LibRocketCorePlugin.GuiCore?.CoreContext?.LoadDocument(Filename);
+                _document?.Show();
             }
         }
 
@@ -56,6 +73,15 @@ namespace Duality.LibRocket
         void ICmpInitializable.OnDeactivate()
         {
             _document?.Hide();
+        }
+
+        void ICmpUpdatable.OnUpdate()
+        {
+            if (_needsReload)
+            {
+                Reload();
+                _needsReload = false;
+            }
         }
     }
 }

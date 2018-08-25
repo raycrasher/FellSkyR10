@@ -13,7 +13,7 @@ namespace Duality.LibRocket
     [Editor.EditorHintCategory("LibRocket")]
     public class GuiController : Renderer, ICmpUpdatable
     {
-        public override float BoundRadius => 300;
+        public override float BoundRadius => float.PositiveInfinity;
         public ContentRef<DrawTechnique> Technique { get; set; }
 
         public override void Draw(IDrawDevice device)

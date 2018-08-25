@@ -6,13 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FellSky.Events;
+using Duality.Resources;
 
 namespace FellSky.Components
 {
-    public class PlayerController : Component, ICmpUpdatable
+    public class ControlBindings
     {
-        public Ship ControlledShip { get; set; }
-
         public Key ThrustUp { get; set; } = Key.W;
         public Key ThrustDown { get; set; } = Key.S;
         public Key TurnCCW { get; set; } = Key.A;
@@ -20,6 +19,14 @@ namespace FellSky.Components
         public Key StrafeLeft { get; set; } = Key.Q;
         public Key StrafeRight { get; set; } = Key.E;
         public Key Boost { get; set; } = Key.Space;
+        public Key Warp { get; set; } = Key.G;
+    }
+
+    public class PlayerController : Component, ICmpUpdatable, IEventHandler<WarpEvent>
+    {
+        public Ship ControlledShip { get; set; }
+
+        public ControlBindings ControlBindings { get; set; } = new ControlBindings();
 
         public int SelectedTurretGroup {
             get { return _selectedTurretGroup; }
@@ -76,25 +83,61 @@ namespace FellSky.Components
             var ship = ControlledShip;
             Vector2 speed = Vector2.Zero;
             var keyboard = DualityApp.Keyboard;
-            if (keyboard.KeyPressed(ThrustDown))
-                speed.X = -ship.ManeuverSpeed;
-            else if (keyboard.KeyPressed(ThrustUp))
-                speed.X = ship.ForwardSpeed;
 
-            if (keyboard.KeyPressed(StrafeLeft))
-                speed.Y = -ship.ManeuverSpeed;
-            else if (keyboard.KeyPressed(StrafeRight))
-                speed.Y = ship.ManeuverSpeed;
+            if (!ship.IsWarping)
+            {
+                if (keyboard.KeyHit(ControlBindings.Warp)) {
+                    ship.Warp();
+                    //var camera = GameObj.GetComponent<ShipCameraController>();
+                    //camera.Smoothness = 0;
+                    //camera.VelocityOffset = 100;
 
-            ship.ThrustVector = ship.GameObj.Transform.GetWorldVector(speed);
+                }
 
-            ship.IsBoosting = keyboard.KeyPressed(Boost);
-            if (keyboard.KeyPressed(TurnCCW))
-                ship.DesiredTorque = -ship.TurnSpeed;
-            else if (keyboard.KeyPressed(TurnCW))
-                ship.DesiredTorque = ship.TurnSpeed;
-            else
-                ship.DesiredTorque = 0;
+                if (keyboard.KeyPressed(ControlBindings.ThrustDown))
+                    speed.X = -ship.ManeuverSpeed;
+                else if (keyboard.KeyPressed(ControlBindings.ThrustUp))
+                    speed.X = ship.ForwardSpeed;
+
+                if (keyboard.KeyPressed(ControlBindings.StrafeLeft))
+                    speed.Y = -ship.ManeuverSpeed;
+                else if (keyboard.KeyPressed(ControlBindings.StrafeRight))
+                    speed.Y = ship.ManeuverSpeed;
+
+                ship.ThrustVector = ship.GameObj.Transform.GetWorldVector(speed);
+
+                ship.IsBoosting = keyboard.KeyPressed(ControlBindings.Boost);
+                if (keyboard.KeyPressed(ControlBindings.TurnCCW))
+                    ship.DesiredTorque = -ship.TurnSpeed;
+                else if (keyboard.KeyPressed(ControlBindings.TurnCW))
+                    ship.DesiredTorque = ship.TurnSpeed;
+                else
+                    ship.DesiredTorque = 0;
+            }
+        }
+
+        void IEventHandler<WarpEvent>.HandleEvent(object source, WarpEvent data)
+        {
+            if(source == ControlledShip.GameObj)
+            {
+                HashSet<GameObject> objectsToTransfer = new HashSet<GameObject>();
+                Scene nextSystemScene = SceneGenerator.GenerateStarSystem();
+                objectsToTransfer.Add(ControlledShip.GameObj);
+                objectsToTransfer.Add(Scene.FindGameObject("@map"));
+                objectsToTransfer.Add(Scene.FindGameObject("@mapcamera"));
+                objectsToTransfer.Add(Scene.FindGameObject("@hud"));
+                objectsToTransfer.Add(Scene.FindGameObject("@player"));
+                objectsToTransfer.Add(Scene.FindGameObject("@gui"));
+
+                foreach (var obj in objectsToTransfer)
+                {
+                    Scene.RemoveObject(obj);
+                    nextSystemScene.AddObject(obj);
+                }
+                ControlledShip.GameObj.Transform.Pos = new Vector3(0, 0, ControlledShip.GameObj.Transform.Pos.Z);
+                
+                Scene.SwitchTo(nextSystemScene);
+            }
         }
     }
 }

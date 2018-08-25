@@ -90,7 +90,7 @@ namespace FellSky
         public static void FireEvent<T>(this Scene scene, object source, T data)
             where T : EventArgs
         {
-            foreach(var cmp in scene.FindComponents<IEventHandler<T>>())
+            foreach(var cmp in scene.FindComponents<IEventHandler<T>>().ToArray())
             {
                 cmp.HandleEvent(source, data);
             }
