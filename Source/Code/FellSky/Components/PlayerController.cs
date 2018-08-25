@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using FellSky.Events;
 using Duality.Resources;
+using Duality.Components.Renderers;
+using Duality.Components.Diagnostics;
 
 namespace FellSky.Components
 {
@@ -20,10 +22,15 @@ namespace FellSky.Components
         public Key StrafeRight { get; set; } = Key.E;
         public Key Boost { get; set; } = Key.Space;
         public Key Warp { get; set; } = Key.G;
+
+        public Key DebugKey { get; set; } = Key.Tilde;
     }
 
     public class PlayerController : Component, ICmpUpdatable, IEventHandler<WarpEvent>
     {
+        [DontSerialize]
+        static Random rng = new Random();
+
         public Ship ControlledShip { get; set; }
 
         public ControlBindings ControlBindings { get; set; } = new ControlBindings();
@@ -113,6 +120,20 @@ namespace FellSky.Components
                     ship.DesiredTorque = ship.TurnSpeed;
                 else
                     ship.DesiredTorque = 0;
+
+            }
+            else
+            {
+                ship.DesiredTorque = 0;
+                ship.ThrustVector = Vector2.Zero;
+            }
+
+            if (keyboard.KeyHit(ControlBindings.DebugKey))
+            {
+                var debug = Scene.FindGameObject("@debug");
+                if (debug != null) { 
+                    debug.Active = !debug.Active;
+                }
             }
         }
 
@@ -122,12 +143,15 @@ namespace FellSky.Components
             {
                 HashSet<GameObject> objectsToTransfer = new HashSet<GameObject>();
                 Scene nextSystemScene = SceneGenerator.GenerateStarSystem();
+                GameObject bg = Scene.FindGameObject("@background");
+
+                objectsToTransfer.Add(bg);
                 objectsToTransfer.Add(ControlledShip.GameObj);
                 objectsToTransfer.Add(Scene.FindGameObject("@map"));
                 objectsToTransfer.Add(Scene.FindGameObject("@mapcamera"));
                 objectsToTransfer.Add(Scene.FindGameObject("@hud"));
                 objectsToTransfer.Add(Scene.FindGameObject("@player"));
-                objectsToTransfer.Add(Scene.FindGameObject("@gui"));
+                objectsToTransfer.Add(Scene.FindGameObject("@gui"));                
 
                 foreach (var obj in objectsToTransfer)
                 {
@@ -135,7 +159,8 @@ namespace FellSky.Components
                     nextSystemScene.AddObject(obj);
                 }
                 ControlledShip.GameObj.Transform.Pos = new Vector3(0, 0, ControlledShip.GameObj.Transform.Pos.Z);
-                
+                var bgc = bg.GetComponent<BackgroundRenderer>();
+                bgc.BackgroundIndex = rng.Next(0, bgc.Backgrounds.Length - 1);
                 Scene.SwitchTo(nextSystemScene);
             }
         }

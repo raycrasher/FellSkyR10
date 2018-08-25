@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\BackgroundRenderer.cs" />
     <Compile Include="Components\BeamProjectile.cs" />
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Defs\EngineDef.cs" />
     <Compile Include="Defs\ShipDef.cs" />
     <Compile Include="Defs\ShipPartDef.cs" />
+    <Compile Include="Defs\SystemSceneGeneratorDef.cs" />
     <Compile Include="Defs\ThingDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
     <Compile Include="Defs\Verb.cs" />

@@ -73,6 +73,7 @@
             <_turrets dataType="Array" type="FellSky.Components.Turret[]" id="1827035822" length="0" />
             <_x003C_ControlBindings_x003E_k__BackingField dataType="Struct" type="FellSky.Components.ControlBindings" id="1883075274">
               <_x003C_Boost_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="Space" value="51" />
+              <_x003C_DebugKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="Tilde" value="119" />
               <_x003C_StrafeLeft_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="Q" value="99" />
               <_x003C_StrafeRight_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="E" value="87" />
               <_x003C_ThrustDown_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="S" value="101" />
@@ -10787,33 +10788,45 @@
               <Y dataType="Float">0</Y>
               <Z dataType="Float">5000</Z>
             </posAbs>
-            <scale dataType="Float">20</scale>
-            <scaleAbs dataType="Float">20</scaleAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
           </item>
-          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="654096542">
-            <active dataType="Bool">true</active>
-            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+          <item dataType="Struct" type="FellSky.Components.BackgroundRenderer" id="198250431">
+            <_x003C_BackgroundIndex_x003E_k__BackingField dataType="Int">0</_x003C_BackgroundIndex_x003E_k__BackingField>
+            <_x003C_Backgrounds_x003E_k__BackingField dataType="Array" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]][]" id="2013888835">
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\1.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\2.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\3.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\4.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\5.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\6.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\8.Pixmap.res</contentPath>
+              </item>
+              <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
+                <contentPath dataType="String">Data\Gfx\spacebg\9.Pixmap.res</contentPath>
+              </item>
+            </_x003C_Backgrounds_x003E_k__BackingField>
+            <_x003C_Color_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
               <A dataType="Byte">255</A>
               <B dataType="Byte">255</B>
               <G dataType="Byte">255</G>
               <R dataType="Byte">255</R>
-            </colorTint>
-            <customMat />
-            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            </_x003C_Color_x003E_k__BackingField>
+            <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3480444558</gameobj>
-            <offset dataType="Float">0</offset>
-            <pixelGrid dataType="Bool">true</pixelGrid>
-            <rect dataType="Struct" type="Duality.Rect">
-              <H dataType="Float">8192</H>
-              <W dataType="Float">8192</W>
-              <X dataType="Float">-4096</X>
-              <Y dataType="Float">-4096</Y>
-            </rect>
-            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="WrapBoth" value="3" />
-            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-              <contentPath dataType="String">Data\Gfx\bg2.Material.res</contentPath>
-            </sharedMat>
-            <spriteIndex dataType="Int">-1</spriteIndex>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
         </_items>
@@ -10824,11 +10837,11 @@
         <body>
           <keys dataType="Array" type="System.Object[]" id="1491044058">
             <item dataType="ObjectRef">1186510720</item>
-            <item dataType="ObjectRef">3595658446</item>
+            <item dataType="Type" id="401450240" value="FellSky.Components.BackgroundRenderer" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="789416634">
             <item dataType="ObjectRef">3537721776</item>
-            <item dataType="ObjectRef">654096542</item>
+            <item dataType="ObjectRef">198250431</item>
           </values>
         </body>
       </compMap>
@@ -10840,7 +10853,7 @@
         <body />
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">background</name>
+      <name dataType="String">@background</name>
       <parent />
       <prefabLink />
     </item>
@@ -10936,7 +10949,7 @@
       <prefabLink />
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="145180118">
-      <active dataType="Bool">false</active>
+      <active dataType="Bool">true</active>
       <children />
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2223557248">
         <_items dataType="Array" type="Duality.Component[]" id="4104611228" length="4">
@@ -10984,7 +10997,7 @@
         <body />
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">debug</name>
+      <name dataType="String">@debug</name>
       <parent />
       <prefabLink />
     </item>

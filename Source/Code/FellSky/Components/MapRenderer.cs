@@ -87,7 +87,7 @@ namespace FellSky.Components
             _canvas.State.ColorTint = GridColor;
             foreach (var obj in objects)
             {
-                canvas.FillPolygonOutline(GetShipTrianglePoly(obj.Transform, obj.GetComponent<Ship>().Radius), CurrentScale * 4, 0, 0);
+                canvas.FillPolygonOutline(GetShipTrianglePoly(obj.Transform, obj.GetComponent<Ship>().Radius), CurrentScale * 6, 0, 0);
             }
         }
 

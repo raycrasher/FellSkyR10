@@ -34,3 +34,5 @@ UserData.dat
 EditorUserData.xml
 .vs
 *.user
+*.vspx
+*.psess

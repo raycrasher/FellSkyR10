@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FellSky
+namespace FellSky.Defs
 {
-    public class FellSkyAppData
+    public class SystemSceneGeneratorDef: Resource
     {
+        public ContentRef<Pixmap>[] Backgrounds { get; set; } = new ContentRef<Pixmap>[0];
     }
 }
