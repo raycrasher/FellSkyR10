@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace FellSky.GfxTool
@@ -86,9 +87,74 @@ namespace FellSky.GfxTool
                 case "packvert":
                     DoPackVert(args.Skip(1).ToArray());
                     break;
+                case "unpack":
+                    UnPack(args.Skip(1).ToArray());
+                    break;
                 default:
                     Console.WriteLine("Invalid command. [ gif, trimpng, pack ]");
                     break;
+            }
+        }
+
+        private static void UnPack(string[] a)
+        {
+            string imageFname, listFname;
+            if(a.Length >= 2)
+            {
+                imageFname = a[0];
+                listFname = a[1];
+            }
+            else if(a.Length==1)
+            {
+                var fname = a[0];
+                if (fname.EndsWith(".png", StringComparison.InvariantCultureIgnoreCase) || fname.EndsWith(".png", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    imageFname = fname;
+                    listFname = fname.Substring(0, fname.Length - 4) + ".txt";
+                }
+                else if (fname.EndsWith(".txt", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    listFname = fname;
+                    imageFname = fname.Substring(0, fname.Length - 4) + ".png";
+                }
+                else {
+                    Console.WriteLine("Invalid file format");
+                    return;
+                }
+
+            } else
+            {
+                Console.WriteLine("Please specify filename (.txt,.jpg,.png)");
+                return;
+            }
+
+            if(!File.Exists(listFname) || !File.Exists(imageFname))
+            {
+                Console.WriteLine("Files do not exist");
+                return;
+            }
+
+            using (Bitmap sourceBmp = new Bitmap(imageFname))
+            {
+                var regex = new Regex(@"(\w+)\s*=\s*(\d+)\s+(\d+)\s+(\d+)\s+(\d+)");
+                foreach(var line in File.ReadAllLines(listFname))
+                {
+                    var match = regex.Match(line);
+                    if (match.Success)
+                    {
+                        var name = match.Groups[1].Value;
+                        var x = int.Parse(match.Groups[2].Value);
+                        var y = int.Parse(match.Groups[3].Value);
+                        var w = int.Parse(match.Groups[4].Value);
+                        var h = int.Parse(match.Groups[5].Value);
+                        Console.WriteLine($"Unpacking: {name} = {x} {y} {w} {h}");
+                        using(Bitmap outBmp = sourceBmp.Clone(new Rectangle(x,y,w,h), sourceBmp.PixelFormat))
+                        {
+                            var directory = Path.GetDirectoryName(listFname);
+                            outBmp.Save($"{Path.Combine(directory,name)}.png");
+                        }
+                    }
+                }
             }
         }
 

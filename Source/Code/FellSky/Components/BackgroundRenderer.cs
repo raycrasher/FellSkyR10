@@ -30,34 +30,39 @@ namespace FellSky.Components
         public override void Draw(IDrawDevice device)
         {
 
-
-            var lt = device.GetWorldPos(Vector2.Zero);
-            var rb = device.GetWorldPos(device.TargetSize);
-            var camPos = device.ViewerPos;
+            Transform xform = this.GameObj.Transform;
+            var z = xform.Pos.Z;
+            var LT = device.GetWorldPos(new Vector3(0,0,z));
+            var RB = device.GetWorldPos(new Vector3(device.TargetSize,z));
+            //var camPos = device.ViewerPos;
+            
 
             _verts = _verts ?? new VertexC1P3T2[4];
             _verts[0].Color = _verts[1].Color = _verts[2].Color = _verts[3].Color = ColorRgba.White;
             _verts[0].DepthOffset = _verts[1].DepthOffset = _verts[2].DepthOffset = _verts[3].DepthOffset = 5000;
-            _verts[0].Pos = new Vector3(lt.X, lt.Y, 0);
-            _verts[1].Pos = new Vector3(rb.X, lt.Y, 0);
-            _verts[2].Pos = new Vector3(rb.X, rb.Y, 0);
-            _verts[3].Pos = new Vector3(lt.X, rb.Y, 0);
+            _verts[0].Pos = new Vector3(LT.X, LT.Y, z);
+            _verts[1].Pos = new Vector3(RB.X, LT.Y, z);
+            _verts[2].Pos = new Vector3(RB.X, RB.Y, z);
+            _verts[3].Pos = new Vector3(LT.X, RB.Y, z);
 
-            var xform = GameObj.Transform;
-            var scale = device.GetScaleAtZ(xform.Pos.Z) * xform.Scale;
+            // Tex coords calc ///////////////////////////////
+            var texSize = _material.MainTexture.Res?.Size ?? Vector2.One;
+            var scale = (1-device.GetScaleAtZ(xform.Pos.Z));
 
-            var texSize = Material.MainTexture.Res.ContentSize;
+            var texLT = xform.GetWorldPoint(LT);
+            var texRB = xform.GetWorldPoint(RB);
+            
+            
 
-            var aspectRatio = device.TargetSize.Y / device.TargetSize.X;
-            var texOffset = camPos.Xy * device.GetScaleAtZ(xform.Pos.Z) / texSize;
-            _verts[0].TexCoord = new Vector2(0, 0) / scale + texOffset;
-            _verts[1].TexCoord = new Vector2(1, 0) / scale + texOffset;
-            _verts[2].TexCoord = new Vector2(1, aspectRatio) / scale + texOffset;
-            _verts[3].TexCoord = new Vector2(0, aspectRatio) / scale + texOffset;
+             _verts[0].TexCoord = new Vector2(texLT.X, texLT.Y) / texSize * scale;
+             _verts[1].TexCoord = new Vector2(texRB.X, texLT.Y) / texSize * scale;
+             _verts[2].TexCoord = new Vector2(texRB.X, texRB.Y) / texSize * scale;
+             _verts[3].TexCoord = new Vector2(texLT.X, texRB.Y) / texSize * scale;
 
-            device.AddVertices(Material, VertexMode.Quads, _verts);
+            device.AddVertices(_material, VertexMode.Quads, _verts);
 
         }
+
 
         void ICmpInitializable.OnActivate()
         {

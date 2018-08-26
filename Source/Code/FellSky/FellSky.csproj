@@ -73,6 +73,7 @@
     <Compile Include="Components\BackgroundRenderer.cs" />
     <Compile Include="Components\BeamProjectile.cs" />
     <Compile Include="Components\BeamRenderer.cs" />
+    <Compile Include="Components\AnimationBlender.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\Cloud.cs" />
     <Compile Include="Components\MapController.cs" />

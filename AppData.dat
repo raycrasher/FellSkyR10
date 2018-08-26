@@ -1,9 +1,9 @@
 ﻿<root dataType="Struct" type="Duality.DualityAppData" id="129723834">
   <appName dataType="String">Duality Application</appName>
-  <customData dataType="Struct" type="FellSky.FellSkyAppData" id="427169525" />
+  <customData />
   <forcedRenderResizeMode dataType="Enum" type="Duality.TargetResize" name="Fit" value="2" />
   <forcedRenderSize dataType="Struct" type="Duality.Point2" />
-  <multisampleBackBuffer dataType="Bool">true</multisampleBackBuffer>
+  <multisampleBackBuffer dataType="Bool">false</multisampleBackBuffer>
   <physicsFixedTime dataType="Bool">false</physicsFixedTime>
   <physicsVelThreshold dataType="Float">0.8333333</physicsVelThreshold>
   <renderSetup dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderSetup]]" />
@@ -13,6 +13,6 @@
   <startScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
     <contentPath dataType="String">Data\Scene.Scene.res</contentPath>
   </startScene>
-  <version dataType="UInt">513</version>
+  <version dataType="UInt">597</version>
 </root>
 <!-- XmlFormatterBase Document Separator -->
