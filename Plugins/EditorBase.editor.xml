@@ -45,11 +45,6 @@
             Focus Camera on GameObject.
             </summary>
         </member>
-        <member name="T:Duality.Editor.Plugins.Base.EditorActions.SlicePixmap">
-            <summary>
-            Opens a window for slicing a pixmap into atlas regions.
-            </summary>
-        </member>
         <member name="T:Duality.Editor.Plugins.Base.EditorActions.OpenScene">
             <summary>
             Open the Scene.
@@ -83,120 +78,6 @@
         <member name="T:Duality.Editor.Plugins.Base.EditorActions.FocusComponent">
             <summary>
             Focus Camera on GameObject.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Forms.PixmapSlicerForm.TargetPixmap">
-            <summary>
-            The <see cref="T:Duality.Resources.Pixmap"/> currently being sliced
-            </summary>
-        </member>
-        <member name="F:Duality.Editor.Plugins.Base.Forms.PixmapSlicerForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicerForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicerForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.TargetPixmap">
-            <summary>
-            The <see cref="T:Duality.Resources.Pixmap"/> currently being sliced
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.GetDisplayRect(Duality.Rect)">
-            <summary>
-            Transforms the given atlas rect to display coordinates
-            </summary>
-            <param name="atlasRect">
-            A <see cref="T:Duality.Rect"/> relative to 
-            the <see cref="T:Duality.Resources.Pixmap"/> being edited
-            </param>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.GetAtlasRect(System.Drawing.Rectangle)">
-            <summary>
-            Transforms the given rectangle in display coordinates
-            to atlas coordinates
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.GetAtlasPos(System.Drawing.Point,System.Boolean)">
-            <summary>
-            Converts the given local / client coordinates into <see cref="T:Duality.Resources.Pixmap"/> atlas space.
-            </summary>
-            <param name="point">The point to transform</param>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.GenerateDisplayImage">
-            <summary>
-            Returns a <see cref="T:System.Drawing.Bitmap"/> of <see cref="P:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.TargetPixmap"/>
-            of the appropriate size for display
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.DrawRectIndex(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32)">
-            <summary>
-            Draws an index value in the middle of the given Rect
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.IsRectHovered(System.Drawing.Rectangle,System.Int32,System.Int32,System.Int32,Duality.Editor.Plugins.Base.PixmapSlicingRectSide@)">
-            <summary>
-            Returns whether or not the specified rect is hovered. Outputs
-            the specific side of the rect that was hovered, if any.
-            </summary>
-        </member>
-        <member name="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.GridSlicePixmapSlicerState">
-            <summary>
-            A <see cref="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.IPixmapSlicerState"/> that provides controls for
-            defining atlas rects with a variable size grid place over 
-            the <see cref="T:Duality.Resources.Pixmap"/>
-            </summary>
-        </member>
-        <member name="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.IPixmapSlicerState">
-            <summary>
-            An operation state for the <see cref="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicerForm"/>
-            </summary>
-        </member>
-        <member name="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.PixmapSlicerStateEventArgs">
-            <summary>
-            <see cref="T:System.EventArgs"/> for general pixmap slicer
-            state events/changes
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.PixmapSlicerState.OnPaint(System.Windows.Forms.PaintEventArgs)">
-            <summary>
-            Called during the paint event of the parent control.
-            Displays all atlas rects and highlights the selected atlas rect.
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.PixmapSlicerState.CreateNumericUpDown(System.String,System.Int32,System.Int32)">
-            <summary>
-            Creates a <see cref="T:Duality.Editor.Controls.ToolStrip.ToolStripNumericUpDown"/> with default styling.
-            The range of the control is set to [0,maximum].
-            </summary>
-        </member>
-        <member name="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.AtlasOrderingPixmapSlicerState">
-            <summary>
-            A <see cref="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.IPixmapSlicerState"/> that allows the user to specify the ordering
-            of atlas rectangles by clicking on each rectangle in the desired order
-            </summary>
-        </member>
-        <member name="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.DefaultPixmapSlicerState">
-            <summary>
-            A <see cref="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.IPixmapSlicerState"/> that provides the ability to
-            resize selected atlas rectangles and provides controls for accessing
-            many other <see cref="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.IPixmapSlicerState"/>
-            </summary>
-        </member>
-        <member name="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.NewRectPixmapSlicerState">
-            <summary>
-            A <see cref="T:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.States.IPixmapSlicerState"/> that allows the user
-            to define new atlas rectangles for the <see cref="P:Duality.Editor.Plugins.Base.Forms.PixmapSlicer.PixmapSlicingView.TargetPixmap"/>
             </summary>
         </member>
         <member name="M:Duality.Editor.Plugins.Base.FontAssetImporter.RenderGlyphs(System.Byte[],System.Single,Duality.Drawing.FontStyle,Duality.Resources.FontCharSet,System.Boolean,System.Boolean)">
@@ -288,11 +169,6 @@
               Looks up a localized string similar to Show Source Files.
             </summary>
         </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ActionName_SlicePixmap">
-            <summary>
-              Looks up a localized string similar to Slice Pixmap.
-            </summary>
-        </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ActionName_ViewGettingStartedTutorial">
             <summary>
               Looks up a localized string similar to Getting Started Tutorial.
@@ -303,82 +179,12 @@
               Looks up a localized string similar to Join the Community.
             </summary>
         </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Button_AutoSlice">
-            <summary>
-              Looks up a localized string similar to Auto-Slice.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Button_GridSlice">
-            <summary>
-              Looks up a localized string similar to Grid-Slice.
-            </summary>
-        </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.DropdownSettingsBlack">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicer_Desc">
-            <summary>
-              Looks up a localized string similar to The Pixmap Slicer provides tools for automatically or manually specifying atlas rectangles..
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicer_Topic">
-            <summary>
-              Looks up a localized string similar to Pixmap Slicer.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerDefaultState_Desc">
-            <summary>
-              Looks up a localized string similar to Click on rects to select them. Selected rects can be resized with the mouse..
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerDefaultState_Topic">
-            <summary>
-              Looks up a localized string similar to Pixmap Slicer.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerGridSlice_Desc">
-            <summary>
-              Looks up a localized string similar to Use the toolstrip controsl to specify the grid parameters..
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerGridSlice_Topic">
-            <summary>
-              Looks up a localized string similar to Grid Slicing.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerNewRect_Desc">
-            <summary>
-              Looks up a localized string similar to Click and drag to define a new atlas rect. New rects are added to the end of the atlas..
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerNewRect_Topic">
-            <summary>
-              Looks up a localized string similar to New Rect.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerRectOrdering_Desc">
-            <summary>
-              Looks up a localized string similar to Click on the atlas rects in the desired order. Remaining rects will be be placed last in the rect order..
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.Help_PixmapSlicerRectOrdering_Topic">
-            <summary>
-              Looks up a localized string similar to Rect Ordering.
-            </summary>
-        </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconAbortCross">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconAcceptCheck">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconCancel">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
@@ -398,26 +204,6 @@
               Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
             </summary>
         </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconHideIndices">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconPixmapSlicer">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconRevealIndices">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconShowIndices">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconSpeakerBlack">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
@@ -428,47 +214,7 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconSquareAdd">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconSquareDelete">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconSquareDeleteMany">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconSquareNumbers">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconTutorial">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconViewBrightness">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconZoomDefault">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconZoomIn">
-            <summary>
-              Looks up a localized resource of type System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.IconZoomOut">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
@@ -548,51 +294,6 @@
               Looks up a localized string similar to Shape.
             </summary>
         </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerAddRect">
-            <summary>
-              Looks up a localized string similar to Add a new atlas rect.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerAutoSlice">
-            <summary>
-              Looks up a localized string similar to Automatically calculate atlas rects.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerCancel">
-            <summary>
-              Looks up a localized string similar to Cancel.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerClear">
-            <summary>
-              Looks up a localized string similar to Delete all atlas rects.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerDelete">
-            <summary>
-              Looks up a localized string similar to Delete the selected atlas rect (Delete).
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerDone">
-            <summary>
-              Looks up a localized string similar to Accept Changes.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerGridSlice">
-            <summary>
-              Looks up a localized string similar to Slice the pixmap with a grid.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.ToolTip_PixmapSlicerOrderRects">
-            <summary>
-              Looks up a localized string similar to Specify the order of atlas rects.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_ClearAtlas">
-            <summary>
-              Looks up a localized string similar to Clear Atlas.
-            </summary>
-        </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_CreateRigidBodyJoint">
             <summary>
               Looks up a localized string similar to Create {0}.
@@ -611,11 +312,6 @@
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_CreateSoundEmitterSourceMulti">
             <summary>
               Looks up a localized string similar to Create {0} Sources.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_DeleteAtlasRect">
-            <summary>
-              Looks up a localized string similar to Delete Atlas Rect.
             </summary>
         </member>
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_DeleteObjects">
@@ -651,16 +347,6 @@
         <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_ReparentRigidBodyJointMulti">
             <summary>
               Looks up a localized string similar to Reparent {0} Joints.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_SetAtlas">
-            <summary>
-              Looks up a localized string similar to Set Atlas.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.Plugins.Base.Properties.EditorBaseRes.UndoRedo_SetAtlasRect">
-            <summary>
-              Looks up a localized string similar to Set Atlas Rect.
             </summary>
         </member>
         <member name="T:Duality.Editor.Plugins.Base.Properties.EditorBaseResCache">
@@ -832,30 +518,6 @@
             <param name="cols">The number of columns in the sprite sheet.</param>
             <param name="rows">The number of rows in the sprite sheet.</param>
             <param name="frameBorder">Border size around each sprite sheet rect.</param>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.PixmapSlicingUtility.SliceGrid(Duality.Resources.Pixmap,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Auto-generates an atlas for the given <see cref="T:Duality.Resources.Pixmap"/> by slicing it into a
-            uniform grid as specified by parameters.
-            </summary>
-            <param name="pixmap"></param>
-            <param name="columns"></param>
-            <param name="rows"></param>
-            <param name="frameBorder"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.PixmapSlicingUtility.SliceAutoFit(Duality.Resources.Pixmap,System.Byte,System.Int32)">
-            <summary>
-            Auto-generates an atlas for the given <see cref="T:Duality.Resources.Pixmap"/> by fitting rectangles to
-            all non-transparent areas.
-            </summary>
-            <param name="alpha">Pixels with an alpha value less or equal to this value will be considered transparent.</param>
-            <param name="minSize">Rectangles with width or higher smaller than this will be ignored.</param>
-        </member>
-        <member name="M:Duality.Editor.Plugins.Base.PixmapSlicingUtility.FindAutoFitRect(Duality.Resources.Pixmap,System.Int32,System.Int32,System.Byte)">
-            <summary>
-            Find an atlas rect containing the given pixel
-            </summary>
         </member>
     </members>
 </doc>

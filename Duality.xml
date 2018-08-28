@@ -692,6 +692,13 @@
             The object will be cloned deeply, because local ownership is assumed.
             </summary>
         </member>
+        <member name="F:Duality.Cloning.CloneBehavior.WeakReference">
+            <summary>
+            If the referenced object is part of the cloned object graph, it will be assigned by-reference
+            similar to the <see cref="F:Duality.Cloning.CloneBehavior.Reference"/> setting. Otherwise, it will be skipped without assigning
+            any value. A typical example are "parent"-backreferences from child objects.
+            </summary>
+        </member>
         <member name="T:Duality.Cloning.ICloneOperation">
             <summary>
             Cloning system interface that allows an <see cref="T:Duality.Cloning.ICloneExplicit"/> or <see cref="T:Duality.Cloning.ICloneSurrogate"/>
@@ -704,7 +711,7 @@
             [GET] The context of this cloning operation, which can provide additional settings.
             </summary>
         </member>
-        <member name="M:Duality.Cloning.ICloneOperation.GetTarget``1(``0)">
+        <member name="M:Duality.Cloning.ICloneOperation.GetTarget``1(``0,``0@)">
             <summary>
             Retrieves the target object that is mapped to the specified source object.
             </summary>
@@ -761,16 +768,6 @@
             <param name="source"></param>
             <param name="target"></param>
             <param name="dontNullifyExternal"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Duality.Cloning.ExtMethodsICloneOperation.GetWeakTarget``1(Duality.Cloning.ICloneOperation,``0)">
-            <summary>
-            Retrieves a weak-referenced target object to the specified source. Will return null if the source 
-            wasn't cloned itself, but referenced only.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="operation"></param>
-            <param name="source"></param>
             <returns></returns>
         </member>
         <member name="F:Duality.Cloning.CloneFieldFlags.None">
@@ -1008,9 +1005,11 @@
             <param name="source"></param>
             <param name="target"></param>
         </member>
-        <member name="M:Duality.Cloning.CloneProvider.GetTargetOf(System.Object)">
+        <member name="M:Duality.Cloning.CloneProvider.GetTargetOf(System.Object,System.Object@)">
             <summary>
-            Retrieves the target graph equivalent of the specified source graph object.
+            Retrieves the target graph equivalent of the specified source
+            graph object and returns whether there is a valid source-target
+            relation.
             
             Note that the resulting target object will (expected to) be the
             same as the source object in cases where there is no mapping, but
@@ -1359,141 +1358,6 @@
             <summary>
             [GET] A flagged enum describing traits of the geometry that is formed by this shapes <see cref="P:Duality.Components.Physics.VertexBasedShapeInfo.Vertices"/>.
             </summary>
-        </member>
-        <member name="T:Duality.Components.Physics.PhysicsWorld">
-            <summary>
-            A physics world is a distinct simulation space for physics objects, as represented by 
-            <see cref="T:Duality.Components.Physics.RigidBody"/> components. Always used in conjunction with a <see cref="T:Duality.Resources.Scene"/>
-            that contains the components representing each physics object.
-            </summary>
-        </member>
-        <member name="P:Duality.Components.Physics.PhysicsWorld.Native">
-            <summary>
-            The physics worlds native implementation. Don't use this, unless you know exactly what you're doing.
-            </summary>
-        </member>
-        <member name="P:Duality.Components.Physics.PhysicsWorld.Gravity">
-            <summary>
-            The worlds global gravity force.
-            </summary>
-        </member>
-        <member name="P:Duality.Components.Physics.PhysicsWorld.InterpolateAlpha">
-            <summary>
-            [GET] When using fixed-timestep physics, the alpha value [0.0 - 1.0] indicates how
-            complete the next step is. This is used for linear interpolation inbetween fixed physics steps.
-            </summary>
-        </member>
-        <member name="P:Duality.Components.Physics.PhysicsWorld.IsFixedTimestep">
-            <summary>
-            [GET] Is fixed-timestep physics calculation currently active?
-            </summary>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.Awake">
-            <summary>
-            Awakes all currently existing physical objects.
-            </summary>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.Simulate(System.Single)">
-            <summary>
-            Advances this physics world simulation by <paramref name="timestep"/> seconds.
-            
-            If <see cref="P:Duality.Components.Physics.PhysicsWorld.IsFixedTimestep"/> is true, this may actually simulate multiple smaller
-            steps, or none at all while accumulating the internal fixed step timer. Otherwise,
-            it will perform exactly one physics stept with the specified <paramref name="timestep"/>.
-            </summary>
-            <param name="timestep"></param>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.ResetSimulation">
-            <summary>
-            Resets physics simulation variables to ensure a fresh start on the next <see cref="M:Duality.Components.Physics.PhysicsWorld.Simulate(System.Single)"/>
-            call. Does not affect the worlds contents.
-            </summary>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.RayCast(Duality.Vector2,Duality.Vector2,Duality.Components.Physics.RayCastCallback)">
-            <summary>
-            Performs a 2d physical raycast in world coordinates.
-            </summary>
-            <param name="start">The starting point in world coordinates.</param>
-            <param name="end">The desired end point in world coordinates.</param>
-            <param name="callback">
-            The callback that is invoked for each hit on the raycast. Note that the order in which each hit occurs isn't deterministic
-            and may appear random. Return -1 to ignore the curret shape, 0 to terminate the raycast, data.Fraction to clip the ray for current hit, or 1 to continue.
-            </param>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.RayCast(Duality.Vector2,Duality.Vector2,Duality.Components.Physics.RayCastCallback,Duality.RawList{Duality.Components.Physics.RayCastData})">
-            <summary>
-            Performs a 2d physical raycast in world coordinates.
-            </summary>
-            <param name="start">The starting point in world coordinates.</param>
-            <param name="end">The desired end point in world coordinates.</param>
-            <param name="callback">
-            The callback that is invoked for each hit on the raycast. Note that the order in which each hit occurs isn't deterministic
-            and may appear random. Return -1 to ignore the curret shape, 0 to terminate the raycast, data.Fraction to clip the ray for current hit, or 1 to continue.
-            </param>
-            <param name="hits">
-            A list that will be filled with all hits that were registered, ordered by their Fraction value. 
-            The list will not be cleared before adding items.
-            </param>
-            <returns>Returns whether any new hit was registered.</returns>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.RayCast(Duality.Vector2,Duality.Vector2,Duality.Components.Physics.RayCastCallback,Duality.Components.Physics.RayCastData@)">
-            <summary>
-            Performs a 2d physical raycast in world coordinates.
-            </summary>
-            <param name="start">The starting point in world coordinates.</param>
-            <param name="end">The desired end point in world coordinates.</param>
-            <param name="callback">
-            The callback that is invoked for each hit on the raycast. Note that the order in which each hit occurs isn't deterministic
-            and may appear random. Return -1 to ignore the curret shape, 0 to terminate the raycast, data.Fraction to clip the ray for current hit, or 1 to continue.
-            </param>
-            <param name="firstHit">Returns the first hit that occurs, i.e. the one with the highest proximity to the starting point.</param>
-            <returns>Returns whether anything has been hit.</returns>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.PickShape(Duality.Vector2)">
-            <summary>
-            Performs a global physical picking operation and returns the <see cref="T:Duality.Components.Physics.ShapeInfo">shape</see> in which
-            the specified world coordinate is located in.
-            </summary>
-            <param name="worldCoord"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.PickShapes(Duality.Vector2,System.Collections.Generic.List{Duality.Components.Physics.ShapeInfo})">
-            <summary>
-            Performs a global physical picking operation and returns the <see cref="T:Duality.Components.Physics.ShapeInfo">shapes</see> that
-            intersect the specified world coordinate.
-            </summary>
-            <param name="worldCoord"></param>
-            <param name="pickedShapes">
-            A list that will be filled with all shapes that were found. 
-            The list will not be cleared before adding items.
-            </param>
-            <returns>Returns whether any new shape was found.</returns>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.PickShapes(Duality.Vector2,Duality.Vector2,System.Collections.Generic.List{Duality.Components.Physics.ShapeInfo})">
-            <summary>
-            Performs a global physical picking operation and returns the <see cref="T:Duality.Components.Physics.ShapeInfo">shapes</see> that
-            intersect the specified world coordinate area.
-            </summary>
-            <param name="worldCoord"></param>
-            <param name="size"></param>
-            <param name="pickedShapes">
-            A list that will be filled with all shapes that were found. 
-            The list will not be cleared before adding items.
-            </param>
-            <returns>Returns whether any new shape was found.</returns>
-        </member>
-        <member name="M:Duality.Components.Physics.PhysicsWorld.QueryRect(Duality.Vector2,Duality.Vector2,System.Collections.Generic.List{Duality.Components.Physics.RigidBody})">
-            <summary>
-            Performs a global physical AABB query and returns the <see cref="T:Duality.Components.Physics.RigidBody">bodies</see> that
-            might be roughly contained or intersected by the specified region.
-            </summary>
-            <param name="worldCoord"></param>
-            <param name="size"></param>
-            <param name="queriedBodies">
-            A list that will be filled with all bodies that were found. 
-            The list will not be cleared before adding items.
-            </param>
-            <returns>Returns whether any new body was found.</returns>
         </member>
         <member name="T:Duality.Components.Physics.CollisionFilter">
             <summary>
@@ -2266,6 +2130,97 @@
         <member name="M:Duality.Components.Physics.RigidBody.EndUpdateBodyShape">
             <summary>
             Restores this RigidBody after a large-scale shape update. See <see cref="M:Duality.Components.Physics.RigidBody.BeginUpdateBodyShape"/>.
+            </summary>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.RayCast(Duality.Vector2,Duality.Vector2,Duality.Components.Physics.RayCastCallback)">
+            <summary>
+            Performs a 2d physical raycast in world coordinates.
+            </summary>
+            <param name="start">The starting point in world coordinates.</param>
+            <param name="end">The desired end point in world coordinates.</param>
+            <param name="callback">
+            The callback that is invoked for each hit on the raycast. Note that the order in which each hit occurs isn't deterministic
+            and may appear random. Return -1 to ignore the curret shape, 0 to terminate the raycast, data.Fraction to clip the ray for current hit, or 1 to continue.
+            </param>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.RayCast(Duality.Vector2,Duality.Vector2,Duality.Components.Physics.RayCastCallback,Duality.RawList{Duality.Components.Physics.RayCastData})">
+            <summary>
+            Performs a 2d physical raycast in world coordinates.
+            </summary>
+            <param name="start">The starting point in world coordinates.</param>
+            <param name="end">The desired end point in world coordinates.</param>
+            <param name="callback">
+            The callback that is invoked for each hit on the raycast. Note that the order in which each hit occurs isn't deterministic
+            and may appear random. Return -1 to ignore the curret shape, 0 to terminate the raycast, data.Fraction to clip the ray for current hit, or 1 to continue.
+            </param>
+            <param name="hits">
+            A list that will be filled with all hits that were registered, ordered by their Fraction value. 
+            The list will not be cleared before adding items.
+            </param>
+            <returns>Returns whether any new hit was registered.</returns>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.RayCast(Duality.Vector2,Duality.Vector2,Duality.Components.Physics.RayCastCallback,Duality.Components.Physics.RayCastData@)">
+            <summary>
+            Performs a 2d physical raycast in world coordinates.
+            </summary>
+            <param name="start">The starting point in world coordinates.</param>
+            <param name="end">The desired end point in world coordinates.</param>
+            <param name="callback">
+            The callback that is invoked for each hit on the raycast. Note that the order in which each hit occurs isn't deterministic
+            and may appear random. Return -1 to ignore the curret shape, 0 to terminate the raycast, data.Fraction to clip the ray for current hit, or 1 to continue.
+            </param>
+            <param name="firstHit">Returns the first hit that occurs, i.e. the one with the highest proximity to the starting point.</param>
+            <returns>Returns whether anything has been hit.</returns>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.PickShapeGlobal(Duality.Vector2)">
+            <summary>
+            Performs a global physical picking operation and returns the <see cref="T:Duality.Components.Physics.ShapeInfo">shape</see> in which
+            the specified world coordinate is located in.
+            </summary>
+            <param name="worldCoord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.PickShapesGlobal(Duality.Vector2,System.Collections.Generic.List{Duality.Components.Physics.ShapeInfo})">
+            <summary>
+            Performs a global physical picking operation and returns the <see cref="T:Duality.Components.Physics.ShapeInfo">shapes</see> that
+            intersect the specified world coordinate.
+            </summary>
+            <param name="worldCoord"></param>
+            <param name="pickedShapes">
+            A list that will be filled with all shapes that were found. 
+            The list will not be cleared before adding items.
+            </param>
+            <returns>Returns whether any new shape was found.</returns>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.PickShapesGlobal(Duality.Vector2,Duality.Vector2,System.Collections.Generic.List{Duality.Components.Physics.ShapeInfo})">
+            <summary>
+            Performs a global physical picking operation and returns the <see cref="T:Duality.Components.Physics.ShapeInfo">shapes</see> that
+            intersect the specified world coordinate area.
+            </summary>
+            <param name="worldCoord"></param>
+            <param name="size"></param>
+            <param name="pickedShapes">
+            A list that will be filled with all shapes that were found. 
+            The list will not be cleared before adding items.
+            </param>
+            <returns>Returns whether any new shape was found.</returns>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.QueryRectGlobal(Duality.Vector2,Duality.Vector2,System.Collections.Generic.List{Duality.Components.Physics.RigidBody})">
+            <summary>
+            Performs a global physical AABB query and returns the <see cref="T:Duality.Components.Physics.RigidBody">bodies</see> that
+            might be roughly contained or intersected by the specified region.
+            </summary>
+            <param name="worldCoord"></param>
+            <param name="size"></param>
+            <param name="queriedBodies">
+            A list that will be filled with all bodies that were found. 
+            The list will not be cleared before adding items.
+            </param>
+            <returns>Returns whether any new body was found.</returns>
+        </member>
+        <member name="M:Duality.Components.Physics.RigidBody.AwakeAll">
+            <summary>
+            Awakes all currently existing RigidBodies.
             </summary>
         </member>
         <member name="T:Duality.Components.Physics.ShapeInfo">
@@ -3523,54 +3478,6 @@
             <param name="progressToNext">
             A factor from zero to one that indicates how far the sprite animation has advanced from the current sprite index to the next one.
             </param>
-        </member>
-        <member name="T:Duality.DefaultContent">
-            <summary>
-            Utility class for managing embedded default content in Duality.
-            
-            There's usually no reason to use this class in game code, and it can in fact be somewhat dangerous
-            when used the wrong way. If you consider invoking any of its API, be careful about it.
-            </summary>
-        </member>
-        <member name="M:Duality.DefaultContent.Init">
-            <summary>
-            Initializes all embedded default content in Duality and registers it in the <see cref="T:Duality.ContentProvider"/>.
-            </summary>
-        </member>
-        <member name="M:Duality.DefaultContent.GetEmbeddedResourceStream(System.String)">
-            <summary>
-            Opens a <see cref="T:System.IO.Stream"/> to an embedded Duality core resource with the specified name.
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Duality.DefaultContent.InitType``1(System.String,System.Func{System.IO.Stream,``0})">
-            <summary>
-            Initializes static default content properties of type <typeparamref name="T"/> by loading
-            embedded Duality core resources and transforming them into one <see cref="T:Duality.Resource"/> instance
-            each.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="embeddedNameExt">
-            The file extension to be added to the property name in order to retrieve a matching embedded resource stream.
-            </param>
-            <param name="resourceCreator">A method that can create a new <see cref="T:Duality.Resource"/> from a specified stream.</param>
-        </member>
-        <member name="M:Duality.DefaultContent.InitType``1(System.Collections.Generic.IDictionary{System.String,``0})">
-            <summary>
-            Initializes static default content properties of type <typeparamref name="T"/> using a predefined
-            mapping from property names to <see cref="T:Duality.Resource"/> instances.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="dictionary"></param>
-        </member>
-        <member name="M:Duality.DefaultContent.InitType``1(System.Func{System.String,``0})">
-            <summary>
-            Initializes static default content properties of type <typeparamref name="T"/> using an init method
-            that can create or retrieve a matching <see cref="T:Duality.Resource"/> instance for each property name.
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="resourceCreator"></param>
         </member>
         <member name="T:Duality.Drawing.IndexDataElementType">
             <summary>
@@ -8695,6 +8602,22 @@
             on you own design.
             </summary>
         </member>
+        <member name="P:Duality.Resources.Scene.PhysicsAlpha">
+            <summary>
+            [GET] When using fixed-timestep physics, the alpha value [0.0 - 1.0] indicates how
+            complete the next step is. This is used for linear interpolation inbetween fixed physics steps.
+            </summary>
+        </member>
+        <member name="P:Duality.Resources.Scene.PhysicsFixedTime">
+            <summary>
+            [GET] Is fixed-timestep physics calculation currently active?
+            </summary>
+        </member>
+        <member name="P:Duality.Resources.Scene.PhysicsWorld">
+            <summary>
+            [GET] Returns the current physics world.
+            </summary>
+        </member>
         <member name="P:Duality.Resources.Scene.Current">
             <summary>
             [GET / SET] The Scene that is currently active i.e. updated and rendered. This is never null.
@@ -8780,11 +8703,6 @@
             [GET / SET] Global gravity force that is applied to all objects that obey the laws of physics.
             </summary>
         </member>
-        <member name="P:Duality.Resources.Scene.Physics">
-            <summary>
-            [GET] Returns the current physics world.
-            </summary>
-        </member>
         <member name="P:Duality.Resources.Scene.AllObjects">
             <summary>
             [GET] Enumerates all registered objects.
@@ -8810,12 +8728,6 @@
             [GET] Returns whether this Scene is <see cref="P:Duality.Resources.Scene.Current"/>.
             </summary>
         </member>
-        <member name="P:Duality.Resources.Scene.IsActive">
-            <summary>
-            [GET] Returns whether this <see cref="T:Duality.Resources.Scene"/> is currently <see cref="M:Duality.Resources.Scene.Activate">active</see>,
-            i.e. in a state where it can update game simulation and be rendered.
-            </summary>
-        </member>
         <member name="P:Duality.Resources.Scene.IsEmpty">
             <summary>
             [GET] Returns whether this Scene is completely empty.
@@ -8826,23 +8738,9 @@
             Creates a new, empty scene which does not contain any <see cref="T:Duality.GameObject">GameObjects</see>.
             </summary>
         </member>
-        <member name="M:Duality.Resources.Scene.Activate">
-            <summary>
-            Transitions the <see cref="T:Duality.Resources.Scene"/> into an active state, where it can be 
-            updated and rendered. This is the state of a <see cref="T:Duality.Resources.Scene"/> while it 
-            is <see cref="P:Duality.Resources.Scene.Current"/>.
-            </summary>
-        </member>
-        <member name="M:Duality.Resources.Scene.Deactivate">
-            <summary>
-            Transitions the <see cref="T:Duality.Resources.Scene"/> into an inactive state, where it can no 
-            longer be updated or rendered. This is the state of a <see cref="T:Duality.Resources.Scene"/> 
-            after it was loaded.
-            </summary>
-        </member>
         <member name="M:Duality.Resources.Scene.Render(Duality.ContentRef{Duality.Resources.RenderTarget},Duality.Rect,Duality.Vector2)">
             <summary>
-            Renders the Scene.
+            Renders the Scene
             </summary>
             <param name="target">
             The <see cref="T:Duality.Resources.RenderTarget"/> which will be used for all rendering output. 
@@ -8853,7 +8751,7 @@
         </member>
         <member name="M:Duality.Resources.Scene.Update">
             <summary>
-            Updates the Scene.
+            Updates the Scene
             </summary>
         </member>
         <member name="M:Duality.Resources.Scene.EditorUpdate">
@@ -8861,12 +8759,9 @@
             Updates the Scene in the editor.
             </summary>
         </member>
-        <member name="M:Duality.Resources.Scene.CleanupDisposedObjects">
+        <member name="M:Duality.Resources.Scene.RunCleanup">
             <summary>
-            Cleanes up scene objects that have been disposed since the scene was last updated.
-            
-            This will invoke <see cref="T:Duality.ICmpInitializable"/> deactivate handlers for objects
-            where deactivation is still pending.
+            Cleanes up disposed Scene objects.
             </summary>
         </member>
         <member name="M:Duality.Resources.Scene.ApplyPrefabLinks">
@@ -8992,11 +8887,9 @@
             <param name="name"></param>
             <returns></returns>
         </member>
-        <member name="T:Duality.DebugLogOutput">
+        <member name="M:Duality.Resources.Scene.AwakePhysics">
             <summary>
-            A <see cref="T:Duality.ILogOutput">Log output</see> that uses <see cref="T:System.Diagnostics.Debug"/> as message destination.
-            
-            This output will only be active if the core was compiled in DEBUG mode. Otherwise, all messages arriving here will be ignored.
+            Awakes all currently existing physical objects.
             </summary>
         </member>
         <member name="T:Duality.RawListPool`1">
@@ -12773,11 +12666,10 @@
             to the specified Type.
             </returns>
         </member>
-        <member name="M:Duality.ContentRef`1.EnsureLoaded">
+        <member name="M:Duality.ContentRef`1.MakeAvailable">
             <summary>
             Loads the associated content as if it was accessed now.
-            You don't usually need to call this method. It is invoked implicitly by trying to 
-            access the <see cref="T:Duality.ContentRef`1"/>.
+            You don't usually need to call this method. It is invoked implicitly by trying to access the ContentRef
             </summary>
         </member>
         <member name="M:Duality.ContentRef`1.Detach">
@@ -12903,7 +12795,7 @@
         <member name="P:Duality.DualityAppData.PhysicsFixedTime">
             <summary>
             [GET / SET] Does the physics simulation use fixed time steps? However, this setting may be overwritten dynamically due
-            to frame timing restrictions. To check whether fixed-timestep physics is currently active, use <see cref="P:Duality.Components.Physics.PhysicsWorld.IsFixedTimestep"/>.
+            to frame timing restrictions. To check whether fixed-timestep physics is currently active, use <see cref="P:Duality.Resources.Scene.PhysicsFixedTime"/>
             </summary>
         </member>
         <member name="P:Duality.DualityAppData.MultisampleBackBuffer">
@@ -13768,7 +13660,7 @@
             to the specified Type.
             </returns>
         </member>
-        <member name="M:Duality.IContentRef.EnsureLoaded">
+        <member name="M:Duality.IContentRef.MakeAvailable">
             <summary>
             Loads the associated content as if it was accessed now.
             You don't usually need to call this method. It is invoked implicitly by trying to access the ContentRef.
@@ -14504,10 +14396,9 @@
         <member name="T:Duality.ContentProvider">
             <summary>
             <para>
-            The <see cref="T:Duality.ContentProvider"/> is Duality's main place for content management. If you need any kind of <see cref="T:Duality.Resource"/>,
-            simply request it from the <see cref="T:Duality.ContentProvider"/> directly, or indirectly via <see cref="T:Duality.ContentRef`1"/>. It keeps 
-            track of which Resources are loaded and valid and prevents Resources from being loaded more than once at a time, thus 
-            reducing loading times and redundancy.
+            The ContentProvider is Duality's main instance for content management. If you need any kind of <see cref="T:Duality.Resource"/>,
+            simply request it from the ContentProvider. It keeps track of which Resources are loaded and valid and prevents
+            Resources from being loaded more than once at a time, thus reducing loading times and redundancy.
             </para>
             <para>
             You can also manually <see cref="M:Duality.ContentProvider.AddContent(System.String,Duality.Resource)">register Resources</see> that have been created at runtime 
@@ -14517,6 +14408,42 @@
             <seealso cref="T:Duality.Resource"/>
             <seealso cref="T:Duality.ContentRef`1"/>
             <seealso cref="T:Duality.IContentRef"/>
+        </member>
+        <member name="F:Duality.ContentProvider.VirtualContentPath">
+            <summary>
+            (Virtual) base path for Duality's embedded default content.
+            </summary>
+        </member>
+        <member name="M:Duality.ContentProvider.GetNameFromPath(System.String)">
+            <summary>
+            Determines the name of a Resource based on its path.
+            </summary>
+            <param name="resPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.ContentProvider.GetFullNameFromPath(System.String)">
+            <summary>
+            Determines the full (hierarchical) name of a Resource based on its path.
+            </summary>
+            <param name="resPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.ContentProvider.InitDefaultContent">
+            <summary>
+            Initializes Dualitys embedded default content.
+            </summary>
+        </member>
+        <member name="M:Duality.ContentProvider.DisposeDefaultContent">
+            <summary>
+            Initializes Dualitys embedded default content.
+            </summary>
+        </member>
+        <member name="M:Duality.ContentProvider.IsDefaultContentPath(System.String)">
+            <summary>
+            Returns whether or not the specified path points to Duality default content.
+            </summary>
+            <param name="resPath"></param>
+            <returns></returns>
         </member>
         <member name="M:Duality.ContentProvider.GetDefaultContent``1">
             <summary>
@@ -14562,19 +14489,13 @@
         </member>
         <member name="M:Duality.ContentProvider.ClearContent(System.Boolean)">
             <summary>
-            Clears all content registered within this <see cref="T:Duality.ContentProvider"/>, and
-            disposes it, if requested.
+            Clears all non-default content.
             </summary>
-            <param name="dispose">If true, the removed content is disposed as well.</param>
+            <param name="dispose">If true, unregistered content is also disposed.</param>
         </member>
         <member name="M:Duality.ContentProvider.AddContent(System.String,Duality.Resource)">
             <summary>
             Registers a <see cref="T:Duality.Resource"/> and maps it to the specified path key.
-            
-            If a different <see cref="T:Duality.Resource"/> was already registered with that path key,
-            it will be disposed and replaced with the specified one. <see cref="T:Duality.ContentRef`1"/>
-            instances referring to the path will re-map to the newly registered <see cref="T:Duality.Resource"/>
-            on their next access.
             </summary>
             <param name="path">The path key to map the Resource to</param>
             <param name="content">The Resource to register.</param>
@@ -14590,7 +14511,7 @@
             <summary>
             Explicitly removes a specific Resource from the ContentProvider.
             </summary>
-            <param name="content"></param>
+            <param name="res"></param>
             <param name="dispose"></param>
             <returns></returns>
         </member>
@@ -14608,6 +14529,20 @@
             the specified directory.
             </summary>
             <param name="dir">The directory to unregister</param>
+            <param name="dispose">If true, unregistered content is also disposed.</param>
+        </member>
+        <member name="M:Duality.ContentProvider.RemoveAllContent``1(System.Boolean)">
+            <summary>
+            Unregisters all content of the specified Type or subclassed Types.
+            </summary>
+            <typeparam name="T">The content Type to look for.</typeparam>
+            <param name="dispose">If true, unregistered content is also disposed.</param>
+        </member>
+        <member name="M:Duality.ContentProvider.RemoveAllContent(System.Type,System.Boolean)">
+            <summary>
+            Unregisters all content of the specified Type or subclassed Types.
+            </summary>
+            <param name="t">The content Type to look for.</param>
             <param name="dispose">If true, unregistered content is also disposed.</param>
         </member>
         <member name="M:Duality.ContentProvider.RenameContent(System.String,System.String)">
@@ -15276,15 +15211,6 @@
             [GET / SET] The <see cref="T:Duality.GameObject"/> to which this Component belongs.
             </summary>
         </member>
-        <member name="P:Duality.Component.Scene">
-            <summary>
-            [GET] The parent <see cref="T:Duality.Resources.Scene"/> to which this <see cref="T:Duality.Component"/> belongs.
-            
-            Note that this property is derived from the components <see cref="P:Duality.Component.GameObj"/>, as a
-            <see cref="T:Duality.Component"/> itself cannot be part of a <see cref="T:Duality.Resources.Scene"/> without a 
-            <see cref="T:Duality.GameObject"/>.
-            </summary>
-        </member>
         <member name="M:Duality.Component.Dispose">
             <summary>
             Disposes this Component. You usually don't need this - use <see cref="M:Duality.ExtMethodsIManageableObject.DisposeLater(Duality.IManageableObject)"/> instead.
@@ -15670,7 +15596,7 @@
             positioned relative to it when occupying a position in space.
             </summary>
         </member>
-        <member name="P:Duality.GameObject.Scene">
+        <member name="P:Duality.GameObject.ParentScene">
             <summary>
             [GET] The GameObjects parent <see cref="T:Duality.Resources.Scene"/>. Each GameObject can belong to
             exactly one Scene, or no Scene at all. To add or remove GameObjects to / from a Scene, use the <see cref="M:Duality.Resources.Scene.AddObject(Duality.GameObject)"/> and
@@ -16229,11 +16155,6 @@
             A Resource files extension.
             </summary>
         </member>
-        <member name="F:Duality.Resource.DefaultContentBasePath">
-            <summary>
-            (Virtual) base path for Duality's embedded default content.
-            </summary>
-        </member>
         <member name="F:Duality.Resource.assetInfo">
             <summary>
             Contains information on how this <see cref="T:Duality.Resource"/> should be treated during
@@ -16259,7 +16180,7 @@
         <member name="P:Duality.Resource.Path">
             <summary>
             [GET] The path where this Resource has been originally loaded from or was first saved to.
-            It is also the path under which this Resource is registered at the <see cref="T:Duality.ContentProvider"/>.
+            It is also the path under which this Resource is registered at the ContentProvider.
             </summary>
         </member>
         <member name="P:Duality.Resource.AssetInfo">
@@ -16297,7 +16218,7 @@
             <param name="makePermanent">
             When true, the Resource will be made permanently available from now on. If it has been generated at runtime 
             or was loaded explicitly outside the ContentProvider, this will set the Resources <see cref="P:Duality.Resource.Path"/> Property
-            and register it in the <see cref="T:Duality.ContentProvider"/>. If the Resource already is a permanent, this parameter will be ignored.
+            and register it in the ContentProvider. If the Resource already is a permanent, this parameter will be ignored.
             </param>
         </member>
         <member name="M:Duality.Resource.Save(System.IO.Stream)">
@@ -16383,7 +16304,7 @@
             <param name="loadCallback">An optional callback that is invoked right after loading the Resource, but before initializing it.</param>
             <param name="initResource">
             Specifies whether or not the Resource is initialized by calling <see cref="M:Duality.Resource.OnLoaded"/>. Never attempt to use
-            uninitialized Resources or register them in the <see cref="T:Duality.ContentProvider"/>.
+            uninitialized Resources or register them in the ContentProvider.
             </param>
             <returns>The Resource that has been loaded.</returns>
         </member>
@@ -16401,7 +16322,7 @@
             <param name="loadCallback">An optional callback that is invoked right after loading the Resource, but before initializing it.</param>
             <param name="initResource">
             Specifies whether or not the Resource is initialized by calling <see cref="M:Duality.Resource.OnLoaded"/>. Never attempt to use
-            uninitialized Resources or register them in the <see cref="T:Duality.ContentProvider"/>.
+            uninitialized Resources or register them in the ContentProvider.
             </param>
             <returns>The Resource that has been loaded.</returns>
         </member>
@@ -16419,7 +16340,7 @@
             <param name="loadCallback">An optional callback that is invoked right after loading the Resource, but before initializing it.</param>
             <param name="initResource">
             Specifies whether or not the Resource is initialized by calling <see cref="M:Duality.Resource.OnLoaded"/>. Never attempt to use
-            uninitialized Resources or register them in the <see cref="T:Duality.ContentProvider"/>.
+            uninitialized Resources or register them in the ContentProvider.
             </param>
             <returns>The Resource that has been loaded.</returns>
         </member>
@@ -16429,27 +16350,6 @@
             Only use it when you know exactly what you're doing. Consider requesting the Resource from the <see cref="T:Duality.ContentProvider"/> instead.
             </summary>
             <param name="res">The Resource to initialize.</param>
-        </member>
-        <member name="M:Duality.Resource.GetNameFromPath(System.String)">
-            <summary>
-            Determines the name of a Resource based on its path.
-            </summary>
-            <param name="resPath"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Duality.Resource.GetFullNameFromPath(System.String)">
-            <summary>
-            Determines the full (hierarchical) name of a Resource based on its path.
-            </summary>
-            <param name="resPath"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Duality.Resource.IsDefaultContentPath(System.String)">
-            <summary>
-            Returns whether or not the specified path points to Duality default content.
-            </summary>
-            <param name="resPath"></param>
-            <returns></returns>
         </member>
         <member name="M:Duality.Resource.IsResourceFile(System.String)">
             <summary>

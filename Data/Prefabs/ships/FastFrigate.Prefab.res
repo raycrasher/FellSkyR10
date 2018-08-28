@@ -1724,8 +1724,1124 @@
           <parent dataType="ObjectRef">306822855</parent>
           <prefabLink />
         </item>
+        <item dataType="Struct" type="Duality.GameObject" id="2255097224">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2668528640">
+            <_items dataType="Array" type="Duality.Component[]" id="1815077020">
+              <item dataType="Struct" type="Duality.Components.Transform" id="2312374442">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">0</angle>
+                <angleAbs dataType="Float">0</angleAbs>
+                <gameobj dataType="ObjectRef">2255097224</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-28.50608</X>
+                  <Y dataType="Float">-1.31130219E-06</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-28.50608</X>
+                  <Y dataType="Float">-1.31130219E-06</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">1.52580869</scale>
+                <scaleAbs dataType="Float">1.52580869</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3723716504">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <gameobj dataType="ObjectRef">2255097224</gameobj>
+                <offset dataType="Float">5</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">0</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="1995293764">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">2255097224</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="3513810363">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">2255097224</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1678574542" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="3966787282">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="Type" id="190932816" value="Duality.Components.Renderers.SpriteAnimator" />
+                <item dataType="Type" id="554317678" value="FellSky.Components.Thruster" />
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="1334943946">
+                <item dataType="ObjectRef">2312374442</item>
+                <item dataType="ObjectRef">3723716504</item>
+                <item dataType="ObjectRef">1995293764</item>
+                <item dataType="ObjectRef">3513810363</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">2312374442</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="3540925282">QVUnVM9090KLVHk+I4CZuQ==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#mainThruster</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="4097318344">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1088810816">
+            <_items dataType="Array" type="Duality.Component[]" id="2642346268">
+              <item dataType="Struct" type="Duality.Components.Transform" id="4154595562">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">0.233838558</angle>
+                <angleAbs dataType="Float">0.233838558</angleAbs>
+                <gameobj dataType="ObjectRef">4097318344</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-14.5221481</X>
+                  <Y dataType="Float">-36.4999847</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-14.5221481</X>
+                  <Y dataType="Float">-36.4999847</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.639488637</scale>
+                <scaleAbs dataType="Float">0.639488637</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1270970328">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
+                <gameobj dataType="ObjectRef">4097318344</gameobj>
+                <offset dataType="Float">4</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="3837514884">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">4097318344</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="1061064187">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">4097318344</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2532996686" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="126833810">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="2640091594">
+                <item dataType="ObjectRef">4154595562</item>
+                <item dataType="ObjectRef">1270970328</item>
+                <item dataType="ObjectRef">3837514884</item>
+                <item dataType="ObjectRef">1061064187</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">4154595562</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="3893344930">Zf/kcl6F5EqSsvIfrWBEZw==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#auxthrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="269206566">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="890265118">
+            <_items dataType="Array" type="Duality.Component[]" id="3186833040">
+              <item dataType="Struct" type="Duality.Components.Transform" id="326483784">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">3.01392961</angle>
+                <angleAbs dataType="Float">3.01392961</angleAbs>
+                <gameobj dataType="ObjectRef">269206566</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">27.9208717</X>
+                  <Y dataType="Float">-40.959095</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">27.9208717</X>
+                  <Y dataType="Float">-40.959095</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.3</scale>
+                <scaleAbs dataType="Float">0.3</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1737825846">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
+                <gameobj dataType="ObjectRef">269206566</gameobj>
+                <offset dataType="Float">8</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="9403106">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">269206566</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="1527919705">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">269206566</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2872779914" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="2161633852">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="1863838102">
+                <item dataType="ObjectRef">326483784</item>
+                <item dataType="ObjectRef">1737825846</item>
+                <item dataType="ObjectRef">9403106</item>
+                <item dataType="ObjectRef">1527919705</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">326483784</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="3621318376">N5Cm2A14vk6hgSCJWTpIag==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#retrothrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="1428636892">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="26475788">
+            <_items dataType="Array" type="Duality.Component[]" id="2177409188">
+              <item dataType="Struct" type="Duality.Components.Transform" id="1485914110">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">3.26925588</angle>
+                <angleAbs dataType="Float">3.26925588</angleAbs>
+                <gameobj dataType="ObjectRef">1428636892</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">27.9208717</X>
+                  <Y dataType="Float">40.959095</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">27.9208717</X>
+                  <Y dataType="Float">40.959095</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.3</scale>
+                <scaleAbs dataType="Float">0.3</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2897256172">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <gameobj dataType="ObjectRef">1428636892</gameobj>
+                <offset dataType="Float">8</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="1168833432">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">1428636892</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="2687350031">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">1428636892</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2964307702" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="729569158">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="484700986">
+                <item dataType="ObjectRef">1485914110</item>
+                <item dataType="ObjectRef">2897256172</item>
+                <item dataType="ObjectRef">1168833432</item>
+                <item dataType="ObjectRef">2687350031</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">1485914110</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="3787822854">4YbDDZMei0yiE7xK0b23FQ==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#retrothrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="3136537034">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="550950058">
+            <_items dataType="Array" type="Duality.Component[]" id="2361484832">
+              <item dataType="Struct" type="Duality.Components.Transform" id="3193814252">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">6.049347</angle>
+                <angleAbs dataType="Float">6.049347</angleAbs>
+                <gameobj dataType="ObjectRef">3136537034</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-14.5221481</X>
+                  <Y dataType="Float">36.4999847</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-14.5221481</X>
+                  <Y dataType="Float">36.4999847</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.639488637</scale>
+                <scaleAbs dataType="Float">0.639488637</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="310189018">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <gameobj dataType="ObjectRef">3136537034</gameobj>
+                <offset dataType="Float">4</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">0</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2876733574">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">3136537034</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="100282877">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">3136537034</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1946302682" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="2604039824">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="3514834670">
+                <item dataType="ObjectRef">3193814252</item>
+                <item dataType="ObjectRef">310189018</item>
+                <item dataType="ObjectRef">2876733574</item>
+                <item dataType="ObjectRef">100282877</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">3193814252</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="4127945580">mnhGQX+dTk2kPfjCj8wbjQ==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#auxthrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="2754199898">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2319620666">
+            <_items dataType="Array" type="Duality.Component[]" id="2488888576">
+              <item dataType="Struct" type="Duality.Components.Transform" id="2811477116">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">4.712389</angle>
+                <angleAbs dataType="Float">4.712389</angleAbs>
+                <gameobj dataType="ObjectRef">2754199898</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">71.12273</X>
+                  <Y dataType="Float">19.904604</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">71.12273</X>
+                  <Y dataType="Float">19.904604</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.15</scale>
+                <scaleAbs dataType="Float">0.15</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="4222819178">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <gameobj dataType="ObjectRef">2754199898</gameobj>
+                <offset dataType="Float">10</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2494396438">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">2754199898</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="4012913037">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">2754199898</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="4171469498" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="3906575744">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="144566478">
+                <item dataType="ObjectRef">2811477116</item>
+                <item dataType="ObjectRef">4222819178</item>
+                <item dataType="ObjectRef">2494396438</item>
+                <item dataType="ObjectRef">4012913037</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">2811477116</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="3295746844">0m3M9As/AUOr3HkGLH1naw==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#maneuverthrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="1585584137">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1998895189">
+            <_items dataType="Array" type="Duality.Component[]" id="3557600502">
+              <item dataType="Struct" type="Duality.Components.Transform" id="1642861355">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">1.57079649</angle>
+                <angleAbs dataType="Float">1.57079649</angleAbs>
+                <gameobj dataType="ObjectRef">1585584137</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">71.12273</X>
+                  <Y dataType="Float">-19.904604</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">71.12273</X>
+                  <Y dataType="Float">-19.904604</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.15</scale>
+                <scaleAbs dataType="Float">0.15</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3054203417">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
+                <gameobj dataType="ObjectRef">1585584137</gameobj>
+                <offset dataType="Float">10</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="1325780677">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">1585584137</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="2844297276">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">1585584137</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="306019656" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="4055421311">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="1322463072">
+                <item dataType="ObjectRef">1642861355</item>
+                <item dataType="ObjectRef">3054203417</item>
+                <item dataType="ObjectRef">1325780677</item>
+                <item dataType="ObjectRef">2844297276</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">1642861355</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="747726381">bbreCq6aDkyhyejtSmuC4g==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#maneuverthrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="777815240">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="957456448">
+            <_items dataType="Array" type="Duality.Component[]" id="1227461404">
+              <item dataType="Struct" type="Duality.Components.Transform" id="835092458">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">1.57079649</angle>
+                <angleAbs dataType="Float">1.57079649</angleAbs>
+                <gameobj dataType="ObjectRef">777815240</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-38.08416</X>
+                  <Y dataType="Float">-61.59278</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-38.08416</X>
+                  <Y dataType="Float">-61.59278</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.15</scale>
+                <scaleAbs dataType="Float">0.15</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2246434520">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
+                <gameobj dataType="ObjectRef">777815240</gameobj>
+                <offset dataType="Float">10</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="518011780">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">777815240</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="2036528379">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">777815240</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3488934990" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="1552548242">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="3700617162">
+                <item dataType="ObjectRef">835092458</item>
+                <item dataType="ObjectRef">2246434520</item>
+                <item dataType="ObjectRef">518011780</item>
+                <item dataType="ObjectRef">2036528379</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">835092458</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="1231150498">KqjT3p0LckG39S1P6xDYuw==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#maneuverthrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
+        <item dataType="Struct" type="Duality.GameObject" id="4028564423">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="4071582267">
+            <_items dataType="Array" type="Duality.Component[]" id="1385543382">
+              <item dataType="Struct" type="Duality.Components.Transform" id="4085841641">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">4.712389</angle>
+                <angleAbs dataType="Float">4.712389</angleAbs>
+                <gameobj dataType="ObjectRef">4028564423</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-38.08416</X>
+                  <Y dataType="Float">61.59278</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">-38.08416</X>
+                  <Y dataType="Float">61.59278</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">0.15</scale>
+                <scaleAbs dataType="Float">0.15</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1202216407">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <gameobj dataType="ObjectRef">4028564423</gameobj>
+                <offset dataType="Float">10</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">124</W>
+                  <X dataType="Float">-124</X>
+                  <Y dataType="Float">-15</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\thrusters.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">1</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="3768760963">
+                <active dataType="Bool">true</active>
+                <animDuration dataType="Float">5</animDuration>
+                <animLoopMode dataType="Enum" type="Duality.Components.Renderers.SpriteAnimator+LoopMode" name="Loop" value="1" />
+                <animTime dataType="Float">0</animTime>
+                <customFrameSequence />
+                <firstFrame dataType="Int">0</firstFrame>
+                <frameCount dataType="Int">2</frameCount>
+                <gameobj dataType="ObjectRef">4028564423</gameobj>
+                <paused dataType="Bool">false</paused>
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Thruster" id="992310266">
+                <_boostAmount dataType="Float">0</_boostAmount>
+                <_isThrusting dataType="Bool">false</_isThrusting>
+                <_thrustAmount dataType="Float">0</_thrustAmount>
+                <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+                <_x003C_Glow_x003E_k__BackingField />
+                <_x003C_Plume_x003E_k__BackingField />
+                <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
+                <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+                <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">35</H>
+                  <W dataType="Float">150</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeBoost_x003E_k__BackingField>
+                <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">20</H>
+                  <W dataType="Float">50</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeIdle_x003E_k__BackingField>
+                <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">30</H>
+                  <W dataType="Float">100</W>
+                  <X dataType="Float">0</X>
+                  <Y dataType="Float">-15</Y>
+                </_x003C_SizeThrust_x003E_k__BackingField>
+                <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">4028564423</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">4</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2049304104" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="1939917137">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="ObjectRef">2508468170</item>
+                <item dataType="ObjectRef">190932816</item>
+                <item dataType="ObjectRef">554317678</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="756974752">
+                <item dataType="ObjectRef">4085841641</item>
+                <item dataType="ObjectRef">1202216407</item>
+                <item dataType="ObjectRef">3768760963</item>
+                <item dataType="ObjectRef">992310266</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">4085841641</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="3943247299">/TDHv6m1qEuVs5M+vD/5fg==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">#maneuverthrusters</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
       </_items>
-      <_size dataType="Int">22</_size>
+      <_size dataType="Int">31</_size>
     </children>
     <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2583251894">
       <_items dataType="Array" type="Duality.Component[]" id="590079590" length="4">
@@ -1969,10 +3085,15 @@
           <useCCD dataType="Bool">false</useCCD>
         </item>
         <item dataType="Struct" type="FellSky.Components.Ship" id="498162791">
-          <_weapons dataType="Struct" type="System.Collections.Generic.List`1[[FellSky.Components.Weapon]]" id="816189927">
-            <_items dataType="Array" type="FellSky.Components.Weapon[]" id="2938713422" length="8" />
-            <_size dataType="Int">0</_size>
-          </_weapons>
+          <_x003C_Acceleration_x003E_k__BackingField dataType="Struct" type="Duality.Vector2" />
+          <_x003C_BoostMultiplier_x003E_k__BackingField dataType="Float">2</_x003C_BoostMultiplier_x003E_k__BackingField>
+          <_x003C_DesiredTorque_x003E_k__BackingField dataType="Float">0</_x003C_DesiredTorque_x003E_k__BackingField>
+          <_x003C_ForwardSpeed_x003E_k__BackingField dataType="Float">30</_x003C_ForwardSpeed_x003E_k__BackingField>
+          <_x003C_IsBoosting_x003E_k__BackingField dataType="Bool">false</_x003C_IsBoosting_x003E_k__BackingField>
+          <_x003C_IsWarping_x003E_k__BackingField dataType="Bool">false</_x003C_IsWarping_x003E_k__BackingField>
+          <_x003C_ManeuverSpeed_x003E_k__BackingField dataType="Float">10</_x003C_ManeuverSpeed_x003E_k__BackingField>
+          <_x003C_ThrustVector_x003E_k__BackingField dataType="Struct" type="Duality.Vector2" />
+          <_x003C_TurnSpeed_x003E_k__BackingField dataType="Float">70</_x003C_TurnSpeed_x003E_k__BackingField>
           <active dataType="Bool">true</active>
           <gameobj dataType="ObjectRef">306822855</gameobj>
         </item>

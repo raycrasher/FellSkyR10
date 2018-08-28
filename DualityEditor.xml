@@ -24,82 +24,6 @@
             [GET] The list of output source files that were exported.
             </summary>
         </member>
-        <member name="T:Duality.Editor.AssetManagement.AssetImporter`1">
-            <summary>
-            A helper class that implements <see cref="T:Duality.Editor.AssetManagement.IAssetImporter"/> and simplifies
-            the implementation of new importers that can only generate a single resource type.
-            </summary>
-            <typeparam name="T">The type of resource that this importer works with.</typeparam>
-        </member>
-        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExtPrimary">
-            <summary>
-            [GET] The main file extension that this importer handles.
-            Used when determining the file extension of exported resources.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExts">
-            <summary>
-            [GET] All file extensions that this importer handles.
-            Used when determining whether or not this importer
-            can handle a given input file.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.Id">
-            <summary>
-            [GET] A fixed system ID that represents this importer.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.Name">
-            <summary>
-            [GET] The user-friendly name of this importer.
-            </summary>
-        </member>
-        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.Priority">
-            <summary>
-            [GET] The relative priority of this importer over others.
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.GetResourceNameFromInput(Duality.Editor.AssetManagement.AssetImportInput)">
-            <summary>
-            Returns the name of the resource that this importer
-            would generate for the given input. Defaults to the name
-            of the input file, without extension.
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.GetOutputNameFromResource(`0)">
-            <summary>
-            Returns the name of the file that would be exported for the given resource.
-            Defaults to the name of the resource with the extension <see cref="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExtPrimary"/>
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.AcceptsInput(Duality.Editor.AssetManagement.AssetImportInput)">
-            <summary>
-            Returns whether or not this importer accepts the given input.
-            By default, compares the input files extension to <see cref="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExts"/>.
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.CanExport(`0)">
-            <summary>
-            Returns whether or not the given resource can be exported.
-            By default, returns true for all non-null resources.
-            </summary>
-        </member>
-        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.ImportResource(Duality.ContentRef{`0},Duality.Editor.AssetManagement.AssetImportInput,Duality.Editor.AssetManagement.IAssetImportEnvironment)">
-            <summary>
-            Performs the import operation for a resource.
-            </summary>
-            <param name="resourceRef">A <see cref="T:Duality.ContentRef`1"/> pointing to the resource being imported.</param>
-            <param name="input">The input information for the import operation.</param>
-            <param name="env">The input environment in which the import is taking place.</param>
-        </member>
-        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.ExportResource(Duality.ContentRef{`0},System.String,Duality.Editor.AssetManagement.IAssetExportEnvironment)">
-            <summary>
-            Performs the export operation for a resource.
-            </summary>
-            <param name="resourceRef">A <see cref="T:Duality.ContentRef`1"/> pointing to the resource being imported.</param>
-            <param name="path">The export path for the resource</param>
-            <param name="env">The input environment in which the import is taking place.</param>
-        </member>
         <member name="T:Duality.Editor.AssetManagement.AssetInternalHelper">
             <summary>
             Provides some internal helper functions for asset-related tasks.
@@ -2950,13 +2874,6 @@
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
-        </member>
-        <member name="M:Duality.Editor.UndoRedoActions.CreateComponentAction.GetRequiredConcreteType(System.Type,System.Type)">
-            <summary>
-            Gets a concrete type from the user that extends from the given type.
-            </summary>
-            <param name="type">The abstract type to get a concrete type for</param>
-            <param name="typeWithRequirement">The type that needs this requirement satisfied</param>
         </member>
         <member name="T:Duality.Editor.EditorLogEntry">
             <summary>

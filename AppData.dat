@@ -3,16 +3,14 @@
   <customData />
   <forcedRenderResizeMode dataType="Enum" type="Duality.TargetResize" name="Fit" value="2" />
   <forcedRenderSize dataType="Struct" type="Duality.Point2" />
-  <multisampleBackBuffer dataType="Bool">false</multisampleBackBuffer>
+  <multisampleBackBuffer dataType="Bool">true</multisampleBackBuffer>
   <physicsFixedTime dataType="Bool">false</physicsFixedTime>
   <physicsVelThreshold dataType="Float">0.8333333</physicsVelThreshold>
   <renderSetup dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderSetup]]" />
   <skipBackends />
   <soundDopplerFactor dataType="Float">1</soundDopplerFactor>
   <speedOfSound dataType="Float">360</speedOfSound>
-  <startScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]">
-    <contentPath dataType="String">Data\Scene.Scene.res</contentPath>
-  </startScene>
-  <version dataType="UInt">597</version>
+  <startScene dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Scene]]" />
+  <version dataType="UInt">0</version>
 </root>
 <!-- XmlFormatterBase Document Separator -->
