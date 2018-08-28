@@ -24,6 +24,82 @@
             [GET] The list of output source files that were exported.
             </summary>
         </member>
+        <member name="T:Duality.Editor.AssetManagement.AssetImporter`1">
+            <summary>
+            A helper class that implements <see cref="T:Duality.Editor.AssetManagement.IAssetImporter"/> and simplifies
+            the implementation of new importers that can only generate a single resource type.
+            </summary>
+            <typeparam name="T">The type of resource that this importer works with.</typeparam>
+        </member>
+        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExtPrimary">
+            <summary>
+            [GET] The main file extension that this importer handles.
+            Used when determining the file extension of exported resources.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExts">
+            <summary>
+            [GET] All file extensions that this importer handles.
+            Used when determining whether or not this importer
+            can handle a given input file.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.Id">
+            <summary>
+            [GET] A fixed system ID that represents this importer.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.Name">
+            <summary>
+            [GET] The user-friendly name of this importer.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.AssetManagement.AssetImporter`1.Priority">
+            <summary>
+            [GET] The relative priority of this importer over others.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.GetResourceNameFromInput(Duality.Editor.AssetManagement.AssetImportInput)">
+            <summary>
+            Returns the name of the resource that this importer
+            would generate for the given input. Defaults to the name
+            of the input file, without extension.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.GetOutputNameFromResource(`0)">
+            <summary>
+            Returns the name of the file that would be exported for the given resource.
+            Defaults to the name of the resource with the extension <see cref="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExtPrimary"/>
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.AcceptsInput(Duality.Editor.AssetManagement.AssetImportInput)">
+            <summary>
+            Returns whether or not this importer accepts the given input.
+            By default, compares the input files extension to <see cref="P:Duality.Editor.AssetManagement.AssetImporter`1.SourceFileExts"/>.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.CanExport(`0)">
+            <summary>
+            Returns whether or not the given resource can be exported.
+            By default, returns true for all non-null resources.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.ImportResource(Duality.ContentRef{`0},Duality.Editor.AssetManagement.AssetImportInput,Duality.Editor.AssetManagement.IAssetImportEnvironment)">
+            <summary>
+            Performs the import operation for a resource.
+            </summary>
+            <param name="resourceRef">A <see cref="T:Duality.ContentRef`1"/> pointing to the resource being imported.</param>
+            <param name="input">The input information for the import operation.</param>
+            <param name="env">The input environment in which the import is taking place.</param>
+        </member>
+        <member name="M:Duality.Editor.AssetManagement.AssetImporter`1.ExportResource(Duality.ContentRef{`0},System.String,Duality.Editor.AssetManagement.IAssetExportEnvironment)">
+            <summary>
+            Performs the export operation for a resource.
+            </summary>
+            <param name="resourceRef">A <see cref="T:Duality.ContentRef`1"/> pointing to the resource being imported.</param>
+            <param name="path">The export path for the resource</param>
+            <param name="env">The input environment in which the import is taking place.</param>
+        </member>
         <member name="T:Duality.Editor.AssetManagement.AssetInternalHelper">
             <summary>
             Provides some internal helper functions for asset-related tasks.
@@ -2875,6 +2951,13 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="M:Duality.Editor.UndoRedoActions.CreateComponentAction.GetRequiredConcreteType(System.Type,System.Type)">
+            <summary>
+            Gets a concrete type from the user that extends from the given type.
+            </summary>
+            <param name="type">The abstract type to get a concrete type for</param>
+            <param name="typeWithRequirement">The type that needs this requirement satisfied</param>
+        </member>
         <member name="T:Duality.Editor.EditorLogEntry">
             <summary>
             Represents a log entry that was received by an <see cref="T:Duality.Editor.EditorLogOutput"/> and
@@ -2937,6 +3020,119 @@
             <param name="targetIndex">The starting index within the target array that entries will be written to.</param>
             <param name="index">The first log index that will be retrieved.</param>
             <param name="count">The number of log entries to be retrieved.</param>
+        </member>
+        <member name="T:Duality.Editor.ResourceFilesChangedEventArgs">
+            <summary>
+            <see cref="T:System.EventArgs"/> providing information about a series of file system changes
+            regarding <see cref="T:Duality.Resource"/> files, or directories containing them.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.ResourceFilesChangedEventArgs.Contains(Duality.IO.FileEventType,Duality.Resource)">
+            <summary>
+            Returns whether a change was made on the specified <see cref="T:Duality.Resource"/>.
+            </summary>
+            <param name="type"></param>
+            <param name="content"></param>
+            <returns></returns>
+            <seealso cref="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.String)"/>
+        </member>
+        <member name="M:Duality.Editor.ResourceFilesChangedEventArgs.Contains(Duality.IO.FileEventType,Duality.ContentRef{Duality.Resource})">
+            <summary>
+            Returns whether a change was made on the specified <see cref="T:Duality.Resource"/>.
+            </summary>
+            <param name="type"></param>
+            <param name="content"></param>
+            <returns></returns>
+            <seealso cref="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.String)"/>
+        </member>
+        <member name="M:Duality.Editor.ResourceFilesChangedEventArgs.Contains(Duality.IO.FileEventType,System.Collections.Generic.IEnumerable{Duality.Resource})">
+            <summary>
+            Returns whether a change was made on any of the specified <see cref="T:Duality.Resource"/> instances.
+            </summary>
+            <param name="type"></param>
+            <param name="content"></param>
+            <returns></returns>
+            <seealso cref="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.Collections.Generic.IEnumerable{System.String})"/>
+        </member>
+        <member name="M:Duality.Editor.ResourceFilesChangedEventArgs.Contains(Duality.IO.FileEventType,System.Collections.Generic.IEnumerable{Duality.ContentRef{Duality.Resource}})">
+            <summary>
+            Returns whether a change was made on any of the specified <see cref="T:Duality.Resource"/> instances.
+            </summary>
+            <param name="type"></param>
+            <param name="content"></param>
+            <returns></returns>
+            <seealso cref="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.Collections.Generic.IEnumerable{System.String})"/>
+        </member>
+        <member name="M:Duality.Editor.ResourceFilesChangedEventArgs.Contains(Duality.IO.FileEventType,System.Type)">
+            <summary>
+            Returns whether a change was made on a <see cref="T:Duality.Resource"/> of the specified type.
+            </summary>
+            <param name="type"></param>
+            <param name="content"></param>
+            <returns></returns>
+            <seealso cref="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.String)"/>
+        </member>
+        <member name="T:Duality.Editor.FileSystemChangedEventArgs">
+            <summary>
+            <see cref="T:System.EventArgs"/> providing information about a series of file system changes.
+            </summary>
+        </member>
+        <member name="P:Duality.Editor.FileSystemChangedEventArgs.FileEvents">
+            <summary>
+            A read-only list of file system events that took place.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.FileSystemChangedEventArgs.Any(Duality.IO.FileEventType)">
+            <summary>
+            Returns whether any changes of the specified type were made.
+            
+            Note that <paramref name="type"/> can be used as a bitmask including
+            multiple types, in which case any detected match will yield a "true" result.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Editor.FileSystemChangedEventArgs.AnyFiles(Duality.IO.FileEventType)">
+            <summary>
+            Returns whether any file changes of the specified type were made.
+            
+            Note that <paramref name="type"/> can be used as a bitmask including
+            multiple types, in which case any detected match will yield a "true" result.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Editor.FileSystemChangedEventArgs.AnyDirectories(Duality.IO.FileEventType)">
+            <summary>
+            Returns whether any directory changes of the specified type were made.
+            
+            Note that <paramref name="type"/> can be used as a bitmask including
+            multiple types, in which case any detected match will yield a "true" result.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.String)">
+            <summary>
+            Returns whether a change was made on the specified path.
+            
+            Note that <paramref name="type"/> can be used as a bitmask including
+            multiple types, in which case any detected match will yield a "true" result.
+            </summary>
+            <param name="type"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Editor.FileSystemChangedEventArgs.Contains(Duality.IO.FileEventType,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Returns whether a change was made on any of the specified paths.
+            
+            Note that <paramref name="type"/> can be used as a bitmask including
+            multiple types, in which case any detected match will yield a "true" result.
+            </summary>
+            <param name="type"></param>
+            <param name="paths"></param>
+            <returns></returns>
         </member>
         <member name="T:Duality.Editor.ObjectPropertyChangedEventArgs">
             <summary>
@@ -3494,6 +3690,39 @@
             <summary>
             Rename the object(s)
             </summary>
+        </member>
+        <member name="P:Duality.Editor.FileEventManager.HasPendingReImports">
+            <summary>
+            Whether any asset re-imports are pending and will be processed on the 
+            next <see cref="M:Duality.Editor.FileEventManager.ProcessPendingReImports"/> call.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.FileEventManager.ProcessEvents">
+            <summary>
+            Immediately processes any pending file system events and triggers their public events.
+            This is usually done automatically by the editor and doesn't need to be called explicitly.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.FileEventManager.ProcessPendingReImports">
+            <summary>
+            Processes any pending asset re-import operations that were scheduled due to source file changes.
+            Will do nothing when <see cref="P:Duality.Editor.FileEventManager.HasPendingReImports"/> is false.
+            </summary>
+        </member>
+        <member name="M:Duality.Editor.FileEventManager.FlagPathEditorModified(System.String)">
+            <summary>
+            Flags the specified path as recently modified by an editor operation and 
+            thus to be ignored when detecing file system changes.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Duality.Editor.FileEventManager.IsPathEditorModified(System.String)">
+            <summary>
+            Returns whether the specified path is currently flagged as modified by the editor and 
+            thus to be ignored when detecing file system changes.
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
         </member>
         <member name="T:Duality.Editor.PathHelper">
             <summary>
