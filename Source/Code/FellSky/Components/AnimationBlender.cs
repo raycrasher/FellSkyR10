@@ -26,9 +26,6 @@ namespace FellSky.Components
             var lastColor = sr.ColorTint;
             var lastFrame = sr.SpriteIndex;
 
-            sr.SpriteIndex = 0;
-            sr.Draw(device);
-
             sr.SpriteIndex = anim.SpriteIndex.Current;
             sr.ColorTint = lastColor.WithAlpha(1f -(lastColor.A / 255f) * blend);
             sr.Draw(device);

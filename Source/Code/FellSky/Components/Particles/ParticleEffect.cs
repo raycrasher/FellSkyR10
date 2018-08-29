@@ -11,6 +11,7 @@ using Duality.Drawing;
 
 namespace FellSky.Components.Particles
 {
+    [EditorHintCategory("Graphics")]
     [RequiredComponent(typeof(Transform))]
     public class ParticleEffect : Renderer, ICmpUpdatable, ICmpInitializable
     {
@@ -80,7 +81,7 @@ namespace FellSky.Components.Particles
             get { return this.boundRadius * this.GameObj.Transform.Scale; }
         }
 
-        public bool UseWorldTransform { get; set; } = true;
+        public bool UseWorldTransform { get; private set; }
 
         public void AddParticles(ParticleEmitter emitter, int count)
         {
@@ -90,22 +91,28 @@ namespace FellSky.Components.Particles
             Pixmap img = tex.BasePixmap.Res;
             if (img == null) return;
 
-            // Gather data for emitting particles
-            Vector3 effectPos = this.GameObj.Transform.Pos;
-            float effectAngle = this.GameObj.Transform.Angle;
-            float effectScale = this.GameObj.Transform.Scale;
-
             // Reserve memory for storing the new particles we're spawning
             if (this.particles == null) this.particles = new RawList<Particle>(count);
             int oldCount = this.particles.Count;
             this.particles.Count = this.particles.Count + count;
+
+            // Gather data for emitting particles
+            Vector3 effectPos = Vector3.Zero;
+            float effectAngle = 0;
+            float effectScale = GameObj.Transform.Scale;
+
+            if (UseWorldTransform)
+            {
+                effectPos = GameObj.Transform.Pos;
+                effectAngle = GameObj.Transform.Angle;
+            }
 
             // Initialize all those new particles
             Particle[] particleData = this.particles.Data;
             for (int i = oldCount; i < this.particles.Count; i++)
             {
                 // Initialize the current particle.
-                emitter.InitParticle(ref particleData[i]);
+                emitter.InitParticle(effectPos,effectAngle,effectScale, ref particleData[i]);
             }
         }
 
@@ -138,9 +145,22 @@ namespace FellSky.Components.Particles
             if (tex == null) return;
 
             Vector2 particleHalfSize = this.particleSize * 0.5f;
-            float objAngle = this.GameObj.Transform.Angle;
-            float objScale = this.GameObj.Transform.Scale;
-            Vector3 objPos = this.GameObj.Transform.Pos;
+            float objAngle;
+            float objScale;
+            Vector3 objPos;
+
+            if (UseWorldTransform)
+            {
+                objAngle = 0;
+                objScale = 1;
+                objPos = Vector3.Zero;
+            }
+            else
+            {
+                objAngle = this.GameObj.Transform.Angle;
+                objScale = this.GameObj.Transform.Scale;
+                objPos = this.GameObj.Transform.Pos;
+            }
 
             Vector2 objXDot, objYDot;
             MathF.GetTransformDotVec(objAngle, objScale, out objXDot, out objYDot);

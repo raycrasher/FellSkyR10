@@ -120,22 +120,22 @@ namespace FellSky.Components.Particles
                 effect.AddParticles(this, count);
             }
         }
-        public void InitParticle(ref Particle particle)
+        public void InitParticle(Vector3 pos, float angle, float scale, ref Particle particle)
         {
             Random random = MathF.Rnd;
 
             if (this.depthMult != 0.0f)
             {
-                particle.Position = this.basePos + random.NextVector3(this.randomPos.MinValue, this.randomPos.MaxValue) * new Vector3(1.0f, 1.0f, this.depthMult);
-                particle.Velocity = this.baseVel + random.NextVector3(this.randomVel.MinValue, this.randomVel.MaxValue) * new Vector3(1.0f, 1.0f, this.depthMult);
+                particle.Position = pos + this.basePos + random.NextVector3(this.randomPos.MinValue, this.randomPos.MaxValue) * new Vector3(1.0f, 1.0f, this.depthMult);
+                particle.Velocity = new Vector3(Vector2.FromAngleLength(angle,1),1) * (this.baseVel) + random.NextVector3(this.randomVel.MinValue, this.randomVel.MaxValue) * new Vector3(1.0f, 1.0f, this.depthMult);
             }
             else
             {
-                particle.Position = this.basePos + new Vector3(random.NextVector2(this.randomPos.MinValue, this.randomPos.MaxValue));
-                particle.Velocity = this.baseVel + new Vector3(random.NextVector2(this.randomVel.MinValue, this.randomVel.MaxValue));
+                particle.Position = pos + this.basePos + new Vector3(random.NextVector2(this.randomPos.MinValue, this.randomPos.MaxValue));
+                particle.Velocity = new Vector3(Vector2.FromAngleLength(angle, 1), 1) * (this.baseVel) + new Vector3(random.NextVector2(this.randomVel.MinValue, this.randomVel.MaxValue));
             }
 
-            particle.Angle = random.NextFloat(this.randomAngle.MinValue, this.randomAngle.MaxValue);
+            particle.Angle = angle + random.NextFloat(this.randomAngle.MinValue, this.randomAngle.MaxValue);
             particle.AngleVelocity = random.NextFloat(this.randomAngleVel.MinValue, this.randomAngleVel.MaxValue);
             particle.TimeToLive = random.NextFloat(this.particleLifetime.MinValue, this.particleLifetime.MaxValue);
             particle.SpriteIndex = random.Next((int)this.spriteIndex.MinValue, (int)this.spriteIndex.MaxValue);
