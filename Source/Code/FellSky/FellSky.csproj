@@ -82,7 +82,6 @@
     <Compile Include="Components\Particles\ParticleEffect.cs" />
     <Compile Include="Components\Particles\ParticleEmitter.cs" />
     <Compile Include="Components\ShipCameraController.cs" />
-    <Compile Include="Components\ClickableBody.cs" />
     <Compile Include="Components\Device.cs" />
     <Compile Include="Components\GameController.cs" />
     <Compile Include="Components\GuiEventForwarder.cs" />
