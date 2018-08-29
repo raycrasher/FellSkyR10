@@ -16,11 +16,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="441580220" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="3920068934">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">3862791716</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">15.49684</X>
+                    <Y dataType="Float">-13.5192308</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">15.49684</X>
+                    <Y dataType="Float">-13.5192308</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1036443700">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">66</B>
+                    <G dataType="Byte">66</G>
+                    <R dataType="Byte">66</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">3862791716</gameobj>
+                  <offset dataType="Float">4</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">38</H>
+                    <W dataType="Float">38</W>
+                    <X dataType="Float">-19</X>
+                    <Y dataType="Float">-19</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">863</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -57,11 +94,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="2062083982" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="2573114153">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">2515836935</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">15.49684</X>
+                    <Y dataType="Float">13.5192308</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">15.49684</X>
+                    <Y dataType="Float">13.5192308</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3984456215">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">66</B>
+                    <G dataType="Byte">66</G>
+                    <R dataType="Byte">66</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">2515836935</gameobj>
+                  <offset dataType="Float">4</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">38</H>
+                    <W dataType="Float">38</W>
+                    <X dataType="Float">-19</X>
+                    <Y dataType="Float">-19</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">863</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -98,11 +172,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1488163366" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="2133034357">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">2075757139</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-18.50321</X>
+                    <Y dataType="Float">-15.5192318</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-18.50321</X>
+                    <Y dataType="Float">-15.5192318</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3544376419">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">108</B>
+                    <G dataType="Byte">131</G>
+                    <R dataType="Byte">107</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">2075757139</gameobj>
+                  <offset dataType="Float">4</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">36</H>
+                    <W dataType="Float">45</W>
+                    <X dataType="Float">-22.5</X>
+                    <Y dataType="Float">-18</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">873</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -139,11 +250,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="2885846678" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="2831655901">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">2774378683</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-18.50321</X>
+                    <Y dataType="Float">15.5192318</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-18.50321</X>
+                    <Y dataType="Float">15.5192318</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="4242997963">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">108</B>
+                    <G dataType="Byte">131</G>
+                    <R dataType="Byte">107</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">2774378683</gameobj>
+                  <offset dataType="Float">4</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">36</H>
+                    <W dataType="Float">45</W>
+                    <X dataType="Float">-22.5</X>
+                    <Y dataType="Float">-18</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">873</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -180,11 +328,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="2079829294" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="3816290259">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">3759013041</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">5.496783</X>
+                    <Y dataType="Float">31.5192757</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">5.496783</X>
+                    <Y dataType="Float">31.5192757</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="932665025">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">99</B>
+                    <G dataType="Byte">137</G>
+                    <R dataType="Byte">99</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">3759013041</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">36</H>
+                    <W dataType="Float">48</W>
+                    <X dataType="Float">-24</X>
+                    <Y dataType="Float">-18</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">875</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -221,11 +406,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1998141422" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="2233786945">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">2176509727</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">5.496783</X>
+                    <Y dataType="Float">-31.5192757</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">5.496783</X>
+                    <Y dataType="Float">-31.5192757</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3645129007">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">99</B>
+                    <G dataType="Byte">137</G>
+                    <R dataType="Byte">99</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">2176509727</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">36</H>
+                    <W dataType="Float">48</W>
+                    <X dataType="Float">-24</X>
+                    <Y dataType="Float">-18</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">875</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -262,11 +484,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="3939252206" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="3315868225">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0.3080516</angle>
+                  <angleAbs dataType="Float">0.3080516</angleAbs>
                   <gameobj dataType="ObjectRef">3258591007</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">68.4968</X>
+                    <Y dataType="Float">-17.5192261</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">68.4968</X>
+                    <Y dataType="Float">-17.5192261</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="432242991">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">89</B>
+                    <G dataType="Byte">89</G>
+                    <R dataType="Byte">89</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">3258591007</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">12</H>
+                    <W dataType="Float">43</W>
+                    <X dataType="Float">-21.5</X>
+                    <Y dataType="Float">-6</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">879</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -303,11 +562,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1288228036" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="3094021210">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">5.975134</angle>
+                  <angleAbs dataType="Float">5.975134</angleAbs>
                   <gameobj dataType="ObjectRef">3036743992</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">68.4968</X>
+                    <Y dataType="Float">17.5192261</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">68.4968</X>
+                    <Y dataType="Float">17.5192261</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="210395976">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">89</B>
+                    <G dataType="Byte">89</G>
+                    <R dataType="Byte">89</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">3036743992</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">12</H>
+                    <W dataType="Float">43</W>
+                    <X dataType="Float">-21.5</X>
+                    <Y dataType="Float">-6</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">879</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -344,11 +640,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1524984934" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="42550847">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">4280240925</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">46.4967766</X>
+                    <Y dataType="Float">-10.5192156</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">46.4967766</X>
+                    <Y dataType="Float">-10.5192156</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1453892909">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">138</B>
+                    <G dataType="Byte">178</G>
+                    <R dataType="Byte">136</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">4280240925</gameobj>
+                  <offset dataType="Float">2</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">24</H>
+                    <W dataType="Float">67</W>
+                    <X dataType="Float">-33.5</X>
+                    <Y dataType="Float">-12</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">896</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -385,11 +718,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="3616276846" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="1421992947">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">1364715729</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">46.4967766</X>
+                    <Y dataType="Float">10.5192156</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">46.4967766</X>
+                    <Y dataType="Float">10.5192156</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2833335009">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">138</B>
+                    <G dataType="Byte">178</G>
+                    <R dataType="Byte">136</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">1364715729</gameobj>
+                  <offset dataType="Float">2</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">24</H>
+                    <W dataType="Float">67</W>
+                    <X dataType="Float">-33.5</X>
+                    <Y dataType="Float">-12</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">896</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -426,11 +796,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1702388774" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="4127381093">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">2.78021717</angle>
+                  <angleAbs dataType="Float">2.78021717</angleAbs>
                   <gameobj dataType="ObjectRef">4070103875</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-24.5031853</X>
+                    <Y dataType="Float">-50.5192337</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-24.5031853</X>
+                    <Y dataType="Float">-50.5192337</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1243755859">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">84</B>
+                    <G dataType="Byte">117</G>
+                    <R dataType="Byte">90</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">4070103875</gameobj>
+                  <offset dataType="Float">2</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">37</H>
+                    <W dataType="Float">36</W>
+                    <X dataType="Float">-18</X>
+                    <Y dataType="Float">-18.5</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">902</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -467,11 +874,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1384703190" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="2915205821">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">3.50296831</angle>
+                  <angleAbs dataType="Float">3.50296831</angleAbs>
                   <gameobj dataType="ObjectRef">2857928603</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-24.5031853</X>
+                    <Y dataType="Float">50.5192337</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-24.5031853</X>
+                    <Y dataType="Float">50.5192337</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="31580587">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">84</B>
+                    <G dataType="Byte">117</G>
+                    <R dataType="Byte">90</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">2857928603</gameobj>
+                  <offset dataType="Float">2</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">37</H>
+                    <W dataType="Float">36</W>
+                    <X dataType="Float">-18</X>
+                    <Y dataType="Float">-18.5</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">902</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -508,11 +952,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1154398560" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="73369752">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">2.80484033</angle>
+                  <angleAbs dataType="Float">2.80484033</angleAbs>
                   <gameobj dataType="ObjectRef">16092534</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-46.50324</X>
+                    <Y dataType="Float">-23.5192356</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-46.50324</X>
+                    <Y dataType="Float">-23.5192356</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1484711814">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">99</B>
+                    <G dataType="Byte">99</G>
+                    <R dataType="Byte">99</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">16092534</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">22</H>
+                    <W dataType="Float">48</W>
+                    <X dataType="Float">-24</X>
+                    <Y dataType="Float">-11</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">919</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -549,11 +1030,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="2029983374" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="916229531">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">3.47834516</angle>
+                  <angleAbs dataType="Float">3.47834516</angleAbs>
                   <gameobj dataType="ObjectRef">858952313</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-46.50324</X>
+                    <Y dataType="Float">23.5192356</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-46.50324</X>
+                    <Y dataType="Float">23.5192356</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2327571593">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">99</B>
+                    <G dataType="Byte">99</G>
+                    <R dataType="Byte">99</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">858952313</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">22</H>
+                    <W dataType="Float">48</W>
+                    <X dataType="Float">-24</X>
+                    <Y dataType="Float">-11</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">919</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -590,11 +1108,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="3455993872" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="1364156400">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">1306879182</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-13.5032034</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-13.5032034</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2775498462">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">81</B>
+                    <G dataType="Byte">99</G>
+                    <R dataType="Byte">81</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">1306879182</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">26</H>
+                    <W dataType="Float">24</W>
+                    <X dataType="Float">-12</X>
+                    <Y dataType="Float">-13</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">936</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -631,11 +1186,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="2802014454" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="76418295">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">19141077</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">30.4967518</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">30.4967518</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1487760357">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">250</B>
+                    <G dataType="Byte">248</G>
+                    <R dataType="Byte">212</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">19141077</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">20</H>
+                    <W dataType="Float">46</W>
+                    <X dataType="Float">-23</X>
+                    <Y dataType="Float">-10</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">938</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -672,11 +1264,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="3548532900" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="3041236770">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">2983959552</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">4.49677467</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">4.49677467</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="157611536">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">174</B>
+                    <G dataType="Byte">203</G>
+                    <R dataType="Byte">179</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">2983959552</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">26</H>
+                    <W dataType="Float">35</W>
+                    <X dataType="Float">-17.5</X>
+                    <Y dataType="Float">-13</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">940</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -713,11 +1342,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="25251756" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="837702558">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0</angle>
+                  <angleAbs dataType="Float">0</angleAbs>
                   <gameobj dataType="ObjectRef">780425340</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-36.5032043</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">-36.5032043</X>
+                    <Y dataType="Float">0</Y>
+                    <Z dataType="Float">-0.000900268555</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2249044620">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">81</B>
+                    <G dataType="Byte">81</G>
+                    <R dataType="Byte">81</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">780425340</gameobj>
+                  <offset dataType="Float">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">26</H>
+                    <W dataType="Float">33</W>
+                    <X dataType="Float">-16.5</X>
+                    <Y dataType="Float">-13</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">944</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -754,11 +1420,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="2785197468" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="2870370806">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">1.03510344</angle>
+                  <angleAbs dataType="Float">1.03510344</angleAbs>
                   <gameobj dataType="ObjectRef">2813093588</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">0.6249218</X>
+                    <Y dataType="Float">50.233</Y>
+                    <Z dataType="Float">0</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">0.6249218</X>
+                    <Y dataType="Float">50.233</Y>
+                    <Z dataType="Float">0</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="4281712868">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">103</B>
+                    <G dataType="Byte">103</G>
+                    <R dataType="Byte">103</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">2813093588</gameobj>
+                  <offset dataType="Float">6</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">18</H>
+                    <W dataType="Float">14</W>
+                    <X dataType="Float">-7</X>
+                    <Y dataType="Float">-9</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">926</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -795,11 +1498,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="3399379670" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="1298347271">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">5.248082</angle>
+                  <angleAbs dataType="Float">5.248082</angleAbs>
                   <gameobj dataType="ObjectRef">1241070053</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">0.6249218</X>
+                    <Y dataType="Float">-50.233</Y>
+                    <Z dataType="Float">0</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">0.6249218</X>
+                    <Y dataType="Float">-50.233</Y>
+                    <Z dataType="Float">0</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2709689333">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">103</B>
+                    <G dataType="Byte">103</G>
+                    <R dataType="Byte">103</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">1241070053</gameobj>
+                  <offset dataType="Float">6</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">18</H>
+                    <W dataType="Float">14</W>
+                    <X dataType="Float">-7</X>
+                    <Y dataType="Float">-9</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">926</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -836,11 +1576,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="3338601808" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="4274593164">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">0.443175972</angle>
+                  <angleAbs dataType="Float">0.443175972</angleAbs>
                   <gameobj dataType="ObjectRef">4217315946</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">26.0469284</X>
+                    <Y dataType="Float">-35.0102844</Y>
+                    <Z dataType="Float">0</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">26.0469284</X>
+                    <Y dataType="Float">-35.0102844</Y>
+                    <Z dataType="Float">0</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1390967930">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">84</B>
+                    <G dataType="Byte">84</G>
+                    <R dataType="Byte">84</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
                   <gameobj dataType="ObjectRef">4217315946</gameobj>
+                  <offset dataType="Float">6</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">23</H>
+                    <W dataType="Float">33</W>
+                    <X dataType="Float">-16.5</X>
+                    <Y dataType="Float">-11.5</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">960</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -877,11 +1654,48 @@
               <_items dataType="Array" type="Duality.Component[]" id="1635912422" length="4">
                 <item dataType="Struct" type="Duality.Components.Transform" id="1421966021">
                   <active dataType="Bool">true</active>
+                  <angle dataType="Float">5.84000969</angle>
+                  <angleAbs dataType="Float">5.84000969</angleAbs>
                   <gameobj dataType="ObjectRef">1364688803</gameobj>
+                  <ignoreParent dataType="Bool">false</ignoreParent>
+                  <pos dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">26.0469284</X>
+                    <Y dataType="Float">35.0102844</Y>
+                    <Z dataType="Float">0</Z>
+                  </pos>
+                  <posAbs dataType="Struct" type="Duality.Vector3">
+                    <X dataType="Float">26.0469284</X>
+                    <Y dataType="Float">35.0102844</Y>
+                    <Z dataType="Float">0</Z>
+                  </posAbs>
+                  <scale dataType="Float">1</scale>
+                  <scaleAbs dataType="Float">1</scaleAbs>
                 </item>
                 <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2833308083">
                   <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">84</B>
+                    <G dataType="Byte">84</G>
+                    <R dataType="Byte">84</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="Vertical" value="2" />
                   <gameobj dataType="ObjectRef">1364688803</gameobj>
+                  <offset dataType="Float">6</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">23</H>
+                    <W dataType="Float">33</W>
+                    <X dataType="Float">-16.5</X>
+                    <Y dataType="Float">-11.5</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                  </sharedMat>
+                  <spriteIndex dataType="Int">960</spriteIndex>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
               </_items>
               <_size dataType="Int">2</_size>
@@ -911,497 +1725,260 @@
             <parent dataType="ObjectRef">3152512771</parent>
             <prefabLink />
           </item>
-          <item dataType="Struct" type="Duality.GameObject" id="2979525044">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1919961248">
-              <_items dataType="Array" type="Duality.Component[]" id="1889171676">
-                <item dataType="Struct" type="Duality.Components.Transform" id="3036802262">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2979525044</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="153177028">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2979525044</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2719721584">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2979525044</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="4238238183">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2979525044</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1611329678" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="2463923314">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="Type" id="3036689616" value="Duality.Components.Renderers.SpriteAnimator" />
-                  <item dataType="Type" id="2926318190" value="FellSky.Components.Thruster" />
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="3831256138">
-                  <item dataType="ObjectRef">3036802262</item>
-                  <item dataType="ObjectRef">153177028</item>
-                  <item dataType="ObjectRef">2719721584</item>
-                  <item dataType="ObjectRef">4238238183</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">3036802262</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="4155951938">Waakg0FHK0+ui72pt11t3A==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#mainThruster</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="2382779185">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1971710721">
-              <_items dataType="Array" type="Duality.Component[]" id="3652911406">
-                <item dataType="Struct" type="Duality.Components.Transform" id="2440056403">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2382779185</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3851398465">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2382779185</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2122975725">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2382779185</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="3641492324">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2382779185</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3106571104" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="3773007051">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="41963592">
-                  <item dataType="ObjectRef">2440056403</item>
-                  <item dataType="ObjectRef">3851398465</item>
-                  <item dataType="ObjectRef">2122975725</item>
-                  <item dataType="ObjectRef">3641492324</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">2440056403</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="1865344897">9/EQPO3PsEmNfCyMSK/RVw==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#auxthrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="2093399364">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2922561680">
-              <_items dataType="Array" type="Duality.Component[]" id="4032808252">
-                <item dataType="Struct" type="Duality.Components.Transform" id="2150676582">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2093399364</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3562018644">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2093399364</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="1833595904">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2093399364</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="3352112503">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2093399364</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2437625582" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="174937314">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="3009851018">
-                  <item dataType="ObjectRef">2150676582</item>
-                  <item dataType="ObjectRef">3562018644</item>
-                  <item dataType="ObjectRef">1833595904</item>
-                  <item dataType="ObjectRef">3352112503</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">2150676582</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="3527796498">FbYqT4zzhU+CJNGEsmKZHQ==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#retrothrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="1020815683">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1031730115">
-              <_items dataType="Array" type="Duality.Component[]" id="3612837926">
-                <item dataType="Struct" type="Duality.Components.Transform" id="1078092901">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">1020815683</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2489434963">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">1020815683</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="761012223">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">1020815683</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="2279528822">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">1020815683</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1894443704" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="2027024041">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="4010674624">
-                  <item dataType="ObjectRef">1078092901</item>
-                  <item dataType="ObjectRef">2489434963</item>
-                  <item dataType="ObjectRef">761012223</item>
-                  <item dataType="ObjectRef">2279528822</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">1078092901</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="2137735307">ydDB+fnhIkm/8jofoOl2ig==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#retrothrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="2709395791">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3692648319">
-              <_items dataType="Array" type="Duality.Component[]" id="387046702">
-                <item dataType="Struct" type="Duality.Components.Transform" id="2766673009">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2709395791</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="4178015071">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2709395791</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2449592331">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2709395791</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="3968108930">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2709395791</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="52580192" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="3601341621">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="1650015048">
-                  <item dataType="ObjectRef">2766673009</item>
-                  <item dataType="ObjectRef">4178015071</item>
-                  <item dataType="ObjectRef">2449592331</item>
-                  <item dataType="ObjectRef">3968108930</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">2766673009</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="1999419391">kUcvvST7VUOBuX2Wr8Du6g==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#auxthrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="3847589477">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="261328197">
-              <_items dataType="Array" type="Duality.Component[]" id="1245534422">
-                <item dataType="Struct" type="Duality.Components.Transform" id="3904866695">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">3847589477</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1021241461">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">3847589477</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="3587786017">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">3847589477</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="811335320">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">3847589477</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2828979240" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="3262753583">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="2219574688">
-                  <item dataType="ObjectRef">3904866695</item>
-                  <item dataType="ObjectRef">1021241461</item>
-                  <item dataType="ObjectRef">3587786017</item>
-                  <item dataType="ObjectRef">811335320</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">3904866695</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="134453693">kbQj3qdRoka6CjReIc+RXA==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#maneuverthrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="2581186292">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1646833760">
-              <_items dataType="Array" type="Duality.Component[]" id="2696411868">
-                <item dataType="Struct" type="Duality.Components.Transform" id="2638463510">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2581186292</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="4049805572">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2581186292</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2321382832">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2581186292</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="3839899431">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2581186292</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2678865550" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="1925082290">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="1450567242">
-                  <item dataType="ObjectRef">2638463510</item>
-                  <item dataType="ObjectRef">4049805572</item>
-                  <item dataType="ObjectRef">2321382832</item>
-                  <item dataType="ObjectRef">3839899431</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">2638463510</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="294447362">R1YRHS8l2UK6uf2RT9W1dA==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#maneuverthrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="927899469">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="4163955501">
-              <_items dataType="Array" type="Duality.Component[]" id="1060073062">
-                <item dataType="Struct" type="Duality.Components.Transform" id="985176687">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">927899469</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2396518749">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">927899469</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="668096009">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">927899469</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="2186612608">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">927899469</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="948535928" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="8640583">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="3572998400">
-                  <item dataType="ObjectRef">985176687</item>
-                  <item dataType="ObjectRef">2396518749</item>
-                  <item dataType="ObjectRef">668096009</item>
-                  <item dataType="ObjectRef">2186612608</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">985176687</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="2125829573">vFwWWil5O0+83CuyjIADRQ==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#maneuverthrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
-          <item dataType="Struct" type="Duality.GameObject" id="2910356155">
-            <active dataType="Bool">true</active>
-            <children />
-            <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2640623131">
-              <_items dataType="Array" type="Duality.Component[]" id="2500072086">
-                <item dataType="Struct" type="Duality.Components.Transform" id="2967633373">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2910356155</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="84008139">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2910356155</gameobj>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2650552695">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2910356155</gameobj>
-                </item>
-                <item dataType="Struct" type="FellSky.Components.Thruster" id="4169069294">
-                  <active dataType="Bool">true</active>
-                  <gameobj dataType="ObjectRef">2910356155</gameobj>
-                </item>
-              </_items>
-              <_size dataType="Int">4</_size>
-            </compList>
-            <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2826204520" surrogate="true">
-              <header />
-              <body>
-                <keys dataType="Array" type="System.Object[]" id="2461862769">
-                  <item dataType="ObjectRef">2562277776</item>
-                  <item dataType="ObjectRef">1287627502</item>
-                  <item dataType="ObjectRef">3036689616</item>
-                  <item dataType="ObjectRef">2926318190</item>
-                </keys>
-                <values dataType="Array" type="System.Object[]" id="2606084320">
-                  <item dataType="ObjectRef">2967633373</item>
-                  <item dataType="ObjectRef">84008139</item>
-                  <item dataType="ObjectRef">2650552695</item>
-                  <item dataType="ObjectRef">4169069294</item>
-                </values>
-              </body>
-            </compMap>
-            <compTransform dataType="ObjectRef">2967633373</compTransform>
-            <identifier dataType="Struct" type="System.Guid" surrogate="true">
-              <header>
-                <data dataType="Array" type="System.Byte[]" id="2973012259">y0Ek7ziFCEWz7L/0/UKk/Q==</data>
-              </header>
-              <body />
-            </identifier>
-            <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-            <name dataType="String">#maneuverthrusters</name>
-            <parent dataType="ObjectRef">3152512771</parent>
-            <prefabLink />
-          </item>
         </_items>
-        <_size dataType="Int">31</_size>
+        <_size dataType="Int">22</_size>
       </children>
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="262733920">
         <_items dataType="Array" type="Duality.Component[]" id="3559074715" length="4">
           <item dataType="Struct" type="Duality.Components.Transform" id="3209789989">
             <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
             <gameobj dataType="ObjectRef">3152512771</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <pos dataType="Struct" type="Duality.Vector3" />
+            <posAbs dataType="Struct" type="Duality.Vector3" />
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
           </item>
           <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="2687442259">
             <active dataType="Bool">true</active>
+            <allowParent dataType="Bool">false</allowParent>
+            <angularDamp dataType="Float">0.3</angularDamp>
+            <angularVel dataType="Float">0</angularVel>
+            <bodyType dataType="Enum" type="Duality.Components.Physics.BodyType" name="Dynamic" value="1" />
+            <colCat dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="Cat1" value="1" />
+            <colFilter />
+            <colWith dataType="Enum" type="Duality.Components.Physics.CollisionCategory" name="All" value="2147483647" />
+            <explicitInertia dataType="Float">0</explicitInertia>
+            <explicitMass dataType="Float">0</explicitMass>
+            <fixedAngle dataType="Bool">false</fixedAngle>
             <gameobj dataType="ObjectRef">3152512771</gameobj>
+            <ignoreGravity dataType="Bool">true</ignoreGravity>
+            <joints />
+            <linearDamp dataType="Float">0.3</linearDamp>
+            <linearVel dataType="Struct" type="Duality.Vector2" />
+            <revolutions dataType="Float">0</revolutions>
+            <shapes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="2993052481">
+              <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="2198364590">
+                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1495577936">
+                  <convexPolygons dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Vector2[]]]" id="639574972">
+                    <_items dataType="Array" type="Duality.Vector2[][]" id="1787481668" length="16">
+                      <item dataType="Array" type="Duality.Vector2[]" id="3784849988">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-71</X>
+                          <Y dataType="Float">22</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-44</X>
+                          <Y dataType="Float">14.999999</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-22</X>
+                          <Y dataType="Float">38</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="889408150">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-44</X>
+                          <Y dataType="Float">14.999999</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-26</X>
+                          <Y dataType="Float">-41</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-22</X>
+                          <Y dataType="Float">38</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="4211560448">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-22</X>
+                          <Y dataType="Float">38</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-26</X>
+                          <Y dataType="Float">-41</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">4</X>
+                          <Y dataType="Float">-52</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="3232942626">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-26</X>
+                          <Y dataType="Float">-41</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-42</X>
+                          <Y dataType="Float">-62</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">4</X>
+                          <Y dataType="Float">-52</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="579791708">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">3</X>
+                          <Y dataType="Float">52.9999962</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-22</X>
+                          <Y dataType="Float">38</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">4</X>
+                          <Y dataType="Float">-52</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="950681854">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">3</X>
+                          <Y dataType="Float">52.9999962</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">4</X>
+                          <Y dataType="Float">-52</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">83</X>
+                          <Y dataType="Float">-14</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="135049656">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">83</X>
+                          <Y dataType="Float">-14</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">83</X>
+                          <Y dataType="Float">16</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">3</X>
+                          <Y dataType="Float">52.9999962</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="2531334506">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-39.9999962</X>
+                          <Y dataType="Float">59.9999962</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-22</X>
+                          <Y dataType="Float">38</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">3</X>
+                          <Y dataType="Float">52.9999962</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="4019561908">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-44</X>
+                          <Y dataType="Float">14.999999</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-45.9999962</X>
+                          <Y dataType="Float">-19</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-26</X>
+                          <Y dataType="Float">-41</Y>
+                        </item>
+                      </item>
+                      <item dataType="Array" type="Duality.Vector2[]" id="467370630">
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-45.9999962</X>
+                          <Y dataType="Float">-19</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-69</X>
+                          <Y dataType="Float">-25</Y>
+                        </item>
+                        <item dataType="Struct" type="Duality.Vector2">
+                          <X dataType="Float">-26</X>
+                          <Y dataType="Float">-41</Y>
+                        </item>
+                      </item>
+                    </_items>
+                    <_size dataType="Int">10</_size>
+                  </convexPolygons>
+                  <density dataType="Float">1</density>
+                  <friction dataType="Float">0.3</friction>
+                  <parent dataType="ObjectRef">2687442259</parent>
+                  <restitution dataType="Float">0.3</restitution>
+                  <sensor dataType="Bool">false</sensor>
+                  <userTag dataType="Int">0</userTag>
+                  <vertices dataType="Array" type="Duality.Vector2[]" id="570400406">
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">83</X>
+                      <Y dataType="Float">-14</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">83</X>
+                      <Y dataType="Float">16</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">3</X>
+                      <Y dataType="Float">53</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-40</X>
+                      <Y dataType="Float">60</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-22</X>
+                      <Y dataType="Float">38</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-71</X>
+                      <Y dataType="Float">22</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-44</X>
+                      <Y dataType="Float">15</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-46</X>
+                      <Y dataType="Float">-19</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-69</X>
+                      <Y dataType="Float">-25</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-26</X>
+                      <Y dataType="Float">-41</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-42</X>
+                      <Y dataType="Float">-62</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">4</X>
+                      <Y dataType="Float">-52</Y>
+                    </item>
+                  </vertices>
+                </item>
+              </_items>
+              <_size dataType="Int">1</_size>
+            </shapes>
+            <useCCD dataType="Bool">false</useCCD>
           </item>
           <item dataType="Struct" type="FellSky.Components.Ship" id="3343852707">
+            <_x003C_Acceleration_x003E_k__BackingField dataType="Struct" type="Duality.Vector2" />
+            <_x003C_BoostMultiplier_x003E_k__BackingField dataType="Float">2</_x003C_BoostMultiplier_x003E_k__BackingField>
+            <_x003C_DesiredTorque_x003E_k__BackingField dataType="Float">0</_x003C_DesiredTorque_x003E_k__BackingField>
+            <_x003C_ForwardSpeed_x003E_k__BackingField dataType="Float">30</_x003C_ForwardSpeed_x003E_k__BackingField>
+            <_x003C_IsBoosting_x003E_k__BackingField dataType="Bool">false</_x003C_IsBoosting_x003E_k__BackingField>
+            <_x003C_IsWarping_x003E_k__BackingField dataType="Bool">false</_x003C_IsWarping_x003E_k__BackingField>
+            <_x003C_ManeuverSpeed_x003E_k__BackingField dataType="Float">10</_x003C_ManeuverSpeed_x003E_k__BackingField>
+            <_x003C_ThrustVector_x003E_k__BackingField dataType="Struct" type="Duality.Vector2" />
+            <_x003C_TurnSpeed_x003E_k__BackingField dataType="Float">70</_x003C_TurnSpeed_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3152512771</gameobj>
           </item>
@@ -1433,44 +2010,7 @@
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">FastFrigate</name>
       <parent />
-      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1548510710">
-        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="1806195277">
-          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="1668149798" length="4">
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2862344092">
-                <_items dataType="Array" type="System.Int32[]" id="2864933316">22, 0, 0, 0</_items>
-                <_size dataType="Int">1</_size>
-              </childIndex>
-              <componentType dataType="ObjectRef">2926318190</componentType>
-              <prop dataType="MemberInfo" id="1415738390" value="P:FellSky.Components.Thruster:Plume" />
-              <val dataType="ObjectRef">153177028</val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1697810952">
-                <_items dataType="Array" type="System.Int32[]" id="40668824">22, 0, 0, 0</_items>
-                <_size dataType="Int">1</_size>
-              </childIndex>
-              <componentType dataType="ObjectRef">2926318190</componentType>
-              <prop dataType="MemberInfo" id="2910968754" value="P:FellSky.Components.Thruster:EditorOverride" />
-              <val dataType="Enum" type="FellSky.Components.Thruster+EditorGraphicOverride" name="Thrust" value="1" />
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="879651380">
-                <_items dataType="Array" type="System.Int32[]" id="431272412">22, 0, 0, 0</_items>
-                <_size dataType="Int">1</_size>
-              </childIndex>
-              <componentType dataType="ObjectRef">2926318190</componentType>
-              <prop dataType="MemberInfo" id="2047692174" value="P:FellSky.Components.Thruster:FlickerFactor" />
-              <val dataType="Float">1</val>
-            </item>
-          </_items>
-          <_size dataType="Int">3</_size>
-        </changes>
-        <obj dataType="ObjectRef">3152512771</obj>
-        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\Prefabs\ships\FastFrigate.Prefab.res</contentPath>
-        </prefab>
-      </prefabLink>
+      <prefabLink />
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="2198866270">
       <active dataType="Bool">true</active>
@@ -1546,6 +2086,85 @@
       <parent />
       <prefabLink />
     </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2341855806">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3468286568">
+        <_items dataType="Array" type="Duality.Component[]" id="1721728044" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="2399133024">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2341855806</gameobj>
+          </item>
+          <item dataType="Struct" type="FellSky.Components.Thruster" id="3600568945">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2341855806</gameobj>
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteAnimator" id="2082052346">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">2341855806</gameobj>
+          </item>
+        </_items>
+        <_size dataType="Int">3</_size>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1105244958" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="587230762">
+            <item dataType="ObjectRef">2562277776</item>
+            <item dataType="Type" id="1889412384" value="FellSky.Components.Thruster" />
+            <item dataType="Type" id="3335831438" value="Duality.Components.Renderers.SpriteAnimator" />
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="1990694874">
+            <item dataType="ObjectRef">2399133024</item>
+            <item dataType="ObjectRef">3600568945</item>
+            <item dataType="ObjectRef">2082052346</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">2399133024</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3100051722">t8uv7/PeTUWdnqVzFQx6eQ==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">thruster</name>
+      <parent />
+      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="631682772">
+        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="37192520">
+          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3850928236" length="4">
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3807034792">
+                <_items dataType="Array" type="System.Int32[]" id="755361452"></_items>
+                <_size dataType="Int">0</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">2562277776</componentType>
+              <prop dataType="MemberInfo" id="118699934" value="P:Duality.Components.Transform:LocalPos" />
+              <val dataType="Struct" type="Duality.Vector3">
+                <X dataType="Float">-41.4326172</X>
+                <Y dataType="Float">0</Y>
+                <Z dataType="Float">0</Z>
+              </val>
+            </item>
+            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3610533780">
+                <_items dataType="ObjectRef">755361452</_items>
+                <_size dataType="Int">0</_size>
+              </childIndex>
+              <componentType dataType="ObjectRef">2562277776</componentType>
+              <prop dataType="MemberInfo" id="463019554" value="P:Duality.Components.Transform:LocalScale" />
+              <val dataType="Float">3.10832572</val>
+            </item>
+          </_items>
+          <_size dataType="Int">2</_size>
+        </changes>
+        <obj dataType="ObjectRef">2341855806</obj>
+        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+          <contentPath dataType="String">Data\Prefabs\thruster.Prefab.res</contentPath>
+        </prefab>
+      </prefabLink>
+    </item>
     <item dataType="ObjectRef">3862791716</item>
     <item dataType="ObjectRef">2515836935</item>
     <item dataType="ObjectRef">2075757139</item>
@@ -1568,15 +2187,6 @@
     <item dataType="ObjectRef">1241070053</item>
     <item dataType="ObjectRef">4217315946</item>
     <item dataType="ObjectRef">1364688803</item>
-    <item dataType="ObjectRef">2979525044</item>
-    <item dataType="ObjectRef">2382779185</item>
-    <item dataType="ObjectRef">2093399364</item>
-    <item dataType="ObjectRef">1020815683</item>
-    <item dataType="ObjectRef">2709395791</item>
-    <item dataType="ObjectRef">3847589477</item>
-    <item dataType="ObjectRef">2581186292</item>
-    <item dataType="ObjectRef">927899469</item>
-    <item dataType="ObjectRef">2910356155</item>
   </serializeObj>
   <visibilityStrategy dataType="Struct" type="Duality.Components.DefaultRendererVisibilityStrategy" id="2035693768" />
 </root>

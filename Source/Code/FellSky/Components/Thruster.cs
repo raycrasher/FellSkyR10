@@ -23,6 +23,7 @@ namespace FellSky.Components
         public float RampDownTime { get; set; } = 0.4f;
         public float FlickerFactor { get; set; } = 0.02f;
 
+
         public ContentRef<Material> Material { get; set; }
         public Vector2 Size { get; set; } = Vector2.One;
 
@@ -32,7 +33,7 @@ namespace FellSky.Components
             set => _editorOverride = value;
         }
 
-        public override float BoundRadius => 100;
+        public override float BoundRadius => Size.X * 100 * GameObj.Transform.Scale;
 
         public ColorRgba ColorTint { get; set; } = ColorRgba.White;
         public int SpriteIndex {
@@ -53,17 +54,30 @@ namespace FellSky.Components
         private VertexC1P3T2[] _vertices;
         
         static readonly VertexC1P3T2[] DefaultVertices = new[] {
-            new VertexC1P3T2{ Pos = new Vector3(0,2,0), Color = ColorRgba.White, DepthOffset = 0,    TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(0,-2,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0,   TexCoord = new Vector2(0,0f) },
+            new VertexC1P3T2{ Pos = new Vector3(0,6,0), Color = ColorRgba.White.WithAlpha(0.5f), DepthOffset = 0,   TexCoord = new Vector2(0,0) },
+            new VertexC1P3T2{ Pos = new Vector3(-3,0,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
             new VertexC1P3T2{ Pos = new Vector3(-3,7,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-3,-7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-10,9,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-10,-9,0), Color = ColorRgba.White, DepthOffset = 0, TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-21,7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-21,-7,0), Color = ColorRgba.White, DepthOffset = 0, TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-38,4,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-38,-4,0), Color = ColorRgba.White, DepthOffset = 0, TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-100,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0, TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,8,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            new VertexC1P3T2{ Pos = new Vector3(-16,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-16,7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            new VertexC1P3T2{ Pos = new Vector3(-30,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-30,6,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            new VertexC1P3T2{ Pos = new Vector3(-100,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0, TexCoord = new Vector2(0,0) },
+
+            new VertexC1P3T2{ Pos = new Vector3(-100,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0, TexCoord = new Vector2(0,1) },            
+            new VertexC1P3T2{ Pos = new Vector3(-30,-6,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(-30,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-16,-7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(-16,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,-8,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-3,-7,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(-3,0,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(0,-6,0), Color = ColorRgba.White.WithAlpha(0.5f), DepthOffset = 0,   TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0,   TexCoord = new Vector2(0,1) },
+
         };
 
 
@@ -75,19 +89,20 @@ namespace FellSky.Components
             MathF.GetTransformDotVec(xform.Angle, xform.Scale, out xDot, out yDot);
 
             var rect = Material.Res?.MainTexture.Res?.LookupAtlas(SpriteIndex) ?? new Rect(0,0,1,1);
-            float texOffset = 0;
+            float texOffset = ((float)Time.GameTimer.TotalSeconds) % 1;
             _vertices = _vertices ?? (VertexC1P3T2[])DefaultVertices.Clone();
             for (int i = 0; i < _vertices.Length; i++)
             {
-                var pos = DefaultVertices[i].Pos;
-                _vertices[i].TexCoord.X = (pos.X / -100) + texOffset;
+                var pos = DefaultVertices[i].Pos * new Vector3(Size, 1);
+                _vertices[i].TexCoord.X = (pos.X / -100) - texOffset;
                 _vertices[i].TexCoord.Y = rect.Y + DefaultVertices[i].TexCoord.Y * rect.H;
                 MathF.TransformDotVec(ref pos, ref xDot, ref yDot);
-                _vertices[i].Pos = xform.Pos + pos * new Vector3(Size,1);
+                _vertices[i].Pos = xform.Pos + pos;
                 _vertices[i].Color = ColorTint * DefaultVertices[i].Color;
                 
             }
             device.AddVertices(Material, VertexMode.TriangleStrip, _vertices);
+            //device.AddVertices(Duality.Resources.Material.SolidWhite, VertexMode.LineStrip, _vertices);
         }
 
         public void OnUpdate()
