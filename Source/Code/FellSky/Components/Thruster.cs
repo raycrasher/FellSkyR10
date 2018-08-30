@@ -46,6 +46,8 @@ namespace FellSky.Components
             set => _spriteIndex = value;
         }
 
+        public float DepthOffset { get; set; } = 0;
+
         private int _nextSpriteIndex;
         private float _progressToNextSprite;
         private int _spriteIndex = 0;
@@ -61,29 +63,37 @@ namespace FellSky.Components
         float _texOffset = 0;        
 
         static readonly VertexC1P3T2[] DefaultVertices = new[] {
-            new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0,   TexCoord = new Vector2(0,0f) },
-            new VertexC1P3T2{ Pos = new Vector3(0,6,0), Color = ColorRgba.White.WithAlpha(0.5f), DepthOffset = 0,   TexCoord = new Vector2(0,0) },
+            new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,0f) },
+            new VertexC1P3T2{ Pos = new Vector3(0,6,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,0) },
             new VertexC1P3T2{ Pos = new Vector3(-3,0,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
             new VertexC1P3T2{ Pos = new Vector3(-3,7,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
-            new VertexC1P3T2{ Pos = new Vector3(-8,8,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-16,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
-            new VertexC1P3T2{ Pos = new Vector3(-16,7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
-            new VertexC1P3T2{ Pos = new Vector3(-30,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
-            new VertexC1P3T2{ Pos = new Vector3(-30,6,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            //new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-8,8,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            //new VertexC1P3T2{ Pos = new Vector3(-12,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-12,7.5f,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            //new VertexC1P3T2{ Pos = new Vector3(-24,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-24,6.5f,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
+            //new VertexC1P3T2{ Pos = new Vector3(-30,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-30,6,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0) },
             new VertexC1P3T2{ Pos = new Vector3(-100,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0, TexCoord = new Vector2(0,0) },
 
             new VertexC1P3T2{ Pos = new Vector3(-100,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0, TexCoord = new Vector2(0,1) },            
-            new VertexC1P3T2{ Pos = new Vector3(-30,-6,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-30,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
-            new VertexC1P3T2{ Pos = new Vector3(-16,-7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-16,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
-            new VertexC1P3T2{ Pos = new Vector3(-8,-8,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-30,-6,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            //new VertexC1P3T2{ Pos = new Vector3(-30,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-24,-6.5f,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            //new VertexC1P3T2{ Pos = new Vector3(-24,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,-7,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-12,-7.5f,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            //new VertexC1P3T2{ Pos = new Vector3(-12,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
+            //new VertexC1P3T2{ Pos = new Vector3(-8,-8,0), Color = ColorRgba.White, DepthOffset = 0,  TexCoord = new Vector2(0,1) },
+            //new VertexC1P3T2{ Pos = new Vector3(-8,0,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
             new VertexC1P3T2{ Pos = new Vector3(-3,-7,0), Color = ColorRgba.White, DepthOffset = 0,   TexCoord = new Vector2(0,1) },
             new VertexC1P3T2{ Pos = new Vector3(-3,0,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,0.5f) },
-            new VertexC1P3T2{ Pos = new Vector3(0,-6,0), Color = ColorRgba.White.WithAlpha(0.5f), DepthOffset = 0,   TexCoord = new Vector2(0,1) },
-            new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0,   TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(0,-6,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,1) },
+            new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(1f), DepthOffset = 0,   TexCoord = new Vector2(0,1) },
 
         };
 
@@ -103,6 +113,7 @@ namespace FellSky.Components
                 var pos = DefaultVertices[i].Pos * new Vector3(Size, 1);
                 _vertices[i].TexCoord.X = (pos.X / -100) - _texOffset;
                 _vertices[i].TexCoord.Y = rect.Y + DefaultVertices[i].TexCoord.Y * rect.H;
+                _vertices[i].DepthOffset = DepthOffset;
                 MathF.TransformDotVec(ref pos, ref xDot, ref yDot);
                 _vertices[i].Pos = xform.Pos + pos;
                 _vertices[i].Color = ColorTint * DefaultVertices[i].Color;
@@ -150,7 +161,7 @@ namespace FellSky.Components
             if (ship.ThrustVector.LengthSquared > 0)
             {
                 //var angle = MathF.NormalizeAngle(Vector2.AngleBetween(_ship.ThrustVector, xform.GetWorldVector(Vector2.UnitX)));  //Utilities.FindAngleBetweenTwoVectors(_ship.ThrustVector, xform.GetWorldVector(Vector2.UnitX)) % MathF.Pi;
-                var dot = Vector2.Dot(ship.ThrustVector.Normalized, -xform.Right.Xy);
+                var dot = Vector2.Dot(ship.ThrustVector.Normalized, xform.Right.Xy);
                 if (dot > 0.7f)
                     _isThrusting = true;
                 else if (dot < -0.2f)
@@ -181,12 +192,12 @@ namespace FellSky.Components
 
             if (_boostAmount > 0)
             {
-                Size = Vector2.Lerp(SizeThrust, SizeBoost, _boostAmount);
+                Size = Vector2.Lerp(SizeThrust, SizeBoost, _boostAmount * flicker);
                 AnimSpeed = MathF.Lerp(AnimSpeedThrust, AnimSpeedBoost, _boostAmount);
             }
             else
             {
-                Size = Vector2.Lerp(SizeIdle, SizeThrust, _thrustAmount);
+                Size = Vector2.Lerp(SizeIdle, SizeThrust, _thrustAmount * flicker);
                 AnimSpeed = MathF.Lerp(AnimSpeedIdle, AnimSpeedThrust, _thrustAmount);
             }
 

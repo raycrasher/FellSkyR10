@@ -2,14 +2,14 @@
   <anisoFilter dataType="Bool">true</anisoFilter>
   <assetInfo />
   <basePixmap dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
-    <contentPath dataType="String">Data\Gfx\thruster_semitransparent.Pixmap.res</contentPath>
+    <contentPath dataType="String">Data\Gfx\thrusterWithGlow.Pixmap.res</contentPath>
   </basePixmap>
   <filterMag dataType="Enum" type="Duality.Drawing.TextureMagFilter" name="Linear" value="1" />
   <filterMin dataType="Enum" type="Duality.Drawing.TextureMinFilter" name="Linear" value="1" />
   <pixelformat dataType="Enum" type="Duality.Drawing.TexturePixelFormat" name="Rgba" value="3" />
   <size dataType="Struct" type="Duality.Point2">
     <X dataType="Int">256</X>
-    <Y dataType="Int">64</Y>
+    <Y dataType="Int">128</Y>
   </size>
   <texSizeMode dataType="Enum" type="Duality.Drawing.TextureSizeMode" name="Enlarge" value="0" />
   <wrapX dataType="Enum" type="Duality.Drawing.TextureWrapMode" name="Repeat" value="1" />

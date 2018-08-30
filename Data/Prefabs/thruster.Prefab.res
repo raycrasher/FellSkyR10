@@ -45,27 +45,27 @@
             <G dataType="Byte">188</G>
             <R dataType="Byte">255</R>
           </_x003C_ColorTint_x003E_k__BackingField>
-          <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
+          <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.2</_x003C_FlickerFactor_x003E_k__BackingField>
           <_x003C_Material_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
             <contentPath dataType="String">Data\Gfx\thruster.Material.res</contentPath>
           </_x003C_Material_x003E_k__BackingField>
-          <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampDownTime_x003E_k__BackingField>
-          <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
+          <_x003C_RampDownTime_x003E_k__BackingField dataType="Float">0.2</_x003C_RampDownTime_x003E_k__BackingField>
+          <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.2</_x003C_RampUpTime_x003E_k__BackingField>
           <_x003C_Size_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">0.3</X>
-            <Y dataType="Float">1.2</Y>
+            <Y dataType="Float">2</Y>
           </_x003C_Size_x003E_k__BackingField>
           <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">2</X>
-            <Y dataType="Float">3</Y>
+            <Y dataType="Float">4</Y>
           </_x003C_SizeBoost_x003E_k__BackingField>
           <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">0.3</X>
-            <Y dataType="Float">1.2</Y>
+            <Y dataType="Float">2</Y>
           </_x003C_SizeIdle_x003E_k__BackingField>
           <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">1</X>
-            <Y dataType="Float">2</Y>
+            <Y dataType="Float">3</Y>
           </_x003C_SizeThrust_x003E_k__BackingField>
           <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
           <active dataType="Bool">true</active>
