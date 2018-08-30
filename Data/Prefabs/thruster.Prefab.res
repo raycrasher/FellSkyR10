@@ -16,17 +16,17 @@
           <gameobj dataType="ObjectRef">1568500774</gameobj>
           <ignoreParent dataType="Bool">false</ignoreParent>
           <pos dataType="Struct" type="Duality.Vector3">
-            <X dataType="Float">0</X>
-            <Y dataType="Float">0.458957672</Y>
+            <X dataType="Float">-41.4326172</X>
+            <Y dataType="Float">0</Y>
             <Z dataType="Float">0</Z>
           </pos>
           <posAbs dataType="Struct" type="Duality.Vector3">
-            <X dataType="Float">0</X>
-            <Y dataType="Float">0.458957672</Y>
+            <X dataType="Float">-41.4326172</X>
+            <Y dataType="Float">0</Y>
             <Z dataType="Float">0</Z>
           </posAbs>
-          <scale dataType="Float">5</scale>
-          <scaleAbs dataType="Float">5</scaleAbs>
+          <scale dataType="Float">1</scale>
+          <scaleAbs dataType="Float">1</scaleAbs>
         </item>
         <item dataType="Struct" type="FellSky.Components.Thruster" id="2827213913">
           <_boostAmount dataType="Float">0</_boostAmount>
@@ -35,10 +35,14 @@
           <_progressToNextSprite dataType="Float">0.406081915</_progressToNextSprite>
           <_spriteIndex dataType="Int">3</_spriteIndex>
           <_thrustAmount dataType="Float">0</_thrustAmount>
+          <_x003C_AnimSpeed_x003E_k__BackingField dataType="Float">2</_x003C_AnimSpeed_x003E_k__BackingField>
+          <_x003C_AnimSpeedBoost_x003E_k__BackingField dataType="Float">3</_x003C_AnimSpeedBoost_x003E_k__BackingField>
+          <_x003C_AnimSpeedIdle_x003E_k__BackingField dataType="Float">0.2</_x003C_AnimSpeedIdle_x003E_k__BackingField>
+          <_x003C_AnimSpeedThrust_x003E_k__BackingField dataType="Float">1</_x003C_AnimSpeedThrust_x003E_k__BackingField>
           <_x003C_ColorTint_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
-            <A dataType="Byte">219</A>
+            <A dataType="Byte">255</A>
             <B dataType="Byte">0</B>
-            <G dataType="Byte">237</G>
+            <G dataType="Byte">188</G>
             <R dataType="Byte">255</R>
           </_x003C_ColorTint_x003E_k__BackingField>
           <_x003C_FlickerFactor_x003E_k__BackingField dataType="Float">0.02</_x003C_FlickerFactor_x003E_k__BackingField>
@@ -49,19 +53,19 @@
           <_x003C_RampUpTime_x003E_k__BackingField dataType="Float">0.4</_x003C_RampUpTime_x003E_k__BackingField>
           <_x003C_Size_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">0.3</X>
-            <Y dataType="Float">0.8</Y>
+            <Y dataType="Float">1.2</Y>
           </_x003C_Size_x003E_k__BackingField>
           <_x003C_SizeBoost_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
-            <X dataType="Float">1.5</X>
-            <Y dataType="Float">1.5</Y>
+            <X dataType="Float">2</X>
+            <Y dataType="Float">3</Y>
           </_x003C_SizeBoost_x003E_k__BackingField>
           <_x003C_SizeIdle_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">0.3</X>
-            <Y dataType="Float">2</Y>
+            <Y dataType="Float">1.2</Y>
           </_x003C_SizeIdle_x003E_k__BackingField>
           <_x003C_SizeThrust_x003E_k__BackingField dataType="Struct" type="Duality.Vector2">
             <X dataType="Float">1</X>
-            <Y dataType="Float">1</Y>
+            <Y dataType="Float">2</Y>
           </_x003C_SizeThrust_x003E_k__BackingField>
           <_x003C_Thrust_x003E_k__BackingField dataType="Float">1</_x003C_Thrust_x003E_k__BackingField>
           <active dataType="Bool">true</active>

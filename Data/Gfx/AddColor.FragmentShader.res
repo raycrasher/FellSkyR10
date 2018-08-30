@@ -17,7 +17,7 @@ out vec4 fragColor;
 void main()
 {
 	vec4 texClr = texture(mainTex, programTexCoord);
-	vec4 result = programColor + texClr;
+	vec4 result = programColor * (1-texClr) + texClr;
 	result.a=texClr.a;
 	
 	AlphaTest(result.a);

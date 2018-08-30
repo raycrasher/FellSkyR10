@@ -11,9 +11,13 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
-    public class Thruster: Renderer, ICmpSpriteRenderer
+    public class Thruster: Renderer, ICmpSpriteRenderer, ICmpUpdatable
     {
         public enum EditorGraphicOverride { Idle, Thrust, Boost }
+
+        public float AnimSpeedIdle { get; set; } = 0.5f;
+        public float AnimSpeedThrust { get; set; } = 1f;
+        public float AnimSpeedBoost { get; set; } = 2f;
 
         public Vector2 SizeIdle { get; set; } = new Vector2(0.3f, 0.5f);
         public Vector2 SizeThrust { get; set; } = new Vector2(1, 1);
@@ -22,6 +26,7 @@ namespace FellSky.Components
         public float RampUpTime { get; set; } = 0.4f;
         public float RampDownTime { get; set; } = 0.4f;
         public float FlickerFactor { get; set; } = 0.02f;
+        public float AnimSpeed { get; set; } = 2;
 
 
         public ContentRef<Material> Material { get; set; }
@@ -52,7 +57,9 @@ namespace FellSky.Components
 
         [DontSerialize]
         private VertexC1P3T2[] _vertices;
-        
+        [DontSerialize]
+        float _texOffset = 0;        
+
         static readonly VertexC1P3T2[] DefaultVertices = new[] {
             new VertexC1P3T2{ Pos = new Vector3(5,0,0), Color = ColorRgba.White.WithAlpha(0.0f), DepthOffset = 0,   TexCoord = new Vector2(0,0f) },
             new VertexC1P3T2{ Pos = new Vector3(0,6,0), Color = ColorRgba.White.WithAlpha(0.5f), DepthOffset = 0,   TexCoord = new Vector2(0,0) },
@@ -89,12 +96,12 @@ namespace FellSky.Components
             MathF.GetTransformDotVec(xform.Angle, xform.Scale, out xDot, out yDot);
 
             var rect = Material.Res?.MainTexture.Res?.LookupAtlas(SpriteIndex) ?? new Rect(0,0,1,1);
-            float texOffset = ((float)Time.GameTimer.TotalSeconds) % 1;
+            
             _vertices = _vertices ?? (VertexC1P3T2[])DefaultVertices.Clone();
             for (int i = 0; i < _vertices.Length; i++)
             {
                 var pos = DefaultVertices[i].Pos * new Vector3(Size, 1);
-                _vertices[i].TexCoord.X = (pos.X / -100) - texOffset;
+                _vertices[i].TexCoord.X = (pos.X / -100) - _texOffset;
                 _vertices[i].TexCoord.Y = rect.Y + DefaultVertices[i].TexCoord.Y * rect.H;
                 MathF.TransformDotVec(ref pos, ref xDot, ref yDot);
                 _vertices[i].Pos = xform.Pos + pos;
@@ -113,6 +120,7 @@ namespace FellSky.Components
                 ship = GameObj.Parent?.Parent?.GetComponent<Ship>();
             }
 
+            _texOffset = (_texOffset + Time.DeltaTime * AnimSpeed) % 1;
 
             const float tolerance = 0.7f;
 
@@ -158,10 +166,10 @@ namespace FellSky.Components
             var deltaTime = Time.DeltaTime;
             if (_isThrusting)
                 _thrustAmount = MathF.Clamp(_thrustAmount + (1 / RampUpTime) * deltaTime, 0, 1);
-            else
+            else if(_boostAmount <=0)
                 _thrustAmount = MathF.Clamp(_thrustAmount - (1 / RampDownTime) * deltaTime, 0, 1);
 
-            if (ship.IsBoosting || (DualityApp.ExecEnvironment == DualityApp.ExecutionEnvironment.Editor && _editorOverride == EditorGraphicOverride.Boost))
+            if (_thrustAmount >= 1 && ( ship.IsBoosting || (DualityApp.ExecEnvironment == DualityApp.ExecutionEnvironment.Editor && _editorOverride == EditorGraphicOverride.Boost)))
                 _boostAmount = MathF.Clamp(_boostAmount + 1 / RampUpTime * deltaTime, 0, 1);
             else
                 _boostAmount = MathF.Clamp(_boostAmount - 1 / RampDownTime * deltaTime, 0, 1);
@@ -174,10 +182,12 @@ namespace FellSky.Components
             if (_boostAmount > 0)
             {
                 Size = Vector2.Lerp(SizeThrust, SizeBoost, _boostAmount);
+                AnimSpeed = MathF.Lerp(AnimSpeedThrust, AnimSpeedBoost, _boostAmount);
             }
             else
             {
-
+                Size = Vector2.Lerp(SizeIdle, SizeThrust, _thrustAmount);
+                AnimSpeed = MathF.Lerp(AnimSpeedIdle, AnimSpeedThrust, _thrustAmount);
             }
 
             /*
