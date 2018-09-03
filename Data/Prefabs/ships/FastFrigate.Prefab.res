@@ -2360,7 +2360,7 @@
                 </item>
                 <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
                   <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1113857070">
-                    <_items dataType="ObjectRef">3860513086</_items>
+                    <_items dataType="Array" type="System.Int32[]" id="1355092090"></_items>
                     <_size dataType="Int">0</_size>
                   </childIndex>
                   <componentType dataType="ObjectRef">4236127214</componentType>
@@ -2380,8 +2380,96 @@
             </prefab>
           </prefabLink>
         </item>
+        <item dataType="Struct" type="Duality.GameObject" id="247064596">
+          <active dataType="Bool">true</active>
+          <children />
+          <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="346344852">
+            <_items dataType="Array" type="Duality.Component[]" id="603153252" length="4">
+              <item dataType="Struct" type="Duality.Components.Transform" id="304341814">
+                <active dataType="Bool">true</active>
+                <angle dataType="Float">0</angle>
+                <angleAbs dataType="Float">0</angleAbs>
+                <gameobj dataType="ObjectRef">247064596</gameobj>
+                <ignoreParent dataType="Bool">false</ignoreParent>
+                <pos dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">58.00002</X>
+                  <Y dataType="Float">-1.99999583</Y>
+                  <Z dataType="Float">0</Z>
+                </pos>
+                <posAbs dataType="Struct" type="Duality.Vector3">
+                  <X dataType="Float">58.00002</X>
+                  <Y dataType="Float">-1.99999583</Y>
+                  <Z dataType="Float">0</Z>
+                </posAbs>
+                <scale dataType="Float">1</scale>
+                <scaleAbs dataType="Float">1</scaleAbs>
+              </item>
+              <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1715683876">
+                <active dataType="Bool">true</active>
+                <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                  <A dataType="Byte">255</A>
+                  <B dataType="Byte">255</B>
+                  <G dataType="Byte">255</G>
+                  <R dataType="Byte">255</R>
+                </colorTint>
+                <customMat />
+                <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                <gameobj dataType="ObjectRef">247064596</gameobj>
+                <offset dataType="Float">-10</offset>
+                <pixelGrid dataType="Bool">false</pixelGrid>
+                <rect dataType="Struct" type="Duality.Rect">
+                  <H dataType="Float">24</H>
+                  <W dataType="Float">76</W>
+                  <X dataType="Float">-38</X>
+                  <Y dataType="Float">-12</Y>
+                </rect>
+                <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                  <contentPath dataType="String">Data\Gfx\kaesprites.Material.res</contentPath>
+                </sharedMat>
+                <spriteIndex dataType="Int">300</spriteIndex>
+                <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+              </item>
+              <item dataType="Struct" type="FellSky.Components.Turret" id="2364353838">
+                <_x003C_GroupNumber_x003E_k__BackingField dataType="Int">1</_x003C_GroupNumber_x003E_k__BackingField>
+                <_x003C_Target_x003E_k__BackingField />
+                <_x003C_TraverseArc_x003E_k__BackingField dataType="Float">0</_x003C_TraverseArc_x003E_k__BackingField>
+                <_x003C_TraverseSpeed_x003E_k__BackingField dataType="Float">360</_x003C_TraverseSpeed_x003E_k__BackingField>
+                <active dataType="Bool">true</active>
+                <gameobj dataType="ObjectRef">247064596</gameobj>
+              </item>
+            </_items>
+            <_size dataType="Int">3</_size>
+          </compList>
+          <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2819149878" surrogate="true">
+            <header />
+            <body>
+              <keys dataType="Array" type="System.Object[]" id="1070864446">
+                <item dataType="ObjectRef">4236127214</item>
+                <item dataType="Type" id="1761904144" value="FellSky.Components.Turret" />
+                <item dataType="ObjectRef">2508468170</item>
+              </keys>
+              <values dataType="Array" type="System.Object[]" id="3433170442">
+                <item dataType="ObjectRef">304341814</item>
+                <item dataType="ObjectRef">2364353838</item>
+                <item dataType="ObjectRef">1715683876</item>
+              </values>
+            </body>
+          </compMap>
+          <compTransform dataType="ObjectRef">304341814</compTransform>
+          <identifier dataType="Struct" type="System.Guid" surrogate="true">
+            <header>
+              <data dataType="Array" type="System.Byte[]" id="860431694">b97mzXmJf0Ksxar4BjgNGw==</data>
+            </header>
+            <body />
+          </identifier>
+          <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+          <name dataType="String">GameObject</name>
+          <parent dataType="ObjectRef">306822855</parent>
+          <prefabLink />
+        </item>
       </_items>
-      <_size dataType="Int">25</_size>
+      <_size dataType="Int">26</_size>
     </children>
     <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2583251894">
       <_items dataType="Array" type="Duality.Component[]" id="590079590">

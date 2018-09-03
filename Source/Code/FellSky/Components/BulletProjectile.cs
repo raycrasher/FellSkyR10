@@ -1,4 +1,5 @@
 ﻿using Duality;
+using Duality.Components.Physics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [RequiredComponent(typeof(RigidBody))]
     public class BulletProjectile: Component, ICmpCollisionListener, ICmpUpdatable
     {
         public float TimeLeft { get; set; }
@@ -31,7 +33,7 @@ namespace FellSky.Components
             TimeLeft -= Time.DeltaTime;
             if (TimeLeft <= 0)
             {
-
+                GameObj.DisposeLater();
             }
         }    
     }

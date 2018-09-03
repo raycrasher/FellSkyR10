@@ -78,6 +78,7 @@
     <Compile Include="Components\Cloud.cs" />
     <Compile Include="Components\MapController.cs" />
     <Compile Include="Components\MapRenderer.cs" />
+    <Compile Include="Components\MouseCursor.cs" />
     <Compile Include="Components\Particles\Particle.cs" />
     <Compile Include="Components\Particles\ParticleEffect.cs" />
     <Compile Include="Components\Particles\ParticleEmitter.cs" />
