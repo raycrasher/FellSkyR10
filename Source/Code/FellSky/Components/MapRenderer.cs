@@ -29,7 +29,7 @@ namespace FellSky.Components
         public int GridSize { get; set; } = 20000;
         public float FullMapScale { get; set; } = 5;
         public float MiniMapScale { get; set; } = 20;
-        public GameObject MapCamera { get; set; }
+        
 
         [DontSerialize]
         Vector2[] triBuffer = new Vector2[3];
@@ -54,12 +54,13 @@ namespace FellSky.Components
             _canvas.Begin(device);
             var controller = GameObj.GetComponent<MapController>();
             var tempScale = controller.HudMapMode == HudMapMode.Full ? FullMapScale : MiniMapScale;
-            var mapCameraCtlr = MapCamera.GetComponent<MapCameraController>();
+            var mapCamera = Scene.FindGameObject<MapCameraController>();
+            var mapCameraCtlr = mapCamera.GetComponent<MapCameraController>();
             var zoomFactor = mapCameraCtlr.FarZoom / mapCameraCtlr.NearZoom;
             CurrentScale = mapCameraCtlr.Zoom == MapCameraZoom.Far ? tempScale : tempScale / zoomFactor;
 
             if(controller.HudMapMode == HudMapMode.Full)
-                DrawGrid(_canvas, controller.TargetRect, MapCamera.GetComponent<Camera>());
+                DrawGrid(_canvas, controller.TargetRect, mapCamera.GetComponent<Camera>());
             DrawShips(_canvas);
             DrawCloudObjects(_canvas);
             _canvas.End();

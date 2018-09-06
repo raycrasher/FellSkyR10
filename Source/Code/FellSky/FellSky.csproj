@@ -76,6 +76,7 @@
     <Compile Include="Components\AnimationBlender.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\Cloud.cs" />
+    <Compile Include="Components\FishEyeTexOffsetAnimator.cs" />
     <Compile Include="Components\MapController.cs" />
     <Compile Include="Components\MapRenderer.cs" />
     <Compile Include="Components\MouseCursor.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Components\Ship.cs" />
     <Compile Include="Components\ShipViewController.cs" />
     <Compile Include="Components\SpriteGlowEffect.cs" />
+    <Compile Include="Components\TexturedRing.cs" />
     <Compile Include="Components\Thruster.cs" />
     <Compile Include="Components\TrailEffect.cs" />
     <Compile Include="Components\Turret.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="Events\WeaponReloadEvent.cs" />
     <Compile Include="FellSkyAppData.cs" />
     <Compile Include="FellSkyCorePlugin.cs" />
+    <Compile Include="Gfx\VertexP3C3T2N3.cs" />
     <Compile Include="Gui\GuiEventArgs.cs" />
     <Compile Include="MainMenu\MainMenuController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
