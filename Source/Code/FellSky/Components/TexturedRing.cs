@@ -34,11 +34,17 @@ namespace FellSky.Components
             int index = 0;
 
             float texWidth = Material.Res?.MainTexture.Res?.ContentWidth ?? 16f;
+            float texHeight = Material.Res?.MainTexture.Res?.ContentHeight ?? 16f;
             float circumference = (InnerRadius + Thickness / 2) * MathF.TwoPi;
-            int uvSections = (int)(circumference / texWidth) + 1;
-            float arcLength = angleDiv * (InnerRadius + Thickness / 2);
-            float uvXInc = arcLength / uvSections;
-            float uvX = 0;
+            float aspectRatio = texWidth / texHeight;
+
+            //try to maintain closest aspect ratio to texture
+            float sizeRatio = Thickness / texHeight;
+            float numUVSections = MathF.Ceiling(circumference / (texWidth * sizeRatio));
+
+            float uvXInc = numUVSections / Sections;
+
+            float uvX=0;
             var xform = GameObj.Transform;
             MathF.GetTransformDotVec(xform.Angle, xform.Scale, out var xDot, out var yDot);
 
