@@ -4,13 +4,12 @@
     <parameters dataType="Struct" type="Duality.Drawing.ShaderParameterCollection" id="1100841590" custom="true">
       <body>
         <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Data\Gfx\sun.Texture.res</contentPath>
+          <contentPath dataType="String">Data\Gfx\sun_halo.Texture.res</contentPath>
         </mainTex>
-        <texOffset dataType="Array" type="System.Single[]" id="2824927200">2.8, 0</texOffset>
       </body>
     </parameters>
     <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
-      <contentPath dataType="String">Data\Gfx\Sun_FishEye.DrawTechnique.res</contentPath>
+      <contentPath dataType="String">Default:DrawTechnique:Add</contentPath>
     </technique>
   </info>
 </root>

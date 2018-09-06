@@ -18,10 +18,15 @@ namespace FellSky.Components
         public float Thickness { get; set; } = 50;
         public uint Sections { get; set; } = 36;
 
-        public override float BoundRadius => InnerRadius + Thickness;
+        public override float BoundRadius => (InnerRadius + Thickness)*GameObj.Transform.Scale;
 
+        public ColorRgba OuterColor { get; set; } = ColorRgba.White;
+        public ColorRgba InnerColor { get; set; } = ColorRgba.White;
         public float DepthOffset { get; set; }
         public ContentRef<Material> Material { get; set; }
+        public float AnimationScale { get; set; } = 1;
+
+        public bool AnimateOuter { get; set; }
 
         public override void Draw(IDrawDevice device)
         {
@@ -54,19 +59,29 @@ namespace FellSky.Components
                 var inner = unitVec * InnerRadius;
                 var outer = unitVec * (InnerRadius + Thickness);
 
-                _vertices[index].Pos = new Vector3(inner,xform.Pos.Z);
+                if (AnimateOuter)
+                {
+                    float factor = MathF.Sin((float)Time.GameTimer.TotalSeconds + angle * 18 + this.GetHashCode() % 314) * 0.2f * AnimationScale + 1;
+                    float factor2 = MathF.Sin((float)Time.GameTimer.TotalSeconds + angle * -11f + this.GetHashCode() % 314) * 0.1f * AnimationScale + 1;
+                    float combined = (factor + factor2);
+                    outer =  unitVec * ( InnerRadius + Thickness * combined);
+                }
+
+                _vertices[index].Pos = new Vector3(inner);
                 MathF.TransformDotVec(ref _vertices[index].Pos, xDot, yDot);
+                _vertices[index].Pos += xform.Pos;
                 _vertices[index].DepthOffset = this.DepthOffset;
                 _vertices[index].TexCoord.X = uvX;
                 _vertices[index].TexCoord.Y = 1;
-                _vertices[index].Color = ColorRgba.White;
+                _vertices[index].Color = InnerColor;
                 index++;
-                _vertices[index].Pos = new Vector3(outer, xform.Pos.Z);
+                _vertices[index].Pos = new Vector3(outer);
                 MathF.TransformDotVec(ref _vertices[index].Pos, xDot, yDot);
+                _vertices[index].Pos += xform.Pos;
                 _vertices[index].DepthOffset = this.DepthOffset;
                 _vertices[index].TexCoord.X = uvX;
                 _vertices[index].TexCoord.Y = 0;
-                _vertices[index].Color = ColorRgba.White;
+                _vertices[index].Color = OuterColor;
                 index++;
                 angle += angleDiv;
                 uvX += uvXInc;
