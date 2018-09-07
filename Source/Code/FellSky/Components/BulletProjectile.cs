@@ -1,5 +1,7 @@
 ﻿using Duality;
 using Duality.Components.Physics;
+using Duality.Resources;
+using FellSky.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,18 @@ namespace FellSky.Components
     {
         public float TimeLeft { get; set; }
 
+        public ContentRef<Prefab> HitEffect { get; set; }
+        public DamageType DamageType { get; set; }
+        public float Damage { get; set; }
+
         void ICmpCollisionListener.OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
-            
+            if (HitEffect.IsAvailable)
+            {
+                Scene.AddObject(HitEffect.Res.Instantiate());
+            }
+            args.CollideWith.FireEvent(this, new DamageEvent(Damage, DamageType));
+            GameObj.DisposeLater();
         }
 
         void ICmpCollisionListener.OnCollisionEnd(Component sender, CollisionEventArgs args)
@@ -24,8 +35,7 @@ namespace FellSky.Components
         }
 
         void ICmpCollisionListener.OnCollisionSolve(Component sender, CollisionEventArgs args)
-        {
-            
+        {            
         }
 
         void ICmpUpdatable.OnUpdate()
