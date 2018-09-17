@@ -15,7 +15,7 @@ namespace FellSky.Components
 
         void ICmpUpdatable.OnUpdate()
         {
-            var mousePos = MainCamera.GetWorldPos(DualityApp.Mouse.Pos);
+            var mousePos = MainCamera?.GetWorldPos(DualityApp.Mouse.Pos) ?? Vector3.Zero;
             GameObj.Transform.Pos = new Vector3(mousePos.Xy,0);
         }
     }

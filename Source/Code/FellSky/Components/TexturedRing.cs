@@ -66,7 +66,7 @@ namespace FellSky.Components
                     float combined = (factor + factor2);
                     outer =  unitVec * ( InnerRadius + Thickness * combined);
                 }
-
+                
                 _vertices[index].Pos = new Vector3(inner);
                 MathF.TransformDotVec(ref _vertices[index].Pos, xDot, yDot);
                 _vertices[index].Pos += xform.Pos;

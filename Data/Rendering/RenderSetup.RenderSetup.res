@@ -74,7 +74,7 @@
         <projection dataType="Enum" type="Duality.Drawing.ProjectionMode" name="Screen" value="2" />
         <targetRect dataType="Struct" type="Duality.Rect">
           <H dataType="Float">0.3</H>
-          <W dataType="Float">0.165962636</W>
+          <W dataType="Float">0.158675373</W>
           <X dataType="Float">0</X>
           <Y dataType="Float">0.7</Y>
         </targetRect>
@@ -131,8 +131,27 @@
         </targetRect>
         <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="AllGroups" value="2147483647" />
       </item>
+      <item dataType="Struct" type="Duality.Resources.RenderStep" id="337957902">
+        <clearColor dataType="Struct" type="Duality.Drawing.ColorRgba" />
+        <clearDepth dataType="Float">1</clearDepth>
+        <clearFlags dataType="Enum" type="Duality.Drawing.ClearFlag" name="None" value="0" />
+        <defaultClearColor dataType="Bool">false</defaultClearColor>
+        <defaultProjection dataType="Bool">false</defaultProjection>
+        <id dataType="String">cursor</id>
+        <input />
+        <inputResize dataType="Enum" type="Duality.TargetResize" name="None" value="0" />
+        <output dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.RenderTarget]]" />
+        <projection dataType="Enum" type="Duality.Drawing.ProjectionMode" name="Perspective" value="1" />
+        <targetRect dataType="Struct" type="Duality.Rect">
+          <H dataType="Float">1</H>
+          <W dataType="Float">1</W>
+          <X dataType="Float">0</X>
+          <Y dataType="Float">0</Y>
+        </targetRect>
+        <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group5" value="32" />
+      </item>
     </_items>
-    <_size dataType="Int">4</_size>
+    <_size dataType="Int">5</_size>
   </steps>
 </root>
 <!-- XmlFormatterBase Document Separator -->

@@ -130,7 +130,7 @@ namespace FellSky.Components
 
             if (keyboard.KeyHit(ControlBindings.DebugKey))
             {
-                var debug = Scene.FindGameObject("@debug");
+                var debug = Scene.FindGameObject("@debug", false);
                 if (debug != null) { 
                     debug.Active = !debug.Active;
                 }
@@ -141,17 +141,9 @@ namespace FellSky.Components
         {
             if(source == ControlledShip.GameObj)
             {
-                HashSet<GameObject> objectsToTransfer = new HashSet<GameObject>();
-                Scene nextSystemScene = SceneGenerator.GenerateStarSystem();
-                GameObject bg = Scene.FindGameObject("@background");
-
-                objectsToTransfer.Add(bg);
+                var objectsToTransfer = Scene.RootObjects.Where(o=>o.Name.StartsWith("@")).ToList();
                 objectsToTransfer.Add(ControlledShip.GameObj);
-                objectsToTransfer.Add(Scene.FindGameObject("@map"));
-                objectsToTransfer.Add(Scene.FindGameObject("@mapcamera"));
-                objectsToTransfer.Add(Scene.FindGameObject("@hud"));
-                objectsToTransfer.Add(Scene.FindGameObject("@player"));
-                objectsToTransfer.Add(Scene.FindGameObject("@gui"));                
+                Scene nextSystemScene = SceneGenerator.GenerateStarSystem();
 
                 foreach (var obj in objectsToTransfer)
                 {
@@ -159,6 +151,9 @@ namespace FellSky.Components
                     nextSystemScene.AddObject(obj);
                 }
                 ControlledShip.GameObj.Transform.Pos = new Vector3(0, 0, ControlledShip.GameObj.Transform.Pos.Z);
+                
+                // change background
+                GameObject bg = objectsToTransfer.FirstOrDefault(o => o.Name == "@background");
                 var bgc = bg.GetComponent<BackgroundRenderer>();
                 bgc.BackgroundIndex = rng.Next(0, bgc.Backgrounds.Length - 1);
                 Scene.SwitchTo(nextSystemScene);

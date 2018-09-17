@@ -9,7 +9,7 @@
       </body>
     </parameters>
     <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
-      <contentPath dataType="String">Default:DrawTechnique:Mask</contentPath>
+      <contentPath dataType="String">Default:DrawTechnique:Alpha</contentPath>
     </technique>
   </info>
 </root>
