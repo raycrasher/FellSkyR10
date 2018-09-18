@@ -4,7 +4,7 @@
   <basePixmap dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Pixmap]]">
     <contentPath dataType="String">Data\Gfx\kaesprites.Pixmap.res</contentPath>
   </basePixmap>
-  <filterMag dataType="Enum" type="Duality.Drawing.TextureMagFilter" name="Linear" value="1" />
+  <filterMag dataType="Enum" type="Duality.Drawing.TextureMagFilter" name="Nearest" value="0" />
   <filterMin dataType="Enum" type="Duality.Drawing.TextureMinFilter" name="LinearMipmapLinear" value="5" />
   <pixelformat dataType="Enum" type="Duality.Drawing.TexturePixelFormat" name="Rgba" value="3" />
   <size dataType="Struct" type="Duality.Point2">
