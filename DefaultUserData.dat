@@ -1,5 +1,5 @@
 ﻿<root dataType="Struct" type="Duality.DualityUserData" id="129723834">
-  <antialiasingQuality dataType="Enum" type="Duality.AAQuality" name="Off" value="3" />
+  <antialiasingQuality dataType="Enum" type="Duality.AAQuality" name="High" value="0" />
   <customData />
   <soundEffectVol dataType="Float">1</soundEffectVol>
   <soundMasterVol dataType="Float">1</soundMasterVol>
@@ -9,8 +9,8 @@
   <windowMode dataType="Enum" type="Duality.ScreenMode" name="Window" value="0" />
   <windowRefreshMode dataType="Enum" type="Duality.RefreshMode" name="AdaptiveVSync" value="3" />
   <windowSize dataType="Struct" type="Duality.Point2">
-    <X dataType="Int">1600</X>
-    <Y dataType="Int">900</Y>
+    <X dataType="Int">800</X>
+    <Y dataType="Int">600</Y>
   </windowSize>
 </root>
 <!-- XmlFormatterBase Document Separator -->

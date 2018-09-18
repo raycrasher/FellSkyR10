@@ -23,7 +23,7 @@ namespace FellSky.Components
         public float ScaleAmount { get; set; } = 0.2f;
         public float OffsetAmount { get; set; } = 5;
         public GlowType GlowType { get; set; } = GlowType.Scale | GlowType.Position;
-        public ContentRef<DrawTechnique> DrawTechnique { get; set; }
+        public ContentRef<DrawTechnique> DrawTechnique { get; set; } = Duality.Resources.DrawTechnique.Add;
 
         void ICmpRenderer.Draw(IDrawDevice device)
         {

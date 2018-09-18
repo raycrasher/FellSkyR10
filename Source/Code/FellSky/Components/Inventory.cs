@@ -10,9 +10,9 @@ namespace FellSky.Components
 {
     public class Inventory: Component
     {
-        public Dictionary<ContentRef<ThingDef>, decimal> Items { get; set; } = new Dictionary<ContentRef<ThingDef>, decimal>();
+        public Dictionary<ContentRef<ItemDef>, decimal> Items { get; set; } = new Dictionary<ContentRef<ItemDef>, decimal>();
 
-        public void AddItem(ContentRef<ThingDef> thing, decimal count)
+        public void AddItem(ContentRef<ItemDef> thing, decimal count)
         {
             if (!thing.IsAvailable) return;
             Items[thing] += count;

@@ -109,9 +109,10 @@
     <Compile Include="Defs\ShipDef.cs" />
     <Compile Include="Defs\ShipPartDef.cs" />
     <Compile Include="Defs\SystemSceneGeneratorDef.cs" />
-    <Compile Include="Defs\ThingDef.cs" />
+    <Compile Include="Defs\ItemDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
     <Compile Include="Defs\Verb.cs" />
+    <Compile Include="Defs\WeaponDef.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Events\DamageEvent.cs" />

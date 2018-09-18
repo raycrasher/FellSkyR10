@@ -39,19 +39,18 @@ namespace FellSky.Components
             get { return _selectedTurretGroup; }
             set
             {
-                if (value != _selectedTurretGroup) {
-                    _oldSelectedTurretGroup = _selectedTurretGroup;
-                    _selectedTurretGroup = value;
-                    _turrets = ControlledShip.GetTurretGroup(value).ToArray();
-                    _turretGroupChangedFlag = true;
-                }
+                _selectedTurretGroup = value;
+                _turretGroupChangedFlag = true;
             }
         }
 
-        private Turret[] _turrets;
+        private Turret[] _controlledTurrets;
         private int _selectedTurretGroup;
-        private bool _turretGroupChangedFlag = false;
-        private int _oldSelectedTurretGroup;
+
+        [DontSerialize]
+        private bool _turretGroupChangedFlag = true;
+        [DontSerialize]
+        private int _oldSelectedTurretGroup=-1;
 
         public void OnUpdate()
         {
@@ -80,7 +79,19 @@ namespace FellSky.Components
 
             if (_turretGroupChangedFlag)
             {
+                if (_controlledTurrets!=null)
+                {
+                    foreach (var turret in _controlledTurrets)
+                        turret.Target = null;
+                }
+                _controlledTurrets = ControlledShip?.GameObj?.GetComponentsDeep<Turret>().Where(t => t.GroupNumber == SelectedTurretGroup).ToArray() ?? new Turret[0];
+
+                var mouseCursor = Scene.FindGameObject("@mousecursor");
+                foreach (var turret in _controlledTurrets)
+                    turret.Target = mouseCursor;
+
                 Scene.FireEvent(this, new SelectedTurretGroupChangedEvent { OldGroup = _oldSelectedTurretGroup, NewGroup = SelectedTurretGroup });
+                _oldSelectedTurretGroup = SelectedTurretGroup;
                 _turretGroupChangedFlag = false;
             }
         }

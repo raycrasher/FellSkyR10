@@ -15,17 +15,18 @@ namespace FellSky.Components
         [Duality.Editor.EditorHintRange(0,180)]
         public float TraverseArc { get; set; }
         public bool IsOmnidirectional => TraverseArc >= 180;
-        public Transform Target { get; set; }
+        public GameObject Target { get; set; }
         public float TraverseSpeed { get; set; } = 360;
         public int GroupNumber { get; set; } = 1;
 
         void ICmpUpdatable.OnUpdate()
         {
-            if (Target == null)
+            var targetXform = Target?.Transform;
+            if (targetXform == null)
                 return;
             var xform = GameObj.Transform;
             var speed = Time.DeltaTime * MathF.DegToRad(TraverseSpeed);
-            var offset = Target.Pos.Xy - xform.Pos.Xy;
+            var offset = targetXform.Pos.Xy - xform.Pos.Xy;
             var currentAngle = GameObj.Transform.Angle;
             if (IsOmnidirectional)
             {
@@ -57,12 +58,8 @@ namespace FellSky.Components
                     }
                 }
 
-                Hardpoint hp = GameObj.Parent?.GetComponent<Hardpoint>();
-                float halfArc;
-                if (hp != null)
-                    halfArc = MathF.DegToRad(hp.Traverse) / 2;
-                else
-                    halfArc = MathF.DegToRad(TraverseArc) / 2;
+                
+                float halfArc = MathF.DegToRad(TraverseArc) / 2;                    
                 var rel = currentRot + deltaAngle;
                 GameObj.Transform.LocalAngle = MathF.Clamp(rel, -halfArc, halfArc);
             }

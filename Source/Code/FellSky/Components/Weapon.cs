@@ -25,7 +25,7 @@ namespace FellSky.Components
         {
             [Duality.Editor.EditorHintRange(0, 1)]
             public float FirePercent { get; set; }
-            public Transform Transform { get; set; }
+            public GameObject Object { get; set; }
         }
 
         private float _timer;
@@ -161,7 +161,7 @@ namespace FellSky.Components
                 DisabledReason = "Program err";
                 return;
             }
-
+            
             Transform xform;
 
             if (index < 0)
@@ -173,7 +173,7 @@ namespace FellSky.Components
             }
             else
             {
-                xform = Muzzles[index].Transform;
+                xform = Muzzles[index].Object.Transform;
                 _muzzleState[index] = true;
                 _fireEvent.Muzzle = Muzzles[index];
                 _fireEvent.BarrelIndex = index;
