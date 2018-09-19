@@ -64,9 +64,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +75,7 @@
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\Cloud.cs" />
     <Compile Include="Components\FishEyeTexOffsetAnimator.cs" />
+    <Compile Include="Components\InventoryGuiController.cs" />
     <Compile Include="Components\MapController.cs" />
     <Compile Include="Components\MapRenderer.cs" />
     <Compile Include="Components\MouseCursor.cs" />
@@ -116,6 +115,7 @@
     <Compile Include="Event.cs" />
     <Compile Include="Events\DamageEvent.cs" />
     <Compile Include="Events\DeathEvent.cs" />
+    <Compile Include="Events\GuiEvent.cs" />
     <Compile Include="Events\SelectedTurretGroupChangedEvent.cs" />
     <Compile Include="Events\WarpEvent.cs" />
     <Compile Include="Events\WeaponFireEvent.cs" />

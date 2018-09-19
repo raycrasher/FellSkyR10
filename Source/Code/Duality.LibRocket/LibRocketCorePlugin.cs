@@ -8,8 +8,6 @@ namespace Duality.LibRocket
 {
     public class LibRocketCorePlugin: CorePlugin
     {
-        
-
         public static GuiCore GuiCore { get; private set; }
 
         protected override void InitPlugin()

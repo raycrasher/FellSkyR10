@@ -57,6 +57,7 @@
     <Compile Include="LibRocketRendererInterface.cs" />
     <Compile Include="LibRocketSystemInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GuiUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

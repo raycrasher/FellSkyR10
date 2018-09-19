@@ -23,6 +23,8 @@ namespace FellSky.Components
         public Key Boost { get; set; } = Key.Space;
         public Key Warp { get; set; } = Key.G;
 
+        public Key Inventory { get; set; } = Key.F1;
+
         public Key DebugKey { get; set; } = Key.Tilde;
     }
 
@@ -54,6 +56,9 @@ namespace FellSky.Components
 
         public void OnUpdate()
         {
+            if (DualityApp.Keyboard.KeyHit(ControlBindings.Inventory))
+                Scene.FireEvent(this, new GuiEvent(GuiEventType.ToggleInventory));
+
             if (ControlledShip != null)
             {
                 if (SelectedTurretGroup < 1)

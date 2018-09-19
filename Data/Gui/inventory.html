@@ -1,0 +1,49 @@
+<rml>
+<head>
+<link type="text/css" href="Global.rcss"/>
+<style>
+body{
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+#itemlist .item{
+	width: 150px;
+	height: 50px;
+	padding: 1px;
+	display:block;
+	border-color: #aa7700ff;
+	border-width: 1px;
+	overflow:scroll;
+}
+
+#itemlist .item .icon {
+	max-height: 48px;
+	width: 48px;
+	float:left;
+	margin-right: 2px;
+}
+
+#itemlist .item .name{
+	font-weight: bold;
+	display:block;
+}
+
+#itemlist .item .shortdesc{
+	font-size: 10px;
+	display:block;
+}
+
+
+
+</style>
+</head>
+<body>
+<window>
+	<windowtitle>Inventory</windowtitle>
+	<ul id="itemlist"></ul>
+	
+</window>
+</body>
+</rml>

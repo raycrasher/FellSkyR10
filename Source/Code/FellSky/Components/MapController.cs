@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
-    public enum HudMapMode { Minimap, Full }
+    public enum HudMapMode { Minimap, Full, None }
     public class MapController : Component, ICmpUpdatable, ICmpInitializable
     {        
         private HudMapMode _hudMapMode;
@@ -59,6 +59,9 @@ namespace FellSky.Components
                         break;
                     case HudMapMode.Full:
                         RenderSetup.Res.Steps[1].TargetRect = TargetRect = new Rect(0, 0, 1, 1);
+                        break;
+                    case HudMapMode.None:
+                        RenderSetup.Res.Steps[1].TargetRect = TargetRect = new Rect(0, 0, 0, 0);
                         break;
                 }
             }

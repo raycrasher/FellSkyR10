@@ -15,7 +15,7 @@ namespace Duality.LibRocket
         private bool _scissorEnabled = false;
 
         IDrawDevice _device;
-        Dictionary<IntPtr, ContentRef<Texture>> _textures = new Dictionary<IntPtr, ContentRef<Texture>>();
+        Dictionary<IntPtr, (ContentRef<Texture> tex, bool isGenerated)> _textures = new Dictionary<IntPtr, (ContentRef<Texture> tex, bool isGenerated)>();
         private Rect _scissorRegion;
 
         VertexC1P3T2[] _vtxBuffer = new VertexC1P3T2[2048];
@@ -35,7 +35,7 @@ namespace Duality.LibRocket
 
         public LibRocketRendererInterface()
         {
-            _textures[IntPtr.Zero] = null;
+            _textures[IntPtr.Zero] = (null, true);
             _geometries[IntPtr.Zero] = null;
 
             Logs.Game.Write("LibRocket RenderInterface created.");
@@ -49,9 +49,17 @@ namespace Duality.LibRocket
         protected override IntPtr CompileGeometry(Vertex[] vertices, int[] indices, IntPtr texture)
         {   
             var buffer = new VertexBuffer();
-            buffer.LoadVertexData(GetVertices(vertices), 0, vertices.Length);
+            var texinfo = _textures[texture];
+
+            if (texinfo.tex == null)
+            {
+                texinfo.tex = new Texture(new Pixmap(new PixelData(1, 1, ColorRgba.White)));
+                _textures[texture] = texinfo;
+            }
+
+            buffer.LoadVertexData(GetVertices(vertices, texinfo), 0, vertices.Length);
             buffer.LoadIndexData(indices.Select(s=>(ushort)s).ToArray(), 0, indices.Length);
-            var batch = new DrawBatch(buffer, null, VertexMode.Triangles, new BatchInfo(Technique, ColorRgba.TransparentWhite, _textures[texture]));
+            var batch = new DrawBatch(buffer, null, VertexMode.Triangles, new BatchInfo(Technique, ColorRgba.White, texinfo.tex));
             var idx = (IntPtr)batch.GetHashCode();
             _geometries[idx] = batch;
             return idx;
@@ -99,15 +107,16 @@ namespace Duality.LibRocket
             var texture = new Texture(pixMap, TextureSizeMode.Default, TextureMagFilter.Linear, TextureMinFilter.Linear, format: TexturePixelFormat.Rgba);
             texture.AnisotropicFilter = true;
             texture_handle = new IntPtr(texture.GetHashCode());
-            _textures[texture_handle] = texture;
+            _textures[texture_handle] = (texture,true);
             return true;
         }
 
-        private VertexC1P3T2[] GetVertices(Vertex[] vertices)
+        private VertexC1P3T2[] GetVertices(Vertex[] vertices, (ContentRef<Texture> tex, bool isGenerated) texinfo)
         {
             var newVerts = new VertexC1P3T2[vertices.Length];
             float pixelOffset = MathF.RoundToInt(_device.TargetSize.X) != (MathF.RoundToInt(_device.TargetSize.X) / 2) * 2 ? 0.5f : 0f;
-            for(int i = 0; i < vertices.Length; i++)
+            var texSize = texinfo.tex.Res?.Size ?? Vector2.One;
+            for (int i = 0; i < vertices.Length; i++)
             {
                 var vtx = vertices[i];
                 newVerts[i] = new VertexC1P3T2
@@ -116,16 +125,21 @@ namespace Duality.LibRocket
                     Pos = new Vector3(MathF.Round(vtx.Position.X) + pixelOffset, MathF.Round(vtx.Position.Y) + pixelOffset, ZIndex),
                     TexCoord = new Vector2(vtx.TexCoords.X, vtx.TexCoords.Y)
                 };
+                if (!texinfo.isGenerated)
+                {
+                    newVerts[i].TexCoord = newVerts[i].TexCoord / texSize;
+                }
             }
 
             return newVerts;
         }
 
-        private VertexC1P3T2[] GetVertices(Vertex[] vertices, int[] indices)
+        private VertexC1P3T2[] GetVertices(Vertex[] vertices, int[] indices, (ContentRef<Texture> tex, bool isGenerated) texinfo)
         {
             if (vertices.Length > _vtxBuffer.Length)
                 _vtxBuffer = new VertexC1P3T2[indices.Length];
             float pixelOffset = MathF.RoundToInt(_device.TargetSize.X) != (MathF.RoundToInt(_device.TargetSize.X) / 2) * 2 ? 0.5f : 0f;
+            var texSize = texinfo.tex.Res?.Size ?? Vector2.One;
             for (int i = 0; i < indices.Length; i++)
             {
                 var vtx = vertices[indices[i]];
@@ -136,6 +150,10 @@ namespace Duality.LibRocket
                     Pos = new Vector3(MathF.Round(vtx.Position.X) + pixelOffset, MathF.Round(vtx.Position.Y) + pixelOffset, ZIndex),
                     TexCoord = new Vector2(vtx.TexCoords.X, vtx.TexCoords.Y)
                 };
+                if (!texinfo.isGenerated)
+                {
+                    vtx2.TexCoord = vtx2.TexCoord / texSize;
+                }
                 _vtxBuffer[i] = vtx2;
             }
 
@@ -145,10 +163,10 @@ namespace Duality.LibRocket
         protected override bool LoadTexture(ref IntPtr texture_handle, ref Vector2i texture_dimensions, string source)
         {
             var tex = ContentProvider.RequestContent<Texture>(source);
-            if (tex == null)
+            if (!tex.IsAvailable)
                 return false;
             var hash = (IntPtr)tex.Res.GetHashCode();
-            _textures[hash] = tex;
+            _textures[hash] = (tex,false);
             texture_handle = hash;
             return true;
         }
@@ -160,6 +178,18 @@ namespace Duality.LibRocket
 
         private void SetClipRect(BatchInfo batch)
         {
+            var size = _device.TargetSize;
+            var box = _scissorEnabled ? _scissorRegion : new Rect(0, 0, size.X, size.Y);
+            //box.W /= 2;
+            //box.H /= 2;
+
+            var bl = new Vector3(box.LeftX, box.TopY, 0);
+            var ur = new Vector3(box.RightX, box.BottomY, 0);
+            batch.SetValue("targetSize", new Vector2(size.X,size.Y));
+            batch.SetValue("clipRect", new Duality.Vector4(bl.X, bl.Y, ur.X, ur.Y));
+            batch.SetValue("debug", _scissorEnabled ? 1.0f : 0.0f);
+
+            /*
             if (_scissorEnabled)
             {
                 var size = _device.TargetSize;
@@ -174,21 +204,30 @@ namespace Duality.LibRocket
                 var size = _device.TargetSize;
                 batch.SetValue("clipRect", new Duality.Vector4(0, 0, size.X, size.Y));
             }
+            */
         }
 
         protected override void RenderGeometry(Vertex[] vertices, int[] indices, IntPtr texture, Vector2f translation)
         {
             if (_device == null || Technique == null)
                 return;
-            
+
             var batchInfo = _device.RentMaterial();
             batchInfo.Technique = Technique;
             batchInfo.MainColor = ColorRgba.White;
-            batchInfo.MainTexture = _textures[texture];
+            var texinfo = _textures[texture];
+            if (texinfo.tex == null)
+            {
+                texinfo.tex = new Texture(new Pixmap(new PixelData(1, 1, ColorRgba.White)));
+                _textures[texture] = texinfo;
+            }
+            
+            batchInfo.MainTexture = texinfo.tex;
             batchInfo.SetValue("translation", new Duality.Vector2(translation.X, translation.Y));
             SetClipRect(batchInfo);
-            _device.AddVertices(batchInfo, VertexMode.Triangles, GetVertices(vertices, indices), indices.Length);
+            _device.AddVertices(batchInfo, VertexMode.Triangles, GetVertices(vertices, indices, texinfo), indices.Length);
         }
 
+        
     }
 }

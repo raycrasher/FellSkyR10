@@ -39,8 +39,10 @@ namespace Duality.LibRocket
 
         protected override void JoinPath(ref string translatedPath, string documentPath, string path)
         {
-            base.JoinPath(ref translatedPath, documentPath, path);
+            if (path.EndsWith(".res", StringComparison.InvariantCultureIgnoreCase))
+                translatedPath=path;
+            else
+                base.JoinPath(ref translatedPath, documentPath, path);
         }
-
     }
 }
