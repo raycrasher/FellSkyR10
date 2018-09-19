@@ -100,10 +100,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Duality.LibRocket\Duality.LibRocket.csproj">
-      <Project>{464a8624-a8a1-47d8-be2b-8157751098d3}</Project>
-      <Name>Duality.LibRocket</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FellSky.Common\FellSky.Common.csproj">
       <Project>{8c75ac55-767c-424e-bd8e-db5f15bbe1f3}</Project>
       <Name>FellSky.Common</Name>
