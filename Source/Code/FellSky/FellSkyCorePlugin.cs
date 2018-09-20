@@ -14,5 +14,12 @@ namespace FellSky
         public static FellSkyAppData AppData => ((FellSkyAppData)DualityApp.AppData.CustomData);
 
         public static SystemSceneGeneratorDef SystemSceneGenData => (SystemSceneGeneratorDef)ContentProvider.GetAvailableContent<SystemSceneGeneratorDef>().FirstOrDefault();
+
+        protected override void InitPlugin()
+        {
+            base.InitPlugin();
+            DualityApp.AppData.MultisampleBackBuffer = false;
+        }
+
     }
 }

@@ -5,18 +5,22 @@
 body{
 	width:100%;
 	height:100%;
-	text-align:center;
 }
 
 #itemlist .item{
-	width: 150px;
-	height: 50px;
+	width: 200px;
+	height: 40px;
 	padding: 1px;
 	display:block;
 	border-color: #aa7700ff;
 	border-width: 1px;
-	overflow:scroll;
+	overflow:hidden;
 }
+
+#itemlist .item:hover {
+	background: #553300DD;
+}
+
 
 #itemlist .item .icon {
 	max-height: 48px;
@@ -43,7 +47,7 @@ body{
 <window>
 	<windowtitle>Inventory</windowtitle>
 	<ul id="itemlist"></ul>
-	
+	<windowhandle/>
 </window>
 </body>
 </rml>

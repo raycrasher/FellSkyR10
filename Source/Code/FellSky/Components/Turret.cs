@@ -16,23 +16,26 @@ namespace FellSky.Components
         public float TraverseArc { get; set; }
         public bool IsOmnidirectional => TraverseArc >= 180;
         public GameObject Target { get; set; }
+        public GameObject TurretBody { get; set; }
         public float TraverseSpeed { get; set; } = 360;
         public int GroupNumber { get; set; } = 1;
 
         void ICmpUpdatable.OnUpdate()
         {
             var targetXform = Target?.Transform;
-            if (targetXform == null)
+            var xform = TurretBody?.Transform;
+
+            if (targetXform == null || xform==null)
                 return;
-            var xform = GameObj.Transform;
+            
             var speed = Time.DeltaTime * MathF.DegToRad(TraverseSpeed);
             var offset = targetXform.Pos.Xy - xform.Pos.Xy;
-            var currentAngle = GameObj.Transform.Angle;
+            var currentAngle = TurretBody.Transform.Angle;
             if (IsOmnidirectional)
             {
                 var angle = NormalizeAngleNegPiToPi(FindAngleBetweenTwoVectors(xform.Right.Xy, offset));
                 var deltaAngle = MathF.Clamp(angle, -speed, speed);
-                GameObj.Transform.TurnBy(deltaAngle);
+                TurretBody.Transform.TurnBy(deltaAngle);
             }
             else
             {
@@ -61,7 +64,7 @@ namespace FellSky.Components
                 
                 float halfArc = MathF.DegToRad(TraverseArc) / 2;                    
                 var rel = currentRot + deltaAngle;
-                GameObj.Transform.LocalAngle = MathF.Clamp(rel, -halfArc, halfArc);
+                TurretBody.Transform.LocalAngle = MathF.Clamp(rel, -halfArc, halfArc);
             }
         }
     }
