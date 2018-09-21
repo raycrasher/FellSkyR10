@@ -3,6 +3,7 @@ using Duality.Components;
 using Duality.Drawing;
 using Duality.LibRocket;
 using Duality.Resources;
+using FellSky.Events;
 using LibRocketNet;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 namespace FellSky.Components
 {
     [RequiredComponent(typeof(GuiDocument))]
-    public class RefitController : Renderer, ICmpUpdatable, ICmpInitializable
+    public class RefitController : Renderer, ICmpUpdatable, ICmpInitializable, IEventHandler<GuiEvent>
     {
         [DontSerialize]
         Dictionary<Element, Turret> _turretElements;
@@ -25,6 +26,8 @@ namespace FellSky.Components
 
         public override float BoundRadius => float.PositiveInfinity;
 
+        public string File { get; set; }
+
         [DontSerialize]
         private bool _lastRefitStatus = false;
         [DontSerialize]
@@ -32,9 +35,9 @@ namespace FellSky.Components
 
         void ICmpInitializable.OnActivate()
         {
-            //_document = GameObj.GetComponent<GuiDocument>()?.Document;
-            //_document.Hide();
-            IsRefitting = true;
+            _document = GameObj.GetComponent<GuiDocument>()?.Document;
+            _document?.Hide();
+            IsRefitting = false;
         }
 
         void ICmpInitializable.OnDeactivate()
@@ -70,6 +73,7 @@ namespace FellSky.Components
 
         private void StartRefit()
         {
+            _document?.Show();
             var shipObj = Scene.FindComponent<PlayerController>()?.ControlledShip?.GameObj;
             if (shipObj == null)
             {
@@ -81,7 +85,7 @@ namespace FellSky.Components
 
         private void EndRefit()
         {
-            
+            _document?.Hide();
         }
 
         public override void Draw(IDrawDevice device)
@@ -102,10 +106,16 @@ namespace FellSky.Components
                     _canvas.FillCircleSegment(xform.Pos.X, xform.Pos.Y, xform.Pos.Z, 100, xform.Angle - MathF.DegToRad(turret.TraverseArc) + MathF.PiOver2, xform.Angle + MathF.DegToRad(turret.TraverseArc) + MathF.PiOver2, 90);
 
                     _canvas.State.ColorTint = new ColorRgba(255, 130, 30, 255);
+                    
                     _canvas.FillCircleSegment(xform.Pos.X, xform.Pos.Y, xform.Pos.Z, 10, 0, MathF.TwoPi, 2);
                 }
                 _canvas.End();
             }
+        }
+
+        void IEventHandler<GuiEvent>.HandleEvent(object source, GuiEvent data)
+        {
+            IsRefitting = !IsRefitting;
         }
     }
 }

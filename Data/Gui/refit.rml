@@ -1,0 +1,40 @@
+<rml>
+<head>
+<link type="text/css" href="Global.rcss"/>
+<style>
+body {
+   margin-top: 30px;
+   min-width: 100px;
+   min-height: 100px;
+   width: 400px;
+   height: 500px;
+   display:block;
+   position:absolute;
+}
+
+#stats li{
+	font-size: 12px;
+	display:block;
+
+}
+</style>
+</head>
+<body>
+<h1>
+	<handle id="position_handle" move_target="#document">
+	Refit
+	</handle>
+</h1>
+<div id="content">
+	<ul id="stats">
+	<li>Name: <span class="dataItem" value="name"/></li>
+	<li>Fwd Accel: <span class="dataItem" value="forward_accel"/></li>
+	<li>Man Accel: <span class="dataItem" value="maneuver_accel"/></li>
+	<li>Turn Accel: <span class="dataItem" value="turn_accel"/></li>
+	<li>Est. DPS (alpha):</li>
+	<li>Est. DPS (sustained):</li>
+	</ul>
+</div>
+<handle id="size_handle" size_target="#document"/>
+</body>
+</rml>

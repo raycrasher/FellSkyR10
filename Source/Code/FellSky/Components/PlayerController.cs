@@ -24,6 +24,7 @@ namespace FellSky.Components
         public Key Warp { get; set; } = Key.G;
 
         public Key Inventory { get; set; } = Key.F1;
+        public Key Refit { get; set; } = Key.F2;
 
         public Key DebugKey { get; set; } = Key.Tilde;
     }
@@ -58,6 +59,9 @@ namespace FellSky.Components
         {
             if (DualityApp.Keyboard.KeyHit(ControlBindings.Inventory))
                 Scene.FireEvent(this, new GuiEvent(GuiEventType.ToggleInventory));
+            if(DualityApp.Keyboard.KeyHit(ControlBindings.Refit))
+                Scene.FireEvent(this, new GuiEvent(GuiEventType.Refit));
+
 
             if (ControlledShip != null)
             {

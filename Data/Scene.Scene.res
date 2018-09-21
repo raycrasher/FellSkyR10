@@ -1563,6 +1563,7 @@
               <_x003C_Boost_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="Space" value="51" />
               <_x003C_DebugKey_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="Tilde" value="119" />
               <_x003C_Inventory_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="F1" value="10" />
+              <_x003C_Refit_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="F2" value="11" />
               <_x003C_StrafeLeft_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="Q" value="99" />
               <_x003C_StrafeRight_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="E" value="87" />
               <_x003C_ThrustDown_x003E_k__BackingField dataType="Enum" type="Duality.Input.Key" name="S" value="101" />
@@ -12066,12 +12067,12 @@
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
           <item dataType="Struct" type="Duality.LibRocket.GuiDocument" id="635549779">
-            <_filename />
+            <_filename dataType="String">Data/Gui/Refit.rml</_filename>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3859368498</gameobj>
           </item>
           <item dataType="Struct" type="FellSky.Components.RefitController" id="3851600096">
-            <_x003C_IsRefitting_x003E_k__BackingField dataType="Bool">true</_x003C_IsRefitting_x003E_k__BackingField>
+            <_x003C_IsRefitting_x003E_k__BackingField dataType="Bool">false</_x003C_IsRefitting_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3859368498</gameobj>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />

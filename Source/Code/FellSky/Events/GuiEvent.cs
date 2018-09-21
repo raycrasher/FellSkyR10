@@ -8,7 +8,8 @@ namespace FellSky.Events
 {
     public enum GuiEventType
     {
-        ToggleInventory
+        ToggleInventory,
+        Refit
     }
 
     public class GuiEvent: EventArgs
