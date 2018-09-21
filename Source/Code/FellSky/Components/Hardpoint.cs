@@ -11,6 +11,7 @@ namespace FellSky.Components
     {
         Hull, Weapon, Thruster, Device
     }
+    [Duality.Editor.EditorHintCategory("Ship")]
     public class Hardpoint: Component
     {
         public HardpointType Type { get; set; }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     public class BackgroundRenderer : Renderer, ICmpInitializable
     {
         public ContentRef<Pixmap>[] Backgrounds { get; set; }

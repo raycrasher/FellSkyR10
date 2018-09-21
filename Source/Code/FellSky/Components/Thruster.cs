@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     public class Thruster: Renderer, ICmpSpriteRenderer, ICmpUpdatable
     {
         public enum EditorGraphicOverride { Idle, Thrust, Boost }

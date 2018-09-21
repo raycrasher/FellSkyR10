@@ -9,6 +9,7 @@ using static FellSky.Utilities;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Ship")]
     [RequiredComponent(typeof(Transform))]
     public class Turret : Component, ICmpUpdatable
     {

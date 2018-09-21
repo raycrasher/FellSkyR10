@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Combat")]
     [RequiredComponent(typeof(Transform))]
     public class BeamProjectile: Component, ICmpUpdatable
     {

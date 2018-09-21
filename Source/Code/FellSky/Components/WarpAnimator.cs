@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     public class WarpAnimator : Renderer, ICmpInitializable, ICmpUpdatable
     {
         

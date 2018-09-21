@@ -13,36 +13,36 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
-    [RequiredComponent(typeof(GuiDocument))]
+    [Duality.Editor.EditorHintCategory("Gui")]
     public class RefitController : Renderer, ICmpUpdatable, ICmpInitializable, IEventHandler<GuiEvent>
     {
-        [DontSerialize]
-        Dictionary<Element, Turret> _turretElements;
+        public bool IsRefitting { get => _isRefitting; set => _isRefitting = value; }
 
-        [DontSerialize]
-        private ElementDocument _document;
-
-        public bool IsRefitting { get; set; }
+        public string SummaryDocumentFilename { get => _summaryDocumentFilename; set => _summaryDocumentFilename = value; }
+        public string ItemListDocumentFilename { get => _itemListDocumentFilename; set => _itemListDocumentFilename = value; }
 
         public override float BoundRadius => float.PositiveInfinity;
 
-        public string File { get; set; }
-
-        [DontSerialize]
-        private bool _lastRefitStatus = false;
-        [DontSerialize]
-        private Canvas _canvas;
+        private string _summaryDocumentFilename;
+        private string _itemListDocumentFilename;
+        [DontSerialize] private bool _isRefitting;
+        [DontSerialize] Dictionary<Element, Turret> _turretElements;
+        [DontSerialize] private ElementDocument _itemsDoc;
+        [DontSerialize] private ElementDocument _summaryDoc;
+        [DontSerialize] private bool _lastRefitStatus = false;
+        [DontSerialize] private Canvas _canvas;
 
         void ICmpInitializable.OnActivate()
         {
-            _document = GameObj.GetComponent<GuiDocument>()?.Document;
-            _document?.Hide();
+            _itemsDoc = GuiCore.Instance.CoreContext.LoadDocument(ItemListDocumentFilename);
+            _summaryDoc = GuiCore.Instance.CoreContext.LoadDocument(SummaryDocumentFilename);
             IsRefitting = false;
         }
 
         void ICmpInitializable.OnDeactivate()
         {
-            
+            _itemsDoc?.Close();
+            _summaryDoc?.Close();
         }
 
         void ICmpUpdatable.OnUpdate()
@@ -68,12 +68,13 @@ namespace FellSky.Components
 
         private void UpdateBoxSizes()
         {
-            
+
         }
 
         private void StartRefit()
         {
-            _document?.Show();
+            _summaryDoc?.Show();
+            _itemsDoc?.Show();
             var shipObj = Scene.FindComponent<PlayerController>()?.ControlledShip?.GameObj;
             if (shipObj == null)
             {
@@ -85,7 +86,8 @@ namespace FellSky.Components
 
         private void EndRefit()
         {
-            _document?.Hide();
+            _summaryDoc?.Hide();
+            _itemsDoc?.Hide();
         }
 
         public override void Draw(IDrawDevice device)
@@ -99,14 +101,14 @@ namespace FellSky.Components
                 mat.Technique = DrawTechnique.Alpha;
                 _canvas.State.SetMaterial(mat);
 
-                foreach(var turret in _turretElements.Values)
+                foreach (var turret in _turretElements.Values)
                 {
                     var xform = turret.GameObj.Transform;
                     _canvas.State.ColorTint = new ColorRgba(255, 130, 30, 64);
                     _canvas.FillCircleSegment(xform.Pos.X, xform.Pos.Y, xform.Pos.Z, 100, xform.Angle - MathF.DegToRad(turret.TraverseArc) + MathF.PiOver2, xform.Angle + MathF.DegToRad(turret.TraverseArc) + MathF.PiOver2, 90);
 
                     _canvas.State.ColorTint = new ColorRgba(255, 130, 30, 255);
-                    
+
                     _canvas.FillCircleSegment(xform.Pos.X, xform.Pos.Y, xform.Pos.Z, 10, 0, MathF.TwoPi, 2);
                 }
                 _canvas.End();

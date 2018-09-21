@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 namespace FellSky.Components
 {
     [RequiredComponent(typeof(MapController))]
+    [Duality.Editor.EditorHintCategory("Graphics")]
     public class MapRenderer : Component, ICmpRenderer
     {
         public static readonly VisibilityFlag DefaultVisibilityFlags = VisibilityFlag.Group2;

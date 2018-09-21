@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Ship")]
     public class Inventory: Component
     {
         public Dictionary<ContentRef<ItemDef>, decimal> Items { get; set; } = new Dictionary<ContentRef<ItemDef>, decimal>();

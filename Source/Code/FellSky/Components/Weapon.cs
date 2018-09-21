@@ -17,6 +17,7 @@ namespace FellSky.Components
         Disabled, Ready, ContinuousFiring, Cycling, Reloading
     }
 
+    [Duality.Editor.EditorHintCategory("Ship")]
     public class Weapon : Component, ICmpUpdatable, ICmpInitializable
     {
         static Random rng = new Random();

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Common")]
     public class Health: Component
     {
         public float MaxHealth { get; set; } = 100;

@@ -9,6 +9,7 @@ using Duality;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     [RequiredComponent(typeof(VelocityTracker)),
      RequiredComponent(typeof(Transform))]
     public class TrailEffect : Renderer, ICmpUpdatable, ICmpInitializable

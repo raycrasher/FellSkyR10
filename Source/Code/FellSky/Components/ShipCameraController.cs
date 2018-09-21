@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     public class ShipCameraController : Component, ICmpUpdatable
     {
         private float smoothness = 1.0f;

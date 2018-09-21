@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     public class TexturedRing : Renderer
     {
         private VertexC1P3T2[] _vertices;

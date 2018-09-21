@@ -10,6 +10,7 @@ namespace FellSky.Components
 {
     public enum MapCameraZoom { Near, Far }
 
+    [Duality.Editor.EditorHintCategory("Graphics")]
     [RequiredComponent(typeof(Camera))]
     public class MapCameraController : Component, ICmpUpdatable, ICmpInitializable
     {

@@ -13,6 +13,7 @@ namespace FellSky.Components
     [Flags]
     public enum GlowType { Scale = 1, Position = 2 }
 
+    [Duality.Editor.EditorHintCategory("Graphics")]
     [RequiredComponent(typeof(ICmpSpriteRenderer))]
     public class SpriteGlowEffect : Component, ICmpRenderer
     {

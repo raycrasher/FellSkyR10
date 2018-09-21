@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Ship")]
     [RequiredComponent(typeof(Duality.LibRocket.GuiDocument))]
     public class ShipViewController : Component, ICmpUpdatable
     {

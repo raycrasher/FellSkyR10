@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace FellSky.Components
 {
     [RequiredComponent(typeof(Transform))]
+    [Duality.Editor.EditorHintCategory("Common")]
     public class MouseCursor : Component, ICmpUpdatable
     {
         public Camera MainCamera { get; set; }

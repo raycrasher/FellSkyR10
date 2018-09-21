@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Common")]
     [RequiredComponent(typeof(SpriteRenderer))]
     public class FishEyeTexOffsetAnimator : Component, ICmpUpdatable
     {

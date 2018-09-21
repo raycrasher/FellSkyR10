@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Ship")]
     public class Device: Component
     {
         public short PowerLevel { get; set; }

@@ -16,40 +16,40 @@ namespace FellSky.Components
     [RequiredComponent(typeof(Transform))]
     public class Ship : Component, ICmpUpdatable, ICmpInitializable
     {
-        [DontSerialize]
-        private List<Thruster> _thrusters;
-        [DontSerialize]
-        private List<Weapon> _weapons;
-        [DontSerialize]
-        private float _radius;
-        [DontSerialize]
-        private Vector2 _centroid;
+        [DontSerialize] private List<Thruster> _thrusters;
+        [DontSerialize] private List<Weapon> _weapons;
+        [DontSerialize] private float _radius;
+        [DontSerialize] private Vector2 _centroid;
 
-        public float ManeuverSpeed { get; set; } = 10;
-        public float ForwardSpeed { get; set; } = 30;
-        public float TurnSpeed { get; internal set; } = 70;
-        public float BoostMultiplier { get; set; } = 2;
+        private float _maneuverSpeed = 10;
+        private float _forwardSpeed = 30;
+        private float _turnSpeed = 70;
+        private float _boostMultiplier = 2;
+        private Vector2 _thrustVector;
+        private bool _isBoosting;
+        private float _desiredTorque;
+        private Vector2 _acceleration;
+        private bool _isWarping = false;
 
-        public Vector2 ThrustVector { get; set; }
-        public bool IsBoosting { get; set; }        
-        public float DesiredTorque { get; set; }
-        public Vector2 Acceleration { get; private set; }
+        public float ManeuverSpeed { get => _maneuverSpeed; set => _maneuverSpeed = value; }
+        public float ForwardSpeed { get => _forwardSpeed; set => _forwardSpeed = value; }
+        public float TurnSpeed { get => _turnSpeed; internal set => _turnSpeed = value; }
+        public float BoostMultiplier { get => _boostMultiplier; set => _boostMultiplier = value; }
+
+        public Vector2 ThrustVector { get => _thrustVector; set => _thrustVector = value; }
+        public bool IsBoosting { get => _isBoosting; set => _isBoosting = value; }
+        public float DesiredTorque { get => _desiredTorque; set => _desiredTorque = value; }
+        public Vector2 Acceleration { get => _acceleration; private set => _acceleration = value; }
+
         public Rotation TurnDirection => DesiredTorque < 0 ? Rotation.CCW : DesiredTorque > 0 ? Rotation.CW : Rotation.None;
-        public float Radius
-        {
-            get => _radius;
-            private set => _radius = value;
-        }
-        public Vector2 LocalCentroid
-        {
-            get => _centroid;
-            private set => _centroid = value;
-        }
+
+        public float Radius { get => _radius; private set => _radius = value; }
+        public Vector2 LocalCentroid { get => _centroid; private set => _centroid = value; }
 
         public Vector2 Centroid => GameObj.Transform.GetWorldPoint(_centroid);
 
         [Duality.Editor.EditorHintFlags(MemberFlags.Invisible)]
-        public bool IsWarping { get; internal set; } = false;
+        public bool IsWarping { get => _isWarping; internal set => _isWarping = value; }
 
         public void UpdateEquipment()
         {
@@ -73,7 +73,7 @@ namespace FellSky.Components
 
         void ICmpInitializable.OnDeactivate()
         {
-            
+
         }
 
         void ICmpUpdatable.OnUpdate()

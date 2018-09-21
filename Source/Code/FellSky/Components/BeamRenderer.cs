@@ -10,6 +10,7 @@ using Duality.Resources;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Graphics")]
     /// <summary>
     /// Renders a beam.
     /// Rendering makes some assumptions about the underlying texture.

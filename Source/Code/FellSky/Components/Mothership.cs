@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Ship")]
     public class Mothership: Component
     {
         

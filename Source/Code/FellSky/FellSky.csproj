@@ -71,7 +71,6 @@
     <Compile Include="Components\BackgroundRenderer.cs" />
     <Compile Include="Components\BeamProjectile.cs" />
     <Compile Include="Components\BeamRenderer.cs" />
-    <Compile Include="Components\AnimationBlender.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\Cloud.cs" />
     <Compile Include="Components\FishEyeTexOffsetAnimator.cs" />
@@ -92,7 +91,6 @@
     <Compile Include="Components\IProjectile.cs" />
     <Compile Include="Components\MapCameraController.cs" />
     <Compile Include="Components\Mothership.cs" />
-    <Compile Include="Components\Pawn.cs" />
     <Compile Include="Components\PlayerController.cs" />
     <Compile Include="Components\Ship.cs" />
     <Compile Include="Components\ShipViewController.cs" />
@@ -103,7 +101,6 @@
     <Compile Include="Components\Turret.cs" />
     <Compile Include="Components\WarpAnimator.cs" />
     <Compile Include="Components\Weapon.cs" />
-    <Compile Include="Components\WeaponSlot.cs" />
     <Compile Include="Components\Hull.cs" />
     <Compile Include="Defs\EngineDef.cs" />
     <Compile Include="Defs\ShipDef.cs" />

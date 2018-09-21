@@ -29,6 +29,7 @@ namespace FellSky.Components
         public Key DebugKey { get; set; } = Key.Tilde;
     }
 
+    [Duality.Editor.EditorHintCategory("Common")]
     public class PlayerController : Component, ICmpUpdatable, IEventHandler<WarpEvent>
     {
         [DontSerialize]

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Gui")]
     [RequiredComponent(typeof(GuiDocument))]
     public class InventoryGuiController : Component, IEventHandler<GuiEvent>
     {

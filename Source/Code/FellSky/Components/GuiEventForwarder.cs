@@ -9,6 +9,7 @@ using FellSky.Events;
 
 namespace FellSky.Components
 {
+    [Duality.Editor.EditorHintCategory("Gui")]
     public class GuiEventForwarder : Component, ICmpInitializable
     {
         void ICmpInitializable.OnActivate()

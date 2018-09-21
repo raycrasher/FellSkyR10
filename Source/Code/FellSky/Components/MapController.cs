@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 namespace FellSky.Components
 {
     public enum HudMapMode { Minimap, Full, None }
+
+    [Duality.Editor.EditorHintCategory("Common")]
     public class MapController : Component, ICmpUpdatable, ICmpInitializable
     {        
         private HudMapMode _hudMapMode;

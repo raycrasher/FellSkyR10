@@ -11510,7 +11510,7 @@
             </_x003C_RenderSetup_x003E_k__BackingField>
             <_x003C_TargetRect_x003E_k__BackingField dataType="Struct" type="Duality.Rect">
               <H dataType="Float">1</H>
-              <W dataType="Float">0.14692165</W>
+              <W dataType="Float">0.33170253</W>
               <X dataType="Float">0</X>
               <Y dataType="Float">0.7</Y>
             </_x003C_TargetRect_x003E_k__BackingField>
@@ -12066,30 +12066,24 @@
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
           </item>
-          <item dataType="Struct" type="Duality.LibRocket.GuiDocument" id="635549779">
-            <_filename dataType="String">Data/Gui/Refit.rml</_filename>
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">3859368498</gameobj>
-          </item>
           <item dataType="Struct" type="FellSky.Components.RefitController" id="3851600096">
-            <_x003C_IsRefitting_x003E_k__BackingField dataType="Bool">false</_x003C_IsRefitting_x003E_k__BackingField>
+            <_itemListDocumentFilename dataType="String">Data/Gui/refit_items.rml</_itemListDocumentFilename>
+            <_summaryDocumentFilename dataType="String">Data/Gui/refit_summary.rml</_summaryDocumentFilename>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">3859368498</gameobj>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
         </_items>
-        <_size dataType="Int">3</_size>
+        <_size dataType="Int">2</_size>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3385035030" surrogate="true">
         <header />
         <body>
           <keys dataType="Array" type="System.Object[]" id="1578946806">
-            <item dataType="ObjectRef">1056568550</item>
             <item dataType="ObjectRef">1303782688</item>
             <item dataType="Type" id="3856450784" value="FellSky.Components.RefitController" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="785243674">
-            <item dataType="ObjectRef">635549779</item>
             <item dataType="ObjectRef">3916645716</item>
             <item dataType="ObjectRef">3851600096</item>
           </values>
