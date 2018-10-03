@@ -9718,9 +9718,19 @@
             Provides access to a set of <see cref="T:Duality.Input.GamepadInput">GamepadInputs</see>.
             </summary>
         </member>
-        <member name="P:Duality.Input.IUserInput.Description">
+        <member name="P:Duality.Input.IUserInput.Id">
             <summary>
-            [GET] A text description of this input.
+            [GET] The unique ID of this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.IUserInput.ProductId">
+            <summary>
+            [GET] The unique ID of the product that is providing this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.IUserInput.ProductName">
+            <summary>
+            [GET] The name of the product that is providing this input.
             </summary>
         </member>
         <member name="P:Duality.Input.IUserInput.IsAvailable">
@@ -9763,9 +9773,19 @@
             [GET / SET] The gamepad inputs data source.
             </summary>
         </member>
-        <member name="P:Duality.Input.GamepadInput.Description">
+        <member name="P:Duality.Input.GamepadInput.Id">
             <summary>
-            [GET] A string containing a unique description for this instance.
+            [GET] A string containing a unique id for this instance.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.GamepadInput.ProductId">
+            <summary>
+            [GET] The unique ID of the product that is providing this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.GamepadInput.ProductName">
+            <summary>
+            [GET] The name of the product that is providing this input.
             </summary>
         </member>
         <member name="P:Duality.Input.GamepadInput.IsAvailable">
@@ -9944,9 +9964,9 @@
         </member>
         <member name="P:Duality.Input.UserInputCollection`2.Item(System.String)">
             <summary>
-            [GET] Returns a specific input by its <see cref="P:Duality.Input.IUserInput.Description"/>.
+            [GET] Returns a specific input by its <see cref="P:Duality.Input.IUserInput.Id"/>.
             </summary>
-            <param name="desc"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Duality.Input.UserInputCollection`2.ClearSources">
@@ -10070,25 +10090,25 @@
             [GET] Returns the number of hats.
             </summary>
         </member>
-        <member name="P:Duality.Input.IJoystickInputSource.Item(Duality.Input.JoystickButton)">
+        <member name="M:Duality.Input.IJoystickInputSource.ButtonPressed(System.Int32)">
             <summary>
-            [GET] Returns whether the specified device button is currently pressed.
+            Returns whether the specified device button is currently pressed.
             </summary>
-            <param name="button"></param>
+            <param name="buttonIndex"></param>
             <returns></returns>
         </member>
-        <member name="P:Duality.Input.IJoystickInputSource.Item(Duality.Input.JoystickAxis)">
+        <member name="M:Duality.Input.IJoystickInputSource.AxisValue(System.Int32)">
             <summary>
-            [GET] Returns the specified device axis current value.
+            Returns the specified device axis current value.
             </summary>
-            <param name="axis"></param>
+            <param name="axisIndex"></param>
             <returns></returns>
         </member>
-        <member name="P:Duality.Input.IJoystickInputSource.Item(Duality.Input.JoystickHat)">
+        <member name="M:Duality.Input.IJoystickInputSource.HatPosition(System.Int32)">
             <summary>
             [GET] Returns the current position of the specified joystick hat.
             </summary>
-            <param name="hat"></param>
+            <param name="hatIndex"></param>
             <returns></returns>
         </member>
         <member name="T:Duality.Input.JoystickInput">
@@ -10101,9 +10121,19 @@
             [GET / SET] The extended user inputs data source.
             </summary>
         </member>
-        <member name="P:Duality.Input.JoystickInput.Description">
+        <member name="P:Duality.Input.JoystickInput.Id">
             <summary>
-            [GET] A string containing a unique description for this instance.
+            [GET] A string containing a unique id for this instance.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.JoystickInput.ProductId">
+            <summary>
+            [GET] The unique ID of the product that is providing this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.JoystickInput.ProductName">
+            <summary>
+            [GET] The name of the product that is providing this input.
             </summary>
         </member>
         <member name="P:Duality.Input.JoystickInput.IsAvailable">
@@ -10125,27 +10155,6 @@
             <summary>
             [GET] Returns the number of joystick hats.
             </summary>
-        </member>
-        <member name="P:Duality.Input.JoystickInput.Item(Duality.Input.JoystickButton)">
-            <summary>
-            [GET] Returns whether the specified device button is currently pressed.
-            </summary>
-            <param name="button"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Duality.Input.JoystickInput.Item(Duality.Input.JoystickAxis)">
-            <summary>
-            [GET] Returns the specified device axis current value.
-            </summary>
-            <param name="axis"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Duality.Input.JoystickInput.Item(Duality.Input.JoystickHat)">
-            <summary>
-            [GET] Returns the current position of the specified joystick hat.
-            </summary>
-            <param name="hat"></param>
-            <returns></returns>
         </member>
         <member name="E:Duality.Input.JoystickInput.ButtonUp">
             <summary>
@@ -10177,60 +10186,60 @@
             Fired when the joystick becomes available to Duality.
             </summary>
         </member>
-        <member name="M:Duality.Input.JoystickInput.ButtonPressed(Duality.Input.JoystickButton)">
+        <member name="M:Duality.Input.JoystickInput.ButtonPressed(System.Int32)">
             <summary>
             Returns whether the specified button is currently pressed.
             </summary>
-            <param name="button"></param>
+            <param name="buttonIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.ButtonHit(Duality.Input.JoystickButton)">
+        <member name="M:Duality.Input.JoystickInput.ButtonHit(System.Int32)">
             <summary>
             Returns whether the specified button was hit this frame.
             </summary>
-            <param name="button"></param>
+            <param name="buttonIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.ButtonReleased(Duality.Input.JoystickButton)">
+        <member name="M:Duality.Input.JoystickInput.ButtonReleased(System.Int32)">
             <summary>
             Returns whether the specified button was released this frame.
             </summary>
-            <param name="button"></param>
+            <param name="buttonIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.AxisValue(Duality.Input.JoystickAxis)">
+        <member name="M:Duality.Input.JoystickInput.AxisValue(System.Int32)">
             <summary>
             Returns the specified axis value.
             </summary>
-            <param name="axis"></param>
+            <param name="axisIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.AxisSpeed(Duality.Input.JoystickAxis)">
+        <member name="M:Duality.Input.JoystickInput.AxisSpeed(System.Int32)">
             <summary>
             Returns the specified axis value change since last frame.
             </summary>
-            <param name="axis"></param>
+            <param name="axisIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.HatPosition(Duality.Input.JoystickHat)">
+        <member name="M:Duality.Input.JoystickInput.HatPosition(System.Int32)">
             <summary>
             Returns the current position of the specified joystick hat.
             </summary>
-            <param name="hat"></param>
+            <param name="hatIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.HatHit(Duality.Input.JoystickHat)">
+        <member name="M:Duality.Input.JoystickInput.HatHit(System.Int32)">
             <summary>
             Returns all new hat displacement that occurred since last frame.
             </summary>
-            <param name="hat"></param>
+            <param name="hatIndex"></param>
             <returns></returns>
         </member>
-        <member name="M:Duality.Input.JoystickInput.HatReleased(Duality.Input.JoystickHat)">
+        <member name="M:Duality.Input.JoystickInput.HatReleased(System.Int32)">
             <summary>
             Returns all old hat displacement that stopped since last frame.
             </summary>
-            <param name="hat"></param>
+            <param name="hatIndex"></param>
             <returns></returns>
         </member>
         <member name="T:Duality.Input.IUserInputSource">
@@ -10238,9 +10247,19 @@
             Base interface for describing a source of user input.
             </summary>
         </member>
-        <member name="P:Duality.Input.IUserInputSource.Description">
+        <member name="P:Duality.Input.IUserInputSource.Id">
             <summary>
-            [GET] A string containing a unique description for this instance.
+            [GET] The unique id of this input source.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.IUserInputSource.ProductId">
+            <summary>
+            [GET] The unique ID of the product that is providing this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.IUserInputSource.ProductName">
+            <summary>
+            [GET] The name of the product that is providing this input.
             </summary>
         </member>
         <member name="P:Duality.Input.IUserInputSource.IsAvailable">
@@ -10263,9 +10282,19 @@
             [GET / SET] The mouse inputs data source.
             </summary>
         </member>
-        <member name="P:Duality.Input.MouseInput.Description">
+        <member name="P:Duality.Input.MouseInput.Id">
             <summary>
-            [GET] A text description of this input.
+            [GET] The unique id of this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.MouseInput.ProductId">
+            <summary>
+            [GET] The unique ID of the product that is providing this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.MouseInput.ProductName">
+            <summary>
+            [GET] The name of the product that is providing this input.
             </summary>
         </member>
         <member name="P:Duality.Input.MouseInput.IsAvailable">
@@ -10366,9 +10395,19 @@
             [GET / SET] The keyboard inputs data source.
             </summary>
         </member>
-        <member name="P:Duality.Input.KeyboardInput.Description">
+        <member name="P:Duality.Input.KeyboardInput.Id">
             <summary>
-            [GET] A text description of this input.
+            [GET] The unique id of this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.KeyboardInput.ProductId">
+            <summary>
+            [GET] The unique ID of the product that is providing this input.
+            </summary>
+        </member>
+        <member name="P:Duality.Input.KeyboardInput.ProductName">
+            <summary>
+            [GET] The name of the product that is providing this input.
             </summary>
         </member>
         <member name="P:Duality.Input.KeyboardInput.IsAvailable">

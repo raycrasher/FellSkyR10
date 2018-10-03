@@ -9,8 +9,8 @@
   <windowMode dataType="Enum" type="Duality.ScreenMode" name="Window" value="0" />
   <windowRefreshMode dataType="Enum" type="Duality.RefreshMode" name="AdaptiveVSync" value="3" />
   <windowSize dataType="Struct" type="Duality.Point2">
-    <X dataType="Int">1600</X>
-    <Y dataType="Int">900</Y>
+    <X dataType="Int">800</X>
+    <Y dataType="Int">600</Y>
   </windowSize>
 </root>
 <!-- XmlFormatterBase Document Separator -->
