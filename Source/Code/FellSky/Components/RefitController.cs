@@ -21,6 +21,8 @@ namespace FellSky.Components
         public string SummaryDocumentFilename { get => _summaryDocumentFilename; set => _summaryDocumentFilename = value; }
         public string ItemListDocumentFilename { get => _itemListDocumentFilename; set => _itemListDocumentFilename = value; }
 
+        public bool ShowTurretArcs { get => _showTurretArcs; set => _showTurretArcs = value; }
+
         public override float BoundRadius => float.PositiveInfinity;
 
         private string _summaryDocumentFilename;
@@ -31,6 +33,7 @@ namespace FellSky.Components
         [DontSerialize] private ElementDocument _summaryDoc;
         [DontSerialize] private bool _lastRefitStatus = false;
         [DontSerialize] private Canvas _canvas;
+        private bool _showTurretArcs;
 
         void ICmpInitializable.OnActivate()
         {
@@ -92,7 +95,7 @@ namespace FellSky.Components
 
         public override void Draw(IDrawDevice device)
         {
-            if (IsRefitting && DualityApp.ExecEnvironment == DualityApp.ExecutionEnvironment.Launcher)
+            if (IsRefitting && DualityApp.ExecEnvironment == DualityApp.ExecutionEnvironment.Launcher && ShowTurretArcs)
             {
                 _canvas = _canvas ?? new Canvas();
                 _canvas.Begin(device);

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Defs\ItemDef.cs" />
     <Compile Include="FellSkyCommonCorePlugin.cs" />
+    <Compile Include="Components\MultiSprite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
