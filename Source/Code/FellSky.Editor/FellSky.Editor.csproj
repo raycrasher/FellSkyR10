@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\AtlasSpriteConverter.cs" />
+    <Compile Include="Actions\CreateGeometryOperation.cs" />
     <Compile Include="Actions\ImportAtlas.cs" />
     <Compile Include="Actions\SpriteOperations.cs" />
     <Compile Include="AtlasSprite.cs" />

@@ -47,9 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\GeometryRenderer.cs" />
+    <Compile Include="Defs\Geometry.cs" />
     <Compile Include="Defs\ItemDef.cs" />
     <Compile Include="FellSkyCommonCorePlugin.cs" />
-    <Compile Include="Components\MultiSprite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
