@@ -1,9 +1,50 @@
 ﻿Map:
    Player can explore a system with 10-20 locations.
-   Each system has 3-5 hubs, each one owned by a faction.
-   A faction can only own 1 hub.
-   Each system has 1 powered jump point controlled by the dominant faction.
-   Each system has 1 unpowered jump point.
+   
+
+Resources:
+	Gatherable:
+		water
+		rock
+		volatiles
+		organics
+		metal ore
+		rare ore
+		biomass
+		air
+		energy
+
+	Intermediate
+		chemical propellant (chemprop)
+		chemical explosives (chemex)
+		reaction mass (remass)
+		fissile fuel  
+		fusion fuel
+		metal
+		rare metal
+		supplies
+
+	Product
+		structural prefabs
+		armor plate
+
+
+Research Data
+	Astro
+	Bio
+	Physics
+	Chem
+	Socio
+	Geo
+	Materials
+
+
+
+
+
+
+
+
 
 Species:
 	Human-Baseline

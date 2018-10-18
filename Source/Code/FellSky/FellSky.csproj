@@ -73,6 +73,7 @@
     <Compile Include="Components\BeamRenderer.cs" />
     <Compile Include="Components\BulletProjectile.cs" />
     <Compile Include="Components\Cloud.cs" />
+    <Compile Include="Components\EditorMirrorPart.cs" />
     <Compile Include="Components\FishEyeTexOffsetAnimator.cs" />
     <Compile Include="Components\InventoryGuiController.cs" />
     <Compile Include="Components\MapController.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Components\Particles\ParticleEffect.cs" />
     <Compile Include="Components\Particles\ParticleEmitter.cs" />
     <Compile Include="Components\RefitController.cs" />
+    <Compile Include="Components\ResourceStorage.cs" />
     <Compile Include="Components\ShipCameraController.cs" />
     <Compile Include="Components\Device.cs" />
     <Compile Include="Components\GameController.cs" />
@@ -103,11 +105,11 @@
     <Compile Include="Components\Weapon.cs" />
     <Compile Include="Components\Hull.cs" />
     <Compile Include="Defs\EngineDef.cs" />
+    <Compile Include="Defs\ResourceDef.cs" />
     <Compile Include="Defs\ShipDef.cs" />
     <Compile Include="Defs\ShipPartDef.cs" />
     <Compile Include="Defs\SystemSceneGeneratorDef.cs" />
     <Compile Include="Defs\SovereignDef.cs" />
-    <Compile Include="Defs\Verb.cs" />
     <Compile Include="Defs\WeaponDef.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Event.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Gfx\VertexP3C3T2N3.cs" />
     <Compile Include="Gui\GuiEventArgs.cs" />
     <Compile Include="MainMenu\MainMenuController.cs" />
+    <Compile Include="PlayerData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Health.cs" />
     <Compile Include="SceneGenerator.cs" />

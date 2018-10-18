@@ -25,7 +25,12 @@ namespace FellSky.Components
         public float DepthOffset { get => _depthOffset; set => _depthOffset = value; }
         public override float BoundRadius => (_geometry.IsAvailable ? _geometry.Res.BoundingRadius : 0) * GameObj.Transform.Scale;
 
-        public ContentRef<RawGeometry> Geometry { get => _geometry; set => _geometry = value; }
+        public ContentRef<RawGeometry> Geometry {
+            get => _geometry;
+            set {
+                _geometry = value;
+            }
+        }
         public ContentRef<Material> Material { get => _material; set => _material = value; }
         public VertexMode VertexMode { get => _vertexMode; set => _vertexMode = value; }
 
