@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\GeometryRenderer.cs" />
-    <Compile Include="Defs\Geometry.cs" />
+    <Compile Include="Defs\GeometryBase.cs" />
+    <Compile Include="Defs\GroupedSpriteGeometry.cs" />
+    <Compile Include="Defs\RawGeometry.cs" />
     <Compile Include="Defs\ItemDef.cs" />
     <Compile Include="FellSkyCommonCorePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

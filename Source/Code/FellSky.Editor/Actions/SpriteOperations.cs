@@ -1,5 +1,6 @@
 ﻿using Duality;
 using Duality.Components.Renderers;
+using FellSky.Defs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,17 @@ namespace FellSky.Editor.Actions
                     spriteRenderer.DepthOffset += delta;
                 }
             }
+        }
+
+        public static void CreateGeometry()
+        {
+            var sprites = Duality.Editor.DualityEditorApp.Selection.OfType<GameObject>().SelectMany(s => s.GetComponentsDeep<SpriteRenderer>());
+            var geometries = RawGeometry.CreateGeometry(sprites).ToArray();
+
+            for(int i = 0; i<geometries.Length; i++)
+            {
+                geometries[i].Save($"Data/_generated_geom{i}.geometry.res", true);
+            }            
         }
 
     }

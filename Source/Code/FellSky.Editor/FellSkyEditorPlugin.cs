@@ -60,6 +60,11 @@ namespace FellSky.Editor
                 ActionHandler = (o, e) => SpriteOperations.ChangeDepth(-1),
                 ShortcutKeys = Keys.Control | Keys.Subtract
             });
+            spriteMenu.AddItem(new MenuModelItem
+            {
+                Name = "Create Geometry out of sprites",
+                ActionHandler = (o, e) => SpriteOperations.CreateGeometry(),
+            });
         }
 
         protected override IDockContent DeserializeDockContent(Type dockContentType)

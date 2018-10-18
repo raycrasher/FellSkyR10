@@ -61,14 +61,13 @@ namespace FellSky.Components
         void ICmpInitializable.OnActivate()
         {
             UpdateEquipment();
-            CalculateRadius();
+            //CalculateRadius();
         }
 
         private void CalculateRadius()
         {
-            var sprites = GameObj.GetComponentsDeep<SpriteRenderer>().Where(s => s.VisibilityGroup == Duality.Drawing.VisibilityFlag.Group0).ToArray();
-            Radius = sprites.Max(s => s.GameObj.Transform.LocalPos.Length + s.BoundRadius);
-            LocalCentroid = new Vector2(sprites.Average(s => s.GameObj.Transform.LocalPos.X), sprites.Average(s => s.GameObj.Transform.LocalPos.Y));
+            Radius = GameObj.GetComponent<GeometryRenderer>().BoundRadius;
+            //LocalCentroid = new Vector2(sprites.Average(s => s.GameObj.Transform.LocalPos.X), sprites.Average(s => s.GameObj.Transform.LocalPos.Y));
         }
 
         void ICmpInitializable.OnDeactivate()
@@ -84,25 +83,28 @@ namespace FellSky.Components
         private void DoControls()
         {
             var rigidBody = GameObj.GetComponent<RigidBody>();
-            var local = GameObj.Transform.GetLocalVector(ThrustVector);
+            if (rigidBody != null)
+            {
+                var local = GameObj.Transform.GetLocalVector(ThrustVector);
 
-            var force = new Vector2(
-                MathF.Clamp(local.X, -ManeuverSpeed, ForwardSpeed),
-                MathF.Clamp(local.Y, -ManeuverSpeed, ManeuverSpeed));
+                var force = new Vector2(
+                    MathF.Clamp(local.X, -ManeuverSpeed, ForwardSpeed),
+                    MathF.Clamp(local.Y, -ManeuverSpeed, ManeuverSpeed));
 
-            var maxForceLength = Math.Max(ForwardSpeed, ManeuverSpeed);
+                var maxForceLength = Math.Max(ForwardSpeed, ManeuverSpeed);
 
-            if (force.LengthSquared > maxForceLength * maxForceLength)
-                force = force.Normalized * maxForceLength;
+                if (force.LengthSquared > maxForceLength * maxForceLength)
+                    force = force.Normalized * maxForceLength;
 
-            if (IsBoosting) force *= BoostMultiplier;
+                if (IsBoosting) force *= BoostMultiplier;
 
-            if (force.LengthSquared > 0)
-                rigidBody.ApplyLocalForce(force);
+                if (force.LengthSquared > 0)
+                    rigidBody.ApplyLocalForce(force);
 
-            Acceleration = force;
+                Acceleration = force;
 
-            rigidBody.ApplyLocalForce(MathF.Clamp(DesiredTorque, -TurnSpeed, TurnSpeed));
+                rigidBody.ApplyLocalForce(MathF.Clamp(DesiredTorque, -TurnSpeed, TurnSpeed));
+            }
         }
 
         public void Warp()
