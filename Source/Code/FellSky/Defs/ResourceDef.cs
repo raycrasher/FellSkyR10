@@ -1,4 +1,5 @@
 ﻿using Duality;
+using Duality.Editor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace FellSky.Defs
 {
+    [EditorHintCategory("Defs")]
     public class ResourceDef: Resource
     {
-        public float MassPerUnit { get; set; } = 1;
-        public float VolumePerUnit { get; set; } = 1;
+        public float Density { get; set; } = 1;
     }
 }

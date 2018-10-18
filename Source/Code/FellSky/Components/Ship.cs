@@ -67,6 +67,7 @@ namespace FellSky.Components
         private void CalculateRadius()
         {
             Radius = GameObj.GetComponent<GeometryRenderer>().BoundRadius;
+            LocalCentroid = Vector2.Zero;
             //LocalCentroid = new Vector2(sprites.Average(s => s.GameObj.Transform.LocalPos.X), sprites.Average(s => s.GameObj.Transform.LocalPos.Y));
         }
 

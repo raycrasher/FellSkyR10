@@ -18,7 +18,7 @@ namespace FellSky.Components
         public float CapacityVolume { get; set; } = 10000;
         public float CapacityMass { get; set; } = 10000;
 
-        public float CurrentVolume => ResourceMax.Sum(r => r.Value * r.Key.Res.VolumePerUnit);
-        public float CurrentMass => ResourceMax.Sum(r => r.Value * r.Key.Res.MassPerUnit);
+        public float CurrentVolume => ResourceMax.Sum(r => r.Value);
+        public float CurrentMass => ResourceMax.Sum(r => r.Key.Res.Density * r.Value);
     }
 }

@@ -146,10 +146,10 @@ namespace FellSky.Components
                 switch (ship.TurnDirection)
                 {
                     case Rotation.CW:
-                        p = new Vector2(-offset.Y, offset.X) / offset.Length * -1;
+                        p = new Vector2(-offset.Y, offset.X) / offset.Length * 1;
                         break;
                     case Rotation.CCW:
-                        p = new Vector2(-offset.Y, offset.X) / offset.Length * 1;
+                        p = new Vector2(-offset.Y, offset.X) / offset.Length * -1;
                         break;
                     default:
                         p = new Vector2();
