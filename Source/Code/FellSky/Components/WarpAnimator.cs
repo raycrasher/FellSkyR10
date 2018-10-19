@@ -18,6 +18,7 @@ namespace FellSky.Components
     {
         
         private SpriteRenderer[] _sprites;
+        private GeometryRenderer[] _geometries;
 
         enum AnimState { Charging, Warping, }
         public override float BoundRadius => float.PositiveInfinity;
@@ -65,6 +66,8 @@ namespace FellSky.Components
 
                 foreach (var sprite in _sprites)
                     SpriteGlowEffect.RenderSpriteGlow(device, sprite, GlowType.Position | GlowType.Scale, 1.1f, 10f, Color.WithAlpha(alpha), DrawTechnique.Res, -100);
+                foreach (var geom in _geometries)
+                    SpriteGlowEffect.RenderSpriteGlow(device, geom, GlowType.Position | GlowType.Scale, 1.1f, 10f, Color.WithAlpha(alpha), DrawTechnique.Res, -100);
             }
             else
             {
@@ -77,6 +80,7 @@ namespace FellSky.Components
         {
             Ship = Ship ?? GameObj.Parent;
             _sprites = Ship?.GetComponentsDeep<SpriteRenderer>().ToArray();
+            _geometries = Ship?.GetComponentsDeep<GeometryRenderer>().ToArray();
         }
 
         void ICmpInitializable.OnDeactivate()

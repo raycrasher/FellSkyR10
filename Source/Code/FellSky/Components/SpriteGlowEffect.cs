@@ -75,6 +75,37 @@ namespace FellSky.Components
             renderer.DepthOffset = lastzOffset;
         }
 
+        public static void RenderSpriteGlow(IDrawDevice device, GeometryRenderer geometry, GlowType glowType, float scaleAmount, float offsetAmount, ColorRgba colorRgba, DrawTechnique technique, int depthOffset)
+        {
+            if (geometry == null || !geometry.Geometry.IsAvailable || !geometry.Material.IsAvailable)
+                return;
+
+            var pos = geometry.GameObj.Transform.Pos;
+            var scale = geometry.GameObj.Transform.Scale;
+
+            float factor = 1;
+
+            if ((glowType & GlowType.Scale) != 0)
+            {
+                factor = rng.NextFloat(0, 1);
+                pos = pos * (1+factor * scaleAmount);
+            }
+            if ((glowType & GlowType.Position) != 0)
+            {
+                pos.X += rng.NextFloat(-1, 1) * offsetAmount;
+                pos.Y += rng.NextFloat(-1, 1) * offsetAmount;
+            }
+
+            BatchInfo batch;
+            if (!GlowMaterialsCache.TryGetValue((geometry.Material, technique), out batch))
+            {
+                batch = new BatchInfo((Material)geometry.Material);
+                batch.Technique = technique;
+                GlowMaterialsCache[(geometry.Material, technique)] = batch;
+            }
+            GeometryRenderer.Draw(device, geometry, batch, pos, geometry.GameObj.Transform.Angle, scale, depthOffset);
+        }
+
         void ICmpRenderer.GetCullingInfo(out CullingInfo info)
         {
             var sprite = GameObj.GetComponent<ICmpRenderer>();

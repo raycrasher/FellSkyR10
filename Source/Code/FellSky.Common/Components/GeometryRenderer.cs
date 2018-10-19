@@ -36,48 +36,71 @@ namespace FellSky.Components
 
         public override void Draw(IDrawDevice device)
         {
-            if (!_geometry.IsAvailable || !_material.IsAvailable || _geometry.Res.Vertices == null) return;
-            int numVerts = _geometry.Res.NumVertices ?? 0;
-            if(_vertexMode == VertexMode.Triangles)
+            Draw(device, this, Material.Res, GameObj.Transform.Pos, GameObj.Transform.Angle, GameObj.Transform.Scale, DepthOffset);
+        }
 
-            switch (VertexMode)
-            {
-            case VertexMode.Triangles:
-                if (numVerts % 3 != 0)
-                    return;
-                break;
-            case VertexMode.Quads:
-                if (numVerts % 4 != 0)
-                    return;
-                break;
-            case VertexMode.TriangleStrip:
-            case VertexMode.TriangleFan:
-                if (numVerts < 3)
-                    return;
-                break;
-            case VertexMode.LineLoop:
-                break;                    
-            }
+        public static void Draw(IDrawDevice device, GeometryRenderer renderer, Material material, Vector3 position, float angle, float scale, float depth)
+        {
+            if (renderer == null ||
+                !renderer._geometry.IsAvailable ||
+                material == null ||
+                renderer._geometry.Res.Vertices == null) return;
 
-            var geomVertices = _geometry.Res.Vertices;
+            PrepareVertices(renderer, position, angle, scale, depth);
+            device.AddVertices(material, renderer._vertexMode, renderer._vertices);
+        }
+        public static void Draw(IDrawDevice device, GeometryRenderer renderer, BatchInfo batch, Vector3 position, float angle, float scale, float depth)
+        {
+            if (renderer == null ||
+                !renderer._geometry.IsAvailable ||
+                batch == null ||
+                renderer._geometry.Res.Vertices == null) return;
 
-            if (_vertices == null || _vertices.Length != geomVertices.Length)
-                _vertices = new VertexC1P3T2[_geometry.Res.Vertices.Length];
+            PrepareVertices(renderer, position, angle, scale, depth);
+            device.AddVertices(batch, renderer._vertexMode, renderer._vertices);
+        }
+
+        private static void PrepareVertices(GeometryRenderer renderer, Vector3 position, float angle, float scale, float depth)
+        {
+            int numVerts = renderer._geometry.Res.NumVertices ?? 0;
+            if (renderer._vertexMode == VertexMode.Triangles)
+
+                switch (renderer.VertexMode)
+                {
+                    case VertexMode.Triangles:
+                        if (numVerts % 3 != 0)
+                            return;
+                        break;
+                    case VertexMode.Quads:
+                        if (numVerts % 4 != 0)
+                            return;
+                        break;
+                    case VertexMode.TriangleStrip:
+                    case VertexMode.TriangleFan:
+                        if (numVerts < 3)
+                            return;
+                        break;
+                    case VertexMode.LineLoop:
+                        break;
+                }
+
+            var geomVertices = renderer._geometry.Res.Vertices;
+
+            if (renderer._vertices == null || renderer._vertices.Length != geomVertices.Length)
+                renderer._vertices = new VertexC1P3T2[renderer._geometry.Res.Vertices.Length];
 
             Vector2 xDot, yDot;
-            var xform = GameObj.Transform;
-            MathF.GetTransformDotVec(xform.Angle, xform.Scale, out xDot, out yDot);
+            //var xform = GameObj.Transform;
+            MathF.GetTransformDotVec(angle, scale, out xDot, out yDot);
 
             for (int i = 0; i < geomVertices.Length; i++)
             {
                 var vert = geomVertices[i];
-                vert.DepthOffset = -vert.DepthOffset + DepthOffset;
+                vert.DepthOffset = -vert.DepthOffset + renderer.DepthOffset;
                 MathF.TransformDotVec(ref vert.Pos, ref xDot, ref yDot);
-                vert.Pos += xform.Pos;
-                _vertices[i] = vert;
+                vert.Pos += position;
+                renderer._vertices[i] = vert;
             }
-
-            device.AddVertices(Material, _vertexMode, _vertices);
         }
     }
 }
