@@ -48,6 +48,8 @@ namespace FellSky.Components
                 float alpha = MathF.Clamp01(ElapsedTime / chargeTime);
                 foreach (var sprite in _sprites)
                     SpriteGlowEffect.RenderSpriteGlow(device, sprite, GlowType.Position | GlowType.Scale, 1.1f, 10f, Color.WithAlpha(alpha), DrawTechnique.Res, -100);
+                foreach(var geom in _geometries)
+                    SpriteGlowEffect.RenderSpriteGlow(device, geom, GlowType.Position | GlowType.Scale, 1.1f, 10f, Color.WithAlpha(alpha), DrawTechnique.Res, -100);
             }
             else if (ElapsedTime >= chargeTime && ElapsedTime <= chargeTime + warpTime)
             {

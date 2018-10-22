@@ -58,13 +58,16 @@
         <input dataType="Struct" type="Duality.Drawing.BatchInfo" id="1372777964">
           <parameters dataType="Struct" type="Duality.Drawing.ShaderParameterCollection" id="3904983652" custom="true">
             <body>
+              <blur dataType="Array" type="System.Single[]" id="3196673476">0.01</blur>
+              <dir dataType="Array" type="System.Single[]" id="3792488854">1, 1</dir>
               <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
                 <contentPath dataType="String">Data\Rendering\mapTexture.Texture.res</contentPath>
               </mainTex>
+              <resolution dataType="Array" type="System.Single[]" id="1854844032">1024, 1024</resolution>
             </body>
           </parameters>
           <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
-            <contentPath dataType="String">Default:DrawTechnique:Alpha</contentPath>
+            <contentPath dataType="String">Default:DrawTechnique:SharpAlpha</contentPath>
           </technique>
         </input>
         <inputResize dataType="Enum" type="Duality.TargetResize" name="Fill" value="3" />
@@ -74,7 +77,7 @@
         <projection dataType="Enum" type="Duality.Drawing.ProjectionMode" name="Screen" value="2" />
         <targetRect dataType="Struct" type="Duality.Rect">
           <H dataType="Float">0.3</H>
-          <W dataType="Float">0.227737233</W>
+          <W dataType="Float">0.15923509</W>
           <X dataType="Float">0</X>
           <Y dataType="Float">0.7</Y>
         </targetRect>

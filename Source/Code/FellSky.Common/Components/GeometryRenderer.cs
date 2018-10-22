@@ -24,6 +24,7 @@ namespace FellSky.Components
 
         public float DepthOffset { get => _depthOffset; set => _depthOffset = value; }
         public override float BoundRadius => (_geometry.IsAvailable ? _geometry.Res.BoundingRadius : 0) * GameObj.Transform.Scale;
+        public ColorRgba Color { get; set; } = ColorRgba.White;
 
         public ContentRef<RawGeometry> Geometry {
             get => _geometry;
@@ -36,31 +37,31 @@ namespace FellSky.Components
 
         public override void Draw(IDrawDevice device)
         {
-            Draw(device, this, Material.Res, GameObj.Transform.Pos, GameObj.Transform.Angle, GameObj.Transform.Scale, DepthOffset);
+            Draw(device, this, Material.Res, GameObj.Transform.Pos, GameObj.Transform.Angle, GameObj.Transform.Scale, DepthOffset, Color, BlendMode.Multiply);
         }
 
-        public static void Draw(IDrawDevice device, GeometryRenderer renderer, Material material, Vector3 position, float angle, float scale, float depth)
+        public static void Draw(IDrawDevice device, GeometryRenderer renderer, Material material, Vector3 position, float angle, float scale, float depth, ColorRgba tint, BlendMode blend)
         {
             if (renderer == null ||
                 !renderer._geometry.IsAvailable ||
                 material == null ||
                 renderer._geometry.Res.Vertices == null) return;
 
-            PrepareVertices(renderer, position, angle, scale, depth);
+            PrepareVertices(renderer, position, angle, scale, depth, tint, blend);
             device.AddVertices(material, renderer._vertexMode, renderer._vertices);
         }
-        public static void Draw(IDrawDevice device, GeometryRenderer renderer, BatchInfo batch, Vector3 position, float angle, float scale, float depth)
+        public static void Draw(IDrawDevice device, GeometryRenderer renderer, BatchInfo batch, Vector3 position, float angle, float scale, float depth, ColorRgba tint, BlendMode blend)
         {
             if (renderer == null ||
                 !renderer._geometry.IsAvailable ||
                 batch == null ||
                 renderer._geometry.Res.Vertices == null) return;
 
-            PrepareVertices(renderer, position, angle, scale, depth);
+            PrepareVertices(renderer, position, angle, scale, depth, tint, blend);
             device.AddVertices(batch, renderer._vertexMode, renderer._vertices);
         }
 
-        private static void PrepareVertices(GeometryRenderer renderer, Vector3 position, float angle, float scale, float depth)
+        private static void PrepareVertices(GeometryRenderer renderer, Vector3 position, float angle, float scale, float depth, ColorRgba tint, BlendMode blend)
         {
             int numVerts = renderer._geometry.Res.NumVertices ?? 0;
             if (renderer._vertexMode == VertexMode.Triangles)
@@ -99,6 +100,19 @@ namespace FellSky.Components
                 vert.DepthOffset = -vert.DepthOffset + renderer.DepthOffset;
                 MathF.TransformDotVec(ref vert.Pos, ref xDot, ref yDot);
                 vert.Pos += position;
+                switch (blend)
+                {
+                    case BlendMode.Add:
+                        vert.Color += tint;
+                        break;
+                    case BlendMode.Multiply:
+                        vert.Color *= tint;
+                        break;
+                    case BlendMode.Alpha:
+                        //vert.Color = vert.Color
+                        break;
+                }
+                vert.Color *= tint;
                 renderer._vertices[i] = vert;
             }
         }

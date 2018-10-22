@@ -61,7 +61,7 @@ namespace FellSky.Components
         void ICmpInitializable.OnActivate()
         {
             UpdateEquipment();
-            //CalculateRadius();
+            CalculateRadius();
         }
 
         private void CalculateRadius()

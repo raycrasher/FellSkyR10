@@ -37,6 +37,8 @@ namespace FellSky.Components
         void ICmpUpdatable.OnUpdate()
         {
             CheckForToggleVisibilityKeyPress();
+            var size = RenderSetup.Res.Steps[1].Input.MainTexture.Res.InternalSize;
+            RenderSetup.Res.Steps[1].Input.SetValue("resolution", new Vector2(size.X, size.Y));
         }
 
         private void CheckForToggleVisibilityKeyPress()

@@ -3,14 +3,12 @@
   <info dataType="Struct" type="Duality.Drawing.BatchInfo" id="427169525">
     <parameters dataType="Struct" type="Duality.Drawing.ShaderParameterCollection" id="1100841590" custom="true">
       <body>
-        <mainTex dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Texture]]">
-          <contentPath dataType="String">Default:Texture:White</contentPath>
-        </mainTex>
-        <resolution dataType="Array" type="System.Single[]" id="2824927200">1024, 1024</resolution>
+        <radius dataType="Array" type="System.Single[]" id="2824927200">2</radius>
+        <resolution dataType="Array" type="System.Single[]" id="3573126030">1024</resolution>
       </body>
     </parameters>
     <technique dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.DrawTechnique]]">
-      <contentPath dataType="String">Default:DrawTechnique:Alpha</contentPath>
+      <contentPath dataType="String">Data\Gfx\blur.DrawTechnique.res</contentPath>
     </technique>
   </info>
 </root>

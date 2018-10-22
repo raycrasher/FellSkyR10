@@ -3335,12 +3335,7 @@
             <gameobj dataType="ObjectRef">512890155</gameobj>
           </item>
           <item dataType="Struct" type="FellSky.Components.MapRenderer" id="3542425734">
-            <_x003C_BackgroundColor_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
-              <A dataType="Byte">206</A>
-              <B dataType="Byte">0</B>
-              <G dataType="Byte">0</G>
-              <R dataType="Byte">40</R>
-            </_x003C_BackgroundColor_x003E_k__BackingField>
+            <_x003C_BackgroundColor_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba" />
             <_x003C_CurrentScale_x003E_k__BackingField dataType="Float">10</_x003C_CurrentScale_x003E_k__BackingField>
             <_x003C_FullMapScale_x003E_k__BackingField dataType="Float">5</_x003C_FullMapScale_x003E_k__BackingField>
             <_x003C_GridColor_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">

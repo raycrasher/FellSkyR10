@@ -88,7 +88,7 @@ namespace FellSky.Components
             if ((glowType & GlowType.Scale) != 0)
             {
                 factor = rng.NextFloat(0, 1);
-                pos = pos * (1+factor * scaleAmount);
+                scale =  1 + (factor * (1-scaleAmount));
             }
             if ((glowType & GlowType.Position) != 0)
             {
@@ -103,7 +103,7 @@ namespace FellSky.Components
                 batch.Technique = technique;
                 GlowMaterialsCache[(geometry.Material, technique)] = batch;
             }
-            GeometryRenderer.Draw(device, geometry, batch, pos, geometry.GameObj.Transform.Angle, scale, depthOffset);
+            GeometryRenderer.Draw(device, geometry, batch, pos, geometry.GameObj.Transform.Angle, scale, depthOffset, colorRgba, BlendMode.Solid);
         }
 
         void ICmpRenderer.GetCullingInfo(out CullingInfo info)

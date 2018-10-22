@@ -1,5 +1,6 @@
 ﻿using Duality;
 using Duality.Components;
+using Duality.Components.Physics;
 using Duality.Components.Renderers;
 using Duality.Drawing;
 using Duality.Resources;
@@ -60,8 +61,8 @@ namespace FellSky.Components
             var zoomFactor = mapCameraCtlr.FarZoom / mapCameraCtlr.NearZoom;
             CurrentScale = mapCameraCtlr.Zoom == MapCameraZoom.Far ? tempScale : tempScale / zoomFactor;
 
-            if(controller.HudMapMode == HudMapMode.Full)
-                DrawGrid(_canvas, controller.TargetRect, mapCamera.GetComponent<Camera>());
+            //if(controller.HudMapMode == HudMapMode.Full)
+                //DrawGrid(_canvas, controller.TargetRect, mapCamera.GetComponent<Camera>());
             DrawShips(_canvas);
             DrawCloudObjects(_canvas);
             _canvas.End();
@@ -89,24 +90,83 @@ namespace FellSky.Components
             _canvas.State.ColorTint = GridColor;
             foreach (var obj in objects)
             {
-                canvas.FillPolygonOutline(GetShipTrianglePoly(obj.Transform, obj.GetComponent<Ship>().Radius), CurrentScale * 6, 0, 0);
+                DrawRigidBody(obj.GetComponent<RigidBody>());
+                //canvas.FillPolygonOutline(GetShipTrianglePoly(obj, obj.GetComponent<Ship>().Radius), CurrentScale * 6, 0, 0);
             }
         }
 
-        private Vector2[] GetShipTrianglePoly(Transform transform, float shipIconSize)
+        private void DrawRigidBody(RigidBody rigidBody)
         {
-            shipIconSize /= 2;
-            float scale = CurrentScale;
-            triBuffer[0] = transform.GetWorldPoint(new Vector3(shipIconSize, 0,0) * scale).Xy;
-            triBuffer[1] = transform.GetWorldPoint(new Vector3(-shipIconSize, shipIconSize * 0.6f, 0) * scale).Xy;
-            triBuffer[2] = transform.GetWorldPoint(new Vector3(-shipIconSize, -shipIconSize * 0.6f, 0) * scale).Xy;
-            return triBuffer;
-
+            foreach(var shape in rigidBody.Shapes)
+            {
+                if(shape is CircleShapeInfo circle)
+                {
+                    DrawShapeOutline(_canvas, rigidBody.GameObj.Transform, circle);
+                }
+                else if (shape is PolyShapeInfo poly)
+                {
+                    DrawShapeOutline(_canvas, rigidBody.GameObj.Transform, poly.Vertices);
+                }
+            }
         }
+
+        private void DrawShapeOutline(Canvas canvas, Transform transform, CircleShapeInfo shape)
+        {
+            Vector3 pos = transform.Pos;
+            float angle = transform.Angle;
+            float scale = transform.Scale;
+
+            
+            canvas.State.TransformScale = new Vector2(scale, scale);
+            canvas.State.TransformAngle = angle;
+            canvas.State.TransformHandle = -shape.Position;
+            //canvas.FillCircleSegment(
+            //    pos.X,
+            //    pos.Y,
+            //    pos.Z,
+            //    shape.Radius,
+            //    0.0f,
+            //    MathF.RadAngle360,
+            //    CurrentScale * 6);
+            canvas.FillCircle(
+                pos.X,
+                pos.Y,
+                pos.Z,
+                shape.Radius);
+        }
+        private void DrawShapeOutline(Canvas canvas, Transform transform, Vector2[] shapeVertices)
+        {
+            Vector3 pos = transform.Pos;
+            float angle = transform.Angle;
+            float scale = transform.Scale;
+
+            canvas.State.TransformAngle = angle;
+            canvas.State.TransformScale = new Vector2(scale, scale);
+
+            float inOutFactor = -1.0f + 0.3f / MathF.Max(1.0f, 2);
+            //canvas.FillPolygonOutline(shapeVertices, CurrentScale * 6, inOutFactor, pos.X, pos.Y, pos.Z);
+            canvas.FillPolygon(shapeVertices, pos.X, pos.Y, pos.Z);
+        }
+
+        /*
+        private Vector2[] GetShipTrianglePoly(GameObject obj, float shipIconSize)
+        {
+            
+            //shipIconSize /= 2;
+            //float scale = CurrentScale;
+            //triBuffer[0] = transform.GetWorldPoint(new Vector3(shipIconSize, 0,0) * scale).Xy;
+            //triBuffer[1] = transform.GetWorldPoint(new Vector3(-shipIconSize, shipIconSize * 0.6f, 0) * scale).Xy;
+            //triBuffer[2] = transform.GetWorldPoint(new Vector3(-shipIconSize, -shipIconSize * 0.6f, 0) * scale).Xy;
+
+            return triBuffer;
+        }
+        */
 
         private void DrawGrid(Canvas canvas, Rect rect, Camera camera)
         {
             _canvas.State.ColorTint = GridColor.WithAlpha(0.3f);
+            _canvas.State.TransformAngle = 0;
+            _canvas.State.TransformScale = new Vector2(1);
             float crossSize = CurrentScale * 10;
             var topLeft = camera.GetWorldPos(rect.TopLeft * DualityApp.TargetViewSize);
             var bottomRight = camera.GetWorldPos(rect.BottomRight * DualityApp.TargetViewSize);
