@@ -4,6 +4,7 @@ using Duality.Components.Physics;
 using Duality.Components.Renderers;
 using Duality.Editor;
 using Duality.Resources;
+using FellSky.Defs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace FellSky.Components
         [DontSerialize] private float _radius;
         [DontSerialize] private Vector2 _centroid;
 
-        private float _maneuverSpeed = 10;
+        private float _maneuverForce = 10;
         private float _forwardSpeed = 30;
         private float _turnSpeed = 70;
         private float _boostMultiplier = 2;
@@ -30,10 +31,13 @@ namespace FellSky.Components
         private float _desiredTorque;
         private Vector2 _acceleration;
         private bool _isWarping = false;
+        private ContentRef<ShipDef> _def;
+        private float _maxSpeed = -1;
 
-        public float ManeuverSpeed { get => _maneuverSpeed; set => _maneuverSpeed = value; }
-        public float ForwardSpeed { get => _forwardSpeed; set => _forwardSpeed = value; }
-        public float TurnSpeed { get => _turnSpeed; internal set => _turnSpeed = value; }
+        public float ManeuverForce { get => _maneuverForce; set => _maneuverForce = value; }
+        public float ForwardForce { get => _forwardSpeed; set => _forwardSpeed = value; }
+        public float TurnForce { get => _turnSpeed; internal set => _turnSpeed = value; }
+        public float MaxSpeed { get => _maxSpeed; private set => _maxSpeed = value; }
         public float BoostMultiplier { get => _boostMultiplier; set => _boostMultiplier = value; }
 
         public Vector2 ThrustVector { get => _thrustVector; set => _thrustVector = value; }
@@ -48,6 +52,8 @@ namespace FellSky.Components
 
         public Vector2 Centroid => GameObj.Transform.GetWorldPoint(_centroid);
 
+        public ContentRef<ShipDef> Def { get => _def; set => _def = value; }
+
         [Duality.Editor.EditorHintFlags(MemberFlags.Invisible)]
         public bool IsWarping { get => _isWarping; internal set => _isWarping = value; }
 
@@ -60,14 +66,27 @@ namespace FellSky.Components
 
         void ICmpInitializable.OnActivate()
         {
+            UpdateStats();
             UpdateEquipment();
-            CalculateRadius();
+        }
+
+        private void UpdateStats()
+        {
+            if (Def.IsAvailable)
+            {
+                var def = Def.Res;
+                // f=ma
+                ForwardForce = def.Mass * def.ForwardAccel;
+                ManeuverForce = def.Mass * def.ManeuverAccel;
+                TurnForce = def.Mass * def.TurnAccel;
+                MaxSpeed = def.MaxSpeed;
+            }
+            Radius = GameObj.GetComponent<GeometryRenderer>().BoundRadius;
+            LocalCentroid = Vector2.Zero;
         }
 
         private void CalculateRadius()
         {
-            Radius = GameObj.GetComponent<GeometryRenderer>().BoundRadius;
-            LocalCentroid = Vector2.Zero;
             //LocalCentroid = new Vector2(sprites.Average(s => s.GameObj.Transform.LocalPos.X), sprites.Average(s => s.GameObj.Transform.LocalPos.Y));
         }
 
@@ -79,6 +98,13 @@ namespace FellSky.Components
         void ICmpUpdatable.OnUpdate()
         {
             DoControls();
+
+            var rb = GameObj.GetComponent<RigidBody>();
+            if (rb != null)
+            {
+                if (rb.LinearVelocity.Length > MaxSpeed)
+                    rb.LinearVelocity = rb.LinearVelocity.Normalized * MaxSpeed;
+            }
         }
 
         private void DoControls()
@@ -89,10 +115,10 @@ namespace FellSky.Components
                 var local = GameObj.Transform.GetLocalVector(ThrustVector);
 
                 var force = new Vector2(
-                    MathF.Clamp(local.X, -ManeuverSpeed, ForwardSpeed),
-                    MathF.Clamp(local.Y, -ManeuverSpeed, ManeuverSpeed));
+                    MathF.Clamp(local.X, -ManeuverForce, ForwardForce),
+                    MathF.Clamp(local.Y, -ManeuverForce, ManeuverForce));
 
-                var maxForceLength = Math.Max(ForwardSpeed, ManeuverSpeed);
+                var maxForceLength = Math.Max(ForwardForce, ManeuverForce);
 
                 if (force.LengthSquared > maxForceLength * maxForceLength)
                     force = force.Normalized * maxForceLength;
@@ -104,7 +130,7 @@ namespace FellSky.Components
 
                 Acceleration = force;
 
-                rigidBody.ApplyLocalForce(MathF.Clamp(DesiredTorque, -TurnSpeed, TurnSpeed));
+                rigidBody.ApplyLocalForce(MathF.Clamp(DesiredTorque, -TurnForce, TurnForce));
             }
         }
 

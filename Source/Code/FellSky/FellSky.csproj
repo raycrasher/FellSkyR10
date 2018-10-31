@@ -131,7 +131,10 @@
     <Compile Include="SceneGenerator.cs" />
     <Compile Include="SpaceLayer\Components\SpaceObject.cs" />
     <Compile Include="SpaceLayer\Components\StarSystem.cs" />
+    <Compile Include="SpaceLayer\Location.cs" />
     <Compile Include="SpaceLayer\MapGenerator.cs" />
+    <Compile Include="SpaceLayer\StarSystem.cs" />
+    <Compile Include="SpaceLayer\SystemObject.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>

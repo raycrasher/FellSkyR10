@@ -2009,37 +2009,10 @@
                 <parent />
                 <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="2010571994">
                   <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="1587420696">
-                    <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3732995116">
+                    <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3732995116" length="8">
                       <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
                         <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="4083244584">
                           <_items dataType="Array" type="System.Int32[]" id="3828175276"></_items>
-                          <_size dataType="Int">0</_size>
-                        </childIndex>
-                        <componentType dataType="ObjectRef">821599916</componentType>
-                        <prop dataType="MemberInfo" id="2521386654" value="P:FellSky.Components.Ship:TurnSpeed" />
-                        <val dataType="Float">50</val>
-                      </item>
-                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1861697300">
-                          <_items dataType="ObjectRef">3828175276</_items>
-                          <_size dataType="Int">0</_size>
-                        </childIndex>
-                        <componentType dataType="ObjectRef">821599916</componentType>
-                        <prop dataType="MemberInfo" id="3630742562" value="P:FellSky.Components.Ship:ForwardSpeed" />
-                        <val dataType="Float">5</val>
-                      </item>
-                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="202704096">
-                          <_items dataType="ObjectRef">3828175276</_items>
-                          <_size dataType="Int">0</_size>
-                        </childIndex>
-                        <componentType dataType="ObjectRef">821599916</componentType>
-                        <prop dataType="MemberInfo" id="1202203462" value="P:FellSky.Components.Ship:ManeuverSpeed" />
-                        <val dataType="Float">2</val>
-                      </item>
-                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2768707724">
-                          <_items dataType="Array" type="System.Int32[]" id="3371806480"></_items>
                           <_size dataType="Int">0</_size>
                         </childIndex>
                         <componentType dataType="ObjectRef">1303782688</componentType>
@@ -2049,6 +2022,35 @@
                           <Y dataType="Float">335</Y>
                           <Z dataType="Float">0</Z>
                         </val>
+                      </item>
+                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2521386654">
+                          <_items dataType="Array" type="System.Int32[]" id="1898325994"></_items>
+                          <_size dataType="Int">0</_size>
+                        </childIndex>
+                        <componentType dataType="ObjectRef">2447864246</componentType>
+                        <prop dataType="MemberInfo" id="1861697300" value="P:Duality.Components.Physics.RigidBody:AngularDamping" />
+                        <val dataType="Float">1</val>
+                      </item>
+                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3630742562">
+                          <_items dataType="Array" type="System.Int32[]" id="3180320942"></_items>
+                          <_size dataType="Int">0</_size>
+                        </childIndex>
+                        <componentType dataType="ObjectRef">821599916</componentType>
+                        <prop dataType="MemberInfo" id="202704096" value="P:FellSky.Components.Ship:Def" />
+                        <val dataType="Struct" type="Duality.ContentRef`1[[FellSky.Defs.ShipDef]]">
+                          <contentPath dataType="String">Data\Defs\Ships\recon_frigate_human.ShipDef.res</contentPath>
+                        </val>
+                      </item>
+                      <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
+                        <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1202203462">
+                          <_items dataType="Array" type="System.Int32[]" id="1684900866"></_items>
+                          <_size dataType="Int">0</_size>
+                        </childIndex>
+                        <componentType dataType="ObjectRef">2447864246</componentType>
+                        <prop dataType="MemberInfo" id="2768707724" value="P:Duality.Components.Physics.RigidBody:LinearDamping" />
+                        <val dataType="Float">0</val>
                       </item>
                     </_items>
                     <_size dataType="Int">4</_size>
@@ -2782,7 +2784,7 @@
           <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="3159282064" length="4">
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
               <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3145178160">
-                <_items dataType="ObjectRef">3828175276</_items>
+                <_items dataType="Array" type="System.Int32[]" id="1641478844"></_items>
                 <_size dataType="Int">0</_size>
               </childIndex>
               <componentType dataType="ObjectRef">1303782688</componentType>
@@ -2795,7 +2797,7 @@
             </item>
             <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
               <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="166253166">
-                <_items dataType="ObjectRef">3371806480</_items>
+                <_items dataType="ObjectRef">3828175276</_items>
                 <_size dataType="Int">0</_size>
               </childIndex>
               <componentType dataType="ObjectRef">1303782688</componentType>

@@ -123,22 +123,22 @@ namespace FellSky.Components
                 }
 
                 if (keyboard.KeyPressed(ControlBindings.ThrustDown))
-                    speed.X = -ship.ManeuverSpeed;
+                    speed.X = -ship.ManeuverForce;
                 else if (keyboard.KeyPressed(ControlBindings.ThrustUp))
-                    speed.X = ship.ForwardSpeed;
+                    speed.X = ship.ForwardForce;
 
                 if (keyboard.KeyPressed(ControlBindings.StrafeLeft))
-                    speed.Y = -ship.ManeuverSpeed;
+                    speed.Y = -ship.ManeuverForce;
                 else if (keyboard.KeyPressed(ControlBindings.StrafeRight))
-                    speed.Y = ship.ManeuverSpeed;
+                    speed.Y = ship.ManeuverForce;
 
                 ship.ThrustVector = ship.GameObj.Transform.GetWorldVector(speed);
 
                 ship.IsBoosting = keyboard.KeyPressed(ControlBindings.Boost);
                 if (keyboard.KeyPressed(ControlBindings.TurnCCW))
-                    ship.DesiredTorque = -ship.TurnSpeed;
+                    ship.DesiredTorque = -ship.TurnForce;
                 else if (keyboard.KeyPressed(ControlBindings.TurnCW))
-                    ship.DesiredTorque = ship.TurnSpeed;
+                    ship.DesiredTorque = ship.TurnForce;
                 else
                     ship.DesiredTorque = 0;
 
